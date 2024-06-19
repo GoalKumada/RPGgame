@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\goal2\\RPGgame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|c:\\users\\goal2\\rpggame\\assets\\warrior free set\\contact.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\warrior free set\\contact.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|c:\\users\\goal2\\rpggame\\assets\\warrior free set\\license.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\warrior free set\\license.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|C:\\Users\\goal2\\RPGgame\\assets\\scrips\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scrips\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|C:\\Users\\goal2\\RPGgame\\assets\\scrips\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scrips\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|c:\\users\\goal2\\rpggame\\assets\\scrips\\animationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scrips\\animationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,52 +19,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Contact.txt",
-              "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Warrior free set\\Contact.txt",
-              "RelativeDocumentMoniker": "Assets\\Warrior free set\\Contact.txt",
-              "ToolTip": "C:\\Users\\goal2\\RPGgame\\Assets\\Warrior free set\\Contact.txt",
-              "RelativeToolTip": "Assets\\Warrior free set\\Contact.txt",
-              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-06-12T08:04:34.341Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "License.txt",
-              "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Warrior free set\\License.txt",
-              "RelativeDocumentMoniker": "Assets\\Warrior free set\\License.txt",
-              "ToolTip": "C:\\Users\\goal2\\RPGgame\\Assets\\Warrior free set\\License.txt",
-              "RelativeToolTip": "Assets\\Warrior free set\\License.txt",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-06-12T08:04:12.603Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Player.cs",
-              "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scrips\\Player.cs",
-              "RelativeDocumentMoniker": "Assets\\Scrips\\Player.cs",
-              "ToolTip": "C:\\Users\\goal2\\RPGgame\\Assets\\Scrips\\Player.cs",
-              "RelativeToolTip": "Assets\\Scrips\\Player.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAADwvwQAAAAfAAAA",
+              "Title": "AnimationController.cs",
+              "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scrips\\AnimationController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scrips\\AnimationController.cs",
+              "ToolTip": "C:\\Users\\goal2\\RPGgame\\Assets\\Scrips\\AnimationController.cs",
+              "RelativeToolTip": "Assets\\Scrips\\AnimationController.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAwCMAAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-08T06:56:50.855Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Character.cs",
-              "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scrips\\Character.cs",
-              "RelativeDocumentMoniker": "Assets\\Scrips\\Character.cs",
-              "ToolTip": "C:\\Users\\goal2\\RPGgame\\Assets\\Scrips\\Character.cs",
-              "RelativeToolTip": "Assets\\Scrips\\Character.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-08T05:32:02.837Z"
+              "WhenOpened": "2024-06-19T05:51:13.02Z",
+              "EditorCaption": ""
             }
           ]
         }
