@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\goal2\\RPGgame\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|c:\\users\\goal2\\rpggame\\assets\\scrips\\move.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scrips\\move.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|c:\\users\\goal2\\rpggame\\assets\\scrips\\animationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scrips\\animationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -19,12 +23,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Move.cs",
+              "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scrips\\Move.cs",
+              "RelativeDocumentMoniker": "Assets\\Scrips\\Move.cs",
+              "ToolTip": "C:\\Users\\goal2\\RPGgame\\Assets\\Scrips\\Move.cs",
+              "RelativeToolTip": "Assets\\Scrips\\Move.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAAADwAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-22T06:08:00.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "AnimationController.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scrips\\AnimationController.cs",
               "RelativeDocumentMoniker": "Assets\\Scrips\\AnimationController.cs",
               "ToolTip": "C:\\Users\\goal2\\RPGgame\\Assets\\Scrips\\AnimationController.cs",
               "RelativeToolTip": "Assets\\Scrips\\AnimationController.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAAwCMAAAA+AAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAwCsAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-19T05:51:13.02Z",
               "EditorCaption": ""

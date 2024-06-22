@@ -61,6 +61,7 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2023.2.18f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scrips\Move.cs" />
     <Compile Include="Assets\Scrips\Player.cs" />
     <Compile Include="Assets\Scrips\Character.cs" />
     <Compile Include="Assets\Scrips\AnimationController.cs" />

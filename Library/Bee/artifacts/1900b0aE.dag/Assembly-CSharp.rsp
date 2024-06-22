@@ -395,6 +395,7 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2023.2.18f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
 "Assets/Scrips/AnimationController.cs"
 "Assets/Scrips/Character.cs"
+"Assets/Scrips/Move.cs"
 "Assets/Scrips/Player.cs"
 -langversion:9.0
 
