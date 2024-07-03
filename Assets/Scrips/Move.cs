@@ -1,84 +1,97 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class Move : MonoBehaviour
 {
     [SerializeField] private Animator animator;
-    private bool attack;
-    private bool hurt;
-    private float speed = 2.0f;
-    private Vector3 goal = new Vector3(2,2,2);
-
-    // Start is called before the first frame update
+    private float speed_x = 0.0025f;
+    private float speed_z = 0.0015f;
+    private bool attackEnded = false;
+    private Vector3 destinationPos = new Vector3(-0.5f,0.2f,0);
+    private Vector3 originalPos;
+    
     void Start()
     {
-        
+        originalPos = this.transform.position;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        /*if (Mouse.current != null)
-        {
-            if (Mouse.current.leftButton.wasReleasedThisFrame)
-            {
-                attack = false;
-            }
 
-            if (Mouse.current.rightButton.wasReleasedThisFrame)
-            {
-                hurt = false;
-            }
-
-            if (Mouse.current.leftButton.wasPressedThisFrame)
-            {
-                attack = true;
-                Debug.Log("攻撃");
-            }
-
-            if (Mouse.current.rightButton.wasPressedThisFrame)
-            {
-                hurt = true;
-                Debug.Log("攻撃を受けた");
-            }
-
-        }*/
-
-        characterControll(goal);
-            animator.SetBool("Attack", attack);
+        AttackControl(destinationPos,originalPos);
 
     }
 
-    private void characterMove(float speed)
+    void beforeAttackMove(float speed_x ,float speed_z)
     {
         Vector3 myPosition = this.transform.position;
-        myPosition.x += speed;
-        myPosition.y += speed;
-        myPosition.z += speed;
+
+        if (myPosition.x != destinationPos.x)
+        {
+            myPosition.x += speed_x;
+        }
+        if (myPosition.z < destinationPos.z) 
+        { 
+            myPosition.z += speed_z;
+        }
+        else if (myPosition.z > destinationPos.z) 
+        {
+            myPosition.z -= speed_z;
+        }
 
         this.transform.position = myPosition;
 
     }
 
-    private void characterControll(Vector3 goal)
+    void afterAttackMove(float speed_x, float speed_z)
     {
         Vector3 myPosition = this.transform.position;
-        if (myPosition != goal)
+
+        if (myPosition.x != originalPos.x)
         {
-            characterMove(speed);
+            myPosition.x -= speed_x;
+        }
+        if (myPosition.z < originalPos.z)
+        {
+            myPosition.z += speed_z;
+        }
+        else if (myPosition.z > originalPos.z)
+        {
+            myPosition.z -= speed_z;
         }
 
+        this.transform.position = myPosition;
+
+    }
+
+    void AttackControl(Vector3 destinationPos, Vector3 originalPos)
+    {
+        Vector3 myPosition = this.transform.position;
+
+        if (!attackEnded)
+        {
+            if (myPosition != destinationPos)
+            {
+                beforeAttackMove(speed_x,speed_z);
+            }
+
+            else
+            {
+                animator.SetTrigger("Attack");
+                attackEnded = true;
+            }
+        }
         else
         {
-            attack = true;
-            Debug.Log("攻撃");
-            //animator.SetBool("Hurt", hurt);
-
+            if (myPosition != originalPos)
+            {
+                afterAttackMove(speed_x, speed_z);
+            }
         }
 
     }
+
+    
 
 
 }
