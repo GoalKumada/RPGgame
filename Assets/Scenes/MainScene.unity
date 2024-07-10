@@ -275,13 +275,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6418305117690308680, guid: f05706a5aae93a24284a40f964f89627, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9088872721161602048, guid: f05706a5aae93a24284a40f964f89627, type: 3}
       propertyPath: m_Name
       value: Enemy (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9093572642467695068, guid: f05706a5aae93a24284a40f964f89627, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -336,10 +336,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6418305117690308680, guid: f05706a5aae93a24284a40f964f89627, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9088872721161602048, guid: f05706a5aae93a24284a40f964f89627, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -363,7 +359,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2413891244205699244, guid: 80a7c5dd10c0ef3488fd0ef1f55a25b7, type: 3}
       propertyPath: m_Name
-      value: Warrior_Sheet-Effect_  (3)
+      value: Warrior (3)
       objectReference: {fileID: 0}
     - target: {fileID: 7581120647766076550, guid: 80a7c5dd10c0ef3488fd0ef1f55a25b7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -424,7 +420,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2413891244205699244, guid: 80a7c5dd10c0ef3488fd0ef1f55a25b7, type: 3}
       propertyPath: m_Name
-      value: Warrior_Sheet-Effect_  (1)
+      value: Warrior (1)
       objectReference: {fileID: 0}
     - target: {fileID: 7581120647766076550, guid: 80a7c5dd10c0ef3488fd0ef1f55a25b7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -520,7 +516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d18adc8d1c9762a45b9776d7947b3a17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: 
+  CharactorName: 
   HP: 0
   TP: 0
   DEF: 0
@@ -537,7 +533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d05121d01bb6ba498a4e064b363dbaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: 
+  CharactorName: 
   HP: 0
   TP: 0
   DEF: 0
@@ -644,7 +640,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2413891244205699244, guid: 80a7c5dd10c0ef3488fd0ef1f55a25b7, type: 3}
       propertyPath: m_Name
-      value: Warrior_Sheet-Effect_  (2)
+      value: Warrior (2)
       objectReference: {fileID: 0}
     - target: {fileID: 7581120647766076550, guid: 80a7c5dd10c0ef3488fd0ef1f55a25b7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -743,13 +739,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6418305117690308680, guid: f05706a5aae93a24284a40f964f89627, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9088872721161602048, guid: f05706a5aae93a24284a40f964f89627, type: 3}
       propertyPath: m_Name
       value: Enemy (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9093572642467695068, guid: f05706a5aae93a24284a40f964f89627, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

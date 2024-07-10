@@ -1,97 +1,213 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
 public class Move : MonoBehaviour
 {
     [SerializeField] private Animator animator;
-    private float speed_x = 0.0025f;
-    private float speed_z = 0.0015f;
-    private bool attackEnded = false;
-    private Vector3 destinationPos = new Vector3(-0.5f,0.2f,0);
+    private float speed_x;
+    private float speed_z;
+    private float moveFrames = 120;
+    private Vector3 destinationPosOfArray = new Vector3(-0.5f,0.2f,0);
+    private Vector3 destinationPosOfEnemy = new Vector3(0.5f, 0.2f, 0);
+    private Vector3 destinationPos;
     private Vector3 originalPos;
+    private bool attackStart = false;
+    private bool attackEnd = false;
+    private bool hurtStart = false;
+    private bool hurtEnd = false;
+
+    //private bool moveEnd = false;
+
+    private 
     
     void Start()
     {
         originalPos = this.transform.position;
+
+        if (this.gameObject.tag == "Array")
+        {
+            destinationPos = destinationPosOfArray;
+        }
+        else if (this.gameObject.tag == "Enemy")
+        {
+            destinationPos = destinationPosOfEnemy;
+        }
+
+        speed_x = Math.Abs(originalPos.x - destinationPos.x) / moveFrames;
+        speed_z = Math.Abs(originalPos.z - destinationPos.z) / moveFrames;
+
     }
 
     void Update()
     {
 
-        AttackControl(destinationPos,originalPos);
+        //AttackControl();
+        HurtControl();
+
+        /*if (moveEnd)
+        {
+            return;
+        }*/
 
     }
 
-    void beforeAttackMove(float speed_x ,float speed_z)
+    //アニメーション前に移動するための関数
+    public void BeforeActionMove()
     {
         Vector3 myPosition = this.transform.position;
 
-        if (myPosition.x != destinationPos.x)
+        if (this.gameObject.tag == "Array")
         {
-            myPosition.x += speed_x;
-        }
-        if (myPosition.z < destinationPos.z) 
-        { 
-            myPosition.z += speed_z;
-        }
-        else if (myPosition.z > destinationPos.z) 
-        {
-            myPosition.z -= speed_z;
+            if (myPosition.x != destinationPos.x)
+            {
+                myPosition.x += speed_x;
+            }
+            if (myPosition.z < destinationPos.z)
+            {
+                myPosition.z += speed_z;
+            }
+            else if (myPosition.z > destinationPos.z)
+            {
+                myPosition.z -= speed_z;
+            }
+
+            this.transform.position = myPosition;
         }
 
-        this.transform.position = myPosition;
+        if (this.gameObject.tag == "Enemy")
+        {
+            if (myPosition.x != destinationPos.x)
+            {
+                myPosition.x -= speed_x;
+            }
+            if (myPosition.z < destinationPos.z)
+            {
+                myPosition.z += speed_z;
+            }
+            else if (myPosition.z > destinationPos.z)
+            {
+                myPosition.z -= speed_z;
+            }
+
+            this.transform.position = myPosition;
+        }
 
     }
 
-    void afterAttackMove(float speed_x, float speed_z)
+    //アニメーション後に移動するための関数
+    public void AfterActionMove()
     {
         Vector3 myPosition = this.transform.position;
 
-        if (myPosition.x != originalPos.x)
+        if (this.gameObject.tag == "Array")
         {
-            myPosition.x -= speed_x;
-        }
-        if (myPosition.z < originalPos.z)
-        {
-            myPosition.z += speed_z;
-        }
-        else if (myPosition.z > originalPos.z)
-        {
-            myPosition.z -= speed_z;
+            if (myPosition.x != originalPos.x)
+            {
+                myPosition.x -= speed_x;
+            }
+            if (myPosition.z < originalPos.z)
+            {
+                myPosition.z += speed_z;
+            }
+            else if (myPosition.z > originalPos.z)
+            {
+                myPosition.z -= speed_z;
+            }
+
+
+            this.transform.position = myPosition;
+
         }
 
-        this.transform.position = myPosition;
+        if (this.gameObject.tag == "Enemy")
+        {
+            if (myPosition.x != originalPos.x)
+            {
+                myPosition.x += speed_x;
+            }
+            if (myPosition.z < originalPos.z)
+            {
+                myPosition.z += speed_z;
+            }
+            else if (myPosition.z > originalPos.z)
+            {
+                myPosition.z -= speed_z;
+            }
 
+            this.transform.position = myPosition;
+
+        }
+
+        /*if (myPosition == originalPos)
+        {
+            Debug.Log("kougeki syuuryou");
+            moveEnd = true;
+        }*/
     }
 
-    void AttackControl(Vector3 destinationPos, Vector3 originalPos)
+    public void OnAttackEnd()
+    {
+        attackEnd = true;
+    }
+
+    public void OnHurtEnd()
+    {
+        hurtEnd = true;
+    }
+
+    public void AttackControl()
     {
         Vector3 myPosition = this.transform.position;
 
-        if (!attackEnded)
+        if (!attackEnd)
         {
             if (myPosition != destinationPos)
             {
-                beforeAttackMove(speed_x,speed_z);
+                BeforeActionMove();
             }
-
             else
             {
-                animator.SetTrigger("Attack");
-                attackEnded = true;
+                if (!attackStart)
+                {
+                    animator.SetTrigger("Attack");
+                    attackStart = true;
+                }
             }
         }
-        else
+
+        if (attackEnd)
         {
-            if (myPosition != originalPos)
-            {
-                afterAttackMove(speed_x, speed_z);
-            }
+            AfterActionMove();
         }
 
     }
 
-    
+    public void HurtControl()
+    {
+        Vector3 myPosition = this.transform.position;
 
+        if (!hurtEnd)
+        {
+            if (myPosition != destinationPos)
+            {
+                BeforeActionMove();
+            }
+            else
+            {
+                if (!hurtStart)
+                {
+                    animator.SetTrigger("Hurt");
+                    hurtStart = true;
+                }
+            }
+        }
+
+        if (hurtEnd)
+        {
+            AfterActionMove();
+        }
+
+    }
 
 }

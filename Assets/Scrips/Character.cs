@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    [SerializeField] private string name;
+    [SerializeField] private string CharactorName;
     [SerializeField] private float HP;
     [SerializeField] private float TP;
     [SerializeField] private float DEF;
