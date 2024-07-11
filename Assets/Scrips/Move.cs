@@ -8,8 +8,8 @@ public class Move : MonoBehaviour
     private float speed_x;
     private float speed_z;
     private float moveFrames = 120;
-    private Vector3 destinationPosOfArray = new Vector3(-0.5f,0.2f,0);
-    private Vector3 destinationPosOfEnemy = new Vector3(0.5f, 0.2f, 0);
+    private Vector3 destinationPosOfArray = new Vector3(-0.5f,0.2f,-0.5f);
+    private Vector3 destinationPosOfEnemy = new Vector3(0.5f,0.2f,-0.5f);
     private Vector3 destinationPos;
     private Vector3 originalPos;
     private bool attackStart = false;
