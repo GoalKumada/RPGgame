@@ -61,10 +61,13 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2023.2.18f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scrips\Move.cs" />
-    <Compile Include="Assets\Scrips\Player.cs" />
-    <Compile Include="Assets\Scrips\Character.cs" />
-    <Compile Include="Assets\Scrips\AnimationController.cs" />
+    <Compile Include="Assets\Scripts\Character\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Character\Ally.cs" />
+    <Compile Include="Assets\Scripts\BattleManager.cs" />
+    <Compile Include="Assets\Scripts\Character\Character.cs" />
+    <Compile Include="Assets\Scripts\Window\SelectCursor.cs" />
+    <Compile Include="Assets\Scripts\Move.cs" />
+    <Compile Include="Assets\Scripts\Window\SelectableText.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Warrior free set\License.txt" />

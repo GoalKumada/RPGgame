@@ -393,10 +393,13 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2023.2.18f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2023.2.18f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2023.2.18f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
-"Assets/Scrips/AnimationController.cs"
-"Assets/Scrips/Character.cs"
-"Assets/Scrips/Move.cs"
-"Assets/Scrips/Player.cs"
+"Assets/Scripts/BattleManager.cs"
+"Assets/Scripts/Character/Ally.cs"
+"Assets/Scripts/Character/Character.cs"
+"Assets/Scripts/Character/Enemy.cs"
+"Assets/Scripts/Move.cs"
+"Assets/Scripts/Window/SelectableText.cs"
+"Assets/Scripts/Window/SelectCursor.cs"
 -langversion:9.0
 
 /deterministic
