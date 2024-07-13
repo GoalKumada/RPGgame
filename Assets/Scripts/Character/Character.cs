@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    [SerializeField] private string charactorName;
+    [SerializeField] private string characterName;
     [SerializeField] private float HP;
     [SerializeField] private float TP;
     [SerializeField] private float DEF;
@@ -19,14 +19,14 @@ public class Character : MonoBehaviour
         
     }
 
-    public void attack()
+    public void Attack(Character target)
     {
-
-
+        target.HP -= 5.0f;
+        Debug.Log($"{characterName}の攻撃！{target.name}に{5}のダメージ");
 
     }
 
-    public void useSkill()
+    public void UseSkill()
     {
 
     }
