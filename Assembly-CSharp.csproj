@@ -65,7 +65,8 @@
     <Compile Include="Assets\Scripts\Character\Ally.cs" />
     <Compile Include="Assets\Scripts\BattleManager.cs" />
     <Compile Include="Assets\Scripts\Character\Character.cs" />
-    <Compile Include="Assets\Scripts\Window\SelectCursor.cs" />
+    <Compile Include="Assets\Scripts\Window\WindowMenu.cs" />
+    <Compile Include="Assets\Scripts\UI.cs" />
     <Compile Include="Assets\Scripts\Move.cs" />
     <Compile Include="Assets\Scripts\Window\SelectableText.cs" />
   </ItemGroup>

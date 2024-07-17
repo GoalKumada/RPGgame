@@ -398,8 +398,9 @@
 "Assets/Scripts/Character/Character.cs"
 "Assets/Scripts/Character/Enemy.cs"
 "Assets/Scripts/Move.cs"
+"Assets/Scripts/UI.cs"
 "Assets/Scripts/Window/SelectableText.cs"
-"Assets/Scripts/Window/SelectCursor.cs"
+"Assets/Scripts/Window/WindowMenu.cs"
 -langversion:9.0
 
 /deterministic
