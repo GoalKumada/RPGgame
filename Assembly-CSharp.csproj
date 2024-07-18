@@ -62,11 +62,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Character\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Phases\ChooseAllyPhase.cs" />
+    <Compile Include="Assets\Scripts\Phases\PhaseBase.cs" />
     <Compile Include="Assets\Scripts\Character\Ally.cs" />
     <Compile Include="Assets\Scripts\BattleManager.cs" />
+    <Compile Include="Assets\Scripts\Phases\ChooseEnemyPhase.cs" />
+    <Compile Include="Assets\Scripts\Phases\RunCheckPhase.cs" />
     <Compile Include="Assets\Scripts\Character\Character.cs" />
+    <Compile Include="Assets\Scripts\Phases\ChooseRunOrBattlePhase.cs" />
     <Compile Include="Assets\Scripts\Window\WindowMenu.cs" />
-    <Compile Include="Assets\Scripts\UI.cs" />
+    <Compile Include="Assets\Scripts\Phases\ResultPhase.cs" />
+    <Compile Include="Assets\Scripts\Phases\ExecutePhase.cs" />
+    <Compile Include="Assets\Scripts\Phases\StartPhase.cs" />
+    <Compile Include="Assets\Scripts\Phases\EndPhase.cs" />
+    <Compile Include="Assets\Scripts\Phases\ChooseCommandPhase.cs" />
     <Compile Include="Assets\Scripts\Move.cs" />
     <Compile Include="Assets\Scripts\Window\SelectableText.cs" />
   </ItemGroup>

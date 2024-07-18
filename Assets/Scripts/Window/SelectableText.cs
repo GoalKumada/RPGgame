@@ -13,7 +13,7 @@ public class SelectableText : Selectable
     public override void OnSelect(BaseEventData eventData)
     {
         //base.OnSelect(eventData);
-        Debug.Log($"{gameObject.name}が選択された");
+        //Debug.Log($"{gameObject.name}が選択された");
         onSelectAction.Invoke(transform); //登録した関数を実行する
     }
 
@@ -21,7 +21,7 @@ public class SelectableText : Selectable
     public override void OnDeselect(BaseEventData eventData)
     {
         //base.OnSelect(eventData);
-        Debug.Log($"{gameObject.name}の選択が外された");
+        //Debug.Log($"{gameObject.name}の選択が外された");
 
     }
     

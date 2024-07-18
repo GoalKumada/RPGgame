@@ -39,6 +39,6 @@ public class WindowMenu : MonoBehaviour
     {
         arrow.SetParent(parent);
         currentID = parent.GetSiblingIndex(); // 何番目の子要素かを取得
-        Debug.Log($"カーソル移動:currentID{currentID}");
+        //Debug.Log($"カーソル移動:currentID{currentID}");
     }
 }

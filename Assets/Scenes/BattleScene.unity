@@ -654,7 +654,6 @@ GameObject:
   - component: {fileID: 234506733}
   - component: {fileID: 234506732}
   - component: {fileID: 234506731}
-  - component: {fileID: 234506735}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -750,22 +749,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &234506735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 234506730}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 375286e97008bcb43b74e6524b09a501, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  runCheckWindow: {fileID: 942299985}
-  chooseAllyWindow: {fileID: 62397242}
-  chooseCommandWindow: {fileID: 1974077547}
-  chooseEnemyWindow: {fileID: 1704525622}
 --- !u!1001 &282946967
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -864,7 +847,6 @@ GameObject:
   - component: {fileID: 328093234}
   - component: {fileID: 328093233}
   - component: {fileID: 328093232}
-  - component: {fileID: 328093236}
   m_Layer: 5
   m_Name: Skill1Text
   m_TagString: Untagged
@@ -999,22 +981,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 328093230}
   m_CullTransparentMesh: 1
---- !u!114 &328093236
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 328093230}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 375286e97008bcb43b74e6524b09a501, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  runCheckWindow: {fileID: 0}
-  chooseAllyWindow: {fileID: 0}
-  chooseCommandWindow: {fileID: 0}
-  chooseEnemyWindow: {fileID: 0}
 --- !u!1 &360162500
 GameObject:
   m_ObjectHideFlags: 0
@@ -2603,11 +2569,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ab4e94d62a4f5444aa88c41364669b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chooseRunOrBattleWindowMenu: {fileID: 0}
-  runCheckWindowMenu: {fileID: 0}
-  chooseAllyWindowMenu: {fileID: 0}
-  chooseCommandWindowMenu: {fileID: 0}
-  chooseEnemyWindowMenu: {fileID: 0}
+  battleContext:
+    chooseRunOrBattleWindowMenu: {fileID: 360162502}
+    runCheckWindowMenu: {fileID: 942299987}
+    chooseAllyWindowMenu: {fileID: 62397247}
+    chooseCommandWindowMenu: {fileID: 1974077549}
+    chooseEnemyWindowMenu: {fileID: 1704525624}
 --- !u!1 &1230745973
 GameObject:
   m_ObjectHideFlags: 0
