@@ -14,15 +14,6 @@ public class WindowMenu : MonoBehaviour
 
     public int currentID; // 選択中の子要素のID
 
-    private void Start()
-    {
-        // test
-        SetMoveArrowFunction();
-
-    }
-
-
-
     void SetMoveArrowFunction()
     {
         foreach (SelectableText selectableText in selectableTexts) 
@@ -40,5 +31,22 @@ public class WindowMenu : MonoBehaviour
         arrow.SetParent(parent);
         currentID = parent.GetSiblingIndex(); // 何番目の子要素かを取得
         //Debug.Log($"カーソル移動:currentID{currentID}");
+    }
+
+    public void Select()
+    {
+        EventSystem.current.SetSelectedGameObject(selectableTexts[currentID].gameObject);
+    }
+
+    public void Open()
+    {
+        currentID = 0;
+        gameObject.SetActive(true);
+        SetMoveArrowFunction();
+    }
+
+    public void Close()
+    {
+        gameObject.SetActive(false);
     }
 }

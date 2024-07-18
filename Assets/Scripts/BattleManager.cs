@@ -28,7 +28,7 @@ public class BattleManager : MonoBehaviour
 }
 
 [System.Serializable]
-public struct BattleContext
+public struct BattleContext // クラスに必要な情報を渡すための構造体
 {
     public WindowMenu chooseRunOrBattleWindowMenu;
     public WindowMenu runCheckWindowMenu;
@@ -36,14 +36,11 @@ public struct BattleContext
     public WindowMenu chooseCommandWindowMenu;
     public WindowMenu chooseEnemyWindowMenu;
 
-    public BattleContext
-        (
-            WindowMenu chooseRunOrBattleWindowMenu,
-            WindowMenu runCheckWindowMenu,
-            WindowMenu chooseAllyWindowMenu,
-            WindowMenu chooseCommandWindowMenu,
-            WindowMenu chooseEnemyWindowMenu
-        )
+    public BattleContext(WindowMenu chooseRunOrBattleWindowMenu,
+                            WindowMenu runCheckWindowMenu,
+                            WindowMenu chooseAllyWindowMenu,
+                            WindowMenu chooseCommandWindowMenu,
+                            WindowMenu chooseEnemyWindowMenu)
     {
         this.chooseRunOrBattleWindowMenu = chooseRunOrBattleWindowMenu;
         this.runCheckWindowMenu = runCheckWindowMenu;

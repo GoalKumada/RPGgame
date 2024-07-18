@@ -8,23 +8,32 @@ public class ChooseEnemyPhase : PhaseBase
     {
         yield return null;
         Debug.Log("ChooseEnemyPhase");
-        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Escape));
         
-        battleContext.chooseEnemyWindowMenu.gameObject.SetActive(false);
+        battleContext.chooseEnemyWindowMenu.Close();
 
         int currentID_cE = battleContext.chooseEnemyWindowMenu.currentID;
 
-        if (currentID_cE == 0)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            nextPhase = new ExecutePhase();
-        }
-        else if (currentID_cE == 1)
-        {
-            nextPhase = new ExecutePhase();
+            if (currentID_cE == 0)
+            {
+                nextPhase = new ExecutePhase();
+            }
+            else if (currentID_cE == 1)
+            {
+                nextPhase = new ExecutePhase();
+            }
+            else
+            {
+                nextPhase = new ExecutePhase();
+            }
         }
         else
         {
-            nextPhase = new ExecutePhase();
-        }        
+            nextPhase = new ChooseCommandPhase();
+            battleContext.chooseCommandWindowMenu.Open();
+            battleContext.chooseCommandWindowMenu.Select();
+        }
     }
 }

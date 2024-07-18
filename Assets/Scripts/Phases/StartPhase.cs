@@ -10,7 +10,7 @@ public class StartPhase : PhaseBase
         yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
 
         nextPhase = new ChooseRunOrBattlePhase();
-        battleContext.chooseRunOrBattleWindowMenu.gameObject.SetActive(true);
+        battleContext.chooseRunOrBattleWindowMenu.Open();
 
     }
 }

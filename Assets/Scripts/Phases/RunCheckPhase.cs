@@ -8,20 +8,30 @@ public class RunCheckPhase : PhaseBase
     {
         yield return null;
         Debug.Log("RunCheckPhase");
-        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Escape));
 
-        battleContext.runCheckWindowMenu.gameObject.SetActive(false);
+        battleContext.runCheckWindowMenu.Close();
 
         int currentID = battleContext.runCheckWindowMenu.currentID;
 
-        if (currentID == 0)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            nextPhase = new StartPhase();
+            if (currentID == 0)
+            {
+                nextPhase = new ChooseRunOrBattlePhase();
+                battleContext.chooseRunOrBattleWindowMenu.Open();
+                battleContext.chooseRunOrBattleWindowMenu.Select();
+            }
+            else
+            {
+                nextPhase = new StartPhase();
+            }
         }
         else
         {
             nextPhase = new ChooseRunOrBattlePhase();
-            battleContext.chooseRunOrBattleWindowMenu.gameObject.SetActive(true);
+            battleContext.chooseRunOrBattleWindowMenu.Open();
+            battleContext.chooseRunOrBattleWindowMenu.Select();
         }
     }
 }

@@ -10,19 +10,19 @@ public class ChooseRunOrBattlePhase : PhaseBase
         Debug.Log("ChooseRunOrBattlePhase");
         yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
 
-        battleContext.chooseRunOrBattleWindowMenu.gameObject.SetActive(false);
+        battleContext.chooseRunOrBattleWindowMenu.Close();
         
         int currentID = battleContext.chooseRunOrBattleWindowMenu.currentID;
 
         if (currentID == 0) // 0(たたかう)ならChooseAllyPhaseへ
         {
             nextPhase = new ChooseAllyPhase();
-            battleContext.chooseAllyWindowMenu.gameObject.SetActive(true);
+            battleContext.chooseAllyWindowMenu.Open();
         }
         else // 1（にげる）ならRunCheckへ
         {
             nextPhase = new RunCheckPhase();
-            battleContext.runCheckWindowMenu.gameObject.SetActive(true);
+            battleContext.runCheckWindowMenu.Open();
         }
     }
 }

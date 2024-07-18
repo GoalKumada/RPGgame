@@ -8,26 +8,35 @@ public class ChooseCommandPhase : PhaseBase
     {
         yield return null;
         Debug.Log("ChooseCommandPhase");
-        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Escape));
 
-        battleContext.chooseCommandWindowMenu.gameObject.SetActive(false);
+        battleContext.chooseCommandWindowMenu.Close();
 
         int currentID = battleContext.chooseCommandWindowMenu.currentID;
 
-        if (currentID == 0)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            nextPhase = new ChooseEnemyPhase();
-            battleContext.chooseEnemyWindowMenu.gameObject.SetActive(true);
-        }
-        else if (currentID == 1)
-        {
-            nextPhase = new ChooseEnemyPhase();
-            battleContext.chooseEnemyWindowMenu.gameObject.SetActive(true);
+            if (currentID == 0)
+            {
+                nextPhase = new ChooseEnemyPhase();
+                battleContext.chooseEnemyWindowMenu.Open();
+            }
+            else if (currentID == 1)
+            {
+                nextPhase = new ChooseEnemyPhase();
+                battleContext.chooseEnemyWindowMenu.Open();
+            }
+            else
+            {
+                nextPhase = new ChooseEnemyPhase();
+                battleContext.chooseEnemyWindowMenu.Open();
+            }
         }
         else
         {
-            nextPhase = new ChooseEnemyPhase();
-            battleContext.chooseEnemyWindowMenu.gameObject.SetActive(true);
+            nextPhase = new ChooseAllyPhase();
+            battleContext.chooseAllyWindowMenu.Open();
+            battleContext.chooseAllyWindowMenu.Select();
         }
     }
 }
