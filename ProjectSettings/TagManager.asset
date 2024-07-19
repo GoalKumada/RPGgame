@@ -4,8 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Array
   - Enemy
+  - Ally
   layers:
   - Default
   - TransparentFX

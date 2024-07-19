@@ -15,7 +15,7 @@ public class BattleManager : MonoBehaviour
 
     IEnumerator Battle()
     {
-        while (!(phaseState is EndPhase))
+        while (!(phaseState is EndPhase)) //EndPhaseになるまで繰り返し
         {
             yield return phaseState.Execute(battleContext); //フェーズの実行
             phaseState = phaseState.nextPhase; //次のフェーズに移行

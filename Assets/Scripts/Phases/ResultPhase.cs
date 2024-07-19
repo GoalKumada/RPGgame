@@ -8,8 +8,9 @@ public class ResultPhase : PhaseBase
     {
         yield return null;
         
+        Debug.Log("ResultPhase");
+        
         nextPhase = new EndPhase();
 
-        Debug.Log("ResultPhase");
     }
 }

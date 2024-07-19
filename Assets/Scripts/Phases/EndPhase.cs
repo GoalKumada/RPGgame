@@ -7,6 +7,7 @@ public class EndPhase : PhaseBase
     public override IEnumerator Execute(BattleContext battleContext)
     {
         yield return null;
+
         Debug.Log("EndPhase");
     }
 }

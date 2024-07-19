@@ -7,9 +7,12 @@ public class ExecutePhase : PhaseBase
     public override IEnumerator Execute(BattleContext battleContext)
     {
         yield return null;
+        
+        Debug.Log("ExecutePhase");
+
+        
 
         nextPhase = new ResultPhase();
         
-        Debug.Log("ExecutePhase");
     }
 }
