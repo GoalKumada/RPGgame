@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 
 public class Move : MonoBehaviour
-{
+{    
     private float selfSpeed_x;
     private float selfSpeed_z;
     private float targetSpeed_x;
@@ -19,25 +19,23 @@ public class Move : MonoBehaviour
     private bool attackEnd = false;
     private bool hurtStart = false;
     private bool hurtEnd = false;
-    private bool end = false;
+    public bool end = false;
     private Animator myAnimator;
     private Animator targetAnimator;
     private GameObject self;
     private GameObject target;
 
+    /*
     private void Start()
     {
         self = GameObject.Find("Warrior");
         target = GameObject.Find("Enemy");
-        
+
         myAnimator = self.GetComponent<Animator>();
         targetAnimator = target.GetComponent<Animator>();
-        
+
         myOriginalPos = self.transform.position;
         targetOriginalPos = target.transform.position;
-
-        Debug.Log(myOriginalPos);
-        Debug.Log(targetOriginalPos);
 
         if (self.tag == "Ally")
         {
@@ -59,37 +57,58 @@ public class Move : MonoBehaviour
 
         selfSpeed_x = Math.Abs(myOriginalPos.x - myDestinationPos.x) / moveFrames;
         selfSpeed_z = Math.Abs(myOriginalPos.z - myDestinationPos.z) / moveFrames;
+
         targetSpeed_x = Math.Abs(targetOriginalPos.x - targetDestinationPos.x) / moveFrames;
         targetSpeed_z = Math.Abs(targetOriginalPos.z - targetDestinationPos.z) / moveFrames;
-
     }
-
+    
     void Update()
     {
         if (!end)
         {
             moveControl(self,target);
         }
+
+        //ToDo ここの修正
+
+        Debug.Log("attackStart:" + attackStart);
+        Debug.Log("attackEnd:" + attackEnd);
+        Debug.Log("hurtStart:" + hurtStart);
+        Debug.Log("hurtEnd:" + hurtEnd);
     }
+    */
 
     //アニメーション前に移動するための関数
     public void BeforeActionMove(GameObject gameObject)
+
     {
         Vector3 myPosition = gameObject.transform.position;
 
         if (gameObject.tag == "Ally")
         {
-            if (myPosition.x != myDestinationPos.x)
+            if (Mathf.Abs(myPosition.x - myDestinationPos.x) > 0.001f)
             {
                 myPosition.x += selfSpeed_x;
             }
-            if (myPosition.z < myDestinationPos.z)
+            else
             {
-                myPosition.z += selfSpeed_z;
+                myPosition.x = myDestinationPos.x;
             }
-            else if (myPosition.z > myDestinationPos.z)
+
+            if (Mathf.Abs(myPosition.z - myDestinationPos.z) > 0.001f)
             {
-                myPosition.z -= selfSpeed_z;
+                if (myPosition.z < myDestinationPos.z)
+                {
+                    myPosition.z += selfSpeed_z;
+                }
+                else if (myPosition.z > myDestinationPos.z)
+                {
+                    myPosition.z -= selfSpeed_z;
+                }
+            }
+            else
+            {
+                myPosition.z = myDestinationPos.z;
             }
 
             gameObject.transform.position = myPosition;
@@ -97,17 +116,29 @@ public class Move : MonoBehaviour
 
         if (gameObject.tag == "Enemy")
         {
-            if (myPosition.x != targetDestinationPos.x)
+            if (Mathf.Abs(myPosition.x - targetDestinationPos.x) > 0.01f)
             {
                 myPosition.x -= targetSpeed_x;
             }
-            if (myPosition.z < targetDestinationPos.z)
+            else
             {
-                myPosition.z += targetSpeed_z;
+                myPosition.x = targetDestinationPos.x;
             }
-            else if (myPosition.z > targetDestinationPos.z)
+
+            if (Mathf.Abs(myPosition.z - targetDestinationPos.z) > 0.01f)
             {
-                myPosition.z -= targetSpeed_z;
+                if (myPosition.z < targetDestinationPos.z)
+                {
+                    myPosition.z += targetSpeed_z;
+                }
+                else if (myPosition.z > targetDestinationPos.z)
+                {
+                    myPosition.z -= targetSpeed_z;
+                }
+            }
+            else
+            {
+                myPosition.z = targetDestinationPos.z;
             }
 
             gameObject.transform.position = myPosition;
@@ -119,21 +150,33 @@ public class Move : MonoBehaviour
     public void AfterActionMove(GameObject gameObject)
     {
         Vector3 myPosition = gameObject.transform.position;
-        Debug.Log("AfterActionMoveが呼ばれた");
 
         if (gameObject.tag == ("Ally"))
         {
-            if (myPosition.x != myOriginalPos.x)
-            {   
+
+            if (Mathf.Abs(myPosition.x - myOriginalPos.x) > 0.001f)
+            {
                 myPosition.x -= selfSpeed_x;
             }
-            if (myPosition.z < myOriginalPos.z)
+            else
             {
-                myPosition.z += selfSpeed_z;
+                myPosition.x = myOriginalPos.x;
             }
-            else if (myPosition.z > myOriginalPos.z)
+
+            if (Mathf.Abs(myPosition.z - myOriginalPos.z) > 0.001f)
             {
-                myPosition.z -= selfSpeed_z;
+                if (myPosition.z < myOriginalPos.z)
+                {
+                    myPosition.z += selfSpeed_z;
+                }
+                else if (myPosition.z > myOriginalPos.z)
+                {
+                    myPosition.z -= selfSpeed_z;
+                }
+            }
+            else
+            {
+                myPosition.z = myOriginalPos.z;
             }
 
             gameObject.transform.position = myPosition;
@@ -141,23 +184,35 @@ public class Move : MonoBehaviour
 
         if (gameObject.tag == "Enemy")
         {
-            if (myPosition.x != targetOriginalPos.x)
+            if (Mathf.Abs(myPosition.x - targetOriginalPos.x) > 0.001f)
             {
                 myPosition.x += targetSpeed_x;
             }
-            if (myPosition.z < targetOriginalPos.z)
+            else
             {
-                myPosition.z += targetSpeed_z;
+                myPosition.x = targetOriginalPos.x;
             }
-            else if (myPosition.z > targetOriginalPos.z)
+
+            if (Mathf.Abs(myPosition.z - myOriginalPos.z) > 0.001f)
             {
-                myPosition.z -= targetSpeed_z;
+                if (myPosition.z < targetOriginalPos.z)
+                {
+                    myPosition.z += targetSpeed_z;
+                }
+                else if (myPosition.z > targetOriginalPos.z)
+                {
+                    myPosition.z -= targetSpeed_z;
+                }
+            }
+            else
+            {
+                myPosition.z = targetOriginalPos.z;
             }
 
             gameObject.transform.position = myPosition;
         }
 
-        if (Vector3.Distance(myPosition, myOriginalPos) < 0.01f)
+        if (Vector3.Distance(myPosition, myOriginalPos) < 0.001f)
         {
             end = true;
         }
@@ -167,10 +222,12 @@ public class Move : MonoBehaviour
     public void OnAttackEnd()
     {
         attackEnd = true;
+        Debug.Log("attackEnd");
     }
 
     public void OnHurtEnd()
     {
+        Debug.Log("hurtEnd");
         hurtEnd = true;
     }
 
@@ -178,25 +235,25 @@ public class Move : MonoBehaviour
     {
         Vector3 myPosition = self.transform.position;
 
-        if (!attackEnd)
+        if (!attackStart)
         {
             if (myPosition != myDestinationPos && myPosition != targetDestinationPos)
             {
                 BeforeActionMove(self);
+                Debug.Log("Attack側のBeforeActionMove");
             }
             else
             {
-                if (!attackStart)
-                {
-                    myAnimator.SetTrigger("Attack");
-                    attackStart = true;
-                }
+                myAnimator.SetTrigger("Attack");
+                attackStart = true;
+                Debug.Log("attackStart");
             }
         }
         
         if (hurtEnd)
         {
             AfterActionMove(self);
+            Debug.Log("Attack側のAfterActionMove");
         }
         
     }
@@ -205,35 +262,71 @@ public class Move : MonoBehaviour
     {
         Vector3 targetPosition = target.transform.position;
 
-        if (!hurtEnd)
+        if (!attackEnd)
         {
             if (targetPosition != myDestinationPos && targetPosition != targetDestinationPos)
             {
                 BeforeActionMove(target);
-            }
-            else
-            {
-                if (attackEnd)
-                {
-                    if (!hurtStart)
-                    {
-                        targetAnimator.SetTrigger("Hurt");
-                        hurtStart = true;
-                    }
-                }
+                Debug.Log("Hurt側のBeforeActionMove");
             }
         }
-        
+        else
+        {
+            if (!hurtStart)
+            {
+                targetAnimator.SetTrigger("Hurt");
+                hurtStart = true;
+                Debug.Log("hurtStart");
+            }
+        }
+
         if (hurtEnd)
         {
             AfterActionMove(target);
+            Debug.Log("Hurt側のAfterActionMove");
         }
-        
     }
 
     public void moveControl(GameObject self, GameObject target)
     {
         AttackControl(self);
         HurtControl(target);
+    }
+
+    public void SetMoveInfo(GameObject self, GameObject target)
+    {
+        Debug.Log("呼ばれてるよ");
+        this.self = self;
+        this.target = target;
+
+        myAnimator = this.self.GetComponent<Animator>();
+        targetAnimator = this.target.GetComponent<Animator>();
+
+        myOriginalPos = this.self.transform.position;
+        targetOriginalPos = this.target.transform.position;
+
+        if (this.self.tag == "Ally")
+        {
+            myDestinationPos = destinationPosOfArray;
+        }
+        else if (this.self.tag == "Enemy")
+        {
+            myDestinationPos = destinationPosOfEnemy;
+        }
+
+        if (this.target.tag == "Ally")
+        {
+            targetDestinationPos = destinationPosOfArray;
+        }
+        else if (this.target.tag == "Enemy")
+        {
+            targetDestinationPos = destinationPosOfEnemy;
+        }
+
+        selfSpeed_x = Math.Abs(myOriginalPos.x - myDestinationPos.x) / moveFrames;
+        selfSpeed_z = Math.Abs(myOriginalPos.z - myDestinationPos.z) / moveFrames;
+        targetSpeed_x = Math.Abs(targetOriginalPos.x - targetDestinationPos.x) / moveFrames;
+        targetSpeed_z = Math.Abs(targetOriginalPos.z - targetDestinationPos.z) / moveFrames;
+
     }
 }

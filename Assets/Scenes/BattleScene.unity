@@ -532,6 +532,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Warrior
       objectReference: {fileID: 0}
+    - target: {fileID: 5706636117007830386, guid: 80a7c5dd10c0ef3488fd0ef1f55a25b7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7581120647766076550, guid: 80a7c5dd10c0ef3488fd0ef1f55a25b7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1
@@ -818,9 +822,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Warrior (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2413891244205699244, guid: 80a7c5dd10c0ef3488fd0ef1f55a25b7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5706636117007830386, guid: 80a7c5dd10c0ef3488fd0ef1f55a25b7, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7581120647766076550, guid: 80a7c5dd10c0ef3488fd0ef1f55a25b7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1514,7 +1522,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -3215296121442803468, guid: f05706a5aae93a24284a40f964f89627, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2926252395625921427, guid: f05706a5aae93a24284a40f964f89627, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1563,6 +1571,10 @@ PrefabInstance:
     - target: {fileID: 9088872721161602048, guid: f05706a5aae93a24284a40f964f89627, type: 3}
       propertyPath: m_Name
       value: Enemy (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9088872721161602048, guid: f05706a5aae93a24284a40f964f89627, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2401,7 +2413,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1229345615}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ab4e94d62a4f5444aa88c41364669b8, type: 3}
   m_Name: 
@@ -2817,6 +2829,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -3215296121442803468, guid: f05706a5aae93a24284a40f964f89627, type: 3}
+      propertyPath: end
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3215296121442803468, guid: f05706a5aae93a24284a40f964f89627, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -3029,7 +3045,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -3215296121442803468, guid: f05706a5aae93a24284a40f964f89627, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2926252395625921427, guid: f05706a5aae93a24284a40f964f89627, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3078,6 +3094,10 @@ PrefabInstance:
     - target: {fileID: 9088872721161602048, guid: f05706a5aae93a24284a40f964f89627, type: 3}
       propertyPath: m_Name
       value: Enemy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9088872721161602048, guid: f05706a5aae93a24284a40f964f89627, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3657,9 +3677,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Warrior (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2413891244205699244, guid: 80a7c5dd10c0ef3488fd0ef1f55a25b7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5706636117007830386, guid: 80a7c5dd10c0ef3488fd0ef1f55a25b7, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7581120647766076550, guid: 80a7c5dd10c0ef3488fd0ef1f55a25b7, type: 3}
       propertyPath: m_LocalPosition.x

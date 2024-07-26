@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ChooseAllyPhase : PhaseBase
 {
+    public static GameObject self;
+    
     public override IEnumerator Execute(BattleContext battleContext)
     {
         yield return null;
@@ -18,16 +20,19 @@ public class ChooseAllyPhase : PhaseBase
         {
             if (currentID == 0)
             {
+                self = GameObject.Find("Warrior");
                 nextPhase = new ChooseCommandPhase();
                 battleContext.chooseCommandWindowMenu.Open();
             }
             else if (currentID == 1)
             {
+                self = GameObject.Find("Warrior (1)");
                 nextPhase = new ChooseCommandPhase();
                 battleContext.chooseCommandWindowMenu.Open();
             }
             else
             {
+                self = GameObject.Find("Warrior (2)");
                 nextPhase = new ChooseCommandPhase();
                 battleContext.chooseCommandWindowMenu.Open();
             }

@@ -47,5 +47,8 @@ public struct BattleContext // クラスに必要な情報を渡すための構�
         this.chooseAllyWindowMenu = chooseAllyWindowMenu;
         this.chooseCommandWindowMenu = chooseCommandWindowMenu;
         this.chooseEnemyWindowMenu = chooseEnemyWindowMenu;
+
+        GameObject self;
+        GameObject target;
     }
 }
