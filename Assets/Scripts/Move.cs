@@ -15,15 +15,18 @@ public class Move : MonoBehaviour
     private Vector3 myDestinationPos;
     private Vector3 targetOriginalPos;
     private Vector3 targetDestinationPos;
-    private bool attackStart = false;
-    private bool attackEnd = false;
-    private bool hurtStart = false;
-    private bool hurtEnd = false;
-    public bool end = false;
+    [SerializeField] private bool attackStart = false;
+    [SerializeField] private bool attackEnd = false;
+    [SerializeField] private bool hurtStart = false;
+    [SerializeField] private bool hurtEnd = false;
     private Animator myAnimator;
     private Animator targetAnimator;
     private GameObject self;
     private GameObject target;
+
+    public static bool setMoveInfoFlag = false;
+    public static bool moveControlFlag = false;
+    public static bool end = false;
 
     /*
     private void Start()
@@ -60,23 +63,42 @@ public class Move : MonoBehaviour
 
         targetSpeed_x = Math.Abs(targetOriginalPos.x - targetDestinationPos.x) / moveFrames;
         targetSpeed_z = Math.Abs(targetOriginalPos.z - targetDestinationPos.z) / moveFrames;
+
     }
     
-    void Update()
+    private void Update()
     {
         if (!end)
         {
             moveControl(self,target);
         }
 
-        //ToDo ここの修正
-
-        Debug.Log("attackStart:" + attackStart);
-        Debug.Log("attackEnd:" + attackEnd);
-        Debug.Log("hurtStart:" + hurtStart);
-        Debug.Log("hurtEnd:" + hurtEnd);
+        //Debug.Log("attackStart:" + attackStart);
+        //Debug.Log("attackEnd:" + attackEnd);
+        //Debug.Log("hurtStart:" + hurtStart);
+        //Debug.Log("hurtEnd:" + hurtEnd);
     }
     */
+
+    private void Update()
+    {
+        if (setMoveInfoFlag)
+        {
+            SetMoveInfo(ExecutePhase.self, ExecutePhase.target);
+            //Debug.Log("self=" + self);
+            //Debug.Log("target=" + target);
+            setMoveInfoFlag = false;
+        }
+        
+        // SetMoveInfoが一回ではselfとtargetを保持してくれない？
+
+        if (moveControlFlag)
+        {
+            //Debug.Log("self=" + self);
+            //Debug.Log("target=" + target);
+            moveControl(ExecutePhase.self, ExecutePhase.target);
+        }
+    }
 
     //アニメーション前に移動するための関数
     public void BeforeActionMove(GameObject gameObject)
@@ -116,7 +138,7 @@ public class Move : MonoBehaviour
 
         if (gameObject.tag == "Enemy")
         {
-            if (Mathf.Abs(myPosition.x - targetDestinationPos.x) > 0.01f)
+            if (Mathf.Abs(myPosition.x - targetDestinationPos.x) > 0.001f)
             {
                 myPosition.x -= targetSpeed_x;
             }
@@ -125,7 +147,7 @@ public class Move : MonoBehaviour
                 myPosition.x = targetDestinationPos.x;
             }
 
-            if (Mathf.Abs(myPosition.z - targetDestinationPos.z) > 0.01f)
+            if (Mathf.Abs(myPosition.z - targetDestinationPos.z) > 0.001f)
             {
                 if (myPosition.z < targetDestinationPos.z)
                 {
@@ -222,6 +244,7 @@ public class Move : MonoBehaviour
     public void OnAttackEnd()
     {
         attackEnd = true;
+
         Debug.Log("attackEnd");
     }
 
@@ -244,8 +267,8 @@ public class Move : MonoBehaviour
             }
             else
             {
-                myAnimator.SetTrigger("Attack");
                 attackStart = true;
+                myAnimator.SetTrigger("Attack");
                 Debug.Log("attackStart");
             }
         }
@@ -275,6 +298,7 @@ public class Move : MonoBehaviour
             if (!hurtStart)
             {
                 targetAnimator.SetTrigger("Hurt");
+                //attackEnd = true;
                 hurtStart = true;
                 Debug.Log("hurtStart");
             }

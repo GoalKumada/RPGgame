@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class ExecutePhase : PhaseBase
 {
-    Move move = new Move();
+    public static GameObject self;
+    public static GameObject target;
+    
     public override IEnumerator Execute(BattleContext battleContext)
     {
         yield return null;
@@ -12,15 +14,13 @@ public class ExecutePhase : PhaseBase
         Debug.Log("ExecutePhase");
 
 
-        GameObject self = ChooseAllyPhase.self;
-        GameObject target = ChooseEnemyPhase.target;
+        self = ChooseAllyPhase.self;
+        target = ChooseEnemyPhase.target;
 
-        move.SetMoveInfo(self,target);
+        Move.setMoveInfoFlag = true;
+        Move.moveControlFlag = true;
 
-        //while (!move.end)
-        {
-            move.moveControl(self,target);
-        }
+        yield return new WaitUntil(() => Move.end == true);
         
         nextPhase = new ResultPhase();
         

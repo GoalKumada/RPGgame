@@ -7,6 +7,8 @@ public class BattleManager : MonoBehaviour
     [SerializeField] BattleContext battleContext;
     PhaseBase phaseState;
 
+    [SerializeField] Move[] move;
+
     private void Start()
     {
         phaseState = new StartPhase();
@@ -48,7 +50,5 @@ public struct BattleContext // クラスに必要な情報を渡すための構�
         this.chooseCommandWindowMenu = chooseCommandWindowMenu;
         this.chooseEnemyWindowMenu = chooseEnemyWindowMenu;
 
-        GameObject self;
-        GameObject target;
     }
 }
