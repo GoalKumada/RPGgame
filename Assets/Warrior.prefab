@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7581120647766076550}
+  - component: {fileID: 6116886779743692037}
   - component: {fileID: 6247554090848621618}
-  - component: {fileID: 5706636117007830386}
   - component: {fileID: 8721858041882971606}
   m_Layer: 0
   m_Name: Warrior
@@ -34,6 +34,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6116886779743692037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2413891244205699244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e47e7be206dd3004fb09fe040deac28f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackStart: 0
+  attackEnd: 0
+  hurtStart: 0
+  hurtEnd: 0
+  end: 0
 --- !u!212 &6247554090848621618
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -88,18 +105,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5706636117007830386
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2413891244205699244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d6f40e826e15b542bfe7171033a13c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &8721858041882971606
 Animator:
   serializedVersion: 7

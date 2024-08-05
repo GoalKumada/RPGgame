@@ -5,8 +5,9 @@ using UnityEngine;
 public class ChooseEnemyPhase : PhaseBase
 {
     public static GameObject target;
+    public static int attacked;
 
-    public override IEnumerator Execute(BattleContext battleContext)
+    public override IEnumerator Execute(BattleContext battleContext, NewMove[] newMove)
     {
         yield return null;
         Debug.Log("ChooseEnemyPhase");
@@ -20,17 +21,19 @@ public class ChooseEnemyPhase : PhaseBase
         {
             if (currentID_cE == 0)
             {
+                attacked = 3;
                 target = GameObject.Find("Enemy");
                 nextPhase = new ExecutePhase();
             }
             else if (currentID_cE == 1)
             {
-
+                attacked = 4;
                 target = GameObject.Find("Enemy (1)"); 
                 nextPhase = new ExecutePhase();
             }
             else
             {
+                attacked = 5;
                 target = GameObject.Find("Enemy (2)"); 
                 nextPhase = new ExecutePhase();
             }

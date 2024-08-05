@@ -5,9 +5,8 @@ using UnityEngine;
 public class BattleManager : MonoBehaviour
 {
     [SerializeField] BattleContext battleContext;
+    [SerializeField] NewMove[] newMove;
     PhaseBase phaseState;
-
-    [SerializeField] Move[] move;
 
     private void Start()
     {
@@ -19,11 +18,11 @@ public class BattleManager : MonoBehaviour
     {
         while (!(phaseState is EndPhase)) //EndPhaseになるまで繰り返し
         {
-            yield return phaseState.Execute(battleContext); //フェーズの実行
+            yield return phaseState.Execute(battleContext,newMove); //フェーズの実行
             phaseState = phaseState.nextPhase; //次のフェーズに移行
         }
 
-        yield return phaseState.Execute(battleContext); //EndPhaseの実行
+        yield return phaseState.Execute(battleContext,newMove); //EndPhaseの実行
 
         yield break;
     }

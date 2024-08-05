@@ -397,7 +397,7 @@
 "Assets/Scripts/Character/Ally.cs"
 "Assets/Scripts/Character/Character.cs"
 "Assets/Scripts/Character/Enemy.cs"
-"Assets/Scripts/Move.cs"
+"Assets/Scripts/NewMove.cs"
 "Assets/Scripts/Phases/ChooseAllyPhase.cs"
 "Assets/Scripts/Phases/ChooseCommandPhase.cs"
 "Assets/Scripts/Phases/ChooseEnemyPhase.cs"

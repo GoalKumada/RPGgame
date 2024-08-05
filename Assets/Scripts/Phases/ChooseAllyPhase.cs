@@ -5,8 +5,9 @@ using UnityEngine;
 public class ChooseAllyPhase : PhaseBase
 {
     public static GameObject self;
+    public static int attacker;
     
-    public override IEnumerator Execute(BattleContext battleContext)
+    public override IEnumerator Execute(BattleContext battleContext, NewMove[] newMove)
     {
         yield return null;
         Debug.Log("ChooseAllyPhase");
@@ -20,18 +21,21 @@ public class ChooseAllyPhase : PhaseBase
         {
             if (currentID == 0)
             {
+                attacker = 0;
                 self = GameObject.Find("Warrior");
                 nextPhase = new ChooseCommandPhase();
                 battleContext.chooseCommandWindowMenu.Open();
             }
             else if (currentID == 1)
             {
+                attacker = 1;
                 self = GameObject.Find("Warrior (1)");
                 nextPhase = new ChooseCommandPhase();
                 battleContext.chooseCommandWindowMenu.Open();
             }
             else
             {
+                attacker = 2;
                 self = GameObject.Find("Warrior (2)");
                 nextPhase = new ChooseCommandPhase();
                 battleContext.chooseCommandWindowMenu.Open();

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StartPhase : PhaseBase
 {
-    public override IEnumerator Execute(BattleContext battleContext)
+    public override IEnumerator Execute(BattleContext battleContext, NewMove[] newMove)
     {
         Debug.Log("StartPhase");
         yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));

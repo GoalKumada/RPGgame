@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ResultPhase : PhaseBase
 {
-    public override IEnumerator Execute(BattleContext battleContext)
+    public override IEnumerator Execute(BattleContext battleContext, NewMove[] newMove)
     {
         yield return null;
         

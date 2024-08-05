@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RunCheckPhase : PhaseBase
 {
-    public override IEnumerator Execute(BattleContext battleContext)
+    public override IEnumerator Execute(BattleContext battleContext, NewMove[] newMove)
     {
         yield return null;
         Debug.Log("RunCheckPhase");
