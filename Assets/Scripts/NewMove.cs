@@ -105,18 +105,17 @@ public class NewMove : MonoBehaviour
     public void OnAttackEnd()
     {
         attackEnd = true;
-        Debug.Log("attackEnd");
+        //Debug.Log("attackEnd");
     }
 
     public void OnHurtEnd()
     {
-        Debug.Log("hurtEnd");
+        //Debug.Log("hurtEnd");
         hurtEnd = true;
     }
 
     public void BeforeActionMove(GameObject gameObject)
     {
-        Debug.Log("BeforeActionMove");
         Vector3 myPosition = gameObject.transform.position;
 
         if (gameObject.tag == "Ally")

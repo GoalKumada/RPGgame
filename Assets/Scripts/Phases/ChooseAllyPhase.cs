@@ -21,6 +21,9 @@ public class ChooseAllyPhase : PhaseBase
         {
             if (currentID == 0)
             {
+                
+                //
+                
                 attacker = 0;
                 self = GameObject.Find("Warrior");
                 nextPhase = new ChooseCommandPhase();

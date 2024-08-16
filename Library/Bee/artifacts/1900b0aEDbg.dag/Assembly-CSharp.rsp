@@ -408,6 +408,7 @@
 "Assets/Scripts/Phases/ResultPhase.cs"
 "Assets/Scripts/Phases/RunCheckPhase.cs"
 "Assets/Scripts/Phases/StartPhase.cs"
+"Assets/Scripts/SystemManager.cs"
 "Assets/Scripts/Window/SelectableText.cs"
 "Assets/Scripts/Window/WindowMenu.cs"
 -langversion:9.0

@@ -5,16 +5,12 @@ using UnityEngine;
 public class Ally : Character
 {
     [SerializeField] private float SPEED;
+    private string job;
+    private List<Skill> skills;
+    //private Equipment equipment;
+    
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+
 }

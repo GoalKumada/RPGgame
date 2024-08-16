@@ -37,6 +37,9 @@ public class ChooseEnemyPhase : PhaseBase
                 target = GameObject.Find("Enemy (2)"); 
                 nextPhase = new ExecutePhase();
             }
+
+            SystemManager.start = true;
+
         }
         else
         {
