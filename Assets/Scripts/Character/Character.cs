@@ -9,6 +9,8 @@ public class Character : MonoBehaviour
     [SerializeField] private float TP;
     [SerializeField] private float DEF;
 
+    [SerializeField] public Skill[] skills;
+
 
     public void Attack(Character target)
     {

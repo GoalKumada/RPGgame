@@ -6,7 +6,7 @@ public class Ally : Character
 {
     [SerializeField] private float SPEED;
     private string job;
-    private List<Skill> skills;
+    private List<Skill> skillsOfAlly;
     //private Equipment equipment;
     
 

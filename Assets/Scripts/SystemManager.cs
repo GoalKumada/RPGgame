@@ -16,13 +16,20 @@ public class SystemManager : MonoBehaviour
             switch (ChooseAllyPhase.attacker)
             {
                 case 0:
+                    //allies[0].skills[0];
                     allies[0].Attack(enemies[ChooseEnemyPhase.attacked-3]);
+                    allies[0].UseSkill(enemies[ChooseEnemyPhase.attacked-3],1);
+                    allies[0].UseSkill(enemies[ChooseEnemyPhase.attacked-3],2);
                     break;
                 case 1:
-                    allies[1].UseSkill(enemies[ChooseEnemyPhase.attacked-3],1);
+                    allies[1].Attack(enemies[ChooseEnemyPhase.attacked - 3]);
+                    allies[1].UseSkill(enemies[ChooseEnemyPhase.attacked - 3], 1);
+                    allies[1].UseSkill(enemies[ChooseEnemyPhase.attacked - 3], 2);
                     break;
                 case 2:
-                    allies[2].UseSkill(enemies[ChooseEnemyPhase.attacked-3],2);
+                    allies[2].Attack(enemies[ChooseEnemyPhase.attacked - 3]);
+                    allies[2].UseSkill(enemies[ChooseEnemyPhase.attacked - 3], 1);
+                    allies[2].UseSkill(enemies[ChooseEnemyPhase.attacked - 3], 2);
                     break;
             }
 

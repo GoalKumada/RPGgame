@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ChooseCommandPhase : PhaseBase
 {
-    public int skillNumber;
+    public static int skillNumber;
 
     public override IEnumerator Execute(BattleContext battleContext, NewMove[] newMove)
     {
@@ -20,7 +20,7 @@ public class ChooseCommandPhase : PhaseBase
         {
             if (currentID == 0)
             {
-                //skillNumber = 0;
+                skillNumber = 0;
                 nextPhase = new ChooseEnemyPhase();
                 battleContext.chooseEnemyWindowMenu.Open();
             }

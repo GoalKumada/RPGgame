@@ -5,6 +5,6 @@ using UnityEngine;
 public class Enemy : Character
 {
     private string type;
-    private List<Skill> skills;
+    private List<Skill> skillsOfEnemy;
 
 }
