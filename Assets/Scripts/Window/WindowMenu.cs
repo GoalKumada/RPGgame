@@ -11,8 +11,25 @@ public class WindowMenu : MonoBehaviour
 
     [SerializeField] Transform arrow = default;
     [SerializeField] List<SelectableText> selectableTexts = new List<SelectableText>();
-
+    [SerializeField] SelectableText selectableTextPrefab = default;
     public int currentID; // 選択中の子要素のID
+
+    public void CreateSelectableText(string[] strings)
+    {
+        arrow.SetParent(transform);
+        foreach (SelectableText selectableText in selectableTexts)
+        {
+            Destroy(selectableText.gameObject);
+        }
+        
+        selectableTexts.Clear();
+        foreach (string str in strings)
+        {
+            SelectableText text = Instantiate(selectableTextPrefab, transform);
+            text.SetText(str);
+            selectableTexts.Add(text);
+        }
+    }
 
     void SetMoveArrowFunction()
     {

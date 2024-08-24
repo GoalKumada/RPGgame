@@ -13,10 +13,14 @@ public class ChooseRunOrBattlePhase : PhaseBase
         battleContext.chooseRunOrBattleWindowMenu.Close();
         
         int currentID = battleContext.chooseRunOrBattleWindowMenu.currentID;
+        SystemManager sm;
+        GameObject gobj = GameObject.Find("SystemManager");
+        sm = gobj.GetComponent<SystemManager>();
 
         if (currentID == 0) // 0(たたかう)ならChooseAllyPhaseへ
         {
             nextPhase = new ChooseAllyPhase();
+            battleContext.chooseAllyWindowMenu.CreateSelectableText(sm.GetStringsOfAllies());
             battleContext.chooseAllyWindowMenu.Open();
         }
         else // 1（にげる）ならRunCheckへ

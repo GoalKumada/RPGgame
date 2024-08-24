@@ -15,20 +15,20 @@ public class ChooseEnemyPhase : PhaseBase
         
         battleContext.chooseEnemyWindowMenu.Close();
 
-        int currentID_cE = battleContext.chooseEnemyWindowMenu.currentID;
+        int currentID = battleContext.chooseEnemyWindowMenu.currentID;
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (currentID_cE == 0)
+            if (currentID == 0)
             {
                 attacked = 3;
                 target = GameObject.Find("Enemy");
                 nextPhase = new ExecutePhase();
             }
-            else if (currentID_cE == 1)
+            else if (currentID == 1)
             {
                 attacked = 4;
-                target = GameObject.Find("Enemy (1)"); 
+                target = GameObject.Find("Enemy (1)");
                 nextPhase = new ExecutePhase();
             }
             else

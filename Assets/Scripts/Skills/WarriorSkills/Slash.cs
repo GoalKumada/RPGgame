@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Slash : Skill
 {
-    public void Start()
+    public Slash()
     {
         skillName = "スラッシュ";
         attackPower = 10;

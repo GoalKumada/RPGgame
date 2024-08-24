@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Skill : MonoBehaviour
 {
-    protected string skillName;
-    protected int attackPower;
+    public string skillName;
+    public int attackPower;
     protected enum Type {attack,heal,buff,debuff};
     protected Type type;
-    protected string skillExplain;
+    public string skillExplain;
 
 
 }

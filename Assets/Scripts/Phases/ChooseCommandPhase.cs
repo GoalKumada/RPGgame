@@ -15,6 +15,10 @@ public class ChooseCommandPhase : PhaseBase
         battleContext.chooseCommandWindowMenu.Close();
 
         int currentID = battleContext.chooseCommandWindowMenu.currentID;
+        
+        SystemManager sm;
+        GameObject gobj = GameObject.Find("SystemManager");
+        sm = gobj.GetComponent<SystemManager>();
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -22,18 +26,21 @@ public class ChooseCommandPhase : PhaseBase
             {
                 skillNumber = 0;
                 nextPhase = new ChooseEnemyPhase();
+                battleContext.chooseEnemyWindowMenu.CreateSelectableText(sm.GetStringsOfEnemies());
                 battleContext.chooseEnemyWindowMenu.Open();
             }
             else if (currentID == 1)
             {
                 skillNumber = 1;
                 nextPhase = new ChooseEnemyPhase();
+                battleContext.chooseEnemyWindowMenu.CreateSelectableText(sm.GetStringsOfEnemies());
                 battleContext.chooseEnemyWindowMenu.Open();
             }
             else
             {
                 skillNumber = 2;
                 nextPhase = new ChooseEnemyPhase();
+                battleContext.chooseEnemyWindowMenu.CreateSelectableText(sm.GetStringsOfEnemies());
                 battleContext.chooseEnemyWindowMenu.Open();
             }
         }

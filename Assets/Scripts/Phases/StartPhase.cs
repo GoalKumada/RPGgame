@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class StartPhase : PhaseBase
 {
+
     public override IEnumerator Execute(BattleContext battleContext, NewMove[] newMove)
     {
         Debug.Log("StartPhase");

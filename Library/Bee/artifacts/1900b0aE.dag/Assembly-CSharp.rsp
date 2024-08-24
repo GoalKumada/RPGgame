@@ -418,6 +418,7 @@
 "Assets/Scripts/Skills/WarriorSkills/SpinAttack.cs"
 "Assets/Scripts/SystemManager.cs"
 "Assets/Scripts/Window/SelectableText.cs"
+"Assets/Scripts/Window/TextWindow.cs"
 "Assets/Scripts/Window/WindowMenu.cs"
 -langversion:9.0
 

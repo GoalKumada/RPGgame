@@ -5,5 +5,6 @@ using UnityEngine;
 public abstract class PhaseBase
 {
     public PhaseBase nextPhase;
+    
     public abstract IEnumerator Execute(BattleContext battleContext, NewMove[] newMove);
 }

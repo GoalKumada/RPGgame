@@ -9,6 +9,11 @@ public class SelectableText : Selectable
 {
     public UnityAction<Transform> onSelectAction = null; //関数登録用の変数
     
+    public void SetText(string text)
+    {
+        GetComponent<Text>().text = text;
+    }
+
     //選択状態になったら実行される関数
     public override void OnSelect(BaseEventData eventData)
     {

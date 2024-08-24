@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    private int attackPower;
+    private float attackPower;
 
 }

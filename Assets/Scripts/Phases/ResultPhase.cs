@@ -9,8 +9,14 @@ public class ResultPhase : PhaseBase
         yield return null;
         
         Debug.Log("ResultPhase");
-        
-        nextPhase = new EndPhase();
 
+        if (SystemManager.canContinueFighting)
+        {
+            nextPhase = new RunCheckPhase();
+        }
+        else
+        {
+            nextPhase = new EndPhase();
+        }
     }
 }
