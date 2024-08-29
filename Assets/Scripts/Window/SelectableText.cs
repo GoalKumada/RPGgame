@@ -18,7 +18,7 @@ public class SelectableText : Selectable
     public override void OnSelect(BaseEventData eventData)
     {
         //base.OnSelect(eventData);
-        //Debug.Log($"{gameObject.name}が選択された");
+        Debug.Log($"{gameObject.transform.GetSiblingIndex()}が選択された");
         onSelectAction.Invoke(transform); //登録した関数を実行する
     }
 

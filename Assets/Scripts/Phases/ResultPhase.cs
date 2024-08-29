@@ -12,7 +12,10 @@ public class ResultPhase : PhaseBase
 
         if (SystemManager.canContinueFighting)
         {
-            nextPhase = new RunCheckPhase();
+            nextPhase = new ChooseRunOrBattlePhase();
+            battleContext.chooseRunOrBattleWindowMenu.Open();
+            //battleContext.chooseRunOrBattleWindowMenu.Select();
+
         }
         else
         {

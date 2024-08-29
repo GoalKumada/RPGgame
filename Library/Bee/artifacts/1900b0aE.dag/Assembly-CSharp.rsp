@@ -417,6 +417,7 @@
 "Assets/Scripts/Skills/WarriorSkills/Slash.cs"
 "Assets/Scripts/Skills/WarriorSkills/SpinAttack.cs"
 "Assets/Scripts/SystemManager.cs"
+"Assets/Scripts/Window/DialogueText.cs"
 "Assets/Scripts/Window/SelectableText.cs"
 "Assets/Scripts/Window/TextWindow.cs"
 "Assets/Scripts/Window/WindowMenu.cs"

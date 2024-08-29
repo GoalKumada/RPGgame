@@ -31,7 +31,7 @@ public class WindowMenu : MonoBehaviour
         }
     }
 
-    void SetMoveArrowFunction()
+    public void SetMoveArrowFunction()
     {
         foreach (SelectableText selectableText in selectableTexts) 
         {
@@ -39,7 +39,9 @@ public class WindowMenu : MonoBehaviour
         }
 
         // 最初から一番上の選択肢を選択状態にする
-        EventSystem.current.SetSelectedGameObject(selectableTexts[currentID].gameObject);
+        //currentID = 0;
+        //EventSystem.current.SetSelectedGameObject(selectableTexts[currentID].gameObject);
+        
     }
     
     // 親を変更してカーソルを移動する
@@ -47,7 +49,6 @@ public class WindowMenu : MonoBehaviour
     {
         arrow.SetParent(parent);
         currentID = parent.GetSiblingIndex(); // 何番目の子要素かを取得
-        //Debug.Log($"カーソル移動:currentID{currentID}");
     }
 
     public void Select()
@@ -58,12 +59,14 @@ public class WindowMenu : MonoBehaviour
     public void Open()
     {
         currentID = 0;
+        //EventSystem.current.SetSelectedGameObject(selectableTexts[currentID].gameObject);
         gameObject.SetActive(true);
         SetMoveArrowFunction();
     }
 
     public void Close()
     {
+        //EventSystem.current.SetSelectedGameObject(null);
         gameObject.SetActive(false);
     }
 }

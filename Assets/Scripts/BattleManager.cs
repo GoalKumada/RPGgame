@@ -36,18 +36,20 @@ public struct BattleContext // クラスに必要な情報を渡すための構�
     public WindowMenu chooseAllyWindowMenu;
     public WindowMenu chooseCommandWindowMenu;
     public WindowMenu chooseEnemyWindowMenu;
+    public TextWindow textWindow;
 
     public BattleContext(WindowMenu chooseRunOrBattleWindowMenu,
                             WindowMenu runCheckWindowMenu,
                             WindowMenu chooseAllyWindowMenu,
                             WindowMenu chooseCommandWindowMenu,
-                            WindowMenu chooseEnemyWindowMenu)
+                            WindowMenu chooseEnemyWindowMenu,
+                            TextWindow textWindow)
     {
         this.chooseRunOrBattleWindowMenu = chooseRunOrBattleWindowMenu;
         this.runCheckWindowMenu = runCheckWindowMenu;
         this.chooseAllyWindowMenu = chooseAllyWindowMenu;
         this.chooseCommandWindowMenu = chooseCommandWindowMenu;
         this.chooseEnemyWindowMenu = chooseEnemyWindowMenu;
-
+        this.textWindow = textWindow;
     }
 }

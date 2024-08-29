@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\Phases\ChooseEnemyPhase.cs" />
     <Compile Include="Assets\Scripts\Skills\Skill.cs" />
     <Compile Include="Assets\Scripts\Phases\RunCheckPhase.cs" />
+    <Compile Include="Assets\Scripts\Window\DialogueText.cs" />
     <Compile Include="Assets\Scripts\Character\Character.cs" />
     <Compile Include="Assets\Scripts\Skills\WarriorSkills\SpinAttack.cs" />
     <Compile Include="Assets\Scripts\Phases\ChooseRunOrBattlePhase.cs" />
