@@ -16,10 +16,9 @@ public class ChooseEnemyPhase : PhaseBase
 
 
         yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Escape));
-        
-        battleContext.chooseEnemyWindowMenu.Close();
 
         int index = battleContext.chooseEnemyWindowMenu.currentID;
+        battleContext.chooseEnemyWindowMenu.Close();
 
         SystemManager sm;
         GameObject gobj = GameObject.Find("SystemManager");
@@ -35,7 +34,6 @@ public class ChooseEnemyPhase : PhaseBase
                 Enemy attackedEnemy = sm.enemies[0];
                 string itsname = sm.enemies[0].name;
                 target = GameObject.Find(itsname);
-                nextPhase = new ExecutePhase();
             }
             else if (index == 1)
             {
@@ -45,7 +43,6 @@ public class ChooseEnemyPhase : PhaseBase
                 Enemy attackedEnemy = sm.enemies[1];
                 string itsname = sm.enemies[1].name;
                 target = GameObject.Find(itsname);
-                nextPhase = new ExecutePhase();
             }
             else if (index == 2)
             {
@@ -55,9 +52,9 @@ public class ChooseEnemyPhase : PhaseBase
                 Enemy attackedEnemy = sm.enemies[2];
                 string itsname = sm.enemies[2].name;
                 target = GameObject.Find(itsname);
-                nextPhase = new ExecutePhase();
             }
 
+            nextPhase = new ExecutePhase();
             SystemManager.start = true;
 
         }
@@ -65,7 +62,6 @@ public class ChooseEnemyPhase : PhaseBase
         {
             nextPhase = new ChooseCommandPhase();
             battleContext.chooseCommandWindowMenu.Open();
-            //battleContext.chooseCommandWindowMenu.Select();
         }
     }
 }

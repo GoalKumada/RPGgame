@@ -13,9 +13,9 @@ public class ChooseRunOrBattlePhase : PhaseBase
 
         yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
 
-        battleContext.chooseRunOrBattleWindowMenu.Close();
-        
         int index = battleContext.chooseRunOrBattleWindowMenu.currentID;
+        battleContext.chooseRunOrBattleWindowMenu.Close();
+
         SystemManager sm;
         GameObject gobj = GameObject.Find("SystemManager");
         sm = gobj.GetComponent<SystemManager>();

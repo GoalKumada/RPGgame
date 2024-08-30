@@ -20,14 +20,14 @@ public class NewMove : MonoBehaviour
     private GameObject self;
     private GameObject target;
 
-    public bool attackMoveStart = false;
-    public bool hurtMoveStart = false;
-    public bool attackStart = false;
-    public bool attackEnd = false;
-    public bool hurtEnd = false;
-    public bool afterAttackMoveStart = false;
-    public bool afterHurtMoveStart = false;
-    public bool end = false;
+    [SerializeField] public bool executeAttackMove = false;
+    [SerializeField] public bool executeHurtMove = false;
+    [SerializeField] public bool attackStart = false;
+    [SerializeField] public bool attackEnd = false;
+    [SerializeField] public bool hurtEnd = false;
+    [SerializeField] public bool executeAfterAttackMove = false;
+    [SerializeField] public bool executeAfterHurtMove = false;
+    [SerializeField] public bool end = false;
 
 
     private void Start()
@@ -37,22 +37,22 @@ public class NewMove : MonoBehaviour
 
     private void Update()
     {
-        if (attackMoveStart)
+        if (executeAttackMove)
         {
             BeforeActionMove(self);
         }
 
-        if (hurtMoveStart)
+        if (executeHurtMove)
         {
             BeforeActionMove(target);
         }
 
-        if (afterAttackMoveStart)
+        if (executeAfterAttackMove)
         {
             AfterActionMove(self);
         }
 
-        if (afterHurtMoveStart)
+        if (executeAfterHurtMove)
         {
             AfterActionMove(target);
         }
@@ -105,12 +105,12 @@ public class NewMove : MonoBehaviour
     public void OnAttackEnd()
     {
         attackEnd = true;
-        //Debug.Log("attackEnd");
+        attackStart = false;
     }
 
     public void OnHurtEnd()
     {
-        //Debug.Log("hurtEnd");
+        attackStart = false;
         hurtEnd = true;
     }
 
@@ -147,12 +147,6 @@ public class NewMove : MonoBehaviour
 
             gameObject.transform.position = myPosition;
 
-            if (myPosition == myDestinationPos)
-            {
-                attackMoveStart = false;
-                attackStart = true;
-            }
-
         }
 
         if (gameObject.tag == "Enemy")
@@ -183,12 +177,13 @@ public class NewMove : MonoBehaviour
             }
 
             gameObject.transform.position = myPosition;
+        }
 
-            if (myPosition == targetDestinationPos)
-            {
-                hurtMoveStart = false;
-                //attackStart = true;
-            }
+        if (myPosition == myDestinationPos || myPosition == targetDestinationPos)
+        {
+            executeAttackMove = false;
+            executeHurtMove = false;
+            attackStart = true;
         }
     }
 
@@ -256,21 +251,25 @@ public class NewMove : MonoBehaviour
             gameObject.transform.position = myPosition;
         }
 
-        if (myPosition == targetOriginalPos)
+        if (myPosition == myOriginalPos || myPosition == targetOriginalPos)
         {
-            
+            executeAfterAttackMove = false;
+            executeAfterHurtMove = false;
+            attackEnd = false;
+            hurtEnd = false;
             end = true;
         }
+
     }
 
-    public void AttackStart()
+    public void AttackAnimationStart()
     {
         myAnimator.SetTrigger("Attack");
     }
 
-    public void HurtStart()
+    public void HurtAnimationStart()
     {
         targetAnimator.SetTrigger("Hurt");
+        hurtEnd = false;
     }
-
 }

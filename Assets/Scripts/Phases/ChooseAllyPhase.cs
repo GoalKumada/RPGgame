@@ -18,9 +18,8 @@ public class ChooseAllyPhase : PhaseBase
 
         yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Escape));
 
-        battleContext.chooseAllyWindowMenu.Close();
-
         int index = battleContext.chooseAllyWindowMenu.currentID;
+        battleContext.chooseAllyWindowMenu.Close();
 
         SystemManager sm;
         GameObject gobj = GameObject.Find("SystemManager");
@@ -36,7 +35,6 @@ public class ChooseAllyPhase : PhaseBase
                 self = GameObject.Find(itsname);
                 nextPhase = new ChooseCommandPhase();
                 battleContext.chooseCommandWindowMenu.CreateSelectableText(sm.allies[0].GetStringsOfSkills());
-                battleContext.chooseCommandWindowMenu.Open();
             }
             else if (index == 1)
             {
@@ -46,7 +44,6 @@ public class ChooseAllyPhase : PhaseBase
                 self = GameObject.Find(itsname);
                 nextPhase = new ChooseCommandPhase();
                 battleContext.chooseCommandWindowMenu.CreateSelectableText(sm.allies[1].GetStringsOfSkills());
-                battleContext.chooseCommandWindowMenu.Open();
             }
             else if (index == 2)
             {
@@ -56,8 +53,8 @@ public class ChooseAllyPhase : PhaseBase
                 self = GameObject.Find(itsname);
                 nextPhase = new ChooseCommandPhase();
                 battleContext.chooseCommandWindowMenu.CreateSelectableText(sm.allies[2].GetStringsOfSkills());
-                battleContext.chooseCommandWindowMenu.Open();
             }
+            battleContext.chooseCommandWindowMenu.Open();
         }
         else
         {

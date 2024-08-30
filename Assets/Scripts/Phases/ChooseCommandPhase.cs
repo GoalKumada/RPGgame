@@ -12,9 +12,8 @@ public class ChooseCommandPhase : PhaseBase
         Debug.Log("ChooseCommandPhase");
         yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Escape));
 
-        battleContext.chooseCommandWindowMenu.Close();
-
         int index = battleContext.chooseCommandWindowMenu.currentID;
+        battleContext.chooseCommandWindowMenu.Close();
         
         SystemManager sm;
         GameObject gobj = GameObject.Find("SystemManager");
@@ -25,30 +24,23 @@ public class ChooseCommandPhase : PhaseBase
             if (index == 0)
             {
                 skillNumber = 0;
-                nextPhase = new ChooseEnemyPhase();
-                battleContext.chooseEnemyWindowMenu.CreateSelectableText(sm.GetStringsOfEnemies());
-                battleContext.chooseEnemyWindowMenu.Open();
             }
             else if (index == 1)
             {
                 skillNumber = 1;
-                nextPhase = new ChooseEnemyPhase();
-                battleContext.chooseEnemyWindowMenu.CreateSelectableText(sm.GetStringsOfEnemies());
-                battleContext.chooseEnemyWindowMenu.Open();
             }
             else if (index == 2)
             {
                 skillNumber = 2;
-                nextPhase = new ChooseEnemyPhase();
-                battleContext.chooseEnemyWindowMenu.CreateSelectableText(sm.GetStringsOfEnemies());
-                battleContext.chooseEnemyWindowMenu.Open();
             }
+            nextPhase = new ChooseEnemyPhase();
+            battleContext.chooseEnemyWindowMenu.CreateSelectableText(sm.GetStringsOfEnemies());
+            battleContext.chooseEnemyWindowMenu.Open();
         }
         else
         {
             nextPhase = new ChooseAllyPhase();
             battleContext.chooseAllyWindowMenu.Open();
-            //battleContext.chooseAllyWindowMenu.Select();
         }
     }
 }

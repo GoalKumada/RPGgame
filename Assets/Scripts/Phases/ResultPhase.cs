@@ -14,7 +14,6 @@ public class ResultPhase : PhaseBase
         {
             nextPhase = new ChooseRunOrBattlePhase();
             battleContext.chooseRunOrBattleWindowMenu.Open();
-            //battleContext.chooseRunOrBattleWindowMenu.Select();
 
         }
         else

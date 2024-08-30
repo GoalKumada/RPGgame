@@ -13,22 +13,27 @@ public class ExecutePhase : PhaseBase
         newMove[ChooseAllyPhase.attacker].SetAttackerInfo(ChooseAllyPhase.self);
         newMove[ChooseEnemyPhase.attacked].SetTargetInfo(ChooseEnemyPhase.target);
 
-        newMove[ChooseAllyPhase.attacker].attackMoveStart = true;
-        newMove[ChooseEnemyPhase.attacked].hurtMoveStart = true;
+        newMove[ChooseAllyPhase.attacker].executeAttackMove = true;
+        newMove[ChooseEnemyPhase.attacked].executeHurtMove = true;
 
         yield return new WaitUntil(() => newMove[ChooseAllyPhase.attacker].attackStart == true);
-        newMove[ChooseAllyPhase.attacker].AttackStart();
+        newMove[ChooseAllyPhase.attacker].AttackAnimationStart();
 
         yield return new WaitUntil(() => newMove[ChooseAllyPhase.attacker].attackEnd == true);
-        newMove[ChooseEnemyPhase.attacked].HurtStart();
+        newMove[ChooseEnemyPhase.attacked].HurtAnimationStart();
+        //newMove[ChooseAllyPhase.attacker].attackEnd = false;
 
         yield return new WaitUntil(() => newMove[ChooseEnemyPhase.attacked].hurtEnd == true);
-        newMove[ChooseAllyPhase.attacker].afterAttackMoveStart = true;
-        newMove[ChooseEnemyPhase.attacked].afterHurtMoveStart = true;
+        newMove[ChooseAllyPhase.attacker].executeAfterAttackMove = true;
+        newMove[ChooseEnemyPhase.attacked].executeAfterHurtMove = true;
 
         yield return new WaitUntil(() => newMove[ChooseEnemyPhase.attacked].end == true);
         
         nextPhase = new ResultPhase();
+
+        yield return null;
+        newMove[ChooseAllyPhase.attacker].end = false;
+        newMove[ChooseEnemyPhase.attacked].end = false;
         
     }
 }

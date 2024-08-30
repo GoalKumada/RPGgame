@@ -15,9 +15,8 @@ public class RunCheckPhase : PhaseBase
 
         yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Escape));
 
-        battleContext.runCheckWindowMenu.Close();
-
         int index = battleContext.runCheckWindowMenu.currentID;
+        battleContext.runCheckWindowMenu.Close();
 
         if (Input.GetKeyDown(KeyCode.Space))
         {

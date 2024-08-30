@@ -17,11 +17,15 @@ public class WindowMenu : MonoBehaviour
     public void CreateSelectableText(string[] strings)
     {
         arrow.SetParent(transform);
+
+        // 選択状態をクリアする
+        EventSystem.current.SetSelectedGameObject(null);
+
         foreach (SelectableText selectableText in selectableTexts)
         {
             Destroy(selectableText.gameObject);
         }
-        
+
         selectableTexts.Clear();
         foreach (string str in strings)
         {
@@ -33,40 +37,48 @@ public class WindowMenu : MonoBehaviour
 
     public void SetMoveArrowFunction()
     {
-        foreach (SelectableText selectableText in selectableTexts) 
+        foreach (SelectableText selectableText in selectableTexts)
         {
             selectableText.onSelectAction = MoveArrowTo;
         }
 
         // 最初から一番上の選択肢を選択状態にする
-        //currentID = 0;
-        //EventSystem.current.SetSelectedGameObject(selectableTexts[currentID].gameObject);
-        
+        EventSystem.current.SetSelectedGameObject(selectableTexts[currentID].gameObject);
+
     }
-    
+
     // 親を変更してカーソルを移動する
     public void MoveArrowTo(Transform parent)
     {
         arrow.SetParent(parent);
         currentID = parent.GetSiblingIndex(); // 何番目の子要素かを取得
+        Debug.Log($"矢印の親オブジェクト：{parent.name}");
     }
 
-    public void Select()
+    /*public void Select()
     {
         EventSystem.current.SetSelectedGameObject(selectableTexts[currentID].gameObject);
-    }
+    }*/
 
     public void Open()
     {
         currentID = 0;
-        //EventSystem.current.SetSelectedGameObject(selectableTexts[currentID].gameObject);
         gameObject.SetActive(true);
         SetMoveArrowFunction();
+
+        //　選択状態の設定を遅延させる
+        StartCoroutine(SetInitialSelection());
     }
 
     public void Close()
     {
-        //EventSystem.current.SetSelectedGameObject(null);
         gameObject.SetActive(false);
     }
+
+    private IEnumerator SetInitialSelection()
+    {
+        yield return null; //１フレーム待つ
+        EventSystem.current.SetSelectedGameObject(selectableTexts[currentID].gameObject);
+    }
+
 }
