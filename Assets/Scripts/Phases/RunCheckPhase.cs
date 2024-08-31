@@ -6,7 +6,7 @@ public class RunCheckPhase : PhaseBase
 {
     private string dialogue = "本当に逃げますか？";
 
-    public override IEnumerator Execute(BattleContext battleContext, NewMove[] newMove)
+    public override IEnumerator Execute(BattleContext battleContext, Move[] newMove)
     {
         yield return null;
         Debug.Log("RunCheckPhase");

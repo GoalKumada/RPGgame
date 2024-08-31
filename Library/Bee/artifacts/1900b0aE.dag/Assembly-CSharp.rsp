@@ -401,7 +401,7 @@
 "Assets/Scripts/Item/Armor.cs"
 "Assets/Scripts/Item/Item.cs"
 "Assets/Scripts/Item/Weapon.cs"
-"Assets/Scripts/NewMove.cs"
+"Assets/Scripts/Move.cs"
 "Assets/Scripts/Phases/ChooseAllyPhase.cs"
 "Assets/Scripts/Phases/ChooseCommandPhase.cs"
 "Assets/Scripts/Phases/ChooseEnemyPhase.cs"

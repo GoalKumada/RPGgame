@@ -12,6 +12,7 @@ public class SelectableText : Selectable
     public void SetText(string text)
     {
         GetComponent<Text>().text = text;
+        gameObject.name = text;
     }
 
     //選択状態になったら実行される関数
@@ -19,6 +20,8 @@ public class SelectableText : Selectable
     {
         //base.OnSelect(eventData);
         Debug.Log($"{gameObject.transform.GetSiblingIndex()}が選択された");
+
+        //Debug.Log(gameObject.name);
         onSelectAction.Invoke(transform); //登録した関数を実行する
     }
 
@@ -29,6 +32,9 @@ public class SelectableText : Selectable
         //Debug.Log($"{gameObject.name}の選択が外された");
 
     }
-    
-
+    /*
+    private void Update()
+    {
+        Debug.Log($"{gameObject.transform.GetSiblingIndex()}が選択された");
+    }*/
 }

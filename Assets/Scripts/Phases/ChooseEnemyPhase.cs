@@ -8,7 +8,7 @@ public class ChooseEnemyPhase : PhaseBase
     public static int attacked;
     private string dialogue = "対象は誰にする？";
 
-    public override IEnumerator Execute(BattleContext battleContext, NewMove[] newMove)
+    public override IEnumerator Execute(BattleContext battleContext, Move[] newMove)
     {
         yield return null;
         Debug.Log("ChooseEnemyPhase");
@@ -24,8 +24,10 @@ public class ChooseEnemyPhase : PhaseBase
         GameObject gobj = GameObject.Find("SystemManager");
         sm = gobj.GetComponent<SystemManager>();
 
+        Debug.Log(index);
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            Debug.Log(index);
             if (index == 0)
             {
                 Debug.Log(index);

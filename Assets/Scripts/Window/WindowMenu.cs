@@ -52,7 +52,7 @@ public class WindowMenu : MonoBehaviour
     {
         arrow.SetParent(parent);
         currentID = parent.GetSiblingIndex(); // 何番目の子要素かを取得
-        Debug.Log($"矢印の親オブジェクト：{parent.name}");
+        //Debug.Log($"矢印の親オブジェクト：{parent.name}");
     }
 
     /*public void Select()

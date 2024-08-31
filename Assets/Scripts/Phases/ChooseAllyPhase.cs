@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 using static UnityEngine.GraphicsBuffer;
 
 public class ChooseAllyPhase : PhaseBase
@@ -8,8 +10,8 @@ public class ChooseAllyPhase : PhaseBase
     public static GameObject self;
     public static int attacker;
     private string dialogue = "誰の行動を指示しようか";
-    
-    public override IEnumerator Execute(BattleContext battleContext, NewMove[] newMove)
+
+    public override IEnumerator Execute(BattleContext battleContext, Move[] newMove)
     {
         yield return null;
         Debug.Log("ChooseAllyPhase");
@@ -25,8 +27,11 @@ public class ChooseAllyPhase : PhaseBase
         GameObject gobj = GameObject.Find("SystemManager");
         sm = gobj.GetComponent<SystemManager>();
 
+        Debug.Log(index);
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            Debug.Log(index);
             if (index == 0)
             {
                 attacker = 0;

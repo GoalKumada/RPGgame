@@ -6,7 +6,7 @@ public class ChooseCommandPhase : PhaseBase
 {
     public static int skillNumber;
 
-    public override IEnumerator Execute(BattleContext battleContext, NewMove[] newMove)
+    public override IEnumerator Execute(BattleContext battleContext, Move[] newMove)
     {
         yield return null;
         Debug.Log("ChooseCommandPhase");
@@ -19,8 +19,11 @@ public class ChooseCommandPhase : PhaseBase
         GameObject gobj = GameObject.Find("SystemManager");
         sm = gobj.GetComponent<SystemManager>();
 
+        Debug.Log(index);
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            Debug.Log(index);
             if (index == 0)
             {
                 skillNumber = 0;

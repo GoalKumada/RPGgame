@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class NewMove : MonoBehaviour
+public class Move : MonoBehaviour
 {
     private float selfSpeed_x;
     private float selfSpeed_z;
@@ -20,14 +20,14 @@ public class NewMove : MonoBehaviour
     private GameObject self;
     private GameObject target;
 
-    [SerializeField] public bool executeAttackMove = false;
-    [SerializeField] public bool executeHurtMove = false;
-    [SerializeField] public bool attackStart = false;
-    [SerializeField] public bool attackEnd = false;
-    [SerializeField] public bool hurtEnd = false;
-    [SerializeField] public bool executeAfterAttackMove = false;
-    [SerializeField] public bool executeAfterHurtMove = false;
-    [SerializeField] public bool end = false;
+    public bool executeAttackMove = false;
+    public bool executeHurtMove = false;
+    public bool attackStart = false;
+    public bool attackEnd = false;
+    public bool hurtEnd = false;
+    public bool executeAfterAttackMove = false;
+    public bool executeAfterHurtMove = false;
+    public bool end = false;
 
 
     private void Start()

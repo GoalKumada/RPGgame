@@ -9,7 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2926252395625921427}
-  - component: {fileID: -6901236403008041128}
+  - component: {fileID: 8558971667630148442}
+  - component: {fileID: 7206094696911014652}
   - component: {fileID: 3128537238519033379}
   - component: {fileID: 4165820295055533173}
   m_Layer: 0
@@ -34,7 +35,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &-6901236403008041128
+--- !u!114 &8558971667630148442
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,13 +44,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 9088872721161602048}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e47e7be206dd3004fb09fe040deac28f, type: 3}
+  m_Script: {fileID: 11500000, guid: c740c79268ce3054e9dad0fbe49f3e56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterName: 
+  HP: 0
+  TP: 0
+  DEF: 0
+  skills: []
+--- !u!114 &7206094696911014652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9088872721161602048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04122bafe87a67f41a6397bf6d1d395e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  executeAttackMove: 0
+  executeHurtMove: 0
   attackStart: 0
   attackEnd: 0
-  hurtStart: 0
   hurtEnd: 0
+  executeAfterAttackMove: 0
+  executeAfterHurtMove: 0
   end: 0
 --- !u!212 &3128537238519033379
 SpriteRenderer:

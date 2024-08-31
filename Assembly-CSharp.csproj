@@ -82,11 +82,11 @@
     <Compile Include="Assets\Scripts\Item\Item.cs" />
     <Compile Include="Assets\Scripts\Phases\ResultPhase.cs" />
     <Compile Include="Assets\Scripts\Phases\ExecutePhase.cs" />
-    <Compile Include="Assets\Scripts\NewMove.cs" />
     <Compile Include="Assets\Scripts\Phases\StartPhase.cs" />
     <Compile Include="Assets\Scripts\Phases\EndPhase.cs" />
     <Compile Include="Assets\Scripts\Window\TextWindow.cs" />
     <Compile Include="Assets\Scripts\Phases\ChooseCommandPhase.cs" />
+    <Compile Include="Assets\Scripts\Move.cs" />
     <Compile Include="Assets\Scripts\Window\SelectableText.cs" />
     <Compile Include="Assets\Scripts\Skills\WarriorSkills\Slash.cs" />
   </ItemGroup>

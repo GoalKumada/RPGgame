@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7581120647766076550}
   - component: {fileID: -5000390040308788955}
-  - component: {fileID: 6116886779743692037}
+  - component: {fileID: 1590757427240164233}
   - component: {fileID: 6247554090848621618}
   - component: {fileID: 8721858041882971606}
   - component: {fileID: -2742491024990113953}
@@ -56,7 +56,7 @@ MonoBehaviour:
   DEF: 0
   skills: []
   SPEED: 0
---- !u!114 &6116886779743692037
+--- !u!114 &1590757427240164233
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -65,16 +65,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 2413891244205699244}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e47e7be206dd3004fb09fe040deac28f, type: 3}
+  m_Script: {fileID: 11500000, guid: 04122bafe87a67f41a6397bf6d1d395e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackMoveStart: 0
-  hurtMoveStart: 0
+  executeAttackMove: 0
+  executeHurtMove: 0
   attackStart: 0
   attackEnd: 0
   hurtEnd: 0
-  afterAttackMoveStart: 0
-  afterHurtMoveStart: 0
+  executeAfterAttackMove: 0
+  executeAfterHurtMove: 0
   end: 0
 --- !u!212 &6247554090848621618
 SpriteRenderer:
@@ -164,6 +164,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d06298980d87094baf3dc3dfbbbae70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillName: "\u30B9\u30E9\u30C3\u30B7\u30E5"
+  attackPower: 10
+  skillExplain: "\u3042"
 --- !u!114 &8576170651487398971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,6 +179,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26608363abf0f8b4fae82c80eded1bed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillName: "\u30C0\u30D6\u30EB\u30A2\u30BF\u30C3\u30AF"
+  attackPower: 20
+  skillExplain: 
 --- !u!114 &-3396550082011346164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,3 +194,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f39220b4c488c946bdcdb30cf958855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillName: "\u56DE\u8EE2\u5207\u308A"
+  attackPower: 30
+  skillExplain: 
