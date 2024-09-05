@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.VFX;
 
 
 public class WindowMenu : MonoBehaviour
@@ -9,15 +11,28 @@ public class WindowMenu : MonoBehaviour
 
     // SelectableTextが選択されたら、カーソルを移動する（親オブジェクトを変更する）
 
-    [SerializeField] Transform arrow = default;
     [SerializeField] List<SelectableText> selectableTexts = new List<SelectableText>();
+    [SerializeField] Text arrow;
+    [SerializeField] Text arrowPrefab = default;
     [SerializeField] SelectableText selectableTextPrefab = default;
     public int currentID; // 選択中の子要素のID
 
-    public void CreateSelectableText(string[] strings)
+    public void CreateSelectableTexts(string[] strings)
     {
-        arrow.SetParent(transform);
+        foreach (string str in strings)
+        {
+            SelectableText selectableText = Instantiate(selectableTextPrefab, transform);
+            selectableText.SetText(str);
+            selectableTexts.Add(selectableText);
+        }
 
+        arrow = Instantiate(arrowPrefab, transform);
+        arrow.transform.SetParent(selectableTexts[0].transform);
+
+    }
+
+    public void DeleteSelectableTexts() 
+    {
         // 選択状態をクリアする
         EventSystem.current.SetSelectedGameObject(null);
 
@@ -27,12 +42,6 @@ public class WindowMenu : MonoBehaviour
         }
 
         selectableTexts.Clear();
-        foreach (string str in strings)
-        {
-            SelectableText text = Instantiate(selectableTextPrefab, transform);
-            text.SetText(str);
-            selectableTexts.Add(text);
-        }
     }
 
     public void SetMoveArrowFunction()
@@ -50,35 +59,21 @@ public class WindowMenu : MonoBehaviour
     // 親を変更してカーソルを移動する
     public void MoveArrowTo(Transform parent)
     {
-        arrow.SetParent(parent);
+        arrow.transform.SetParent(parent);
         currentID = parent.GetSiblingIndex(); // 何番目の子要素かを取得
         //Debug.Log($"矢印の親オブジェクト：{parent.name}");
     }
-
-    /*public void Select()
-    {
-        EventSystem.current.SetSelectedGameObject(selectableTexts[currentID].gameObject);
-    }*/
 
     public void Open()
     {
         currentID = 0;
         gameObject.SetActive(true);
         SetMoveArrowFunction();
-
-        //　選択状態の設定を遅延させる
-        StartCoroutine(SetInitialSelection());
     }
 
     public void Close()
     {
         gameObject.SetActive(false);
-    }
-
-    private IEnumerator SetInitialSelection()
-    {
-        yield return null; //１フレーム待つ
-        EventSystem.current.SetSelectedGameObject(selectableTexts[currentID].gameObject);
     }
 
 }

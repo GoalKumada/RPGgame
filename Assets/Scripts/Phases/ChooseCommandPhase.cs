@@ -14,6 +14,7 @@ public class ChooseCommandPhase : PhaseBase
 
         int index = battleContext.chooseCommandWindowMenu.currentID;
         battleContext.chooseCommandWindowMenu.Close();
+        battleContext.chooseCommandWindowMenu.DeleteSelectableTexts();
         
         SystemManager sm;
         GameObject gobj = GameObject.Find("SystemManager");
@@ -37,7 +38,7 @@ public class ChooseCommandPhase : PhaseBase
                 skillNumber = 2;
             }
             nextPhase = new ChooseEnemyPhase();
-            battleContext.chooseEnemyWindowMenu.CreateSelectableText(sm.GetStringsOfEnemies());
+            battleContext.chooseEnemyWindowMenu.CreateSelectableTexts(sm.GetStringsOfEnemies());
             battleContext.chooseEnemyWindowMenu.Open();
         }
         else

@@ -19,6 +19,7 @@ public class ChooseEnemyPhase : PhaseBase
 
         int index = battleContext.chooseEnemyWindowMenu.currentID;
         battleContext.chooseEnemyWindowMenu.Close();
+        battleContext.chooseEnemyWindowMenu.DeleteSelectableTexts();
 
         SystemManager sm;
         GameObject gobj = GameObject.Find("SystemManager");

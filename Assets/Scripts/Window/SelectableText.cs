@@ -32,9 +32,4 @@ public class SelectableText : Selectable
         //Debug.Log($"{gameObject.name}の選択が外された");
 
     }
-    /*
-    private void Update()
-    {
-        Debug.Log($"{gameObject.transform.GetSiblingIndex()}が選択された");
-    }*/
 }

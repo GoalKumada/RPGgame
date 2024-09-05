@@ -23,7 +23,7 @@ public class ChooseRunOrBattlePhase : PhaseBase
         if (index == 0) // 0(たたかう)ならChooseAllyPhaseへ
         {
             nextPhase = new ChooseAllyPhase();
-            battleContext.chooseAllyWindowMenu.CreateSelectableText(sm.GetStringsOfAllies());
+            battleContext.chooseAllyWindowMenu.CreateSelectableTexts(sm.GetStringsOfAllies());
             battleContext.chooseAllyWindowMenu.Open();
         }
         else if (index == 1) // 1（にげる）ならRunCheckへ

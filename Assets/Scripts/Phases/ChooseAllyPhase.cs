@@ -22,6 +22,7 @@ public class ChooseAllyPhase : PhaseBase
 
         int index = battleContext.chooseAllyWindowMenu.currentID;
         battleContext.chooseAllyWindowMenu.Close();
+        battleContext.chooseAllyWindowMenu.DeleteSelectableTexts();
 
         SystemManager sm;
         GameObject gobj = GameObject.Find("SystemManager");
@@ -39,7 +40,7 @@ public class ChooseAllyPhase : PhaseBase
                 string itsname = sm.allies[0].name;
                 self = GameObject.Find(itsname);
                 nextPhase = new ChooseCommandPhase();
-                battleContext.chooseCommandWindowMenu.CreateSelectableText(sm.allies[0].GetStringsOfSkills());
+                battleContext.chooseCommandWindowMenu.CreateSelectableTexts(sm.allies[0].GetStringsOfSkills());
             }
             else if (index == 1)
             {
@@ -48,7 +49,7 @@ public class ChooseAllyPhase : PhaseBase
                 string itsname = sm.allies[1].name;
                 self = GameObject.Find(itsname);
                 nextPhase = new ChooseCommandPhase();
-                battleContext.chooseCommandWindowMenu.CreateSelectableText(sm.allies[1].GetStringsOfSkills());
+                battleContext.chooseCommandWindowMenu.CreateSelectableTexts(sm.allies[1].GetStringsOfSkills());
             }
             else if (index == 2)
             {
@@ -57,7 +58,7 @@ public class ChooseAllyPhase : PhaseBase
                 string itsname = sm.allies[2].name;
                 self = GameObject.Find(itsname);
                 nextPhase = new ChooseCommandPhase();
-                battleContext.chooseCommandWindowMenu.CreateSelectableText(sm.allies[2].GetStringsOfSkills());
+                battleContext.chooseCommandWindowMenu.CreateSelectableTexts(sm.allies[2].GetStringsOfSkills());
             }
             battleContext.chooseCommandWindowMenu.Open();
         }
