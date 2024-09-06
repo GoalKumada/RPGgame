@@ -6,7 +6,7 @@ public class StartPhase : PhaseBase
 {
     private string dialogue = "戦闘開始！";
 
-    public override IEnumerator Execute(BattleContext battleContext, Move[] newMove)
+    public override IEnumerator Execute(BattleContext battleContext, Move[] move)
     {
         Debug.Log("StartPhase");
         battleContext.textWindow.CreateDialogueText(dialogue);

@@ -8,7 +8,7 @@ public class ChooseEnemyPhase : PhaseBase
     public static int attacked;
     private string dialogue = "対象は誰にする？";
 
-    public override IEnumerator Execute(BattleContext battleContext, Move[] newMove)
+    public override IEnumerator Execute(BattleContext battleContext, Move[] move)
     {
         yield return null;
         Debug.Log("ChooseEnemyPhase");
@@ -25,14 +25,10 @@ public class ChooseEnemyPhase : PhaseBase
         GameObject gobj = GameObject.Find("SystemManager");
         sm = gobj.GetComponent<SystemManager>();
 
-        Debug.Log(index);
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log(index);
             if (index == 0)
             {
-                Debug.Log(index);
-                Debug.Log("1番目の選択肢の処理にはいっている");
                 attacked = 3;
                 Enemy attackedEnemy = sm.enemies[0];
                 string itsname = sm.enemies[0].name;
@@ -40,8 +36,6 @@ public class ChooseEnemyPhase : PhaseBase
             }
             else if (index == 1)
             {
-                Debug.Log(index);
-                Debug.Log("２番目の選択肢の処理にはいっている");
                 attacked = 4;
                 Enemy attackedEnemy = sm.enemies[1];
                 string itsname = sm.enemies[1].name;
@@ -49,8 +43,6 @@ public class ChooseEnemyPhase : PhaseBase
             }
             else if (index == 2)
             {
-                Debug.Log(index);
-                Debug.Log("3番目の選択肢の処理にはいっている");
                 attacked = 5;
                 Enemy attackedEnemy = sm.enemies[2];
                 string itsname = sm.enemies[2].name;
@@ -64,6 +56,7 @@ public class ChooseEnemyPhase : PhaseBase
         else
         {
             nextPhase = new ChooseCommandPhase();
+            battleContext.chooseCommandWindowMenu.CreateSelectableTexts(sm.allies[ChooseAllyPhase.attacker].GetStringsOfSkills());
             battleContext.chooseCommandWindowMenu.Open();
         }
     }
