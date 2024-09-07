@@ -8,7 +8,7 @@ public class ChooseEnemyPhase : PhaseBase
     public static int attacked;
     private string dialogue = "対象は誰にする？";
 
-    public override IEnumerator Execute(BattleContext battleContext, Move[] move)
+    public override IEnumerator Execute(BattleContext battleContext, List<Move> moveOfAlly, List<Move> moveOfEnemy)
     {
         yield return null;
         Debug.Log("ChooseEnemyPhase");
@@ -29,21 +29,21 @@ public class ChooseEnemyPhase : PhaseBase
         {
             if (index == 0)
             {
-                attacked = 3;
+                attacked = 0;
                 Enemy attackedEnemy = sm.enemies[0];
                 string itsname = sm.enemies[0].name;
                 target = GameObject.Find(itsname);
             }
             else if (index == 1)
             {
-                attacked = 4;
+                attacked = 1;
                 Enemy attackedEnemy = sm.enemies[1];
                 string itsname = sm.enemies[1].name;
                 target = GameObject.Find(itsname);
             }
             else if (index == 2)
             {
-                attacked = 5;
+                attacked = 2;
                 Enemy attackedEnemy = sm.enemies[2];
                 string itsname = sm.enemies[2].name;
                 target = GameObject.Find(itsname);

@@ -6,7 +6,7 @@ public class ChooseCommandPhase : PhaseBase
 {
     public static int skillNumber;
 
-    public override IEnumerator Execute(BattleContext battleContext, Move[] move)
+    public override IEnumerator Execute(BattleContext battleContext, List<Move> moveOfAlly, List<Move> moveOfEnemy)
     {
         yield return null;
         Debug.Log("ChooseCommandPhase");

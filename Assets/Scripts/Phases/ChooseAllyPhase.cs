@@ -11,7 +11,7 @@ public class ChooseAllyPhase : PhaseBase
     public static int attacker;
     private string dialogue = "誰の行動を指示しようか";
 
-    public override IEnumerator Execute(BattleContext battleContext, Move[] move)
+    public override IEnumerator Execute(BattleContext battleContext, List<Move> moveOfAlly, List<Move> moveOfEnemy)
     {
         yield return null;
         Debug.Log("ChooseAllyPhase");
