@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class ChooseEnemyPhase : PhaseBase
 {
-    public static GameObject target;
-    public static int attacked;
     private string dialogue = "対象は誰にする？";
 
     public override IEnumerator Execute(BattleContext battleContext, List<Move> moveOfAlly, List<Move> moveOfEnemy)
@@ -27,36 +25,29 @@ public class ChooseEnemyPhase : PhaseBase
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (index == 0)
-            {
-                attacked = 0;
-                Enemy attackedEnemy = sm.enemies[0];
-                string itsname = sm.enemies[0].name;
-                target = GameObject.Find(itsname);
-            }
-            else if (index == 1)
-            {
-                attacked = 1;
-                Enemy attackedEnemy = sm.enemies[1];
-                string itsname = sm.enemies[1].name;
-                target = GameObject.Find(itsname);
-            }
-            else if (index == 2)
-            {
-                attacked = 2;
-                Enemy attackedEnemy = sm.enemies[2];
-                string itsname = sm.enemies[2].name;
-                target = GameObject.Find(itsname);
-            }
+            sm.opponent.Add(index);
+            Enemy attackedEnemy = sm.enemies[index];
+            string itsname = sm.enemies[index].name;
+            sm.opponentObject[sm.currentLoops] = GameObject.Find(itsname);
 
-            nextPhase = new ExecutePhase();
-            SystemManager.start = true;
+            if (sm.currentLoops != sm.numOfAllies-1)
+            {
+                sm.currentLoops++;
+                nextPhase = new ChooseAllyPhase();
+                battleContext.chooseAllyWindowMenu.CreateSelectableTexts(sm.GetStringsOfAllies());
+                battleContext.chooseAllyWindowMenu.Open();
+            }
+            else
+            {
+                nextPhase = new ExecutePhase();
+                SystemManager.start = true;
+            }
 
         }
         else
         {
             nextPhase = new ChooseCommandPhase();
-            battleContext.chooseCommandWindowMenu.CreateSelectableTexts(sm.allies[ChooseAllyPhase.attacker].GetStringsOfSkills());
+            battleContext.chooseCommandWindowMenu.CreateSelectableTexts(sm.allies[sm.self[sm.currentLoops]].GetStringsOfSkills());
             battleContext.chooseCommandWindowMenu.Open();
         }
     }

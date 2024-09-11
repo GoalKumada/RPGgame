@@ -1,22 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
-using static UnityEngine.GraphicsBuffer;
 
 public class ChooseAllyPhase : PhaseBase
 {
-    public static GameObject self;
-    public static int attacker;
     private string dialogue = "誰の行動を指示しようか";
 
     public override IEnumerator Execute(BattleContext battleContext, List<Move> moveOfAlly, List<Move> moveOfEnemy)
     {
         yield return null;
         Debug.Log("ChooseAllyPhase");
-        battleContext.textWindow.CreateDialogueText(dialogue);
 
+        battleContext.textWindow.CreateDialogueText(dialogue);
 
         yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Escape));
 
@@ -29,34 +24,13 @@ public class ChooseAllyPhase : PhaseBase
         sm = gobj.GetComponent<SystemManager>();
 
         if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (index == 0)
-            {
-                attacker = 0;
-                Ally attackingAlly = sm.allies[0];
-                string itsname = sm.allies[0].name;
-                self = GameObject.Find(itsname);
-                nextPhase = new ChooseCommandPhase();
-                battleContext.chooseCommandWindowMenu.CreateSelectableTexts(sm.allies[0].GetStringsOfSkills());
-            }
-            else if (index == 1)
-            {
-                attacker = 1;
-                Ally attackingAlly = sm.allies[1];
-                string itsname = sm.allies[1].name;
-                self = GameObject.Find(itsname);
-                nextPhase = new ChooseCommandPhase();
-                battleContext.chooseCommandWindowMenu.CreateSelectableTexts(sm.allies[1].GetStringsOfSkills());
-            }
-            else if (index == 2)
-            {
-                attacker = 2;
-                Ally attackingAlly = sm.allies[2];
-                string itsname = sm.allies[2].name;
-                self = GameObject.Find(itsname);
-                nextPhase = new ChooseCommandPhase();
-                battleContext.chooseCommandWindowMenu.CreateSelectableTexts(sm.allies[2].GetStringsOfSkills());
-            }
+        { 
+            sm.self.Add(index);
+            Ally attackingAlly = sm.allies[index];
+            string itsname = sm.allies[index].name;
+            sm.selfObject.Add(GameObject.Find(itsname));
+            nextPhase = new ChooseCommandPhase();
+            battleContext.chooseCommandWindowMenu.CreateSelectableTexts(sm.allies[index].GetStringsOfSkills());
             battleContext.chooseCommandWindowMenu.Open();
         }
         else

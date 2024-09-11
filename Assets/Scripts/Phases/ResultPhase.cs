@@ -18,10 +18,14 @@ public class ResultPhase : PhaseBase
         GameObject gobj = GameObject.Find("SystemManager");
         sm = gobj.GetComponent<SystemManager>();
 
-        if (sm.enemies[ChooseEnemyPhase.attacked].HP <= 0)
+        for (int i = 0; i < sm.numOfEnemies; i++)
         {
-            bm.moveOfEnemy.RemoveAt(ChooseEnemyPhase.attacked);
-            sm.enemies.RemoveAt(ChooseEnemyPhase.attacked);
+            if (sm.enemies[i].HP <= 0)
+            {
+                bm.moveOfEnemy.RemoveAt(i);
+                sm.enemies.RemoveAt(i);
+                sm.numOfEnemies--;
+            }
         }
 
         if (SystemManager.canContinueFighting)

@@ -8,27 +8,35 @@ public class SystemManager : MonoBehaviour
     [SerializeField] public List<Ally> allies;
     [SerializeField] public List<Enemy> enemies;
 
+    public List<int> self = new List<int>();
+    public List<int> opponent = new List<int>();
+    public List<int> skillNumber = new List<int>();
+    public List<GameObject> selfObject = new List<GameObject>();
+    public List<GameObject> opponentObject = new List<GameObject>();
+    public int numOfAllies;
+    public int numOfEnemies;
+    public int currentLoops = 0;
+
     public static bool start;
     public static bool canContinueFighting;
+
+    private void Start()
+    {
+        numOfAllies = allies.Count;
+        numOfEnemies = enemies.Count;
+    }
 
     private void Update()
     {
         if (start)
         {
-            switch (ChooseAllyPhase.attacker)
+            for (int i = 0; i < numOfAllies; i++) 
             {
-                case 0:
-                    allies[0].UseSkill(enemies[ChooseEnemyPhase.attacked], ChooseCommandPhase.skillNumber);
-                    break;
-                case 1:
-                    allies[1].UseSkill(enemies[ChooseEnemyPhase.attacked], ChooseCommandPhase.skillNumber);
-                    break;
-                case 2:
-                    allies[2].UseSkill(enemies[ChooseEnemyPhase.attacked], ChooseCommandPhase.skillNumber);
-                    break;
+                allies[self[i]].UseSkill(enemies[opponent[i]], skillNumber[i]);
+
             }
 
-            if (enemies.Count > 0)
+            if (numOfEnemies > 0)
             {
                 canContinueFighting = true;
             }

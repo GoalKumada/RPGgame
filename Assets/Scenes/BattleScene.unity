@@ -1885,6 +1885,14 @@ MonoBehaviour:
   - {fileID: 1765204370}
   - {fileID: 1780909253}
   - {fileID: 1294588859}
+  self: 
+  opponent: 
+  skillNumber: 
+  selfObject: []
+  opponentObject: []
+  numOfAllies: 0
+  numOfEnemies: 0
+  currentLoops: 0
 --- !u!1 &1180355775
 GameObject:
   m_ObjectHideFlags: 0
@@ -3482,7 +3490,6 @@ SceneRoots:
   - {fileID: 1230745976}
   - {fileID: 2111299649}
   - {fileID: 40557650}
-  - {fileID: 234506734}
   - {fileID: 50498538}
   - {fileID: 290603188}
   - {fileID: 1866804785}
@@ -3492,4 +3499,5 @@ SceneRoots:
   - {fileID: 1229345616}
   - {fileID: 1172701931}
   - {fileID: 2063363343}
+  - {fileID: 234506734}
   - {fileID: 2089868525}

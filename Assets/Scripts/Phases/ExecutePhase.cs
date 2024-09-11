@@ -10,31 +10,35 @@ public class ExecutePhase : PhaseBase
         
         Debug.Log("ExecutePhase");
 
-        moveOfAlly[ChooseAllyPhase.attacker].SetAttackerInfo(ChooseAllyPhase.self);
-        moveOfEnemy[ChooseEnemyPhase.attacked].SetTargetInfo(ChooseEnemyPhase.target);
+        SystemManager sm;
+        GameObject gobj = GameObject.Find("SystemManager");
+        sm = gobj.GetComponent<SystemManager>();
 
-        moveOfAlly[ChooseAllyPhase.attacker].executeAttackMove = true;
-        moveOfEnemy[ChooseEnemyPhase.attacked].executeHurtMove = true;
+        for (int i = 0; i < sm.numOfAllies; i++)
+        {
+            moveOfAlly[sm.self[i]].SetAttackerInfo(sm.selfObject[i]);
+            moveOfEnemy[sm.opponent[i]].SetTargetInfo(sm.opponentObject[i]);
 
+            moveOfAlly[sm.self[i]].executeAttackMove = true;
+            moveOfEnemy[sm.opponent[i]].executeHurtMove = true;
+
+            yield return new WaitUntil(() => moveOfAlly[sm.self[i]].attackStart == true);
+            moveOfAlly[sm.self[i]].AttackAnimationStart();
+
+            yield return new WaitUntil(() => moveOfAlly[sm.self[i]].attackEnd == true);
+            moveOfEnemy[sm.opponent[i]].HurtAnimationStart();
+
+            yield return new WaitUntil(() => moveOfEnemy[sm.opponent[i]].hurtEnd == true);
+            moveOfAlly[sm.self[i]].executeAfterAttackMove = true;
+            moveOfEnemy[sm.opponent[i]].executeAfterHurtMove = true;
+
+            yield return new WaitUntil(() => moveOfEnemy[sm.opponent[i]].end == true);
         
+            yield return null;
+            moveOfAlly[sm.self[i]].end = false;
+            moveOfEnemy[sm.opponent[i]].end = false;
 
-        yield return new WaitUntil(() => moveOfAlly[ChooseAllyPhase.attacker].attackStart == true);
-        moveOfAlly[ChooseAllyPhase.attacker].AttackAnimationStart();
-
-        yield return new WaitUntil(() => moveOfAlly[ChooseAllyPhase.attacker].attackEnd == true);
-        moveOfEnemy[ChooseEnemyPhase.attacked].HurtAnimationStart();
-
-        yield return new WaitUntil(() => moveOfEnemy[ChooseEnemyPhase.attacked].hurtEnd == true);
-        moveOfAlly[ChooseAllyPhase.attacker].executeAfterAttackMove = true;
-        moveOfEnemy[ChooseEnemyPhase.attacked].executeAfterHurtMove = true;
-
-        yield return new WaitUntil(() => moveOfEnemy[ChooseEnemyPhase.attacked].end == true);
-        
-        nextPhase = new ResultPhase();
-
-        yield return null;
-        moveOfAlly[ChooseAllyPhase.attacker].end = false;
-        moveOfEnemy[ChooseEnemyPhase.attacked].end = false;
-        
+            nextPhase = new ResultPhase();
+        }
     }
 }

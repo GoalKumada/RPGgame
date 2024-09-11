@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class ChooseCommandPhase : PhaseBase
 {
-    public static int skillNumber;
-
     public override IEnumerator Execute(BattleContext battleContext, List<Move> moveOfAlly, List<Move> moveOfEnemy)
     {
         yield return null;
@@ -22,18 +20,7 @@ public class ChooseCommandPhase : PhaseBase
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (index == 0)
-            {
-                skillNumber = 0;
-            }
-            else if (index == 1)
-            {
-                skillNumber = 1;
-            }
-            else if (index == 2)
-            {
-                skillNumber = 2;
-            }
+            sm.skillNumber.Add(index);
             nextPhase = new ChooseEnemyPhase();
             battleContext.chooseEnemyWindowMenu.CreateSelectableTexts(sm.GetStringsOfEnemies());
             battleContext.chooseEnemyWindowMenu.Open();
