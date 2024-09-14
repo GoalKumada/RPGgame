@@ -27,6 +27,8 @@ public class ChooseCommandPhase : PhaseBase
         }
         else
         {
+            sm.self.RemoveAt(sm.currentLoops);
+            sm.selfObject.RemoveAt(sm.currentLoops);
             nextPhase = new ChooseAllyPhase();
             battleContext.chooseAllyWindowMenu.CreateSelectableTexts(sm.GetStringsOfAllies());
             battleContext.chooseAllyWindowMenu.Open();

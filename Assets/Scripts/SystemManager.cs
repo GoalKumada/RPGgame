@@ -5,6 +5,7 @@ using static UnityEngine.GraphicsBuffer;
 
 public class SystemManager : MonoBehaviour
 {
+    // 後にalliesとenemiesにパーティーのListを反映させるコードを追加したい
     [SerializeField] public List<Ally> allies;
     [SerializeField] public List<Enemy> enemies;
 

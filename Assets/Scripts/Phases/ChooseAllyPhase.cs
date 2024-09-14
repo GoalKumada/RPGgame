@@ -24,19 +24,31 @@ public class ChooseAllyPhase : PhaseBase
         sm = gobj.GetComponent<SystemManager>();
 
         if (Input.GetKeyDown(KeyCode.Space))
-        { 
+        {
             sm.self.Add(index);
-            Ally attackingAlly = sm.allies[index];
             string itsname = sm.allies[index].name;
             sm.selfObject.Add(GameObject.Find(itsname));
+
             nextPhase = new ChooseCommandPhase();
             battleContext.chooseCommandWindowMenu.CreateSelectableTexts(sm.allies[index].GetStringsOfSkills());
             battleContext.chooseCommandWindowMenu.Open();
         }
         else
         {
-            nextPhase = new ChooseRunOrBattlePhase();
-            battleContext.chooseRunOrBattleWindowMenu.Open();
+            if (sm.currentLoops == 0)
+            {
+                nextPhase = new ChooseRunOrBattlePhase();
+                battleContext.chooseRunOrBattleWindowMenu.Open();
+            }
+            else
+            {
+                sm.currentLoops--;
+                sm.opponent.RemoveAt(sm.currentLoops);
+                sm.opponentObject.RemoveAt(sm.currentLoops);
+                nextPhase = new ChooseEnemyPhase();
+                battleContext.chooseEnemyWindowMenu.CreateSelectableTexts(sm.GetStringsOfEnemies());
+                battleContext.chooseEnemyWindowMenu.Open();
+            }
         }
     }
 }

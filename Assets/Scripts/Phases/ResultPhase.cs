@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -33,6 +34,13 @@ public class ResultPhase : PhaseBase
             nextPhase = new ChooseRunOrBattlePhase();
             battleContext.chooseRunOrBattleWindowMenu.Open();
 
+            sm.self.Clear();
+            sm.selfObject.Clear();
+
+            sm.opponent.Clear();
+            sm.opponentObject.Clear();
+
+            sm.currentLoops = 0;
         }
         else
         {

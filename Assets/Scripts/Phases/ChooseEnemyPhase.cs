@@ -26,9 +26,8 @@ public class ChooseEnemyPhase : PhaseBase
         if (Input.GetKeyDown(KeyCode.Space))
         {
             sm.opponent.Add(index);
-            Enemy attackedEnemy = sm.enemies[index];
             string itsname = sm.enemies[index].name;
-            sm.opponentObject[sm.currentLoops] = GameObject.Find(itsname);
+            sm.opponentObject.Add(GameObject.Find(itsname));
 
             if (sm.currentLoops != sm.numOfAllies-1)
             {
@@ -41,11 +40,13 @@ public class ChooseEnemyPhase : PhaseBase
             {
                 nextPhase = new ExecutePhase();
                 SystemManager.start = true;
+
             }
 
         }
         else
         {
+            sm.skillNumber.RemoveAt(sm.currentLoops);
             nextPhase = new ChooseCommandPhase();
             battleContext.chooseCommandWindowMenu.CreateSelectableTexts(sm.allies[sm.self[sm.currentLoops]].GetStringsOfSkills());
             battleContext.chooseCommandWindowMenu.Open();
