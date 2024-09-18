@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ChooseAllyPhase : PhaseBase
 {
     private string dialogue = "誰の行動を指示しようか";
+    public GameObject target;
 
     public override IEnumerator Execute(BattleContext battleContext, List<Move> moveOfAlly, List<Move> moveOfEnemy)
     {
@@ -19,15 +21,21 @@ public class ChooseAllyPhase : PhaseBase
         battleContext.chooseAllyWindowMenu.Close();
         battleContext.chooseAllyWindowMenu.DeleteSelectableTexts();
 
-        SystemManager sm;
         GameObject gobj = GameObject.Find("SystemManager");
-        sm = gobj.GetComponent<SystemManager>();
+        SystemManager sm = gobj.GetComponent<SystemManager>();
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
             sm.self.Add(index);
             string itsname = sm.allies[index].name;
             sm.selfObject.Add(GameObject.Find(itsname));
+
+
+            /*
+            GameObject window = GameObject.Find("ChooseAllyWindow");
+            SelectableText[] texts = window.GetComponent<SelectableText[]>();
+            texts[index].gameObject.SetActive(false);
+            */
 
             nextPhase = new ChooseCommandPhase();
             battleContext.chooseCommandWindowMenu.CreateSelectableTexts(sm.allies[index].GetStringsOfSkills());

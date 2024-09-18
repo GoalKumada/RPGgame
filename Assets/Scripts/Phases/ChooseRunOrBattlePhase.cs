@@ -16,9 +16,8 @@ public class ChooseRunOrBattlePhase : PhaseBase
         int index = battleContext.chooseRunOrBattleWindowMenu.currentID;
         battleContext.chooseRunOrBattleWindowMenu.Close();
 
-        SystemManager sm;
         GameObject gobj = GameObject.Find("SystemManager");
-        sm = gobj.GetComponent<SystemManager>();
+        SystemManager sm = gobj.GetComponent<SystemManager>();
 
         if (index == 0) // 0(たたかう)ならChooseAllyPhaseへ
         {

@@ -44,6 +44,30 @@ public class WindowMenu : MonoBehaviour
         selectableTexts.Clear();
     }
 
+    public void DeactivateTextByIndex(int index)
+    {
+        // インデックスが範囲内か確認
+        if (index >= 0 && index < selectableTexts.Count)
+        {
+            selectableTexts[index].gameObject.SetActive(false);
+        }
+        else
+        {
+            Debug.LogError("インデックスが範囲外です");
+        }
+
+        if (!selectableTexts[0].gameObject.activeInHierarchy)
+        {
+            EventSystem.current.SetSelectedGameObject(selectableTexts[1].gameObject);
+
+        }
+        if (!selectableTexts[1].gameObject.activeInHierarchy)
+        {
+            EventSystem.current.SetSelectedGameObject(selectableTexts[2].gameObject);
+        }
+    }
+
+
     public void SetMoveArrowFunction()
     {
         foreach (SelectableText selectableText in selectableTexts)
@@ -61,7 +85,6 @@ public class WindowMenu : MonoBehaviour
     {
         arrow.transform.SetParent(parent);
         currentID = parent.GetSiblingIndex(); // 何番目の子要素かを取得
-        //Debug.Log($"矢印の親オブジェクト：{parent.name}");
     }
 
     public void Open()

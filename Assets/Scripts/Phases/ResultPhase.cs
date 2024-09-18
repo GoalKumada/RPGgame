@@ -11,25 +11,27 @@ public class ResultPhase : PhaseBase
         
         Debug.Log("ResultPhase");
 
-        BattleManager bm;
         GameObject obj = GameObject.Find("BattleManager");
-        bm = obj.GetComponent<BattleManager>();
+        BattleManager bm = obj.GetComponent<BattleManager>();
         
-        SystemManager sm;
         GameObject gobj = GameObject.Find("SystemManager");
-        sm = gobj.GetComponent<SystemManager>();
+        SystemManager sm = gobj.GetComponent<SystemManager>();
 
-        for (int i = 0; i < sm.numOfEnemies; i++)
+        int count = 0;
+        for (int i = sm.numOfEnemies-1; i >= 0; i--)
         {
             if (sm.enemies[i].HP <= 0)
             {
                 bm.moveOfEnemy.RemoveAt(i);
                 sm.enemies.RemoveAt(i);
-                sm.numOfEnemies--;
+                count++;
             }
         }
+        sm.numOfEnemies -= count;
 
-        if (SystemManager.canContinueFighting)
+        Debug.Log(sm.numOfEnemies);
+
+        if (sm.numOfEnemies > 0)
         {
             nextPhase = new ChooseRunOrBattlePhase();
             battleContext.chooseRunOrBattleWindowMenu.Open();
@@ -44,6 +46,7 @@ public class ResultPhase : PhaseBase
         }
         else
         {
+            Debug.Log("敵を全員倒した");
             nextPhase = new EndPhase();
         }
     }

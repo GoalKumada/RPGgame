@@ -10,9 +10,8 @@ public class ExecutePhase : PhaseBase
         
         Debug.Log("ExecutePhase");
 
-        SystemManager sm;
         GameObject gobj = GameObject.Find("SystemManager");
-        sm = gobj.GetComponent<SystemManager>();
+        SystemManager sm = gobj.GetComponent<SystemManager>();
 
         for (int i = 0; i < sm.numOfAllies; i++)
         {

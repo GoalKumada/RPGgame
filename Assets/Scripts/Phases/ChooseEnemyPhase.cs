@@ -19,9 +19,8 @@ public class ChooseEnemyPhase : PhaseBase
         battleContext.chooseEnemyWindowMenu.Close();
         battleContext.chooseEnemyWindowMenu.DeleteSelectableTexts();
 
-        SystemManager sm;
         GameObject gobj = GameObject.Find("SystemManager");
-        sm = gobj.GetComponent<SystemManager>();
+        SystemManager sm = gobj.GetComponent<SystemManager>();
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -35,11 +34,20 @@ public class ChooseEnemyPhase : PhaseBase
                 nextPhase = new ChooseAllyPhase();
                 battleContext.chooseAllyWindowMenu.CreateSelectableTexts(sm.GetStringsOfAllies());
                 battleContext.chooseAllyWindowMenu.Open();
+                if (sm.currentLoops == 1)
+                {
+                    battleContext.chooseAllyWindowMenu.DeactivateTextByIndex(sm.self[0]);
+                }
+                if (sm.currentLoops == 2)
+                {
+                    battleContext.chooseAllyWindowMenu.DeactivateTextByIndex(sm.self[0]);
+                    battleContext.chooseAllyWindowMenu.DeactivateTextByIndex(sm.self[1]);
+                }
             }
             else
             {
                 nextPhase = new ExecutePhase();
-                SystemManager.start = true;
+                SystemManager.calculateStart = true;
 
             }
 
