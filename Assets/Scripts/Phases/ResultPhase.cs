@@ -24,6 +24,10 @@ public class ResultPhase : PhaseBase
             {
                 bm.moveOfEnemy.RemoveAt(i);
                 sm.enemies.RemoveAt(i);
+
+                Animator animator = sm.opponentObject[i].GetComponent<Animator>();
+                animator.SetBool("Death_Idle", true);
+
                 count++;
             }
         }
