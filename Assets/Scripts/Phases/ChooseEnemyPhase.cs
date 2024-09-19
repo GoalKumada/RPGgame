@@ -12,7 +12,6 @@ public class ChooseEnemyPhase : PhaseBase
         Debug.Log("ChooseEnemyPhase");
         battleContext.textWindow.CreateDialogueText(dialogue);
 
-
         yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Escape));
 
         int index = battleContext.chooseEnemyWindowMenu.currentID;
@@ -46,11 +45,9 @@ public class ChooseEnemyPhase : PhaseBase
             }
             else
             {
-                nextPhase = new ExecutePhase();
-                SystemManager.calculateStart = true;
-
+                nextPhase = new AllyMovePhase();
+                SystemManager.allyCalcuStart = true;
             }
-
         }
         else
         {

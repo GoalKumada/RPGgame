@@ -17,8 +17,8 @@ public class SystemManager : MonoBehaviour
     public int numOfAllies;
     public int numOfEnemies;
     public int currentLoops = 0;
-
-    public static bool calculateStart;
+    public static bool allyCalcuStart;
+    public static bool enemyCalcuStart;
 
     private void Start()
     {
@@ -28,13 +28,22 @@ public class SystemManager : MonoBehaviour
 
     private void Update()
     {
-        if (calculateStart)
+        if (allyCalcuStart)
         {
             for (int i = 0; i < numOfAllies; i++) 
             {
                 allies[self[i]].UseSkill(enemies[opponent[i]], skillNumber[i]);
             }
-            calculateStart = false;
+            allyCalcuStart = false;
+        }
+
+        if (enemyCalcuStart)
+        {
+            for (int i = 0; i < numOfEnemies; i++)
+            {
+                enemies[opponent[i]].UseSkill(allies[self[i]], skillNumber[i]);
+            }
+            enemyCalcuStart = false;
         }
     }
 

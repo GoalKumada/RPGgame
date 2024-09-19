@@ -30,13 +30,6 @@ public class ChooseAllyPhase : PhaseBase
             string itsname = sm.allies[index].name;
             sm.selfObject.Add(GameObject.Find(itsname));
 
-
-            /*
-            GameObject window = GameObject.Find("ChooseAllyWindow");
-            SelectableText[] texts = window.GetComponent<SelectableText[]>();
-            texts[index].gameObject.SetActive(false);
-            */
-
             nextPhase = new ChooseCommandPhase();
             battleContext.chooseCommandWindowMenu.CreateSelectableTexts(sm.allies[index].GetStringsOfSkills());
             battleContext.chooseCommandWindowMenu.Open();
