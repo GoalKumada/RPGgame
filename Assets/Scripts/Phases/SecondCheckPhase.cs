@@ -40,6 +40,7 @@ public class SecondCheckPhase : PhaseBase
             // 敵の行動に関する情報をクリア
             sm.self.Clear();
             sm.selfObject.Clear();
+            sm.skillNumber.Clear();
             sm.opponent.Clear();
             sm.opponentObject.Clear();
         }

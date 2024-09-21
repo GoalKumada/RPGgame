@@ -17,8 +17,8 @@ public class Move : MonoBehaviour
     private Vector3 targetDestinationPos;
     private Animator myAnimator;
     private Animator targetAnimator;
-    private GameObject self;
-    private GameObject target;
+    public GameObject self;
+    public GameObject target;
 
     public bool executeAttackMove = false;
     public bool executeHurtMove = false;

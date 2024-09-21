@@ -38,6 +38,8 @@ public class AllyMovePhase : PhaseBase
             yield return null;
             moveOfAlly[sm.self[i]].end = false;
             moveOfEnemy[sm.opponent[i]].end = false;
+            moveOfAlly[sm.self[i]].self = null;
+            moveOfEnemy[sm.opponent[i]].target = null;
 
             nextPhase = new FirstCheckPhase();
         }
