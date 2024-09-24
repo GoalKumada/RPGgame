@@ -401,6 +401,8 @@
 "Assets/Scripts/Item/Armor.cs"
 "Assets/Scripts/Item/Item.cs"
 "Assets/Scripts/Item/Weapon.cs"
+"Assets/Scripts/LifeGauge.cs"
+"Assets/Scripts/LifeGaugeContainer.cs"
 "Assets/Scripts/Move.cs"
 "Assets/Scripts/Phases/AllyMovePhase.cs"
 "Assets/Scripts/Phases/ChooseAllyPhase.cs"

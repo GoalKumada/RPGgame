@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\Character\Enemy.cs" />
     <Compile Include="Assets\Scripts\Item\Accessory.cs" />
     <Compile Include="Assets\Scripts\Item\Weapon.cs" />
+    <Compile Include="Assets\Scripts\LifeGaugeContainer.cs" />
     <Compile Include="Assets\Scripts\Phases\ChooseAllyPhase.cs" />
     <Compile Include="Assets\Scripts\Phases\AllyMovePhase.cs" />
     <Compile Include="Assets\Scripts\Phases\PhaseBase.cs" />
@@ -84,6 +85,7 @@
     <Compile Include="Assets\Scripts\Phases\ChooseRunOrBattlePhase.cs" />
     <Compile Include="Assets\Scripts\Window\WindowMenu.cs" />
     <Compile Include="Assets\Scripts\Item\Item.cs" />
+    <Compile Include="Assets\Scripts\LifeGauge.cs" />
     <Compile Include="Assets\Scripts\Phases\StartPhase.cs" />
     <Compile Include="Assets\Scripts\Phases\EndPhase.cs" />
     <Compile Include="Assets\Scripts\Window\TextWindow.cs" />
