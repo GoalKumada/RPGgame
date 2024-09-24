@@ -11,8 +11,7 @@ public class Move : MonoBehaviour
     private Vector3 goalPosOfEnemy = new Vector3(0.5f, 0.2f, -0.5f);
     [SerializeField] private Vector3 originalPos;
     [SerializeField] private Vector3 goalPos;
-    private Animator selfAnimator;
-    private Animator targetAnimator;
+    private Animator animator;
 
     public GameObject self;
     public GameObject target;
@@ -65,7 +64,7 @@ public class Move : MonoBehaviour
     public void SetSelfInfo(GameObject _object)
     {
         self = _object;
-        selfAnimator = _object.GetComponent<Animator>();
+        animator = _object.GetComponent<Animator>();
         speed_x = Math.Abs(originalPos.x - goalPos.x) / moveFrames;
         speed_z = Math.Abs(originalPos.z - goalPos.z) / moveFrames;
     }
@@ -73,7 +72,7 @@ public class Move : MonoBehaviour
     public void SetTargetInfo(GameObject _object)
     {
         target = _object;
-        targetAnimator = _object.GetComponent<Animator>();
+        animator = _object.GetComponent<Animator>();
         speed_x = Math.Abs(originalPos.x - goalPos.x) / moveFrames;
         speed_z = Math.Abs(originalPos.z - goalPos.z) / moveFrames;
     }
@@ -211,12 +210,12 @@ public class Move : MonoBehaviour
 
     public void AttackAnimationStart()
     {
-        selfAnimator.SetTrigger("Attack");
+        animator.SetTrigger("Attack");
     }
 
     public void HurtAnimationStart()
     {
-        targetAnimator.SetTrigger("Hurt");
+        animator.SetTrigger("Hurt");
         hurtEnd = false;
     }
 }

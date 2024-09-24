@@ -19,12 +19,10 @@ public class SecondCheckPhase : PhaseBase
         {
             if (sm.allies[i].HP <= 0)
             {
+                Animator animator = sm.allies[i].GetComponent<Animator>();
+                animator.SetBool("Death_Idle", true);
                 bm.moveOfAlly.RemoveAt(i);
                 sm.allies.RemoveAt(i);
-
-                Animator animator = sm.selfObject[i].GetComponent<Animator>();
-                animator.SetBool("Death_Idle", true);
-
                 count++;
             }
         }
