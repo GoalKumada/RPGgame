@@ -15,6 +15,8 @@ public class EnemyMovePhase : PhaseBase
         Debug.Log("EnemyMovePhase");
         battleContext.textWindow.CreateDialogueText(dialogue);
 
+        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+
         GameObject gobj = GameObject.Find("SystemManager");
         SystemManager sm = gobj.GetComponent<SystemManager>();
 
@@ -30,16 +32,20 @@ public class EnemyMovePhase : PhaseBase
             string enemyName = sm.enemies[i].name;
             sm.opponentObject.Add(GameObject.Find(enemyName));
 
+            Debug.Log($"{i+1}番目に行動する敵：{i}");
+
             // 技選択は乱数を用いてランダムに
             int maxNumOfSkill = sm.enemies[i].skills.Count();
-            Debug.Log(maxNumOfSkill);
             sm.skillNumber.Add(random.Next(0, maxNumOfSkill));
 
+            Debug.Log($"{i+1}番目に行動する敵の技：{sm.skillNumber[i]}");
+
             // 攻撃する味方の選択もランダムに
-            Debug.Log(sm.numOfAllies);
             sm.self.Add(random.Next(0,sm.numOfAllies));
             string allyname = sm.allies[sm.self[i]].name;
             sm.selfObject.Add(GameObject.Find(allyname));
+
+            Debug.Log($"攻撃する味方：{sm.self[i]}");
         } 
 
         SystemManager.enemyCalcuStart = true;
@@ -63,7 +69,7 @@ public class EnemyMovePhase : PhaseBase
             moveOfEnemy[sm.opponent[i]].executeAfterAttackMove = true;
             moveOfAlly[sm.self[i]].executeAfterHurtMove = true;
 
-            yield return new WaitUntil(() => moveOfEnemy[sm.self[i]].end == true);
+            yield return new WaitUntil(() => moveOfAlly[sm.self[i]].end == true);
 
             yield return null;
             moveOfEnemy[sm.opponent[i]].end = false;

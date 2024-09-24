@@ -28,7 +28,7 @@ public class SecondCheckPhase : PhaseBase
                 count++;
             }
         }
-        sm.numOfEnemies -= count;
+        sm.numOfAllies -= count;
 
         //Debug.Log(sm.numOfAllies);
 

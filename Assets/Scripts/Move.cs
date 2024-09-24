@@ -11,15 +11,15 @@ public class Move : MonoBehaviour
     private float moveFrames = 120;
     private Vector3 destinationPosOfArray = new Vector3(-0.5f, 0.2f, -0.5f);
     private Vector3 destinationPosOfEnemy = new Vector3(0.5f, 0.2f, -0.5f);
-    private Vector3 myOriginalPos;
-    private Vector3 myDestinationPos;
-    private Vector3 targetOriginalPos;
-    private Vector3 targetDestinationPos;
+    [SerializeField] private Vector3 myOriginalPos;
+    [SerializeField] private Vector3 myDestinationPos;
+    [SerializeField] private Vector3 targetOriginalPos;
+    [SerializeField] private Vector3 targetDestinationPos;
     private Animator myAnimator;
     private Animator targetAnimator;
+
     public GameObject self;
     public GameObject target;
-
     public bool executeAttackMove = false;
     public bool executeHurtMove = false;
     public bool attackStart = false;
@@ -40,6 +40,7 @@ public class Move : MonoBehaviour
         if (executeAttackMove)
         {
             BeforeActionMove(self);
+            //Debug.Log("executeAttackMove");
         }
 
         if (executeHurtMove)
@@ -116,10 +117,15 @@ public class Move : MonoBehaviour
 
     public void BeforeActionMove(GameObject gameObject)
     {
+        //Debug.Log("BeforeActionMove(self)を実行中");
+        //Debug.Log(this.gameObject.name);
         Vector3 myPosition = gameObject.transform.position;
 
         if (gameObject.tag == "Ally")
         {
+            //Debug.Log("tag==Ally");
+            //Debug.Log(this.gameObject.name);
+
             if (Mathf.Abs(myPosition.x - myDestinationPos.x) > 0.001f)
             {
                 myPosition.x += selfSpeed_x;
@@ -151,6 +157,9 @@ public class Move : MonoBehaviour
 
         if (gameObject.tag == "Enemy")
         {
+            Debug.Log("tag==Enemy");
+            Debug.Log(this.gameObject.name);
+
             if (Mathf.Abs(myPosition.x - targetDestinationPos.x) > 0.001f)
             {
                 myPosition.x -= targetSpeed_x;
@@ -189,6 +198,8 @@ public class Move : MonoBehaviour
 
     public void AfterActionMove(GameObject gameObject)
     {
+        //Debug.Log("AfterActionMove(self)を実行中");
+        
         Vector3 myPosition = gameObject.transform.position;
 
         if (gameObject.tag == ("Ally"))

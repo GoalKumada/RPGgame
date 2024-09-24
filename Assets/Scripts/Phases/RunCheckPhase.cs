@@ -26,7 +26,7 @@ public class RunCheckPhase : PhaseBase
                 battleContext.chooseRunOrBattleWindowMenu.Open();            }
             else if (index == 1)
             {
-                nextPhase = new StartPhase();
+                nextPhase = new EndPhase();
             }
         }
         else
