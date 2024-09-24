@@ -131,8 +131,7 @@
               "ViewState": "AgIAABQAAAAAAAAAAADwvw8AAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-05T12:43:31.528Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -158,8 +157,7 @@
               "ViewState": "AgIAAB0AAAAAAAAAAAAewCkAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-05T12:33:42.922Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -257,8 +255,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Phases\\StartPhase.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T07:33:27.119Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-23T07:33:27.119Z"
             },
             {
               "$type": "Document",
@@ -270,8 +267,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Phases\\ChooseRunOrBattlePhase.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-24T03:50:21.441Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-24T03:50:21.441Z"
             },
             {
               "$type": "Document",
@@ -283,8 +279,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Phases\\RunCheckPhase.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAADwvxwAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T07:33:37.243Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-23T07:33:37.243Z"
             },
             {
               "$type": "Document",
@@ -296,8 +291,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Phases\\ChooseAllyPhase.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-18T08:09:30.095Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-18T08:09:30.095Z"
             },
             {
               "$type": "Document",
@@ -309,8 +303,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Phases\\ChooseCommandPhase.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-18T08:11:33.537Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-18T08:11:33.537Z"
             },
             {
               "$type": "Document",
@@ -322,8 +315,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Phases\\ChooseEnemyPhase.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAAwCYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-18T08:13:23.416Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-18T08:13:23.416Z"
             },
             {
               "$type": "Document",
@@ -333,7 +325,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Phases\\AllyMovePhase.cs",
               "ToolTip": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Phases\\AllyMovePhase.cs",
               "RelativeToolTip": "Assets\\Scripts\\Phases\\AllyMovePhase.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAkwCkAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAkwBQAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-18T08:14:31.075Z",
               "EditorCaption": ""
@@ -348,8 +340,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Phases\\FirstCheckPhase.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T07:16:20.339Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-23T07:16:20.339Z"
             },
             {
               "$type": "Document",
@@ -359,7 +350,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Phases\\EnemyMovePhase.cs",
               "ToolTip": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Phases\\EnemyMovePhase.cs",
               "RelativeToolTip": "Assets\\Scripts\\Phases\\EnemyMovePhase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE0AAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAAwE4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-19T15:10:19.325Z",
               "EditorCaption": ""
@@ -374,8 +365,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Phases\\SecondCheckPhase.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T15:11:04.282Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-19T15:11:04.282Z"
             },
             {
               "$type": "Document",
@@ -387,8 +377,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Phases\\EndPhase.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T07:30:55.882Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-23T07:30:55.882Z"
             },
             {
               "$type": "Document",
@@ -412,8 +401,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Window\\WindowMenu.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAAwDoAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T16:23:04.574Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-23T16:23:04.574Z"
             },
             {
               "$type": "Document",
@@ -459,7 +447,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Move.cs",
               "ToolTip": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Move.cs",
               "RelativeToolTip": "Assets\\Scripts\\Move.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIkAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-24T06:21:56.501Z",
               "EditorCaption": ""

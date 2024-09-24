@@ -17,7 +17,7 @@ public class AllyMovePhase : PhaseBase
 
         for (int i = 0; i < sm.numOfAllies; i++)
         {
-            moveOfAlly[sm.self[i]].SetAttackerInfo(sm.selfObject[i]);
+            moveOfAlly[sm.self[i]].SetSelfInfo(sm.selfObject[i]);
             moveOfEnemy[sm.opponent[i]].SetTargetInfo(sm.opponentObject[i]);
 
             moveOfAlly[sm.self[i]].executeAttackMove = true;

@@ -20,7 +20,7 @@ public class EnemyMovePhase : PhaseBase
         GameObject gobj = GameObject.Find("SystemManager");
         SystemManager sm = gobj.GetComponent<SystemManager>();
 
-        // 敵の行動を決めるロジックを記述
+        // 敵の行動を決めてListに格納
         // （動く敵を選ぶ→技を選ぶ→攻撃する味方を選ぶ）×（敵の数）
         //   opponent[i]→skillnumber[i]→self[i]
 
@@ -53,7 +53,7 @@ public class EnemyMovePhase : PhaseBase
         // 敵の動きのアニメーションを制御するコード
         for (int i = 0; i < sm.numOfEnemies; i++)
         {
-            moveOfEnemy[sm.opponent[i]].SetAttackerInfo(sm.opponentObject[i]);
+            moveOfEnemy[sm.opponent[i]].SetSelfInfo(sm.opponentObject[i]);
             moveOfAlly [sm.self[i]].SetTargetInfo(sm.selfObject[i]);
 
             moveOfEnemy[sm.opponent[i]].executeAttackMove = true;
@@ -76,7 +76,6 @@ public class EnemyMovePhase : PhaseBase
             moveOfAlly[sm.self[i]].end = false;
             moveOfEnemy[sm.opponent[i]].self = null;
             moveOfAlly[sm.self[i]].target = null;
-
 
             nextPhase = new SecondCheckPhase();
         }
