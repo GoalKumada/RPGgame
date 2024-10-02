@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "C:\\Users\\goal2\\RPGgame\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|c:\\users\\goal2\\rpggame\\assets\\scripts\\window\\selectabletext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\window\\selectabletext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|C:\\Users\\goal2\\RPGgame\\assets\\scripts\\window\\textwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\window\\textwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|C:\\Users\\goal2\\RPGgame\\assets\\scripts\\window\\windowmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\window\\windowmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|C:\\Users\\goal2\\RPGgame\\assets\\scripts\\systemmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\systemmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|C:\\Users\\goal2\\RPGgame\\assets\\scripts\\lifegauge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\lifegauge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|C:\\Users\\goal2\\RPGgame\\assets\\scripts\\phases\\firstcheckphase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\phases\\firstcheckphase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,7 +35,7 @@
       "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\phases\\enemymovephase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|c:\\users\\goal2\\rpggame\\assets\\scripts\\move.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|C:\\Users\\goal2\\RPGgame\\assets\\scripts\\move.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\move.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -25,14 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|C:\\Users\\goal2\\RPGgame\\assets\\scripts\\phases\\chooseenemyphase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\phases\\chooseenemyphase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|C:\\Users\\goal2\\RPGgame\\assets\\scripts\\window\\windowmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\window\\windowmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|C:\\Users\\goal2\\RPGgame\\assets\\scripts\\systemmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\systemmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|C:\\Users\\goal2\\RPGgame\\assets\\scripts\\character\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -65,14 +77,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|C:\\Users\\goal2\\RPGgame\\assets\\scripts\\character\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\character\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|C:\\Users\\goal2\\RPGgame\\assets\\scripts\\window\\textwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\window\\textwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|C:\\Users\\goal2\\RPGgame\\assets\\scripts\\window\\selectabletext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\window\\selectabletext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|C:\\Users\\goal2\\RPGgame\\assets\\scripts\\phases\\phasebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -109,6 +113,18 @@
     {
       "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|C:\\Users\\goal2\\RPGgame\\assets\\scripts\\skills\\skill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\skills\\skill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\goal2\\RPGgame\\assets\\scripts\\lifegaugecontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\lifegaugecontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\goal2\\RPGgame\\assets\\scripts\\characterstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\characterstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\goal2\\RPGgame\\assets\\scripts\\characterstatuspanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\characterstatuspanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -118,11 +134,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 17,
+          "SelectedChildIndex": 24,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "SystemManager.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\SystemManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SystemManager.cs",
@@ -135,7 +151,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "BattleManager.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\BattleManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\BattleManager.cs",
@@ -148,7 +164,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "Character.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Character\\Character.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Character\\Character.cs",
@@ -161,7 +177,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "Enemy.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Character\\Enemy.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Character\\Enemy.cs",
@@ -174,7 +190,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "Ally.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Character\\Ally.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Character\\Ally.cs",
@@ -187,7 +203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "Skill.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Skills\\Skill.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Skills\\Skill.cs",
@@ -199,7 +215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "Slash.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Skills\\WarriorSkills\\Slash.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Skills\\WarriorSkills\\Slash.cs",
@@ -211,7 +227,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "DoubleAttack.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Skills\\WarriorSkills\\DoubleAttack.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Skills\\WarriorSkills\\DoubleAttack.cs",
@@ -223,7 +239,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "SpinAttack.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Skills\\WarriorSkills\\SpinAttack.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Skills\\WarriorSkills\\SpinAttack.cs",
@@ -235,7 +251,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "Weapon.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Item\\Weapon.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Item\\Weapon.cs",
@@ -247,7 +263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "StartPhase.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Phases\\StartPhase.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Phases\\StartPhase.cs",
@@ -259,7 +275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "ChooseRunOrBattlePhase.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Phases\\ChooseRunOrBattlePhase.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Phases\\ChooseRunOrBattlePhase.cs",
@@ -271,7 +287,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "RunCheckPhase.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Phases\\RunCheckPhase.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Phases\\RunCheckPhase.cs",
@@ -283,7 +299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "ChooseAllyPhase.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Phases\\ChooseAllyPhase.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Phases\\ChooseAllyPhase.cs",
@@ -295,7 +311,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "ChooseCommandPhase.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Phases\\ChooseCommandPhase.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Phases\\ChooseCommandPhase.cs",
@@ -307,7 +323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "ChooseEnemyPhase.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Phases\\ChooseEnemyPhase.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Phases\\ChooseEnemyPhase.cs",
@@ -319,7 +335,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "AllyMovePhase.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Phases\\AllyMovePhase.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Phases\\AllyMovePhase.cs",
@@ -331,7 +347,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "FirstCheckPhase.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Phases\\FirstCheckPhase.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Phases\\FirstCheckPhase.cs",
@@ -339,12 +355,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Phases\\FirstCheckPhase.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T07:16:20.339Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-23T07:16:20.339Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "EnemyMovePhase.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Phases\\EnemyMovePhase.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Phases\\EnemyMovePhase.cs",
@@ -352,12 +367,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Phases\\EnemyMovePhase.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAAwE4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T15:10:19.325Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-19T15:10:19.325Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "SecondCheckPhase.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Phases\\SecondCheckPhase.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Phases\\SecondCheckPhase.cs",
@@ -365,12 +379,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Phases\\SecondCheckPhase.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T15:11:04.282Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-19T15:11:04.282Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "EndPhase.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Phases\\EndPhase.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Phases\\EndPhase.cs",
@@ -382,7 +395,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "PhaseBase.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Phases\\PhaseBase.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Phases\\PhaseBase.cs",
@@ -394,19 +407,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "WindowMenu.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Window\\WindowMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Window\\WindowMenu.cs",
               "ToolTip": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Window\\WindowMenu.cs",
               "RelativeToolTip": "Assets\\Scripts\\Window\\WindowMenu.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAAwDoAAABVAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-23T16:23:04.574Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 1,
               "Title": "TextWindow.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Window\\TextWindow.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Window\\TextWindow.cs",
@@ -418,19 +431,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 0,
               "Title": "SelectableText.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Window\\SelectableText.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Window\\SelectableText.cs",
               "ToolTip": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Window\\SelectableText.cs",
               "RelativeToolTip": "Assets\\Scripts\\Window\\SelectableText.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAAwBcAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T16:23:01.636Z"
+              "WhenOpened": "2024-08-23T16:23:01.636Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "DialogueText.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Window\\DialogueText.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Window\\DialogueText.cs",
@@ -442,7 +456,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "Move.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Move.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Move.cs",
@@ -450,8 +464,55 @@
               "RelativeToolTip": "Assets\\Scripts\\Move.cs",
               "ViewState": "AgIAAMAAAAAAAAAAAAAiwNkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-24T06:21:56.501Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-24T06:21:56.501Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "LifeGaugeContainer.cs",
+              "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\LifeGaugeContainer.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\LifeGaugeContainer.cs",
+              "ToolTip": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\LifeGaugeContainer.cs",
+              "RelativeToolTip": "Assets\\Scripts\\LifeGaugeContainer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T07:38:26.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LifeGauge.cs",
+              "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\LifeGauge.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\LifeGauge.cs",
+              "ToolTip": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\LifeGauge.cs",
+              "RelativeToolTip": "Assets\\Scripts\\LifeGauge.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T14:37:04.56Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "CharacterStatusPanel.cs",
+              "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\CharacterStatusPanel.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CharacterStatusPanel.cs",
+              "ToolTip": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\CharacterStatusPanel.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CharacterStatusPanel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T07:54:35.751Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "CharacterStatus.cs",
+              "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\CharacterStatus.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CharacterStatus.cs",
+              "ToolTip": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\CharacterStatus.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CharacterStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T08:33:00.164Z"
             }
           ]
         }

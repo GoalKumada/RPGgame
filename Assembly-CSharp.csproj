@@ -61,31 +61,33 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2023.2.18f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\StatusUI\CharacterStatusPanel.cs" />
     <Compile Include="Assets\Scripts\Skills\WarriorSkills\DoubleAttack.cs" />
     <Compile Include="Assets\Scripts\Character\Enemy.cs" />
     <Compile Include="Assets\Scripts\Item\Accessory.cs" />
     <Compile Include="Assets\Scripts\Item\Weapon.cs" />
-    <Compile Include="Assets\Scripts\LifeGaugeContainer.cs" />
     <Compile Include="Assets\Scripts\Phases\ChooseAllyPhase.cs" />
     <Compile Include="Assets\Scripts\Phases\AllyMovePhase.cs" />
     <Compile Include="Assets\Scripts\Phases\PhaseBase.cs" />
+    <Compile Include="Assets\Scripts\StatusUI\CharacterStatus.cs" />
     <Compile Include="Assets\Scripts\SystemManager.cs" />
     <Compile Include="Assets\Scripts\Character\Ally.cs" />
     <Compile Include="Assets\Scripts\BattleManager.cs" />
     <Compile Include="Assets\Scripts\Item\Armor.cs" />
     <Compile Include="Assets\Scripts\Phases\ChooseEnemyPhase.cs" />
     <Compile Include="Assets\Scripts\Phases\SecondCheckPhase.cs" />
+    <Compile Include="Assets\Scripts\StatusUI\LifeGauge.cs" />
     <Compile Include="Assets\Scripts\Skills\Skill.cs" />
     <Compile Include="Assets\Scripts\Phases\RunCheckPhase.cs" />
     <Compile Include="Assets\Scripts\Window\DialogueText.cs" />
     <Compile Include="Assets\Scripts\Character\Character.cs" />
     <Compile Include="Assets\Scripts\Phases\EnemyMovePhase.cs" />
     <Compile Include="Assets\Scripts\Phases\FirstCheckPhase.cs" />
+    <Compile Include="Assets\Scripts\StatusUI\LifeGaugeContainer.cs" />
     <Compile Include="Assets\Scripts\Skills\WarriorSkills\SpinAttack.cs" />
     <Compile Include="Assets\Scripts\Phases\ChooseRunOrBattlePhase.cs" />
     <Compile Include="Assets\Scripts\Window\WindowMenu.cs" />
     <Compile Include="Assets\Scripts\Item\Item.cs" />
-    <Compile Include="Assets\Scripts\LifeGauge.cs" />
     <Compile Include="Assets\Scripts\Phases\StartPhase.cs" />
     <Compile Include="Assets\Scripts\Phases\EndPhase.cs" />
     <Compile Include="Assets\Scripts\Window\TextWindow.cs" />

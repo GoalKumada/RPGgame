@@ -6,7 +6,7 @@ public class Character : MonoBehaviour
 {
     [SerializeField] public string characterName;
     [SerializeField] public float HP;
-    [SerializeField] private float TP;
+    [SerializeField] public float TP;
     [SerializeField] private float DEF;
 
     [SerializeField] public Skill[] skills;

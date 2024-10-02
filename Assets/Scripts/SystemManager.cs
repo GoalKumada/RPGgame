@@ -20,7 +20,7 @@ public class SystemManager : MonoBehaviour
     public static bool allyCalcuStart;
     public static bool enemyCalcuStart;
 
-    private void Start()
+    private void Awake()
     {
         numOfAllies = allies.Count;
         numOfEnemies = enemies.Count;
