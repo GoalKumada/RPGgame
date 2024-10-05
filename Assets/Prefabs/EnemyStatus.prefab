@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 6907711903416474545}
   - component: {fileID: 6192742033260415223}
   m_Layer: 5
-  m_Name: CharacterStatus
-  m_TagString: Untagged
+  m_Name: EnemyStatus
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -416,7 +416,7 @@ GameObject:
   - component: {fileID: 5597354888357265814}
   - component: {fileID: 5642679774434574811}
   m_Layer: 5
-  m_Name: ValueOfHPText
+  m_Name: ValueOfEnemyHPText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -541,7 +541,7 @@ GameObject:
   - component: {fileID: 7961846849108929209}
   - component: {fileID: 8881047259615950723}
   m_Layer: 5
-  m_Name: ValueOfTPText
+  m_Name: ValueOfEnemyTPText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

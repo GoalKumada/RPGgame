@@ -8,8 +8,9 @@ public class DoubleAttack : Skill
     {
         skillName = "ダブルアタック";
         attackPower = 20;
+        requiredTP = 2;
         type = Type.attack;
-
+        skillExplain = "a";
 
     }
 }

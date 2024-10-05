@@ -19,7 +19,7 @@ public class FirstCheckPhase : PhaseBase
         int count = 0;
         for (int i = sm.numOfEnemies-1; i >= 0; i--)
         {
-            if (sm.enemies[i].HP <= 0)
+            if (sm.enemies[i].currentHP <= 0)
             {
                 Animator animator = sm.enemies[i].GetComponent<Animator>();
                 animator.SetBool("Death_Idle", true);
@@ -37,11 +37,11 @@ public class FirstCheckPhase : PhaseBase
             nextPhase = new EnemyMovePhase();
             
             // 味方の行動に関する情報をクリア
-            sm.self.Clear();
-            sm.selfObject.Clear();
+            sm.nakama.Clear();
+            sm.nakamaObject.Clear();
             sm.skillNumber.Clear();
-            sm.opponent.Clear();
-            sm.opponentObject.Clear();
+            sm.teki.Clear();
+            sm.tekiObject.Clear();
             sm.currentLoops = 0;
         }
         else

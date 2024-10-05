@@ -28,9 +28,9 @@ public class EnemyMovePhase : PhaseBase
         for (int i = 0; i < sm.numOfEnemies; i++)
         {
             // 敵の行動順はListの０→１→２で
-            sm.opponent.Add(i);
+            sm.teki.Add(i);
             string enemyName = sm.enemies[i].name;
-            sm.opponentObject.Add(GameObject.Find(enemyName));
+            sm.tekiObject.Add(GameObject.Find(enemyName));
 
             Debug.Log($"{i+1}番目に行動する敵：{i}");
 
@@ -41,43 +41,52 @@ public class EnemyMovePhase : PhaseBase
             Debug.Log($"{i+1}番目に行動する敵の技：{sm.skillNumber[i]}");
 
             // 攻撃する味方の選択もランダムに
-            sm.self.Add(random.Next(0,sm.numOfAllies));
-            string allyname = sm.allies[sm.self[i]].name;
-            sm.selfObject.Add(GameObject.Find(allyname));
+            sm.nakama.Add(random.Next(0,sm.numOfAllies));
+            string allyname = sm.allies[sm.nakama[i]].name;
+            sm.nakamaObject.Add(GameObject.Find(allyname));
 
-            Debug.Log($"攻撃する味方：{sm.self[i]}");
+            Debug.Log($"攻撃する味方：{sm.nakama[i]}");
         } 
 
         SystemManager.enemyCalcuStart = true;
 
+        GameObject gameObject = GameObject.Find("AllyStatusPanel");
+        CharacterStatusPanel chrctrSttsPnl = gameObject.GetComponent<CharacterStatusPanel>();
+
         // 敵の動きのアニメーションを制御するコード
         for (int i = 0; i < sm.numOfEnemies; i++)
         {
-            moveOfEnemy[sm.opponent[i]].SetSelfInfo(sm.opponentObject[i]);
-            moveOfAlly [sm.self[i]].SetTargetInfo(sm.selfObject[i]);
+            moveOfEnemy[sm.teki[i]].SetSelfInfo(sm.tekiObject[i]);
+            moveOfAlly [sm.nakama[i]].SetTargetInfo(sm.nakamaObject[i]);
 
-            moveOfEnemy[sm.opponent[i]].executeAttackMove = true;
-            moveOfAlly[sm.self[i]].executeHurtMove = true;
+            moveOfEnemy[sm.teki[i]].executeAttackMove = true;
+            moveOfAlly[sm.nakama[i]].executeHurtMove = true;
 
-            yield return new WaitUntil(() => moveOfEnemy[sm.opponent[i]].attackStart == true);
-            moveOfEnemy[sm.opponent[i]].AttackAnimationStart();
+            yield return new WaitUntil(() => moveOfEnemy[sm.teki[i]].attackStart == true);
+            moveOfEnemy[sm.teki[i]].AttackAnimationStart();
 
-            yield return new WaitUntil(() => moveOfEnemy[sm.opponent[i]].attackEnd == true);
-            moveOfAlly[sm.self[i]].HurtAnimationStart();
+            yield return new WaitUntil(() => moveOfEnemy[sm.teki[i]].attackEnd == true);
+            moveOfAlly[sm.nakama[i]].HurtAnimationStart();
 
-            yield return new WaitUntil(() => moveOfAlly[sm.self[i]].hurtEnd == true);
-            moveOfEnemy[sm.opponent[i]].executeAfterAttackMove = true;
-            moveOfAlly[sm.self[i]].executeAfterHurtMove = true;
+            // ステイタス表示系のUIを更新する
+            chrctrSttsPnl.refreshedChracter = sm.nakama[i];
+            //chrctrSttsPnl.enemy = sm.teki[i];
+            chrctrSttsPnl.refreshAllyHP = true;
+            chrctrSttsPnl.refreshEnemyTP = true;
 
-            yield return new WaitUntil(() => moveOfAlly[sm.self[i]].end == true);
+            yield return new WaitUntil(() => moveOfAlly[sm.nakama[i]].hurtEnd == true);
+            moveOfEnemy[sm.teki[i]].executeAfterAttackMove = true;
+            moveOfAlly[sm.nakama[i]].executeAfterHurtMove = true;
+
+            yield return new WaitUntil(() => moveOfAlly[sm.nakama[i]].end == true);
 
             yield return null;
-            moveOfEnemy[sm.opponent[i]].end = false;
-            moveOfAlly[sm.self[i]].end = false;
-            moveOfEnemy[sm.opponent[i]].self = null;
-            moveOfAlly[sm.self[i]].target = null;
-
-            nextPhase = new SecondCheckPhase();
+            moveOfEnemy[sm.teki[i]].end = false;
+            moveOfAlly[sm.nakama[i]].end = false;
+            moveOfEnemy[sm.teki[i]].self = null;
+            moveOfAlly[sm.nakama[i]].target = null;
         }
+
+        nextPhase = new SecondCheckPhase();
     }
 }

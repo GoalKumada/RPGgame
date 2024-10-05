@@ -15,33 +15,50 @@ public class AllyMovePhase : PhaseBase
         GameObject gobj = GameObject.Find("SystemManager");
         SystemManager sm = gobj.GetComponent<SystemManager>();
 
+        GameObject allyStatusPanel = GameObject.Find("AllyStatusPanel");
+        CharacterStatusPanel aspCSP = allyStatusPanel.GetComponent<CharacterStatusPanel>();
+
+        GameObject enemyStatusPanel = GameObject.Find("EnemyStatusPanel");
+        CharacterStatusPanel espCSP = enemyStatusPanel.GetComponent<CharacterStatusPanel>();
+
+        Debug.Log(aspCSP);
+        Debug.Log(espCSP);
+
+        // 味方の動きのアニメーションを制御するコード
         for (int i = 0; i < sm.numOfAllies; i++)
         {
-            moveOfAlly[sm.self[i]].SetSelfInfo(sm.selfObject[i]);
-            moveOfEnemy[sm.opponent[i]].SetTargetInfo(sm.opponentObject[i]);
+            moveOfAlly[sm.nakama[i]].SetSelfInfo(sm.nakamaObject[i]);
+            moveOfEnemy[sm.teki[i]].SetTargetInfo(sm.tekiObject[i]);
 
-            moveOfAlly[sm.self[i]].executeAttackMove = true;
-            moveOfEnemy[sm.opponent[i]].executeHurtMove = true;
+            moveOfAlly[sm.nakama[i]].executeAttackMove = true;
+            moveOfEnemy[sm.teki[i]].executeHurtMove = true;
 
-            yield return new WaitUntil(() => moveOfAlly[sm.self[i]].attackStart == true);
-            moveOfAlly[sm.self[i]].AttackAnimationStart();
+            yield return new WaitUntil(() => moveOfAlly[sm.nakama[i]].attackStart == true);
+            moveOfAlly[sm.nakama[i]].AttackAnimationStart();
 
-            yield return new WaitUntil(() => moveOfAlly[sm.self[i]].attackEnd == true);
-            moveOfEnemy[sm.opponent[i]].HurtAnimationStart();
+            yield return new WaitUntil(() => moveOfAlly[sm.nakama[i]].attackEnd == true);
+            moveOfEnemy[sm.teki[i]].HurtAnimationStart();
 
-            yield return new WaitUntil(() => moveOfEnemy[sm.opponent[i]].hurtEnd == true);
-            moveOfAlly[sm.self[i]].executeAfterAttackMove = true;
-            moveOfEnemy[sm.opponent[i]].executeAfterHurtMove = true;
+            // ステイタス表示系のUIを更新する
+            aspCSP.refreshedChracter = sm.nakama[i];
+            aspCSP.refreshAllyTP = true;
 
-            yield return new WaitUntil(() => moveOfEnemy[sm.opponent[i]].end == true);
+            espCSP.refreshedChracter = sm.teki[i];
+            espCSP.refreshEnemyHP = true;
+
+            yield return new WaitUntil(() => moveOfEnemy[sm.teki[i]].hurtEnd == true);
+            moveOfAlly[sm.nakama[i]].executeAfterAttackMove = true;
+            moveOfEnemy[sm.teki[i]].executeAfterHurtMove = true;
+
+            yield return new WaitUntil(() => moveOfEnemy[sm.teki[i]].end == true);
 
             yield return null;
-            moveOfAlly[sm.self[i]].end = false;
-            moveOfEnemy[sm.opponent[i]].end = false;
-            moveOfAlly[sm.self[i]].self = null;
-            moveOfEnemy[sm.opponent[i]].target = null;
-
-            nextPhase = new FirstCheckPhase();
+            moveOfAlly[sm.nakama[i]].end = false;
+            moveOfEnemy[sm.teki[i]].end = false;
+            moveOfAlly[sm.nakama[i]].self = null;
+            moveOfEnemy[sm.teki[i]].target = null;
         }
+
+        nextPhase = new FirstCheckPhase();
     }
 }

@@ -26,19 +26,19 @@ public class ChooseCommandPhase : PhaseBase
         }
         else
         {
-            sm.self.RemoveAt(sm.currentLoops);
-            sm.selfObject.RemoveAt(sm.currentLoops);
+            sm.nakama.RemoveAt(sm.currentLoops);
+            sm.nakamaObject.RemoveAt(sm.currentLoops);
             nextPhase = new ChooseAllyPhase();
             battleContext.chooseAllyWindowMenu.CreateSelectableTexts(sm.GetStringsOfAllies());
             battleContext.chooseAllyWindowMenu.Open();
             if (sm.currentLoops == 1)
             {
-                battleContext.chooseAllyWindowMenu.DeactivateTextByIndex(sm.self[0]);
+                battleContext.chooseAllyWindowMenu.DeactivateTextByIndex(sm.nakama[0]);
             }
             if (sm.currentLoops == 2)
             {
-                battleContext.chooseAllyWindowMenu.DeactivateTextByIndex(sm.self[0]);
-                battleContext.chooseAllyWindowMenu.DeactivateTextByIndex(sm.self[1]);
+                battleContext.chooseAllyWindowMenu.DeactivateTextByIndex(sm.nakama[0]);
+                battleContext.chooseAllyWindowMenu.DeactivateTextByIndex(sm.nakama[1]);
             }
         }
     }

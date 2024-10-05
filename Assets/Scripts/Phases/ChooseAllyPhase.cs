@@ -26,9 +26,9 @@ public class ChooseAllyPhase : PhaseBase
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            sm.self.Add(index);
+            sm.nakama.Add(index);
             string itsname = sm.allies[index].name;
-            sm.selfObject.Add(GameObject.Find(itsname));
+            sm.nakamaObject.Add(GameObject.Find(itsname));
 
             nextPhase = new ChooseCommandPhase();
             battleContext.chooseCommandWindowMenu.CreateSelectableTexts(sm.allies[index].GetStringsOfSkills());
@@ -44,8 +44,8 @@ public class ChooseAllyPhase : PhaseBase
             else
             {
                 sm.currentLoops--;
-                sm.opponent.RemoveAt(sm.currentLoops);
-                sm.opponentObject.RemoveAt(sm.currentLoops);
+                sm.teki.RemoveAt(sm.currentLoops);
+                sm.tekiObject.RemoveAt(sm.currentLoops);
                 nextPhase = new ChooseEnemyPhase();
                 battleContext.chooseEnemyWindowMenu.CreateSelectableTexts(sm.GetStringsOfEnemies());
                 battleContext.chooseEnemyWindowMenu.Open();

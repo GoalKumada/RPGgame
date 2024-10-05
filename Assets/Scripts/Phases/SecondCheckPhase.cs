@@ -17,7 +17,7 @@ public class SecondCheckPhase : PhaseBase
         int count = 0;
         for (int i = sm.numOfAllies - 1; i >= 0; i--)
         {
-            if (sm.allies[i].HP <= 0)
+            if (sm.allies[i].currentHP <= 0)
             {
                 Animator animator = sm.allies[i].GetComponent<Animator>();
                 animator.SetBool("Death_Idle", true);
@@ -36,11 +36,11 @@ public class SecondCheckPhase : PhaseBase
             battleContext.chooseRunOrBattleWindowMenu.Open();
             
             // 敵の行動に関する情報をクリア
-            sm.self.Clear();
-            sm.selfObject.Clear();
+            sm.nakama.Clear();
+            sm.nakamaObject.Clear();
             sm.skillNumber.Clear();
-            sm.opponent.Clear();
-            sm.opponentObject.Clear();
+            sm.teki.Clear();
+            sm.tekiObject.Clear();
         }
         else
         {

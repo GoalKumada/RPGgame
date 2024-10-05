@@ -8,8 +8,9 @@ public class SpinAttack : Skill
     {
         skillName = "回転切り";
         attackPower = 30;
+        requiredTP = 5;
         type = Type.attack;
-
+        skillExplain = "a";
 
     }
 }

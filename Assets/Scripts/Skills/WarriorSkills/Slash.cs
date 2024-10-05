@@ -10,7 +10,7 @@ public class Slash : Skill
         skillName = "スラッシュ";
         attackPower = 10;
         type = Type.attack;
-
+        requiredTP = 0;
         skillExplain = "あ";
     }
 }

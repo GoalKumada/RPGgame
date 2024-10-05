@@ -5,11 +5,18 @@ using UnityEngine;
 public class Character : MonoBehaviour
 {
     [SerializeField] public string characterName;
-    [SerializeField] public float HP;
-    [SerializeField] public float TP;
+    [SerializeField] public float currentHP;
+    [SerializeField] public float maxHP;
+    [SerializeField] public int currentTP;
+    [SerializeField] public int maxTP;
     [SerializeField] private float DEF;
-
     [SerializeField] public Skill[] skills;
+
+    private void Awake()
+    {
+        currentHP = maxHP;
+        currentTP = maxTP;
+    }
 
     public string[] GetStringsOfSkills()
     {
@@ -22,28 +29,32 @@ public class Character : MonoBehaviour
         return list.ToArray();
     }
 
+    /*
     public void Attack(Character target, int skillNumber)
     {
         int damage = 5;
-        target.HP -= damage;
+        target.currentHP -= damage;
         Debug.Log($"{characterName}の攻撃！ {target.characterName}に{damage}のダメージ");
-        if (target.HP > 0)
+        if (target.currentHP > 0)
         {
-            Debug.Log($"{target.characterName}の残りHPは{target.HP}。");
+            Debug.Log($"{target.characterName}の残りHPは{target.currentHP}。");
         }
         else
         {
             Debug.Log($"{target.characterName}を倒した！");
         }
     }
+    */
 
     public void UseSkill(Character target, int skillNumber)
     {
-        target.HP -= skills[skillNumber].attackPower;
+        target.currentHP -= skills[skillNumber].attackPower;
+        currentTP -= skills[skillNumber].requiredTP;
+        
         Debug.Log($"{characterName}の{skills[skillNumber].skillName}! {target.characterName}に{skills[skillNumber].attackPower}のダメージ");
-        if (target.HP > 0)
+        if (target.currentHP > 0)
         {
-            Debug.Log($"{target.characterName}の残りHPは{target.HP}。");
+            Debug.Log($"{target.characterName}の残りHPは{target.currentHP}。");
         }
         else
         {

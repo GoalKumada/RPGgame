@@ -7,26 +7,68 @@ public class CharacterStatusPanel : MonoBehaviour
 {
     [SerializeField] List<CharacterStatus> characterStatuses = new List<CharacterStatus>();
     [SerializeField] CharacterStatus characterStatusPrefab = default;
-    private float a = 500f;
-    private float b = 30f;
+    public bool refreshAllyHP = false; 
+    public bool refreshAllyTP = false;
+    public bool refreshEnemyHP = false; 
+    public bool refreshEnemyTP = false; 
+    public int refreshedChracter;
+    SystemManager sm;
 
     void Start()
     {
         GameObject gobj = GameObject.Find("SystemManager");
-        SystemManager sm = gobj.GetComponent<SystemManager>();
-        for (int i = 0; i < sm.numOfAllies; i++)
+        sm = gobj.GetComponent<SystemManager>();
+
+        if (gameObject.tag == "Ally") 
         {
-            CharacterStatus characterStatus = Instantiate(characterStatusPrefab,this.transform);
-            characterStatus.SetName(sm.allies[i].characterName);
-            characterStatus.SetValueOfHP(sm.allies[i].HP);
-            characterStatus.SetValueOfTP(sm.allies[i].TP);
-            characterStatuses.Add(characterStatus);
+            for (int i = 0; i < sm.numOfAllies; i++)
+            {
+                CharacterStatus characterStatus = Instantiate(characterStatusPrefab,this.transform);
+                characterStatus.SetName(sm.allies[i].characterName);
+                characterStatus.SetValueOfHP(sm.allies[i]);
+                characterStatus.SetValueOfTP(sm.allies[i]);
+                characterStatuses.Add(characterStatus);
+            }
         }
+        else if (gameObject.tag == "Enemy")
+        {
+            for (int i = 0; i < sm.numOfEnemies; i++)
+            {
+                CharacterStatus characterStatus = Instantiate(characterStatusPrefab, this.transform);
+                characterStatus.SetName(sm.enemies[i].characterName);
+                characterStatus.SetValueOfHP(sm.enemies[i]);
+                characterStatus.SetValueOfTP(sm.enemies[i]);
+                characterStatuses.Add(characterStatus);
+            }
+        }
+
     }
 
     void Update()
     {
-        
+        if (refreshAllyHP)
+        {
+            characterStatuses[refreshedChracter].SetValueOfHP(sm.allies[refreshedChracter]);
+            refreshAllyHP = false;
+        }
+
+        if (refreshAllyTP)
+        {
+            characterStatuses[refreshedChracter].SetValueOfTP(sm.allies[refreshedChracter]);
+            refreshAllyTP = false;
+        }
+
+        if (refreshEnemyHP)
+        {
+            characterStatuses[refreshedChracter].SetValueOfHP(sm.enemies[refreshedChracter]);
+            refreshEnemyHP = false;
+        }
+
+        if (refreshEnemyTP)
+        {
+            characterStatuses[refreshedChracter].SetValueOfTP(sm.enemies[refreshedChracter]);
+            refreshEnemyTP = false;
+        }
     }
 
 

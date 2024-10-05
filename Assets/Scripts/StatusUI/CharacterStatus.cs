@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,17 +23,35 @@ public class CharacterStatus : MonoBehaviour
         text.text = name;
     }
 
-    public void SetValueOfHP(float maxHP)
+    public void SetValueOfHP(Character character)
     {
-        GameObject valueOfHPText = transform.Find("ValueOfHPText").gameObject;
-        Text text = valueOfHPText.GetComponent<Text>();
-        text.text = $"{maxHP}/{maxHP}";
+        if (character.tag == "Ally")
+        {
+            GameObject valueOfHPText = transform.Find("ValueOfAllyHPText").gameObject;
+            Text text = valueOfHPText.GetComponent<Text>();
+            text.text = $"{character.currentHP}/{character.maxHP}";
+        }
+        else if (character.tag == "Enemy")
+        {
+            GameObject valueOfHPText = transform.Find("ValueOfEnemyHPText").gameObject;
+            Text text = valueOfHPText.GetComponent<Text>();
+            text.text = $"{character.currentHP}/{character.maxHP}";
+        }
     }
 
-    public void SetValueOfTP(float maxTP)
+    public void SetValueOfTP(Character character)
     {
-        GameObject valueOfTPText = transform.Find("ValueOfTPText").gameObject;
-        Text text = valueOfTPText.GetComponent<Text>();
-        text.text = $"{maxTP}/{maxTP}";
+        if (character.tag == "Ally")
+        {
+            GameObject valueOfTPText = transform.Find("ValueOfAllyTPText").gameObject;
+            Text text = valueOfTPText.GetComponent<Text>();
+            text.text = $"{character.currentTP} / {character.maxTP}";
+        }
+        else if (character.tag == "Enemy")
+        {
+            GameObject valueOfTPText = transform.Find("ValueOfEnemyTPText").gameObject;
+            Text text = valueOfTPText.GetComponent<Text>();
+            text.text = $"{character.currentTP} / {character.maxTP}";
+        }
     }
 }

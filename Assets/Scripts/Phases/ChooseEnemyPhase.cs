@@ -23,9 +23,9 @@ public class ChooseEnemyPhase : PhaseBase
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            sm.opponent.Add(index);
+            sm.teki.Add(index);
             string itsname = sm.enemies[index].name;
-            sm.opponentObject.Add(GameObject.Find(itsname));
+            sm.tekiObject.Add(GameObject.Find(itsname));
 
             if (sm.currentLoops != sm.numOfAllies-1)
             {
@@ -35,12 +35,12 @@ public class ChooseEnemyPhase : PhaseBase
                 battleContext.chooseAllyWindowMenu.Open();
                 if (sm.currentLoops == 1)
                 {
-                    battleContext.chooseAllyWindowMenu.DeactivateTextByIndex(sm.self[0]);
+                    battleContext.chooseAllyWindowMenu.DeactivateTextByIndex(sm.nakama[0]);
                 }
                 if (sm.currentLoops == 2)
                 {
-                    battleContext.chooseAllyWindowMenu.DeactivateTextByIndex(sm.self[0]);
-                    battleContext.chooseAllyWindowMenu.DeactivateTextByIndex(sm.self[1]);
+                    battleContext.chooseAllyWindowMenu.DeactivateTextByIndex(sm.nakama[0]);
+                    battleContext.chooseAllyWindowMenu.DeactivateTextByIndex(sm.nakama[1]);
                 }
             }
             else
@@ -53,7 +53,7 @@ public class ChooseEnemyPhase : PhaseBase
         {
             sm.skillNumber.RemoveAt(sm.currentLoops);
             nextPhase = new ChooseCommandPhase();
-            battleContext.chooseCommandWindowMenu.CreateSelectableTexts(sm.allies[sm.self[sm.currentLoops]].GetStringsOfSkills());
+            battleContext.chooseCommandWindowMenu.CreateSelectableTexts(sm.allies[sm.nakama[sm.currentLoops]].GetStringsOfSkills());
             battleContext.chooseCommandWindowMenu.Open();
         }
     }
