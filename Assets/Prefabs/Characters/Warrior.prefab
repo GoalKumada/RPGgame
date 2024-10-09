@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 1590757427240164233}
   - component: {fileID: 6247554090848621618}
   - component: {fileID: 8721858041882971606}
-  - component: {fileID: -2742491024990113953}
-  - component: {fileID: 8576170651487398971}
-  - component: {fileID: -3396550082011346164}
+  - component: {fileID: 3627605371799928659}
+  - component: {fileID: 4634140052281764125}
+  - component: {fileID: 799913364183266764}
   m_Layer: 0
   m_Name: Warrior
   m_TagString: Ally
@@ -51,8 +51,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: 
-  HP: 0
-  TP: 0
+  currentHP: 0
+  maxHP: 0
+  currentTP: 0
+  maxTP: 0
   DEF: 0
   skills: []
   SPEED: 0
@@ -68,6 +70,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04122bafe87a67f41a6397bf6d1d395e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  originalPos: {x: 0, y: 0, z: 0}
+  goalPos: {x: 0, y: 0, z: 0}
+  self: {fileID: 0}
+  target: {fileID: 0}
   executeAttackMove: 0
   executeHurtMove: 0
   attackStart: 0
@@ -152,7 +158,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-2742491024990113953
+--- !u!114 &3627605371799928659
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,8 +172,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: "\u30B9\u30E9\u30C3\u30B7\u30E5"
   attackPower: 10
-  skillExplain: "\u3042"
---- !u!114 &8576170651487398971
+  requiredTP: 0
+  skillExplain: "\u6575\u3092\u5207\u308A\u3064\u3051\u308B\u6280\r\nTP\u6D88\u8CBB\uFF10"
+--- !u!114 &4634140052281764125
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -181,8 +188,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: "\u30C0\u30D6\u30EB\u30A2\u30BF\u30C3\u30AF"
   attackPower: 20
-  skillExplain: 
---- !u!114 &-3396550082011346164
+  requiredTP: 2
+  skillExplain: "\u6575\u3092\u7D20\u65E9\u304F\uFF12\u56DE\u5207\u308B\u3064\u3051\u308B\r\n\u6D88\u8CBB\uFF2D\uFF30\uFF12"
+--- !u!114 &799913364183266764
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -196,4 +204,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: "\u56DE\u8EE2\u5207\u308A"
   attackPower: 30
-  skillExplain: 
+  requiredTP: 5
+  skillExplain: "\u56DE\u8EE2\u3057\u306A\u304C\u3089\u5F37\u304F\u6575\u3092\u5207\u308A\u4F0F\u305B\u308B\u5FC5\u6BBA\u6280\r\n\u6D88\u8CBB\uFF2D\uFF30\uFF15"

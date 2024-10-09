@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 6826483874864275127}
   - component: {fileID: 9203489596841102069}
   - component: {fileID: 857564041703475230}
+  - component: {fileID: 1156896330055293092}
   m_Layer: 5
   m_Name: TpGaugeImage
   m_TagString: Untagged
@@ -170,6 +171,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1156896330055293092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671476684953806988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d38e6de81d528a4d9a2a2b8303b7cff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fillImage: {fileID: 6675906233214788516}
 --- !u!1 &3561524158575170531
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,6 +195,7 @@ GameObject:
   - component: {fileID: 532616001032725720}
   - component: {fileID: 1049508755062888412}
   - component: {fileID: 5815973667360480150}
+  - component: {fileID: 7394231418915232927}
   m_Layer: 5
   m_Name: HpGaugeImage
   m_TagString: Untagged
@@ -246,6 +261,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7394231418915232927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3561524158575170531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d38e6de81d528a4d9a2a2b8303b7cff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fillImage: {fileID: 6992630784300310586}
 --- !u!1 &3875877899286602359
 GameObject:
   m_ObjectHideFlags: 0

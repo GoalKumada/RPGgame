@@ -74,9 +74,9 @@
     <Compile Include="Assets\Scripts\Character\Ally.cs" />
     <Compile Include="Assets\Scripts\BattleManager.cs" />
     <Compile Include="Assets\Scripts\Item\Armor.cs" />
+    <Compile Include="Assets\Scripts\StatusUI\GaugeUI.cs" />
     <Compile Include="Assets\Scripts\Phases\ChooseEnemyPhase.cs" />
     <Compile Include="Assets\Scripts\Phases\SecondCheckPhase.cs" />
-    <Compile Include="Assets\Scripts\StatusUI\LifeGauge.cs" />
     <Compile Include="Assets\Scripts\Skills\Skill.cs" />
     <Compile Include="Assets\Scripts\Phases\RunCheckPhase.cs" />
     <Compile Include="Assets\Scripts\Window\DialogueText.cs" />

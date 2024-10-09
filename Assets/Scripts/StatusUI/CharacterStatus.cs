@@ -54,4 +54,20 @@ public class CharacterStatus : MonoBehaviour
             text.text = $"{character.currentTP} / {character.maxTP}";
         }
     }
+
+    public void RefreshGaugeOfHP(Character character)
+    {
+        Transform hpGaugeTransform = transform.Find("GaugePanel/HpGaugeImage");
+        GameObject hpGauge = hpGaugeTransform.gameObject;
+        GaugeUI gaugeUI = hpGauge.GetComponent<GaugeUI>();
+        gaugeUI.fillImage.fillAmount = character.currentHP / character.maxHP;
+    }
+
+    public void RefreshGaugeOfTP(Character character)
+    {
+        Transform tpGaugeTransform = transform.Find("GaugePanel/TpGaugeImage");
+        GameObject tpGauge = tpGaugeTransform.gameObject;
+        GaugeUI gaugeUI = tpGauge.GetComponent<GaugeUI>();
+        gaugeUI.fillImage.fillAmount = (float)character.currentTP / character.maxTP;
+    }
 }

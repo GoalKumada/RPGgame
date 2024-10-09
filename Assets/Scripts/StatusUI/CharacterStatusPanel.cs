@@ -14,7 +14,7 @@ public class CharacterStatusPanel : MonoBehaviour
     public int refreshedChracter;
     SystemManager sm;
 
-    void Start()
+    private void Start()
     {
         GameObject gobj = GameObject.Find("SystemManager");
         sm = gobj.GetComponent<SystemManager>();
@@ -44,35 +44,34 @@ public class CharacterStatusPanel : MonoBehaviour
 
     }
 
-    void Update()
+    private void Update()
     {
         if (refreshAllyHP)
         {
             characterStatuses[refreshedChracter].SetValueOfHP(sm.allies[refreshedChracter]);
+            characterStatuses[refreshedChracter].RefreshGaugeOfHP(sm.allies[refreshedChracter]);
             refreshAllyHP = false;
         }
 
         if (refreshAllyTP)
         {
             characterStatuses[refreshedChracter].SetValueOfTP(sm.allies[refreshedChracter]);
+            characterStatuses[refreshedChracter].RefreshGaugeOfTP(sm.allies[refreshedChracter]);
             refreshAllyTP = false;
         }
 
         if (refreshEnemyHP)
         {
             characterStatuses[refreshedChracter].SetValueOfHP(sm.enemies[refreshedChracter]);
+            characterStatuses[refreshedChracter].RefreshGaugeOfHP(sm.enemies[refreshedChracter]);
             refreshEnemyHP = false;
         }
 
         if (refreshEnemyTP)
         {
             characterStatuses[refreshedChracter].SetValueOfTP(sm.enemies[refreshedChracter]);
+            characterStatuses[refreshedChracter].RefreshGaugeOfTP(sm.enemies[refreshedChracter]);
             refreshEnemyTP = false;
         }
     }
-
-
-
-
-
 }

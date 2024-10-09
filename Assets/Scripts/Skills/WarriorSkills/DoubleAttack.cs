@@ -10,7 +10,7 @@ public class DoubleAttack : Skill
         attackPower = 20;
         requiredTP = 2;
         type = Type.attack;
-        skillExplain = "a";
+        skillExplain = "敵を素早く２回切るつける\r\n消費ＭＰ２";
 
     }
 }

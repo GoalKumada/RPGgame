@@ -13,7 +13,8 @@ public class ChooseCommandPhase : PhaseBase
         int index = battleContext.chooseCommandWindowMenu.currentID;
         battleContext.chooseCommandWindowMenu.Close();
         battleContext.chooseCommandWindowMenu.DeleteSelectableTexts();
-        
+        battleContext.textWindow.isChooseComandPhase = false;
+
         GameObject gobj = GameObject.Find("SystemManager");
         SystemManager sm = gobj.GetComponent<SystemManager>();
 

@@ -8,7 +8,14 @@ using UnityEngine.UI;
 public class SelectableText : Selectable
 {
     public UnityAction<Transform> onSelectAction = null; //関数登録用の変数
-    
+    BattleManager bm;
+
+    private new void Awake()
+    {
+        GameObject obj = GameObject.Find("BattleManager");
+        bm = obj.GetComponent<BattleManager>();
+    }
+
     public void SetText(string text)
     {
         GetComponent<Text>().text = text;
@@ -18,18 +25,13 @@ public class SelectableText : Selectable
     //選択状態になったら実行される関数
     public override void OnSelect(BaseEventData eventData)
     {
-        //base.OnSelect(eventData);
-        Debug.Log($"{gameObject.transform.GetSiblingIndex()}が選択された");
-
-        //Debug.Log(gameObject.name);
         onSelectAction.Invoke(transform); //登録した関数を実行する
+        //Debug.Log($"{gameObject.transform.GetSiblingIndex()}が選択された");
     }
 
     //非選択状態になったら実行される関数
     public override void OnDeselect(BaseEventData eventData)
     {
-        //base.OnSelect(eventData);
-        //Debug.Log($"{gameObject.name}の選択が外された");
 
     }
 }

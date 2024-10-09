@@ -13,6 +13,9 @@ GameObject:
   - component: {fileID: 7206094696911014652}
   - component: {fileID: 3128537238519033379}
   - component: {fileID: 4165820295055533173}
+  - component: {fileID: 8804676192823947841}
+  - component: {fileID: -495140303582378852}
+  - component: {fileID: -7358713714668978614}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -48,8 +51,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: 
-  HP: 0
-  TP: 0
+  currentHP: 0
+  maxHP: 0
+  currentTP: 0
+  maxTP: 0
   DEF: 0
   skills: []
 --- !u!114 &7206094696911014652
@@ -64,6 +69,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04122bafe87a67f41a6397bf6d1d395e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  originalPos: {x: 0, y: 0, z: 0}
+  goalPos: {x: 0, y: 0, z: 0}
+  self: {fileID: 0}
+  target: {fileID: 0}
   executeAttackMove: 0
   executeHurtMove: 0
   attackStart: 0
@@ -148,3 +157,51 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8804676192823947841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9088872721161602048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d06298980d87094baf3dc3dfbbbae70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u30B9\u30E9\u30C3\u30B7\u30E5"
+  attackPower: 10
+  requiredTP: 0
+  skillExplain: "\u6575\u3092\u5207\u308A\u3064\u3051\u308B\u6280\r\nTP\u6D88\u8CBB\uFF10"
+--- !u!114 &-495140303582378852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9088872721161602048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26608363abf0f8b4fae82c80eded1bed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u30C0\u30D6\u30EB\u30A2\u30BF\u30C3\u30AF"
+  attackPower: 20
+  requiredTP: 2
+  skillExplain: "\u6575\u3092\u7D20\u65E9\u304F\uFF12\u56DE\u5207\u308B\u3064\u3051\u308B\r\n\u6D88\u8CBB\uFF2D\uFF30\uFF12"
+--- !u!114 &-7358713714668978614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9088872721161602048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f39220b4c488c946bdcdb30cf958855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u56DE\u8EE2\u5207\u308A"
+  attackPower: 30
+  requiredTP: 5
+  skillExplain: "\u56DE\u8EE2\u3057\u306A\u304C\u3089\u5F37\u304F\u6575\u3092\u5207\u308A\u4F0F\u305B\u308B\u5FC5\u6BBA\u6280\r\n\u6D88\u8CBB\uFF2D\uFF30\uFF15"

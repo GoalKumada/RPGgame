@@ -1,8 +1,7 @@
 using System;
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
 using UnityEngine;
 
 public class EnemyMovePhase : PhaseBase
@@ -32,30 +31,36 @@ public class EnemyMovePhase : PhaseBase
             string enemyName = sm.enemies[i].name;
             sm.tekiObject.Add(GameObject.Find(enemyName));
 
-            Debug.Log($"{i+1}番目に行動する敵：{i}");
+            //Debug.Log($"{i+1}番目に行動する敵：{i}");
 
             // 技選択は乱数を用いてランダムに
             int maxNumOfSkill = sm.enemies[i].skills.Count();
             sm.skillNumber.Add(random.Next(0, maxNumOfSkill));
 
-            Debug.Log($"{i+1}番目に行動する敵の技：{sm.skillNumber[i]}");
+            //Debug.Log($"{i+1}番目に行動する敵の技：{sm.skillNumber[i]}");
 
             // 攻撃する味方の選択もランダムに
             sm.nakama.Add(random.Next(0,sm.numOfAllies));
             string allyname = sm.allies[sm.nakama[i]].name;
             sm.nakamaObject.Add(GameObject.Find(allyname));
 
-            Debug.Log($"攻撃する味方：{sm.nakama[i]}");
+            //Debug.Log($"攻撃する味方：{sm.nakama[i]}");
         } 
 
-        SystemManager.enemyCalcuStart = true;
 
-        GameObject gameObject = GameObject.Find("AllyStatusPanel");
-        CharacterStatusPanel chrctrSttsPnl = gameObject.GetComponent<CharacterStatusPanel>();
+        GameObject allyStatusPanel = GameObject.Find("AllyStatusPanel");
+        CharacterStatusPanel aspCSP = allyStatusPanel.GetComponent<CharacterStatusPanel>();
+
+        GameObject enemyStatusPanel = GameObject.Find("EnemyStatusPanel");
+        CharacterStatusPanel espCSP = enemyStatusPanel.GetComponent<CharacterStatusPanel>();
 
         // 敵の動きのアニメーションを制御するコード
         for (int i = 0; i < sm.numOfEnemies; i++)
         {
+            // 敵の攻撃によるダメージの計算をする
+            sm.enemies[sm.teki[i]].UseSkill(sm.allies[sm.nakama[i]], sm.skillNumber[i]);
+
+
             moveOfEnemy[sm.teki[i]].SetSelfInfo(sm.tekiObject[i]);
             moveOfAlly [sm.nakama[i]].SetTargetInfo(sm.nakamaObject[i]);
 
@@ -69,10 +74,11 @@ public class EnemyMovePhase : PhaseBase
             moveOfAlly[sm.nakama[i]].HurtAnimationStart();
 
             // ステイタス表示系のUIを更新する
-            chrctrSttsPnl.refreshedChracter = sm.nakama[i];
-            //chrctrSttsPnl.enemy = sm.teki[i];
-            chrctrSttsPnl.refreshAllyHP = true;
-            chrctrSttsPnl.refreshEnemyTP = true;
+            espCSP.refreshedChracter = sm.teki[i];
+            espCSP.refreshEnemyTP = true;
+
+            aspCSP.refreshedChracter = sm.nakama[i];
+            aspCSP.refreshAllyHP = true;
 
             yield return new WaitUntil(() => moveOfAlly[sm.nakama[i]].hurtEnd == true);
             moveOfEnemy[sm.teki[i]].executeAfterAttackMove = true;

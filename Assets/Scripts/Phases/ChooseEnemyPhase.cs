@@ -46,7 +46,6 @@ public class ChooseEnemyPhase : PhaseBase
             else
             {
                 nextPhase = new AllyMovePhase();
-                SystemManager.allyCalcuStart = true;
             }
         }
         else

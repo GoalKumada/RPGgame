@@ -11,6 +11,6 @@ public class Slash : Skill
         attackPower = 10;
         type = Type.attack;
         requiredTP = 0;
-        skillExplain = "あ";
+        skillExplain = "敵を切りつける技\r\nTP消費０";
     }
 }

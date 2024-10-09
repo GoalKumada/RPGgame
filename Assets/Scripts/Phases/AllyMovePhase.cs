@@ -27,6 +27,9 @@ public class AllyMovePhase : PhaseBase
         // 味方の動きのアニメーションを制御するコード
         for (int i = 0; i < sm.numOfAllies; i++)
         {
+            // 味方の攻撃によるダメージの計算をする
+            sm.allies[sm.nakama[i]].UseSkill(sm.enemies[sm.teki[i]], sm.skillNumber[i]);
+
             moveOfAlly[sm.nakama[i]].SetSelfInfo(sm.nakamaObject[i]);
             moveOfEnemy[sm.teki[i]].SetTargetInfo(sm.tekiObject[i]);
 

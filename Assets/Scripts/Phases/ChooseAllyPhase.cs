@@ -31,6 +31,7 @@ public class ChooseAllyPhase : PhaseBase
             sm.nakamaObject.Add(GameObject.Find(itsname));
 
             nextPhase = new ChooseCommandPhase();
+            battleContext.textWindow.isChooseComandPhase = true;
             battleContext.chooseCommandWindowMenu.CreateSelectableTexts(sm.allies[index].GetStringsOfSkills());
             battleContext.chooseCommandWindowMenu.Open();
         }

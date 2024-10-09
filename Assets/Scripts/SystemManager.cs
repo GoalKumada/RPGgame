@@ -17,8 +17,6 @@ public class SystemManager : MonoBehaviour
     public int numOfAllies;
     public int numOfEnemies;
     public int currentLoops = 0;
-    public static bool allyCalcuStart;
-    public static bool enemyCalcuStart;
 
     private void Awake()
     {
@@ -28,25 +26,7 @@ public class SystemManager : MonoBehaviour
 
     private void Update()
     {
-        // 味方の攻撃によるダメージの計算をする
-        if (allyCalcuStart)
-        {
-            for (int i = 0; i < numOfAllies; i++) 
-            {
-                allies[nakama[i]].UseSkill(enemies[teki[i]], skillNumber[i]);
-            }
-            allyCalcuStart = false;
-        }
 
-        // 敵
-        if (enemyCalcuStart)
-        {
-            for (int i = 0; i < numOfEnemies; i++)
-            {
-                enemies[teki[i]].UseSkill(allies[nakama[i]], skillNumber[i]);
-            }
-            enemyCalcuStart = false;
-        }
     }
 
     public string[] GetStringsOfAllies()
