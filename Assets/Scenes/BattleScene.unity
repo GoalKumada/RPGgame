@@ -407,7 +407,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5000390040308788955, guid: 80a7c5dd10c0ef3488fd0ef1f55a25b7, type: 3}
       propertyPath: characterName
-      value: "\u3042\u3044\u3046\u3048\u304A"
+      value: "\u6226\u58EB\uFF11"
       objectReference: {fileID: 0}
     - target: {fileID: -5000390040308788955, guid: 80a7c5dd10c0ef3488fd0ef1f55a25b7, type: 3}
       propertyPath: skills.Array.size
@@ -728,7 +728,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5000390040308788955, guid: 80a7c5dd10c0ef3488fd0ef1f55a25b7, type: 3}
       propertyPath: maxHP
-      value: 20
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: -5000390040308788955, guid: 80a7c5dd10c0ef3488fd0ef1f55a25b7, type: 3}
       propertyPath: maxTP
@@ -2570,7 +2570,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8558971667630148442, guid: f05706a5aae93a24284a40f964f89627, type: 3}
       propertyPath: characterName
-      value: "\u304B\u304D\u304F\u3051\u3053"
+      value: "\u6575\uFF11"
       objectReference: {fileID: 0}
     - target: {fileID: 8558971667630148442, guid: f05706a5aae93a24284a40f964f89627, type: 3}
       propertyPath: skills.Array.size
@@ -2948,7 +2948,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5000390040308788955, guid: 80a7c5dd10c0ef3488fd0ef1f55a25b7, type: 3}
       propertyPath: maxTP
-      value: 30
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -5000390040308788955, guid: 80a7c5dd10c0ef3488fd0ef1f55a25b7, type: 3}
       propertyPath: currentHP

@@ -27,7 +27,7 @@ public class ChooseEnemyPhase : PhaseBase
             string itsname = sm.enemies[index].name;
             sm.tekiObject.Add(GameObject.Find(itsname));
 
-            if (sm.currentLoops != sm.numOfAllies-1)
+            if (sm.currentLoops != sm.numOfAllies - 1)
             {
                 sm.currentLoops++;
                 nextPhase = new ChooseAllyPhase();

@@ -420,7 +420,7 @@
 "Assets/Scripts/Skills/WarriorSkills/SpinAttack.cs"
 "Assets/Scripts/StatusUI/CharacterStatus.cs"
 "Assets/Scripts/StatusUI/CharacterStatusPanel.cs"
-"Assets/Scripts/StatusUI/LifeGauge.cs"
+"Assets/Scripts/StatusUI/GaugeUI.cs"
 "Assets/Scripts/StatusUI/LifeGaugeContainer.cs"
 "Assets/Scripts/SystemManager.cs"
 "Assets/Scripts/Window/DialogueText.cs"

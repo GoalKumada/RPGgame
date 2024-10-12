@@ -39,6 +39,9 @@ public class AllyMovePhase : PhaseBase
             yield return new WaitUntil(() => moveOfAlly[sm.nakama[i]].attackStart == true);
             moveOfAlly[sm.nakama[i]].AttackAnimationStart();
 
+            // 
+
+
             yield return new WaitUntil(() => moveOfAlly[sm.nakama[i]].attackEnd == true);
             moveOfEnemy[sm.teki[i]].HurtAnimationStart();
 

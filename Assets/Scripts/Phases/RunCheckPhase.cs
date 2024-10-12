@@ -23,7 +23,8 @@ public class RunCheckPhase : PhaseBase
             if (index == 0)
             {
                 nextPhase = new ChooseRunOrBattlePhase();
-                battleContext.chooseRunOrBattleWindowMenu.Open();            }
+                battleContext.chooseRunOrBattleWindowMenu.Open();
+            }
             else if (index == 1)
             {
                 nextPhase = new EndPhase();
@@ -32,6 +33,7 @@ public class RunCheckPhase : PhaseBase
         else
         {
             nextPhase = new ChooseRunOrBattlePhase();
-            battleContext.chooseRunOrBattleWindowMenu.Open();        }
+            battleContext.chooseRunOrBattleWindowMenu.Open();
+        }
     }
 }

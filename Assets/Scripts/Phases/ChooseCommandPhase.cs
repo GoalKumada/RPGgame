@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class ChooseCommandPhase : PhaseBase
 {
+    private string dialogue = "MPが足りない！";
+
     public override IEnumerator Execute(BattleContext battleContext, List<Move> moveOfAlly, List<Move> moveOfEnemy)
     {
         yield return null;
         Debug.Log("ChooseCommandPhase");
-        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Escape));
+        start:
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Escape));
 
         int index = battleContext.chooseCommandWindowMenu.currentID;
         battleContext.chooseCommandWindowMenu.Close();
@@ -20,10 +23,31 @@ public class ChooseCommandPhase : PhaseBase
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            sm.skillNumber.Add(index);
-            nextPhase = new ChooseEnemyPhase();
-            battleContext.chooseEnemyWindowMenu.CreateSelectableTexts(sm.GetStringsOfEnemies());
-            battleContext.chooseEnemyWindowMenu.Open();
+            // 現在のTPが必要TPより少なかったら選択できない
+            if (sm.allies[sm.nakama.Count - 1].currentTP < sm.allies[sm.nakama.Count - 1].skills[index].requiredTP)
+            {
+                yield return null;
+                Debug.Log("aaa");
+                battleContext.textWindow.isChooseComandPhase = false;
+                battleContext.textWindow.CreateDialogueText(dialogue);
+                
+                yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+
+                battleContext.chooseCommandWindowMenu.CreateSelectableTexts(sm.allies[sm.nakama.Count-1].GetStringsOfSkills());
+                battleContext.chooseCommandWindowMenu.Open();
+                battleContext.textWindow.isChooseComandPhase = true;
+
+
+                goto start;
+            }
+            else
+            {
+                Debug.Log("こっち入ってるよね");
+                sm.skillNumber.Add(index);
+                nextPhase = new ChooseEnemyPhase();
+                battleContext.chooseEnemyWindowMenu.CreateSelectableTexts(sm.GetStringsOfEnemies());
+                battleContext.chooseEnemyWindowMenu.Open();
+            }
         }
         else
         {
