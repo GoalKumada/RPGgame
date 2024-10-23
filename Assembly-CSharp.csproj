@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\BattleManager.cs" />
     <Compile Include="Assets\Scripts\Item\Armor.cs" />
     <Compile Include="Assets\Scripts\StatusUI\GaugeUI.cs" />
+    <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Phases\ChooseEnemyPhase.cs" />
     <Compile Include="Assets\Scripts\Phases\SecondCheckPhase.cs" />
     <Compile Include="Assets\Scripts\Skills\Skill.cs" />
@@ -97,8 +98,8 @@
     <Compile Include="Assets\Scripts\Skills\WarriorSkills\Slash.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Warrior free set\License.txt" />
-    <None Include="Assets\Warrior free set\Contact.txt" />
+    <None Include="Assets\Imports\Warrior free set\License.txt" />
+    <None Include="Assets\Imports\Warrior free set\Contact.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

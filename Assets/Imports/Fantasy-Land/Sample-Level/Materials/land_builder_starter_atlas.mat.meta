@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 078f965c3f70db941aabfeff61300f56
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 18598
+  packageName: Fantasy Environment Level Set
+  packageVersion: 1.3
+  assetPath: Assets/Sample-Level/Materials/land_builder_starter_atlas.mat
+  uploadId: 39880

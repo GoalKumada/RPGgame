@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 18ac42e418a4ad7408e325e04137fd8e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 18598
+  packageName: Fantasy Environment Level Set
+  packageVersion: 1.3
+  assetPath: Assets/Sample-Level/Materials/floor_variability_8px_borders.mat
+  uploadId: 39880
