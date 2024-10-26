@@ -15,7 +15,7 @@ C:/Users/goal2/RPGgame
 -logFile
 Logs/AssetImportWorker3.log
 -srvPort
-58623
+59948
 -job-worker-count
 11
 -background-job-worker-count
@@ -58,12 +58,12 @@ C:/Users/goal2/RPGgame
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [21844] Host "[IP] 192.168.1.106 [Port] 0 [Flags] 2 [Guid] 3337488088 [EditorId] 3337488088 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-I4N517B) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
-Player connection [21844] Host "[IP] 192.168.1.106 [Port] 0 [Flags] 2 [Guid] 3337488088 [EditorId] 3337488088 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-I4N517B) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [26628] Host "[IP] 192.168.1.106 [Port] 0 [Flags] 2 [Guid] 3995967858 [EditorId] 3995967858 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-I4N517B) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [26628] Host "[IP] 192.168.1.106 [Port] 0 [Flags] 2 [Guid] 3995967858 [EditorId] 3995967858 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-I4N517B) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 11
 [Physics::Module] Initialized MultithreadedJobDispatcher with 11 workers.
 Library Redirect Path: Library/
-Refreshing native plugins compatible for Editor in 1.04 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.90 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2023.2.18f1 (1cb755715f58)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2023.2.18f1/Editor/Data/Resources/UnitySubsystems
@@ -79,7 +79,7 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2023.2.18f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2023.2.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2023.2.18f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56340
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56040
 Begin MonoManager ReloadAssembly
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
@@ -96,47 +96,47 @@ Register platform support module: C:/Program Files/Unity/Hub/Editor/2023.2.18f1/
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2023.2.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2023.2.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2023.2.18f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
-Registered in 0.007686 seconds.
-- Loaded All Assemblies, in  0.310 seconds
+Registered in 0.004062 seconds.
+- Loaded All Assemblies, in  0.285 seconds
 [usbmuxd] Start listen thread
 [usbmuxd] Listen thread started
 Native extension for iOS target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 254 ms
+Android Extension - Scanning For ADB Devices 204 ms
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Mono: successfully reloaded assembly
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-- Finished resetting the current domain, in  0.544 seconds
-Domain Reload Profiling: 852ms
-	BeginReloadAssembly (95ms)
+- Finished resetting the current domain, in  0.485 seconds
+Domain Reload Profiling: 769ms
+	BeginReloadAssembly (85ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (28ms)
+	RebuildCommonClasses (27ms)
 	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (47ms)
-	LoadAllAssembliesAndSetupDomain (128ms)
-		LoadAssemblies (95ms)
+	initialDomainReloadingComplete (40ms)
+	LoadAllAssembliesAndSetupDomain (122ms)
+		LoadAssemblies (84ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (125ms)
-			TypeCache.Refresh (124ms)
-				TypeCache.ScanAssembly (112ms)
+		AnalyzeDomain (119ms)
+			TypeCache.Refresh (118ms)
+				TypeCache.ScanAssembly (108ms)
 			BuildScriptInfoCaches (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (545ms)
+	FinalizeReload (485ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (503ms)
+		SetupLoadedEditorAssemblies (443ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (340ms)
+			InitializePlatformSupportModulesInManaged (294ms)
 			SetLoadedEditorAssemblies (3ms)
-			BeforeProcessingInitializeOnLoad (5ms)
-			ProcessInitializeOnLoadAttributes (117ms)
-			ProcessInitializeOnLoadMethodAttributes (38ms)
+			BeforeProcessingInitializeOnLoad (4ms)
+			ProcessInitializeOnLoadAttributes (105ms)
+			ProcessInitializeOnLoadMethodAttributes (36ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -159,205 +159,650 @@ C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 Symbol file LoadedFromMemory doesn't match image C:\Users\goal2\RPGgame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\goal2\RPGgame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  0.681 seconds
-Refreshing native plugins compatible for Editor in 0.75 ms, found 3 plugins.
+- Loaded All Assemblies, in  0.624 seconds
+Refreshing native plugins compatible for Editor in 0.65 ms, found 3 plugins.
 Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.495 seconds
-Domain Reload Profiling: 1173ms
-	BeginReloadAssembly (254ms)
+- Finished resetting the current domain, in  0.466 seconds
+Domain Reload Profiling: 1088ms
+	BeginReloadAssembly (237ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (5ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (29ms)
+		CreateAndSetChildDomain (28ms)
 	RebuildCommonClasses (29ms)
 	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (32ms)
-	LoadAllAssembliesAndSetupDomain (353ms)
-		LoadAssemblies (275ms)
+	initialDomainReloadingComplete (28ms)
+	LoadAllAssembliesAndSetupDomain (317ms)
+		LoadAssemblies (237ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (143ms)
-			TypeCache.Refresh (121ms)
-				TypeCache.ScanAssembly (107ms)
-			BuildScriptInfoCaches (17ms)
+		AnalyzeDomain (139ms)
+			TypeCache.Refresh (118ms)
+				TypeCache.ScanAssembly (105ms)
+			BuildScriptInfoCaches (16ms)
 			ResolveRequiredComponents (3ms)
-	FinalizeReload (496ms)
+	FinalizeReload (467ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (347ms)
+		SetupLoadedEditorAssemblies (326ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (17ms)
 			SetLoadedEditorAssemblies (3ms)
-			BeforeProcessingInitializeOnLoad (32ms)
-			ProcessInitializeOnLoadAttributes (274ms)
-			ProcessInitializeOnLoadMethodAttributes (17ms)
-			AfterProcessingInitializeOnLoad (5ms)
+			BeforeProcessingInitializeOnLoad (30ms)
+			ProcessInitializeOnLoadAttributes (256ms)
+			ProcessInitializeOnLoadMethodAttributes (15ms)
+			AfterProcessingInitializeOnLoad (4ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (6ms)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
-Refreshing native plugins compatible for Editor in 1.12 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.62 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 10 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 3593 unused Assets / (0.8 MB). Loaded Objects now: 4191.
-Memory consumption went from 115.8 MB to 115.0 MB.
-Total: 7.975900 ms (FindLiveObjects: 0.690500 ms CreateObjectMapping: 0.252900 ms MarkObjects: 6.070000 ms  DeleteObjects: 0.961700 ms)
+Unloading 3592 unused Assets / (1.1 MB). Loaded Objects now: 4204.
+Memory consumption went from 121.5 MB to 120.4 MB.
+Total: 8.146800 ms (FindLiveObjects: 0.378200 ms CreateObjectMapping: 0.161900 ms MarkObjects: 6.058500 ms  DeleteObjects: 1.547100 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1162157.888066 seconds.
-  path: Assets/Imports/Fantasy-Land/Fantasy-Land-Set-Mobile/Prefabs/grass_07.prefab
-  artifactKey: Guid(0801b0b6aab6eee4780345268d570bbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/Fantasy-Land/Fantasy-Land-Set-Mobile/Prefabs/grass_07.prefab using Guid(0801b0b6aab6eee4780345268d570bbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b4e96444a905cd67960bb36545d8d75d') in 0.0933687 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+  Time since last request: 165504.456236 seconds.
+  path: Assets/Imports/Cartoon_Texture_Pack/WALLS/WALL_Bricks/Materials/Wall_Brick_D.mat
+  artifactKey: Guid(99c80548b1df7044281ddaed1d658ead) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/Cartoon_Texture_Pack/WALLS/WALL_Bricks/Materials/Wall_Brick_D.mat using Guid(99c80548b1df7044281ddaed1d658ead) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '23c7919edc7f1a9a006debe3f8a83daa') in 0.288396 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+Symbol file LoadedFromMemory doesn't match image C:\Users\goal2\RPGgame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\goal2\RPGgame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.439 seconds
+Refreshing native plugins compatible for Editor in 0.64 ms, found 3 plugins.
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.527 seconds
+Domain Reload Profiling: 966ms
+	BeginReloadAssembly (128ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (39ms)
+	RebuildCommonClasses (27ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (21ms)
+	LoadAllAssembliesAndSetupDomain (253ms)
+		LoadAssemblies (211ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (96ms)
+			TypeCache.Refresh (5ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (85ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (528ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (360ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (20ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (37ms)
+			ProcessInitializeOnLoadAttributes (276ms)
+			ProcessInitializeOnLoadMethodAttributes (17ms)
+			AfterProcessingInitializeOnLoad (5ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (9ms)
+Refreshing native plugins compatible for Editor in 0.70 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3591 unused Assets / (0.7 MB). Loaded Objects now: 4246.
+Memory consumption went from 122.3 MB to 121.6 MB.
+Total: 5.361800 ms (FindLiveObjects: 0.382200 ms CreateObjectMapping: 0.169200 ms MarkObjects: 4.188300 ms  DeleteObjects: 0.621500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+Symbol file LoadedFromMemory doesn't match image C:\Users\goal2\RPGgame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\goal2\RPGgame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.498 seconds
+Refreshing native plugins compatible for Editor in 0.65 ms, found 3 plugins.
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.538 seconds
+Domain Reload Profiling: 1035ms
+	BeginReloadAssembly (132ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (37ms)
+	RebuildCommonClasses (29ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (21ms)
+	LoadAllAssembliesAndSetupDomain (305ms)
+		LoadAssemblies (247ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (112ms)
+			TypeCache.Refresh (15ms)
+				TypeCache.ScanAssembly (4ms)
+			BuildScriptInfoCaches (91ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (539ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (397ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (18ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (40ms)
+			ProcessInitializeOnLoadAttributes (313ms)
+			ProcessInitializeOnLoadMethodAttributes (15ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Refreshing native plugins compatible for Editor in 0.66 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3755 unused Assets / (0.9 MB). Loaded Objects now: 4408.
+Memory consumption went from 126.2 MB to 125.3 MB.
+Total: 5.146300 ms (FindLiveObjects: 0.361300 ms CreateObjectMapping: 0.319800 ms MarkObjects: 3.734400 ms  DeleteObjects: 0.730300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+Symbol file LoadedFromMemory doesn't match image C:\Users\goal2\RPGgame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\goal2\RPGgame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.452 seconds
+Refreshing native plugins compatible for Editor in 0.66 ms, found 3 plugins.
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.565 seconds
+Domain Reload Profiling: 1016ms
+	BeginReloadAssembly (129ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (38ms)
+	RebuildCommonClasses (26ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (21ms)
+	LoadAllAssembliesAndSetupDomain (266ms)
+		LoadAssemblies (214ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (107ms)
+			TypeCache.Refresh (5ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (96ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (565ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (397ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (20ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (37ms)
+			ProcessInitializeOnLoadAttributes (311ms)
+			ProcessInitializeOnLoadMethodAttributes (19ms)
+			AfterProcessingInitializeOnLoad (5ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (7ms)
+Refreshing native plugins compatible for Editor in 0.69 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3755 unused Assets / (0.9 MB). Loaded Objects now: 4408.
+Memory consumption went from 128.2 MB to 127.3 MB.
+Total: 5.534200 ms (FindLiveObjects: 0.410400 ms CreateObjectMapping: 0.344000 ms MarkObjects: 3.993300 ms  DeleteObjects: 0.785700 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+Symbol file LoadedFromMemory doesn't match image C:\Users\goal2\RPGgame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\goal2\RPGgame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.450 seconds
+Refreshing native plugins compatible for Editor in 0.66 ms, found 3 plugins.
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.576 seconds
+Domain Reload Profiling: 1026ms
+	BeginReloadAssembly (128ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (37ms)
+	RebuildCommonClasses (26ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (20ms)
+	LoadAllAssembliesAndSetupDomain (265ms)
+		LoadAssemblies (216ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (104ms)
+			TypeCache.Refresh (5ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (93ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (577ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (400ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (20ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (37ms)
+			ProcessInitializeOnLoadAttributes (314ms)
+			ProcessInitializeOnLoadMethodAttributes (18ms)
+			AfterProcessingInitializeOnLoad (5ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (8ms)
+Refreshing native plugins compatible for Editor in 0.82 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3755 unused Assets / (1.0 MB). Loaded Objects now: 4408.
+Memory consumption went from 130.1 MB to 129.1 MB.
+Total: 6.100100 ms (FindLiveObjects: 0.478100 ms CreateObjectMapping: 0.309100 ms MarkObjects: 4.153100 ms  DeleteObjects: 1.159100 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+Symbol file LoadedFromMemory doesn't match image C:\Users\goal2\RPGgame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\goal2\RPGgame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.447 seconds
+Refreshing native plugins compatible for Editor in 0.69 ms, found 3 plugins.
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.545 seconds
+Domain Reload Profiling: 992ms
+	BeginReloadAssembly (128ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (40ms)
+	RebuildCommonClasses (26ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (20ms)
+	LoadAllAssembliesAndSetupDomain (262ms)
+		LoadAssemblies (217ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (97ms)
+			TypeCache.Refresh (6ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (86ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (546ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (377ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (21ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (39ms)
+			ProcessInitializeOnLoadAttributes (291ms)
+			ProcessInitializeOnLoadMethodAttributes (18ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (7ms)
+Refreshing native plugins compatible for Editor in 0.69 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3755 unused Assets / (0.9 MB). Loaded Objects now: 4408.
+Memory consumption went from 132.1 MB to 131.2 MB.
+Total: 4.925300 ms (FindLiveObjects: 0.409700 ms CreateObjectMapping: 0.169200 ms MarkObjects: 3.593000 ms  DeleteObjects: 0.752500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 2350.180608 seconds.
+  path: Assets/Imports/MedievalBuildings/Materials/M_BlacksmithsHouse01.mat
+  artifactKey: Guid(2c2ec3dba98741f4c91e415af531cacd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/MedievalBuildings/Materials/M_BlacksmithsHouse01.mat using Guid(2c2ec3dba98741f4c91e415af531cacd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ef6915c0be69053b50bc43932177acaa') in 0.2493199 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
 
 ========================================================================
 Received Import Request.
-  Time since last request: 6.695822 seconds.
-  path: Assets/Imports/Fantasy-Land/Fantasy-Land-Set-Mobile/Prefabs/mobile_barrel_02.prefab
-  artifactKey: Guid(a8c56d153a12524429087292194c2d41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/Fantasy-Land/Fantasy-Land-Set-Mobile/Prefabs/mobile_barrel_02.prefab using Guid(a8c56d153a12524429087292194c2d41) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4f9074bf6573d12cdb05d8057e099295') in 0.0164722 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+  Time since last request: 0.000028 seconds.
+  path: Assets/Imports/MedievalBuildings/Materials/M_House03.mat
+  artifactKey: Guid(5fc12d146a9e33145a52328378b2bad3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/MedievalBuildings/Materials/M_House03.mat using Guid(5fc12d146a9e33145a52328378b2bad3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '99f47f60f50dc074a096005e57f57aa2') in 0.0863656 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.218695 seconds.
-  path: Assets/Imports/Fantasy-Land/Fantasy-Land-Set-Mobile/Prefabs/mobile_box_04.prefab
-  artifactKey: Guid(73b451e1b8537e247814bf5da135ce7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/Fantasy-Land/Fantasy-Land-Set-Mobile/Prefabs/mobile_box_04.prefab using Guid(73b451e1b8537e247814bf5da135ce7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e2ec8de85a23bb941988a06b28047d98') in 0.0140824 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+  Time since last request: 0.000023 seconds.
+  path: Assets/Imports/MedievalBuildings/Materials/M_House15.mat
+  artifactKey: Guid(75b5a47e5f8169345a7a92c253965a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/MedievalBuildings/Materials/M_House15.mat using Guid(75b5a47e5f8169345a7a92c253965a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '866a9af7f9205c6b281ec57fe136664b') in 0.0120813 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.416609 seconds.
-  path: Assets/Imports/Fantasy-Land/Fantasy-Land-Set-Mobile/Prefabs/mobile_fence_06.prefab
-  artifactKey: Guid(e7a23ac8dda0e4048a38116e040806fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/Fantasy-Land/Fantasy-Land-Set-Mobile/Prefabs/mobile_fence_06.prefab using Guid(e7a23ac8dda0e4048a38116e040806fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f2477fbccccce1c12c05a6f1a55fb72c') in 0.01465 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+  Time since last request: 0.000015 seconds.
+  path: Assets/Imports/MedievalBuildings/Materials/M_Castle01.mat
+  artifactKey: Guid(4412161da840daa40a8db051e689d4f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/MedievalBuildings/Materials/M_Castle01.mat using Guid(4412161da840daa40a8db051e689d4f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '165ca8dd87568d62a4af0d57b3b5000d') in 0.0140871 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.667226 seconds.
-  path: Assets/Imports/Fantasy-Land/Fantasy-Land-Set-Mobile/Prefabs/mobile_house01_02.prefab
-  artifactKey: Guid(182bf790ad3e27843a093506d1a54676) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/Fantasy-Land/Fantasy-Land-Set-Mobile/Prefabs/mobile_house01_02.prefab using Guid(182bf790ad3e27843a093506d1a54676) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6ddb99b1e644461a28488822600f5946') in 0.015156 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+  Time since last request: 0.000014 seconds.
+  path: Assets/Imports/MedievalBuildings/Materials/M_House12.mat
+  artifactKey: Guid(7909a815a85f6f744b513e569f89d6e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/MedievalBuildings/Materials/M_House12.mat using Guid(7909a815a85f6f744b513e569f89d6e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c906146349dd3191de5b213f354c449e') in 0.0134963 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.502817 seconds.
-  path: Assets/Imports/Fantasy-Land/Fantasy-Land-Set-Mobile/Prefabs/mobile_house02_03.prefab
-  artifactKey: Guid(06d12e1698929a349974fb60fe2b1300) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/Fantasy-Land/Fantasy-Land-Set-Mobile/Prefabs/mobile_house02_03.prefab using Guid(06d12e1698929a349974fb60fe2b1300) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '04039f16400017f662aceae7b8b83cd9') in 0.0152463 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+  Time since last request: 0.000020 seconds.
+  path: Assets/Imports/MedievalBuildings/Materials/M_House14.mat
+  artifactKey: Guid(e6a25e337ab704949abcaceb1d05f75d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/MedievalBuildings/Materials/M_House14.mat using Guid(e6a25e337ab704949abcaceb1d05f75d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '47cb6cea1a45c1bd735f3a849d829a2a') in 0.0140417 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.353847 seconds.
-  path: Assets/Imports/Fantasy-Land/Fantasy-Land-Set-Mobile/Prefabs/mobile_mushroom_04.prefab
-  artifactKey: Guid(a6cf86d1c3a81b542a6d13e1f5d676f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/Fantasy-Land/Fantasy-Land-Set-Mobile/Prefabs/mobile_mushroom_04.prefab using Guid(a6cf86d1c3a81b542a6d13e1f5d676f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b63fc1a4751a761347281b932e8fde19') in 0.0143626 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+  Time since last request: 0.000017 seconds.
+  path: Assets/Imports/MedievalBuildings/Materials/M_House05.mat
+  artifactKey: Guid(187748ef03f4ba141aa383d6aa6417fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/MedievalBuildings/Materials/M_House05.mat using Guid(187748ef03f4ba141aa383d6aa6417fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6f77e0817ef2354d6121ccbee72c1c9f') in 0.0172029 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.576151 seconds.
-  path: Assets/Imports/Fantasy-Land/Fantasy-Land-Set-Mobile/Prefabs/mobile_mushroom_10.prefab
-  artifactKey: Guid(78442725be61208408daee584fa2b3d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/Fantasy-Land/Fantasy-Land-Set-Mobile/Prefabs/mobile_mushroom_10.prefab using Guid(78442725be61208408daee584fa2b3d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5afc6e1abb4631f9119288074382c502') in 0.0152654 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+  Time since last request: 0.000025 seconds.
+  path: Assets/Imports/MedievalBuildings/Materials/M_Church02.mat
+  artifactKey: Guid(5b807f741a533a445aea25a7e9c0e8ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/MedievalBuildings/Materials/M_Church02.mat using Guid(5b807f741a533a445aea25a7e9c0e8ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a81fd41ccfdeaf20521dd6c4d0ea00ae') in 0.0175885 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.479717 seconds.
-  path: Assets/Imports/Fantasy-Land/Fantasy-Land-Set-Mobile/Prefabs/mobile_rock_01.prefab
-  artifactKey: Guid(5c1a33d04dc034847a39cf4d456ccade) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/Fantasy-Land/Fantasy-Land-Set-Mobile/Prefabs/mobile_rock_01.prefab using Guid(5c1a33d04dc034847a39cf4d456ccade) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7cdd484a2d8e3fc150d74e459d2e0c22') in 0.0145743 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+  Time since last request: 0.000027 seconds.
+  path: Assets/Imports/MedievalBuildings/Materials/M_House10.mat
+  artifactKey: Guid(1966b1f8dceb2be4f8fb8dfe2f695d68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/MedievalBuildings/Materials/M_House10.mat using Guid(1966b1f8dceb2be4f8fb8dfe2f695d68) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '68f3deae500fa13be5ec1040b76ee221') in 0.0187029 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.521709 seconds.
-  path: Assets/Imports/Fantasy-Land/Fantasy-Land-Set-Mobile/Prefabs/mobile_rock_07.prefab
-  artifactKey: Guid(0f022de262383f448884d7f1853879fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/Fantasy-Land/Fantasy-Land-Set-Mobile/Prefabs/mobile_rock_07.prefab using Guid(0f022de262383f448884d7f1853879fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0dc296588e912159ed9ce7270f915bc3') in 0.0165025 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+  Time since last request: 0.000028 seconds.
+  path: Assets/Imports/MedievalBuildings/Materials/M_Church01.mat
+  artifactKey: Guid(bf761c8035f5cb447848382f049b25ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/MedievalBuildings/Materials/M_Church01.mat using Guid(bf761c8035f5cb447848382f049b25ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '17f982db4dea7370953594f53faa1efb') in 0.0181776 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.520629 seconds.
-  path: Assets/Imports/Fantasy-Land/Fantasy-Land-Set-Mobile/Prefabs/mobile_stair_02_01.prefab
-  artifactKey: Guid(491dba3b80411c44cb5881e2681332ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/Fantasy-Land/Fantasy-Land-Set-Mobile/Prefabs/mobile_stair_02_01.prefab using Guid(491dba3b80411c44cb5881e2681332ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1fe9fb774c4490d0c203b4d9815ca3d7') in 0.0153 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+  Time since last request: 0.000017 seconds.
+  path: Assets/Imports/MedievalBuildings/Materials/M_House09.mat
+  artifactKey: Guid(43e22fe2b2a7c8b409e0b29b368c2dc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/MedievalBuildings/Materials/M_House09.mat using Guid(43e22fe2b2a7c8b409e0b29b368c2dc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '55f69b6b48789e6062c6ebf59bacd47d') in 0.0189136 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.399370 seconds.
-  path: Assets/Imports/Fantasy-Land/Fantasy-Land-Set-Mobile/Prefabs/mobile_stones_ancient_05.prefab
-  artifactKey: Guid(afd65fcd41b5d0e46866714b790d7ba9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/Fantasy-Land/Fantasy-Land-Set-Mobile/Prefabs/mobile_stones_ancient_05.prefab using Guid(afd65fcd41b5d0e46866714b790d7ba9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7ba442ce34df4653fd57bb95fe168366') in 0.0136984 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+  Time since last request: 0.000025 seconds.
+  path: Assets/Imports/MedievalBuildings/Materials/M_BlacksmithsHouse02.mat
+  artifactKey: Guid(c4859cd66a19e084a98a924ca1c226fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/MedievalBuildings/Materials/M_BlacksmithsHouse02.mat using Guid(c4859cd66a19e084a98a924ca1c226fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '33bbaba5103973066e983b8cd708aba4') in 0.0197815 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.553956 seconds.
-  path: Assets/Imports/Fantasy-Land/Fantasy-Land-Set-Mobile/Prefabs/mobile_stones_ancient_11.prefab
-  artifactKey: Guid(11df370a4f7b1274582286acbb723b72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/Fantasy-Land/Fantasy-Land-Set-Mobile/Prefabs/mobile_stones_ancient_11.prefab using Guid(11df370a4f7b1274582286acbb723b72) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '30ca2e689fe114f1103a16aa1f0ff326') in 0.0162179 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+  Time since last request: 0.000023 seconds.
+  path: Assets/Imports/MedievalBuildings/Materials/M_House02.mat
+  artifactKey: Guid(4c850f0bb6a3eda47a13ffaf4c7e8323) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/MedievalBuildings/Materials/M_House02.mat using Guid(4c850f0bb6a3eda47a13ffaf4c7e8323) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bccf6a589a46738870a10ffea0cbcb48') in 0.0172121 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.404810 seconds.
-  path: Assets/Imports/Fantasy-Land/Fantasy-Land-Set-Mobile/Prefabs/mobile_tree_01.prefab
-  artifactKey: Guid(9187d3d58c2c9044989cb07a5472d6db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/Fantasy-Land/Fantasy-Land-Set-Mobile/Prefabs/mobile_tree_01.prefab using Guid(9187d3d58c2c9044989cb07a5472d6db) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '35e93cc4d3a9722b493896c0097d979b') in 0.0155795 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 14
+  Time since last request: 0.602581 seconds.
+  path: Assets/Imports/MedievalBuildings/Meshes/SM_BlacksmithsHouse01.fbx
+  artifactKey: Guid(8e673fa30a21b3842ba4f4c4b10a56bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/MedievalBuildings/Meshes/SM_BlacksmithsHouse01.fbx using Guid(8e673fa30a21b3842ba4f4c4b10a56bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '24f4adf35b95be5a3280ce8e153cd894') in 0.0501699 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.450818 seconds.
-  path: Assets/Imports/Fantasy-Land/Fantasy-Land-Set-Mobile/Prefabs/mobile_tree_07.prefab
-  artifactKey: Guid(8e6261a059d32c845ba3e473a9fd93ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/Fantasy-Land/Fantasy-Land-Set-Mobile/Prefabs/mobile_tree_07.prefab using Guid(8e6261a059d32c845ba3e473a9fd93ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '608eda87c9acbe8bd618aebf9358e730') in 0.0149275 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 14
+  Time since last request: 0.000021 seconds.
+  path: Assets/Imports/MedievalBuildings/Meshes/SM_Castle02.fbx
+  artifactKey: Guid(d6b8176a06575fc4aa49e246ee7eea2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/MedievalBuildings/Meshes/SM_Castle02.fbx using Guid(d6b8176a06575fc4aa49e246ee7eea2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd801da33428660c8290a1b9a1368d51e') in 0.0168322 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.080186 seconds.
-  path: Assets/Imports/Fantasy-Land/Fantasy-Land-Set-Mobile/Prefabs/mobile_tree_13.prefab
-  artifactKey: Guid(88752c6b779fbc4488a250623feaed0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/Fantasy-Land/Fantasy-Land-Set-Mobile/Prefabs/mobile_tree_13.prefab using Guid(88752c6b779fbc4488a250623feaed0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c171a1fe28248331dd27f5c96212d9cb') in 0.0358575 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 14
+  Time since last request: 0.000030 seconds.
+  path: Assets/Imports/MedievalBuildings/Meshes/SM_House04.fbx
+  artifactKey: Guid(0760bea89f59fb143a13817dd41efee8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/MedievalBuildings/Meshes/SM_House04.fbx using Guid(0760bea89f59fb143a13817dd41efee8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cba81074dd0d6b4c1e94642bcab5022b') in 0.0193162 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.328532 seconds.
-  path: Assets/Imports/Fantasy-Land/Fantasy-Land-Set-Mobile/Prefabs/mobile_wall_02_corner_convex.prefab
-  artifactKey: Guid(55b9d60cb87eadb4f90f4161e12c53f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/Fantasy-Land/Fantasy-Land-Set-Mobile/Prefabs/mobile_wall_02_corner_convex.prefab using Guid(55b9d60cb87eadb4f90f4161e12c53f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a49f84f31cbe2d757235638ece7262ad') in 0.0158773 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+  Time since last request: 0.000021 seconds.
+  path: Assets/Imports/MedievalBuildings/Meshes/SM_House08.fbx
+  artifactKey: Guid(50d6471b49a22e3498619ac8a8300e55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/MedievalBuildings/Meshes/SM_House08.fbx using Guid(50d6471b49a22e3498619ac8a8300e55) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8af03f3d1a00154280e8c5e71c72fcd2') in 0.0189306 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.335430 seconds.
-  path: Assets/Imports/Fantasy-Land/Fantasy-Land-Set-Mobile/Prefabs/mobile_wood_chump_01.prefab
-  artifactKey: Guid(233a9c84ef12d644390dbcac51476833) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/Fantasy-Land/Fantasy-Land-Set-Mobile/Prefabs/mobile_wood_chump_01.prefab using Guid(233a9c84ef12d644390dbcac51476833) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '47fe22e8827474b80485cdaf3c7084b5') in 0.0159075 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+  Time since last request: 0.000018 seconds.
+  path: Assets/Imports/MedievalBuildings/Meshes/SM_Castle01.fbx
+  artifactKey: Guid(a07893a7152b1364c904f49049c170da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/MedievalBuildings/Meshes/SM_Castle01.fbx using Guid(a07893a7152b1364c904f49049c170da) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '684ca7031adf2aaff26851af93ca7f2a') in 0.018088 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.040643 seconds.
-  path: Assets/Imports/Fantasy-Land/Fantasy-Land-Set-Mobile/Prefabs/mobile_wood_plank_02.prefab
-  artifactKey: Guid(64c00055032f4144b9abc9d6bdaba9fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/Fantasy-Land/Fantasy-Land-Set-Mobile/Prefabs/mobile_wood_plank_02.prefab using Guid(64c00055032f4144b9abc9d6bdaba9fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cfa1b3dac318c9a402186349df72ef54') in 0.0137845 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+  Time since last request: 0.000018 seconds.
+  path: Assets/Imports/MedievalBuildings/Meshes/SM_House11.fbx
+  artifactKey: Guid(6c482ac2f307f394da1990589507cc57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/MedievalBuildings/Meshes/SM_House11.fbx using Guid(6c482ac2f307f394da1990589507cc57) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6f0caa6a9496fecbadd3664665cbe6cb') in 0.0166382 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Imports/MedievalBuildings/Meshes/SM_House05.fbx
+  artifactKey: Guid(1dacee43684218245be65a77d9eef656) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/MedievalBuildings/Meshes/SM_House05.fbx using Guid(1dacee43684218245be65a77d9eef656) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cb2cdfe820d65412ca66cd9030b04d4b') in 0.0231309 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Imports/MedievalBuildings/Meshes/SM_House06.fbx
+  artifactKey: Guid(f5943ed50be8651448282cc4335458a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/MedievalBuildings/Meshes/SM_House06.fbx using Guid(f5943ed50be8651448282cc4335458a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2e4554ede2022efc0d0e2b3cdc543f74') in 0.0196579 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Imports/MedievalBuildings/Meshes/SM_House02.fbx
+  artifactKey: Guid(1cd81c083b72bfe478445edb91e55a66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/MedievalBuildings/Meshes/SM_House02.fbx using Guid(1cd81c083b72bfe478445edb91e55a66) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5df01d7b429dc42737eb3e4ce18a2838') in 0.0194245 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Imports/MedievalBuildings/Meshes/SM_House09.fbx
+  artifactKey: Guid(72d3c0656fc091241965aed7113811e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/MedievalBuildings/Meshes/SM_House09.fbx using Guid(72d3c0656fc091241965aed7113811e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '942f62c82ed54ec9d1f20eaf5b3293ca') in 0.0202534 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Imports/MedievalBuildings/Meshes/SM_Church01.fbx
+  artifactKey: Guid(138d9468713297a4792d3637f9322936) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/MedievalBuildings/Meshes/SM_Church01.fbx using Guid(138d9468713297a4792d3637f9322936) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '858748351eb46649b94ad587e2361a51') in 0.020014 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Imports/MedievalBuildings/Meshes/SM_House01.fbx
+  artifactKey: Guid(67e6849dd9a945d48961b2bfe747a8ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/MedievalBuildings/Meshes/SM_House01.fbx using Guid(67e6849dd9a945d48961b2bfe747a8ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'add09a02c184ff4d36e6ca3d6e3d1a4b') in 0.0181418 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.175448 seconds.
+  path: Assets/Imports/MedievalBuildings/Prefabs/SM_Castle01.prefab
+  artifactKey: Guid(9e4e2b2dfcac0e34496008c67600714a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/MedievalBuildings/Prefabs/SM_Castle01.prefab using Guid(9e4e2b2dfcac0e34496008c67600714a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7e5c7c20aad30716bb703b327acbe451') in 0.0188505 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 23
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Imports/MedievalBuildings/Prefabs/SM_House07.prefab
+  artifactKey: Guid(d1bcbd50bd26ce448b11dabf9c9c838c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/MedievalBuildings/Prefabs/SM_House07.prefab using Guid(d1bcbd50bd26ce448b11dabf9c9c838c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4187ce0c32b718ff6e45131fcfdf6c87') in 0.0157074 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 20
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Imports/MedievalBuildings/Prefabs/SM_House13.prefab
+  artifactKey: Guid(e6343d3add2f02740bd9b1e3be9e8634) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/MedievalBuildings/Prefabs/SM_House13.prefab using Guid(e6343d3add2f02740bd9b1e3be9e8634) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5680253a2a4bd8a7d76db112a7b1c9bb') in 0.0174352 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 20
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Imports/MedievalBuildings/Prefabs/SM_House04.prefab
+  artifactKey: Guid(bc68f43136c6f9b40a4ad5681d8cfb60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/MedievalBuildings/Prefabs/SM_House04.prefab using Guid(bc68f43136c6f9b40a4ad5681d8cfb60) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1c4cc81294cde1d523baba6ee6ed1e18') in 0.0186277 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 20
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Imports/MedievalBuildings/Prefabs/SM_House11.prefab
+  artifactKey: Guid(0b75a1df02527a84f86c82484d64dc66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/MedievalBuildings/Prefabs/SM_House11.prefab using Guid(0b75a1df02527a84f86c82484d64dc66) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '149993f972abf6d1cc6dd65ffb0ae8bd') in 0.0245988 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 23
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Imports/MedievalBuildings/Prefabs/SM_House01.prefab
+  artifactKey: Guid(45d85475b96a4674f98f4fa1b3850cab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/MedievalBuildings/Prefabs/SM_House01.prefab using Guid(45d85475b96a4674f98f4fa1b3850cab) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a633be7d1d8ce03a95addcc116f3d2f7') in 0.0198911 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 20
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Imports/MedievalBuildings/Prefabs/SM_House02.prefab
+  artifactKey: Guid(c0a340eb1a0a05245a070a7703b0dd0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/MedievalBuildings/Prefabs/SM_House02.prefab using Guid(c0a340eb1a0a05245a070a7703b0dd0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '55ca85dfc61be39ab503a2341a7303f9') in 0.0247563 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 20
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Imports/MedievalBuildings/Prefabs/SM_House14.prefab
+  artifactKey: Guid(1af278bce56e8f44fa989a1116e6c6ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/MedievalBuildings/Prefabs/SM_House14.prefab using Guid(1af278bce56e8f44fa989a1116e6c6ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '20ce92d68e02489be0981d20d2c65b67') in 0.0255548 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 23
 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server

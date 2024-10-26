@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4412161da840daa40a8db051e689d4f9
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161732
+  packageName: Medieval Buildings
+  packageVersion: 1.0
+  assetPath: Assets/MedievalBuildings/Materials/M_Castle01.mat
+  uploadId: 350952

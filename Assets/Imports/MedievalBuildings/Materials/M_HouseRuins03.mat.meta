@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f8a25a080da065141803b250ab823957
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161732
+  packageName: Medieval Buildings
+  packageVersion: 1.0
+  assetPath: Assets/MedievalBuildings/Materials/M_HouseRuins03.mat
+  uploadId: 350952

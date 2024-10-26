@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f2a20e39cfd902c4ca3960d793970d57
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161732
+  packageName: Medieval Buildings
+  packageVersion: 1.0
+  assetPath: Assets/MedievalBuildings/Materials/M_WindMill.mat
+  uploadId: 350952

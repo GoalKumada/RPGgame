@@ -9,10 +9,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Rigidbody rb;
     [SerializeField] private SpriteRenderer sr;
+    private Animator animator;
 
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     void Update()
@@ -44,5 +46,16 @@ public class PlayerController : MonoBehaviour
         {
             sr.flipX = false;
         }
+
+        
+        if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
+        {
+            animator.SetBool("Run", true);
+        }
+        else
+        {
+            animator.SetBool("Run", false);
+        }
+        
     }
 }
