@@ -61,44 +61,85 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2023.2.18f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HideMonoScript.cs" />
+    <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\BlockquoteAttribute.cs" />
+    <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\IndentAttribute.cs" />
     <Compile Include="Assets\Scripts\StatusUI\CharacterStatusPanel.cs" />
     <Compile Include="Assets\Scripts\Skills\WarriorSkills\DoubleAttack.cs" />
     <Compile Include="Assets\Scripts\Character\Enemy.cs" />
+    <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\BoxGroupAttribute.cs" />
+    <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\EnableIfAttribute.cs" />
     <Compile Include="Assets\Scripts\Item\Accessory.cs" />
+    <Compile Include="Assets\Imports\Cainos\Pixel Art Platformer - Village Props\Script\Elevator.cs" />
+    <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\SectionHeaderAttribute.cs" />
+    <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\ReadOnlyAttribute.cs" />
+    <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\GroupAttribute.cs" />
     <Compile Include="Assets\Scripts\Item\Weapon.cs" />
     <Compile Include="Assets\Scripts\Phases\ChooseAllyPhase.cs" />
+    <Compile Include="Assets\Imports\Cainos\Pixel Art Platformer - Village Props\Script\Chest.cs" />
     <Compile Include="Assets\Scripts\Phases\AllyMovePhase.cs" />
     <Compile Include="Assets\Scripts\Phases\PhaseBase.cs" />
+    <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\ButtonAttribute.cs" />
+    <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\FoldoutGroupAttribute.cs" />
+    <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\DisableIfAttribute.cs" />
     <Compile Include="Assets\Scripts\StatusUI\CharacterStatus.cs" />
+    <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HelpBoxIfAttribute.cs" />
     <Compile Include="Assets\Scripts\SystemManager.cs" />
     <Compile Include="Assets\Scripts\Character\Ally.cs" />
+    <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\TabGroupAttribute.cs" />
     <Compile Include="Assets\Scripts\BattleManager.cs" />
     <Compile Include="Assets\Scripts\Item\Armor.cs" />
     <Compile Include="Assets\Scripts\StatusUI\GaugeUI.cs" />
+    <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HideIfAttribute.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\ShowIfAttribute.cs" />
+    <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HideLabelAttribute.cs" />
+    <Compile Include="Assets\Imports\Cainos\Pixel Art Platformer - Village Props\Script\BoundingPlatform.cs" />
+    <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HorizontalLineAttribute.cs" />
     <Compile Include="Assets\Scripts\Phases\ChooseEnemyPhase.cs" />
+    <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\DisableInPlayModeAttribute.cs" />
+    <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\DisableLucidEditorAttribute.cs" />
+    <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\PropertyGroupAttribute.cs" />
+    <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\ValidateInputAttribute.cs" />
     <Compile Include="Assets\Scripts\Phases\SecondCheckPhase.cs" />
     <Compile Include="Assets\Scripts\Skills\Skill.cs" />
     <Compile Include="Assets\Scripts\Phases\RunCheckPhase.cs" />
     <Compile Include="Assets\Scripts\Window\DialogueText.cs" />
+    <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\AssetsOnlyAttribute.cs" />
     <Compile Include="Assets\Scripts\Character\Character.cs" />
     <Compile Include="Assets\Scripts\Phases\EnemyMovePhase.cs" />
     <Compile Include="Assets\Scripts\Phases\FirstCheckPhase.cs" />
     <Compile Include="Assets\Scripts\StatusUI\LifeGaugeContainer.cs" />
+    <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HelpBoxAttribute.cs" />
     <Compile Include="Assets\Scripts\Skills\WarriorSkills\SpinAttack.cs" />
     <Compile Include="Assets\Scripts\Phases\ChooseRunOrBattlePhase.cs" />
+    <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\DisableInEditModeAttribute.cs" />
     <Compile Include="Assets\Scripts\Window\WindowMenu.cs" />
+    <Compile Include="Assets\Imports\Cainos\Pixel Art Platformer - Village Props\Script\MovingPlatform.cs" />
     <Compile Include="Assets\Scripts\Item\Item.cs" />
+    <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\LabelWidthAttribute.cs" />
+    <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\GUIColorAttribute.cs" />
+    <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\ShowInInspectorAttribute.cs" />
     <Compile Include="Assets\Scripts\Phases\StartPhase.cs" />
+    <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Enum.cs" />
     <Compile Include="Assets\Scripts\Phases\EndPhase.cs" />
     <Compile Include="Assets\Scripts\Window\TextWindow.cs" />
+    <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\PropertyOrderAttribute.cs" />
+    <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\RequiredAttribute.cs" />
+    <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HorizontalGroupAttribute.cs" />
     <Compile Include="Assets\Scripts\Phases\ChooseCommandPhase.cs" />
+    <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\LabelTextAttribute.cs" />
     <Compile Include="Assets\Scripts\Move.cs" />
+    <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\OnValueChangedAttribute.cs" />
     <Compile Include="Assets\Scripts\Window\SelectableText.cs" />
+    <Compile Include="Assets\Imports\Cainos\Common\Script\Utils\SecondOrderDynamics.cs" />
+    <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\TitleHeaderAttribute.cs" />
     <Compile Include="Assets\Scripts\Skills\WarriorSkills\Slash.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Imports\Cainos\Third Party\Lucid Editor\License.txt" />
     <None Include="Assets\Imports\Warrior free set\License.txt" />
+    <None Include="Assets\Imports\Cainos\Pixel Art Platformer - Village Props\Changelog.txt" />
     <None Include="Assets\Imports\Warrior free set\Contact.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -1126,12 +1167,12 @@
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Cinemachine">
-      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
       <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor">
