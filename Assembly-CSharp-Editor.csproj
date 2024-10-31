@@ -95,8 +95,8 @@
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Editor\Attributes\ReadOnlyAttributeProcessor.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Editor\LucidEditor.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Editor\InspectorProperty\NonSerializedProperty.cs" />
-    <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Editor\Attributes\DisableInEditModeAttributeProcessor.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Editor\Attributes\LabelWidthAttributeProcessor.cs" />
+    <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Editor\Attributes\DisableInEditModeAttributeProcessor.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Editor\SerializeReferenceDropdown.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Editor\Attributes\HideLabelAttributeProcessor.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Editor\Attributes\LabelTextAttributeProcessor.cs" />
