@@ -104,6 +104,7 @@
     <Compile Include="Assets\Scripts\Phases\SecondCheckPhase.cs" />
     <Compile Include="Assets\Scripts\Skills\Skill.cs" />
     <Compile Include="Assets\Scripts\Phases\RunCheckPhase.cs" />
+    <Compile Include="Assets\Imports\Low Poly Trim Sheet Asset Collection\DemoSceneAssets\DemoSceneScripts\DemoCameraMovement.cs" />
     <Compile Include="Assets\Scripts\Window\DialogueText.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\AssetsOnlyAttribute.cs" />
     <Compile Include="Assets\Scripts\Character\Character.cs" />
