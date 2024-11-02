@@ -457,6 +457,7 @@
 "Assets/Scripts/Phases/SecondCheckPhase.cs"
 "Assets/Scripts/Phases/StartPhase.cs"
 "Assets/Scripts/PlayerController.cs"
+"Assets/Scripts/SceneTransition.cs"
 "Assets/Scripts/Skills/Skill.cs"
 "Assets/Scripts/Skills/WarriorSkills/DoubleAttack.cs"
 "Assets/Scripts/Skills/WarriorSkills/Slash.cs"

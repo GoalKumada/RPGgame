@@ -4,7 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/AdventureScene.unity
+    guid: e925ab4c632ba474e8f258f6f4d306fe
+  - enabled: 1
+    path: Assets/Scenes/TavernScene.unity
+    guid: 0654e165c654de245a05b32bcbfcfce5
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 186d837e8fe95224b9d39edb49ec7e68, type: 2}
   m_UseUCBPForAssetBundles: 0
