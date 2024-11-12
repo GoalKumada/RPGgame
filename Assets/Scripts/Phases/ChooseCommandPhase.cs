@@ -24,6 +24,9 @@ public class ChooseCommandPhase : PhaseBase
         if (Input.GetKeyDown(KeyCode.Space))
         {
             // 現在のTPが必要TPより少なかったら選択できない
+
+            // ToDo:最初にTP切れを起こすとIndexOutOfException
+
             if (sm.allies[sm.nakama.Count - 1].currentTP < sm.allies[sm.nakama.Count - 1].skills[index].requiredTP)
             {
                 yield return null;
