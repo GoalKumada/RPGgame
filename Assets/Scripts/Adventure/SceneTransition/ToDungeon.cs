@@ -26,6 +26,7 @@ public class ToDungeon : MonoBehaviour
             {
                 if (wm.currentID == 0)
                 {
+                    Time.timeScale = 1.0f;
                     SceneManager.LoadScene("DungeonScene");
                 }
                 else if (wm.currentID == 1)

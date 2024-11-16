@@ -10,6 +10,9 @@ public class ToTavern : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("衝突判定されている");
+
+
+
             SceneManager.LoadScene("TavernScene");
         }
     }
