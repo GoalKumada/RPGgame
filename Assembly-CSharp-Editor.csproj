@@ -102,6 +102,7 @@
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Editor\Attributes\LabelTextAttributeProcessor.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Editor\Attributes\RequiredAttributeProcessor.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Editor\InspectorProperty\EditableInspectorProperty.cs" />
+    <Compile Include="Assets\RunemarkStudio\DarkFantasyKit [Free]\Readme\Parts\Editor\ReadmeEditor.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Editor\Attributes\EnableIfAttributeProcessor.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Editor\Experimental\TextFieldPopup.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Editor\Utils\TypeUtil.cs" />

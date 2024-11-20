@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Ally
+  - Fade
   layers:
   - Default
   - TransparentFX

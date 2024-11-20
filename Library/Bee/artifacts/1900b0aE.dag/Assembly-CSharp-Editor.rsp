@@ -471,6 +471,7 @@
 "Assets/Imports/Cainos/Third Party/Lucid Editor/Editor/Utils/ProcessorUtil.cs"
 "Assets/Imports/Cainos/Third Party/Lucid Editor/Editor/Utils/ReflectionUtil.cs"
 "Assets/Imports/Cainos/Third Party/Lucid Editor/Editor/Utils/TypeUtil.cs"
+"Assets/RunemarkStudio/DarkFantasyKit [Free]/Readme/Parts/Editor/ReadmeEditor.cs"
 -langversion:9.0
 
 /deterministic

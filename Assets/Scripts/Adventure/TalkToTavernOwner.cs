@@ -11,7 +11,7 @@ public class TalkToTavernOwner : MonoBehaviour
 
     private void Start()
     {
-        canvas = GameObject.Find("Canvas");
+        canvas = GameObject.Find("UI");
         talkIconTransform = canvas.transform.Find("TalkIcon");
         talkIcon = talkIconTransform?.gameObject;
     }
