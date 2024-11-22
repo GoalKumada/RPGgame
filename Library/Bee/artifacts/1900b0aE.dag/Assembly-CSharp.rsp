@@ -438,6 +438,7 @@
 "Assets/RunemarkStudio/DarkFantasyKit [Free]/Readme/Parts/Readme.cs"
 "Assets/Scripts/Adventure/PlayerController.cs"
 "Assets/Scripts/Adventure/PlayerPositionManager.cs"
+"Assets/Scripts/Adventure/SceneTransition/FromDungeonToTown.cs"
 "Assets/Scripts/Adventure/SceneTransition/FromTavernToTown.cs"
 "Assets/Scripts/Adventure/SceneTransition/FromTownToDungeon.cs"
 "Assets/Scripts/Adventure/SceneTransition/FromTownToTavern.cs"
