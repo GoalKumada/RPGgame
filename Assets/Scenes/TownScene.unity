@@ -421,8 +421,8 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  rb: {fileID: 40703855}
-  sr: {fileID: 381352996}
+  rigidBody: {fileID: 40703855}
+  spriteRenderer: {fileID: 381352996}
 --- !u!135 &40703854
 SphereCollider:
   m_ObjectHideFlags: 0

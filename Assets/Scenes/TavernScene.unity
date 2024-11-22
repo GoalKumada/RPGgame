@@ -131,6 +131,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tavern
       objectReference: {fileID: 0}
+    - target: {fileID: 729034223403468367, guid: 20c0f8e5b8729314bb03168a2921e21a, type: 3}
+      propertyPath: rigidBody
+      value: 
+      objectReference: {fileID: 193052594}
+    - target: {fileID: 729034223403468367, guid: 20c0f8e5b8729314bb03168a2921e21a, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 193052593}
     - target: {fileID: 2284227036206517399, guid: 20c0f8e5b8729314bb03168a2921e21a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.3833075
@@ -176,6 +184,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20c0f8e5b8729314bb03168a2921e21a, type: 3}
+--- !u!212 &193052593 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3531221697738308386, guid: 20c0f8e5b8729314bb03168a2921e21a, type: 3}
+  m_PrefabInstance: {fileID: 193052592}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &193052594 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 7458997527318607146, guid: 20c0f8e5b8729314bb03168a2921e21a, type: 3}
+  m_PrefabInstance: {fileID: 193052592}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
