@@ -155,6 +155,7 @@
     <None Include="Assets\Room\Settings\Note.txt" />
     <None Include="Assets\Imports\Warrior free set\License.txt" />
     <None Include="Assets\Imports\Cainos\Pixel Art Platformer - Village Props\Changelog.txt" />
+    <None Include="Assets\Triple Dungeon Pack\Blue Dungeon\blue dungeon_ReadMe.txt" />
     <None Include="Assets\Imports\Warrior free set\Contact.txt" />
   </ItemGroup>
   <ItemGroup>

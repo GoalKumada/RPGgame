@@ -23,6 +23,27 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BattleScenes/BattleScene_2.unity
     guid: 5a06f1bc504f73d43bc842fbab25cb5e
+  - enabled: 1
+    path: Assets/Scenes/BattleScenes/BattleScene_3.unity
+    guid: 6c54d309293d37d4e957edb0958fe1e0
+  - enabled: 1
+    path: Assets/Scenes/BattleScenes/BattleScene_4.unity
+    guid: 25b5c4c1d8cd801428682a6a225da4dc
+  - enabled: 1
+    path: Assets/Scenes/BattleScenes/BattleScene_5.unity
+    guid: c20d71e3577c0cf4ba450533ab865f97
+  - enabled: 1
+    path: Assets/Scenes/BattleScenes/BattleScene_6.unity
+    guid: 83565221b893bfb4c9b24e844385d344
+  - enabled: 1
+    path: Assets/Scenes/BattleScenes/BattleScene_7.unity
+    guid: 3c4aa7d2241dc2b4bb68446c00127e66
+  - enabled: 1
+    path: Assets/Scenes/BattleScenes/BattleScene_8.unity
+    guid: 868d80894ad107e42aec369d655d9e1f
+  - enabled: 1
+    path: Assets/Scenes/BattleScenes/BattleScene_9.unity
+    guid: 4202ec5da4bae5648a9c6c95d975defb
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 186d837e8fe95224b9d39edb49ec7e68, type: 2}
   m_UseUCBPForAssetBundles: 0

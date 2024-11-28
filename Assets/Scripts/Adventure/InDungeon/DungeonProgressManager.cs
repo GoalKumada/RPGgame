@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class DungeonProgressManager : MonoBehaviour
 {
-    public static bool[] isBattleCompleted = new bool[10];
+    public static bool[] isBattleCompleted = new bool[9];
 
     public static int numOfBattlesAttempting = 0;
 
     void Start()
     {
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 9; i++)
         {
             if (isBattleCompleted[i]) 
             {

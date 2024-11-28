@@ -439,6 +439,7 @@
 "Assets/Scripts/Adventure/Common/PlayerController.cs"
 "Assets/Scripts/Adventure/Common/PlayerPositionManager.cs"
 "Assets/Scripts/Adventure/Common/SceneController.cs"
+"Assets/Scripts/Adventure/InDungeon/DungeonProgressManager.cs"
 "Assets/Scripts/Adventure/InDungeon/SceneTransition/FromDungeonToTown.cs"
 "Assets/Scripts/Adventure/InDungeon/SceneTransition/ToBattle.cs"
 "Assets/Scripts/Adventure/InTown/SceneTransition/FromTavernToTown.cs"
