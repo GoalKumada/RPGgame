@@ -15,11 +15,6 @@ public class BattleManager : MonoBehaviour
         StartCoroutine(Battle());
     }
 
-    private void Update()
-    {
-        
-    }
-
 
     IEnumerator Battle()
     {

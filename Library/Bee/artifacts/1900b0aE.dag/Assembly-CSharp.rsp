@@ -442,6 +442,7 @@
 "Assets/Scripts/Adventure/InDungeon/DungeonProgressManager.cs"
 "Assets/Scripts/Adventure/InDungeon/SceneTransition/FromDungeonToTown.cs"
 "Assets/Scripts/Adventure/InDungeon/SceneTransition/ToBattle.cs"
+"Assets/Scripts/Adventure/InTavern/TavernSystemManager.cs"
 "Assets/Scripts/Adventure/InTown/SceneTransition/FromTavernToTown.cs"
 "Assets/Scripts/Adventure/InTown/SceneTransition/FromTownToDungeon.cs"
 "Assets/Scripts/Adventure/InTown/SceneTransition/FromTownToTavern.cs"
