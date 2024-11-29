@@ -9,6 +9,7 @@ public class FromTownToDungeon : MonoBehaviour
     private bool isPaused = false;
     private WindowMenu windowMenu;
     private GameObject toDungeonPanel;
+    private Vector3 EntranceToTheCity = new Vector3(0, 0.2f, -6.0f);
 
     private void Start()
     {
@@ -26,23 +27,23 @@ public class FromTownToDungeon : MonoBehaviour
             {
                 if (windowMenu.currentID == 0)
                 {
-                    PlayerPositionManager.posOfPlayerInTown = new Vector3(0, 0.2f, -6.0f);
+                    PlayerPositionManager.posOfPlayerInTown = EntranceToTheCity;
 
-                    Time.timeScale = 1.0f;
+                    Resume();
 
                     GameObject sceneController = GameObject.Find("SceneController");
                     sceneController.GetComponent<SceneController>().sceneChange("DungeonScene");
                 }
                 else if (windowMenu.currentID == 1)
                 {
-                    Time.timeScale = 1.0f;
+                    Resume();
                     isPaused = false;
                     toDungeonPanel.SetActive(false);
                 }
             }
             else if (Input.GetKeyDown(KeyCode.Escape))
             {
-                Time.timeScale = 1.0f;
+                Resume();
                 isPaused = false;
                 toDungeonPanel.SetActive(false);
             }
@@ -60,10 +61,20 @@ public class FromTownToDungeon : MonoBehaviour
 
             windowMenu.SetMoveArrowFunction();
 
-            Time.timeScale = 0;
+            Pause();
 
             isPaused = true;
 
         }
+    }
+
+    public void Pause()
+    {
+        Time.timeScale = 0;
+    }
+
+    public void Resume()
+    {
+        Time.timeScale = 1.0f;
     }
 }

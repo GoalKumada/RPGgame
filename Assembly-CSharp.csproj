@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\Skills\WarriorSkills\DoubleAttack.cs" />
     <Compile Include="Assets\Scripts\Battle\StatusUI\GaugeUI.cs" />
     <Compile Include="Assets\Scripts\Character\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Adventure\InTavern\TavernSystemManager.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\BoxGroupAttribute.cs" />
     <Compile Include="Assets\Scripts\Battle\StatusUI\CharacterStatus.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\EnableIfAttribute.cs" />
