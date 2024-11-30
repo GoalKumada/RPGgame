@@ -5,7 +5,11 @@ using UnityEngine;
 public class TavernSystemManager : MonoBehaviour
 {
     [SerializeField] public WindowMenu menuPanel;
+    [SerializeField] public WindowMenu jobPanel;
+    [SerializeField] public WindowMenu allyTextPanel;
 
+    private bool isMenuSelectingPhase;
+    private bool isJobSelectingPhase;
 
 
     void Start()
@@ -15,6 +19,16 @@ public class TavernSystemManager : MonoBehaviour
 
     void Update()
     {
+        if (isMenuSelectingPhase)
+        {
+
+
+
+        }
+
         
+
+
+
     }
 }

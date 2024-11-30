@@ -766,6 +766,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuPanel: {fileID: 1495232657}
+  jobPanel: {fileID: 159777850}
+  allyTextPanel: {fileID: 972386765}
 --- !u!4 &193935509
 Transform:
   m_ObjectHideFlags: 0
@@ -3792,6 +3794,7 @@ GameObject:
   - component: {fileID: 1495232656}
   - component: {fileID: 1495232655}
   - component: {fileID: 1495232654}
+  - component: {fileID: 1495232658}
   m_Layer: 5
   m_Name: MenuPanel
   m_TagString: Untagged
@@ -3905,6 +3908,21 @@ MonoBehaviour:
   arrowPrefab: {fileID: 0}
   selectableTextPrefab: {fileID: 0}
   currentID: 0
+--- !u!114 &1495232658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495232652}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 1, b: 1, a: 0.3882353}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1552441954
 GameObject:
   m_ObjectHideFlags: 0
