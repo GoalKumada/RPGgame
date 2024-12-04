@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ChooseAllyPhase : PhaseBase
+public class ChooseAllyPhase : BattlePhaseBase
 {
     private string dialogue = "誰の行動を指示しようか";
     public GameObject target;
@@ -27,8 +27,8 @@ public class ChooseAllyPhase : PhaseBase
         if (Input.GetKeyDown(KeyCode.Space))
         {
             sm.nakama.Add(index);
-            string itsname = sm.allies[index].name;
-            sm.nakamaObject.Add(GameObject.Find(itsname));
+            string itsName = sm.allies[index].name;
+            sm.nakamaObject.Add(GameObject.Find(itsName));
 
             nextPhase = new ChooseCommandPhase();
             battleContext.textWindow.isChooseComandPhase = true;

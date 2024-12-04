@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RunCheckPhase : PhaseBase
+public class RunCheckPhase : BattlePhaseBase
 {
     private string dialogue = "本当に逃げますか？";
 

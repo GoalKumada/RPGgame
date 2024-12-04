@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StartPhase : PhaseBase
+public class StartPhase : BattlePhaseBase
 {
     private string dialogue = "戦闘開始！";
 

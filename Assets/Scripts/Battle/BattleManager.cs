@@ -7,7 +7,7 @@ public class BattleManager : MonoBehaviour
     [SerializeField] BattleContext battleContext;
     [SerializeField] public List<Move> moveOfAlly;
     [SerializeField] public List<Move> moveOfEnemy;
-    public PhaseBase phaseState;
+    public BattlePhaseBase phaseState;
 
     private void Start()
     {

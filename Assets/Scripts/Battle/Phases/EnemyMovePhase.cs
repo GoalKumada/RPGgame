@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMovePhase : PhaseBase
+public class EnemyMovePhase : BattlePhaseBase
 {
     private string dialogue = "敵の攻撃！";
 

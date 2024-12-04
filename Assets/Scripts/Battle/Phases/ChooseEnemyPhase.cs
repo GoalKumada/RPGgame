@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChooseEnemyPhase : PhaseBase
+public class ChooseEnemyPhase : BattlePhaseBase
 {
     private string dialogue = "対象は誰にする？";
 

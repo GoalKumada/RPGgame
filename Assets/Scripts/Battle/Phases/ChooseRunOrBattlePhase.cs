@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChooseRunOrBattlePhase : PhaseBase
+public class ChooseRunOrBattlePhase : BattlePhaseBase
 {
     private string dialogue = "どうする？";
     public override IEnumerator Execute(BattleContext battleContext, List<Move> moveOfAlly, List<Move> moveOfEnemy)

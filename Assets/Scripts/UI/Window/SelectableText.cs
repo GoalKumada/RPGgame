@@ -30,7 +30,7 @@ public class SelectableText : Selectable
     //選択状態になったら実行される関数
     public override void OnSelect(BaseEventData eventData)
     {
-        //Debug.Log($"{gameObject.transform.GetSiblingIndex()}が選択された");
+        Debug.Log($"{gameObject.transform.GetSiblingIndex()}が選択された");
         onSelectAction.Invoke(transform); //登録した関数を実行する
     }
 

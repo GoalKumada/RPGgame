@@ -96,14 +96,15 @@
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\DisableIfAttribute.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HelpBoxIfAttribute.cs" />
     <Compile Include="Assets\Scripts\Battle\Phases\StartPhase.cs" />
+    <Compile Include="Assets\Scripts\Battle\Phases\BattlePhaseBase.cs" />
     <Compile Include="Assets\Scripts\Battle\StatusUI\CharacterStatusPanel.cs" />
     <Compile Include="Assets\Scripts\Character\Ally.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\TabGroupAttribute.cs" />
     <Compile Include="Assets\Scripts\Item\Armor.cs" />
     <Compile Include="Assets\Scripts\Adventure\Common\PlayerPositionManager.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HideIfAttribute.cs" />
+    <Compile Include="Assets\Scripts\Adventure\InTavern\Phases\TavernPhaseBase.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\ShowIfAttribute.cs" />
-    <Compile Include="Assets\Scripts\Battle\Phases\PhaseBase.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HideLabelAttribute.cs" />
     <Compile Include="Assets\Scripts\OnClick.cs" />
     <Compile Include="Assets\Imports\Cainos\Pixel Art Platformer - Village Props\Script\BoundingPlatform.cs" />
@@ -119,6 +120,7 @@
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\AssetsOnlyAttribute.cs" />
     <Compile Include="Assets\Scripts\Character\Character.cs" />
     <Compile Include="Assets\Scripts\Adventure\InTown\SceneTransition\FromTownToTavern.cs" />
+    <Compile Include="Assets\Scripts\Adventure\InTavern\Phases\MenuSelectPhase.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HelpBoxAttribute.cs" />
     <Compile Include="Assets\Scripts\UI\Window\WindowMenu.cs" />
     <Compile Include="Assets\RunemarkStudio\DarkFantasyKit [Free]\Readme\Parts\Readme.cs" />

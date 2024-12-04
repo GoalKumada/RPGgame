@@ -97,4 +97,9 @@ public class WindowMenu : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    public void SetSelected()
+    {
+        EventSystem.current.SetSelectedGameObject(selectableTexts[currentID].gameObject);
+    }
+
 }

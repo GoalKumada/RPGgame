@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AllyMovePhase : PhaseBase
+public class AllyMovePhase : BattlePhaseBase
 {
     private string dialogue = "味方の攻撃！";
 

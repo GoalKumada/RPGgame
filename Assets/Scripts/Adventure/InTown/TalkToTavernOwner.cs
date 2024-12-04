@@ -12,6 +12,9 @@ public class TalkToTavernOwner : MonoBehaviour
     private GameObject tavernSystemManagerObject;
     private TavernSystemManager tavernSystemManager;
 
+    private float cooldownTime = 0.2f;
+    private float lastInteractionTime = 0f;
+
     private void Start()
     {
         GetSystemManager();
@@ -19,10 +22,12 @@ public class TalkToTavernOwner : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyUp(KeyCode.Space) && Time.time - lastInteractionTime >= cooldownTime)
         {
-            tavernSystemManager.menuPanel.Open();
+            lastInteractionTime = Time.time;
             Pause();
+            tavernSystemManager.menuPanel.Open();
+            tavernSystemManager.isMenuSelectingPhase = true;
         }
     }
 
@@ -47,6 +52,7 @@ public class TalkToTavernOwner : MonoBehaviour
         talkIcon = talkIconTransform?.gameObject;
         talkIcon.SetActive(true);
     }
+
     public void GetSystemManager()
     {
         tavernSystemManagerObject = GameObject.Find("TavernSystenManager");
