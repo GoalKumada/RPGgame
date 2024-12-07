@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\goal2\\RPGgame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|C:\\Users\\goal2\\RPGgame\\assets\\scripts\\adventure\\intavern\\tavernsystemmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\adventure\\intavern\\tavernsystemmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|c:\\users\\goal2\\rpggame\\assets\\scripts\\battle\\systemmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\battle\\systemmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|C:\\Users\\goal2\\RPGgame\\assets\\scripts\\ui\\window\\windowmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|C:\\Users\\goal2\\RPGgame\\assets\\scripts\\adventure\\intavern\\tavernsystemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\adventure\\intavern\\tavernsystemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|c:\\users\\goal2\\rpggame\\assets\\scripts\\ui\\window\\windowmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\window\\windowmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -15,15 +19,15 @@
       "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\window\\selectabletext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|C:\\Users\\goal2\\RPGgame\\assets\\scripts\\adventure\\intown\\talktotavernowner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\adventure\\intown\\talktotavernowner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|C:\\Users\\goal2\\RPGgame\\assets\\scripts\\adventure\\indungeon\\scenetransition\\fromdungeontotown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\adventure\\indungeon\\scenetransition\\fromdungeontotown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|c:\\users\\goal2\\rpggame\\assets\\scripts\\adventure\\intavern\\phases\\menuselectphase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|C:\\Users\\goal2\\RPGgame\\assets\\scripts\\adventure\\intavern\\phases\\menuselectphase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\adventure\\intavern\\phases\\menuselectphase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|c:\\users\\goal2\\rpggame\\assets\\scripts\\battle\\phases\\chooserunorbattlephase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|C:\\Users\\goal2\\RPGgame\\assets\\scripts\\battle\\phases\\chooserunorbattlephase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\battle\\phases\\chooserunorbattlephase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -43,7 +47,7 @@
       "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\battle\\battlemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|c:\\users\\goal2\\rpggame\\assets\\scripts\\adventure\\intavern\\phases\\tavernphasebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|C:\\Users\\goal2\\RPGgame\\assets\\scripts\\adventure\\intavern\\phases\\tavernphasebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\adventure\\intavern\\phases\\tavernphasebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -69,10 +73,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|C:\\Users\\goal2\\RPGgame\\assets\\scripts\\adventure\\common\\playerpositionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\adventure\\common\\playerpositionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|C:\\Users\\goal2\\RPGgame\\assets\\scripts\\adventure\\indungeon\\scenetransition\\fromdungeontotown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\adventure\\indungeon\\scenetransition\\fromdungeontotown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|C:\\Users\\goal2\\RPGgame\\assets\\scripts\\adventure\\common\\scenecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -112,19 +112,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "TavernSystemManager.cs",
-              "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Adventure\\InTavern\\TavernSystemManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Adventure\\InTavern\\TavernSystemManager.cs",
-              "ToolTip": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Adventure\\InTavern\\TavernSystemManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Adventure\\InTavern\\TavernSystemManager.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAQwCMAAAAAAAAAAAAAAA==",
+              "Title": "SystemManager.cs",
+              "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Battle\\SystemManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Battle\\SystemManager.cs",
+              "ToolTip": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Battle\\SystemManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Battle\\SystemManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T04:16:52.71Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TavernSystemController.cs",
+              "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Adventure\\InTavern\\TavernSystemController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Adventure\\InTavern\\TavernSystemController.cs",
+              "ToolTip": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Adventure\\InTavern\\TavernSystemController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Adventure\\InTavern\\TavernSystemController.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAADwvycAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-29T18:01:15.116Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "MenuSelectPhase.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Adventure\\InTavern\\Phases\\MenuSelectPhase.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Adventure\\InTavern\\Phases\\MenuSelectPhase.cs",
@@ -132,12 +145,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Adventure\\InTavern\\Phases\\MenuSelectPhase.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwgAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T05:03:33.776Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T05:03:33.776Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "TavernPhaseBase.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Adventure\\InTavern\\Phases\\TavernPhaseBase.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Adventure\\InTavern\\Phases\\TavernPhaseBase.cs",
@@ -145,12 +157,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Adventure\\InTavern\\Phases\\TavernPhaseBase.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwcAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T04:59:47.125Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T04:59:47.125Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Adventure\\Common\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Adventure\\Common\\PlayerController.cs",
@@ -174,19 +185,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TalkToTavernOwner.cs",
-              "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Adventure\\InTown\\TalkToTavernOwner.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Adventure\\InTown\\TalkToTavernOwner.cs",
-              "ToolTip": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Adventure\\InTown\\TalkToTavernOwner.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Adventure\\InTown\\TalkToTavernOwner.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T22:18:38.504Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 19,
               "Title": "FadeManager.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\UI\\FadeManager.cs",
@@ -199,7 +197,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "PlayerPositionManager.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Adventure\\Common\\PlayerPositionManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Adventure\\Common\\PlayerPositionManager.cs",
@@ -211,7 +209,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "FromTownToTavern.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Adventure\\InTown\\SceneTransition\\FromTownToTavern.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Adventure\\InTown\\SceneTransition\\FromTownToTavern.cs",
@@ -223,7 +221,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "FromTownToDungeon.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Adventure\\InTown\\SceneTransition\\FromTownToDungeon.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Adventure\\InTown\\SceneTransition\\FromTownToDungeon.cs",
@@ -235,7 +233,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 4,
               "Title": "FromDungeonToTown.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Adventure\\InDungeon\\SceneTransition\\FromDungeonToTown.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Adventure\\InDungeon\\SceneTransition\\FromDungeonToTown.cs",
@@ -247,7 +245,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "ToBattle.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Adventure\\InDungeon\\SceneTransition\\ToBattle.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Adventure\\InDungeon\\SceneTransition\\ToBattle.cs",
@@ -259,7 +257,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "DungeonProgressManager.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Adventure\\InDungeon\\DungeonProgressManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Adventure\\InDungeon\\DungeonProgressManager.cs",
@@ -271,7 +269,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "StartPhase.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Battle\\Phases\\StartPhase.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Battle\\Phases\\StartPhase.cs",
@@ -279,12 +277,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Battle\\Phases\\StartPhase.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T22:25:38.851Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T22:25:38.851Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "ChooseRunOrBattlePhase.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Battle\\Phases\\ChooseRunOrBattlePhase.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Battle\\Phases\\ChooseRunOrBattlePhase.cs",
@@ -292,12 +289,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Battle\\Phases\\ChooseRunOrBattlePhase.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T05:28:22.433Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T05:28:22.433Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ChooseAllyPhase.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Battle\\Phases\\ChooseAllyPhase.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Battle\\Phases\\ChooseAllyPhase.cs",
@@ -305,12 +301,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Battle\\Phases\\ChooseAllyPhase.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAAwB0AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T04:50:33.298Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T04:50:33.298Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "BattlePhaseBase.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Battle\\Phases\\BattlePhaseBase.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Battle\\Phases\\BattlePhaseBase.cs",
@@ -318,12 +313,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Battle\\Phases\\BattlePhaseBase.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T04:54:30.531Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T04:54:30.531Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "BattleManager.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Battle\\BattleManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Battle\\BattleManager.cs",
@@ -331,31 +325,30 @@
               "RelativeToolTip": "Assets\\Scripts\\Battle\\BattleManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T18:07:31.995Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T18:07:31.995Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "WindowMenu.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\UI\\Window\\WindowMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Window\\WindowMenu.cs",
               "ToolTip": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\UI\\Window\\WindowMenu.cs",
               "RelativeToolTip": "Assets\\Scripts\\UI\\Window\\WindowMenu.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAUwGUAAABZAAAAAAAAAA==",
+              "ViewState": "AgIAADYAAAAAAAAAAAAhwEgAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-29T17:25:32.657Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "SelectableText.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\UI\\Window\\SelectableText.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Window\\SelectableText.cs",
               "ToolTip": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\UI\\Window\\SelectableText.cs",
               "RelativeToolTip": "Assets\\Scripts\\UI\\Window\\SelectableText.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAADwvyAAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-22T22:17:34.058Z",
               "EditorCaption": ""

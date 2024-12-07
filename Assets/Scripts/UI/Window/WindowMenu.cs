@@ -102,4 +102,8 @@ public class WindowMenu : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(selectableTexts[currentID].gameObject);
     }
 
+    public void SetDeselected()
+    {
+        EventSystem.current.SetSelectedGameObject(null);
+    }
 }

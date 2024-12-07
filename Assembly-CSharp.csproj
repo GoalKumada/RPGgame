@@ -69,7 +69,6 @@
     <Compile Include="Assets\Scripts\Skills\WarriorSkills\DoubleAttack.cs" />
     <Compile Include="Assets\Scripts\Battle\StatusUI\GaugeUI.cs" />
     <Compile Include="Assets\Scripts\Character\Enemy.cs" />
-    <Compile Include="Assets\Scripts\Adventure\InTavern\TavernSystemManager.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\BoxGroupAttribute.cs" />
     <Compile Include="Assets\Scripts\Battle\StatusUI\CharacterStatus.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\EnableIfAttribute.cs" />
@@ -98,6 +97,7 @@
     <Compile Include="Assets\Scripts\Battle\Phases\StartPhase.cs" />
     <Compile Include="Assets\Scripts\Battle\Phases\BattlePhaseBase.cs" />
     <Compile Include="Assets\Scripts\Battle\StatusUI\CharacterStatusPanel.cs" />
+    <Compile Include="Assets\Scripts\Adventure\InTavern\TavernSystemController.cs" />
     <Compile Include="Assets\Scripts\Character\Ally.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\TabGroupAttribute.cs" />
     <Compile Include="Assets\Scripts\Item\Armor.cs" />
@@ -113,7 +113,6 @@
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\DisableInPlayModeAttribute.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\DisableLucidEditorAttribute.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\PropertyGroupAttribute.cs" />
-    <Compile Include="Assets\Scripts\Adventure\InTown\TalkToTavernOwner.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\ValidateInputAttribute.cs" />
     <Compile Include="Assets\Scripts\Skills\Skill.cs" />
     <Compile Include="Assets\Imports\Low Poly Trim Sheet Asset Collection\DemoSceneAssets\DemoSceneScripts\DemoCameraMovement.cs" />
@@ -123,6 +122,7 @@
     <Compile Include="Assets\Scripts\Adventure\InTavern\Phases\MenuSelectPhase.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HelpBoxAttribute.cs" />
     <Compile Include="Assets\Scripts\UI\Window\WindowMenu.cs" />
+    <Compile Include="Assets\Scripts\Adventure\InTavern\TalkToTavernOwner.cs" />
     <Compile Include="Assets\RunemarkStudio\DarkFantasyKit [Free]\Readme\Parts\Readme.cs" />
     <Compile Include="Assets\Scripts\Skills\WarriorSkills\SpinAttack.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\DisableInEditModeAttribute.cs" />
