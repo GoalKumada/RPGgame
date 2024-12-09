@@ -19,7 +19,7 @@ public class ChooseEnemyPhase : BattlePhaseBase
         battleContext.chooseEnemyWindowMenu.DeleteSelectableTexts();
 
         GameObject gobj = GameObject.Find("SystemManager");
-        SystemManager sm = gobj.GetComponent<SystemManager>();
+        BattleSystemManager sm = gobj.GetComponent<BattleSystemManager>();
 
         if (Input.GetKeyDown(KeyCode.Space))
         {

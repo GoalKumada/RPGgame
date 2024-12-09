@@ -12,12 +12,12 @@ public class CharacterStatusPanel : MonoBehaviour
     public bool refreshEnemyHP = false; 
     public bool refreshEnemyTP = false; 
     public int refreshedChracter;
-    SystemManager sm;
+    BattleSystemManager sm;
 
     private void Start()
     {
         GameObject gobj = GameObject.Find("SystemManager");
-        sm = gobj.GetComponent<SystemManager>();
+        sm = gobj.GetComponent<BattleSystemManager>();
 
         if (gameObject.tag == "Ally") 
         {

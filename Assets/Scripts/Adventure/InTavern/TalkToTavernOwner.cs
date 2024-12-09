@@ -9,8 +9,8 @@ public class TalkToTavernOwner : MonoBehaviour
     private Transform talkIconTransform;
     private GameObject talkIcon;
 
-    private GameObject tavernSystemManagerObject;
-    private TavernSystemController tavernSystemManager;
+    private GameObject tavernSystemControllerObject;
+    private TavernSystemController tavernSystemController;
 
     private float cooldownTime = 0.2f;
     private float lastInteractionTime = 0f;
@@ -24,10 +24,7 @@ public class TalkToTavernOwner : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Space) && Time.time - lastInteractionTime >= cooldownTime)
         {
-            lastInteractionTime = Time.time;
-            Pause();
-            tavernSystemManager.menuPanel.Open();
-            tavernSystemManager.isMenuSelectingPhase = true;
+            StartTavernSystem();
         }
     }
 
@@ -55,8 +52,17 @@ public class TalkToTavernOwner : MonoBehaviour
 
     public void GetSystemManager()
     {
-        tavernSystemManagerObject = GameObject.Find("TavernSystenManager");
-        tavernSystemManager = tavernSystemManagerObject.GetComponent<TavernSystemController>();
+        tavernSystemControllerObject = GameObject.Find("TavernSystenController");
+        tavernSystemController = tavernSystemControllerObject.GetComponent<TavernSystemController>();
+    }
+
+    public void StartTavernSystem()
+    {
+        lastInteractionTime = Time.time;
+        Pause();
+        tavernSystemController.menuPanel.Open();
+        tavernSystemController.isMenuSelectingPhase = true;
+        tavernSystemController.SetCurrentAmountOfMoney();
     }
 
     public void Pause()

@@ -73,7 +73,6 @@
     <Compile Include="Assets\Scripts\Battle\StatusUI\CharacterStatus.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\EnableIfAttribute.cs" />
     <Compile Include="Assets\Scripts\Item\Accessory.cs" />
-    <Compile Include="Assets\Scripts\Battle\SystemManager.cs" />
     <Compile Include="Assets\Imports\Cainos\Pixel Art Platformer - Village Props\Script\Elevator.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\SectionHeaderAttribute.cs" />
     <Compile Include="Assets\Scripts\Battle\Phases\RunCheckPhase.cs" />
@@ -88,12 +87,14 @@
     <Compile Include="Assets\Scripts\Adventure\Common\PlayerController.cs" />
     <Compile Include="Assets\Imports\Cainos\Pixel Art Platformer - Village Props\Script\Chest.cs" />
     <Compile Include="Assets\Scripts\UI\FadeManager.cs" />
+    <Compile Include="Assets\Scripts\Battle\BattleSystemManager.cs" />
     <Compile Include="Assets\Scripts\Battle\Phases\EnemyMovePhase.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\ButtonAttribute.cs" />
     <Compile Include="Assets\Scripts\Battle\Phases\EndPhase.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\FoldoutGroupAttribute.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\DisableIfAttribute.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HelpBoxIfAttribute.cs" />
+    <Compile Include="Assets\Scripts\SystemManager.cs" />
     <Compile Include="Assets\Scripts\Battle\Phases\StartPhase.cs" />
     <Compile Include="Assets\Scripts\Battle\Phases\BattlePhaseBase.cs" />
     <Compile Include="Assets\Scripts\Battle\StatusUI\CharacterStatusPanel.cs" />
@@ -103,7 +104,6 @@
     <Compile Include="Assets\Scripts\Item\Armor.cs" />
     <Compile Include="Assets\Scripts\Adventure\Common\PlayerPositionManager.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HideIfAttribute.cs" />
-    <Compile Include="Assets\Scripts\Adventure\InTavern\Phases\TavernPhaseBase.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\ShowIfAttribute.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HideLabelAttribute.cs" />
     <Compile Include="Assets\Scripts\OnClick.cs" />
@@ -119,7 +119,6 @@
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\AssetsOnlyAttribute.cs" />
     <Compile Include="Assets\Scripts\Character\Character.cs" />
     <Compile Include="Assets\Scripts\Adventure\InTown\SceneTransition\FromTownToTavern.cs" />
-    <Compile Include="Assets\Scripts\Adventure\InTavern\Phases\MenuSelectPhase.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HelpBoxAttribute.cs" />
     <Compile Include="Assets\Scripts\UI\Window\WindowMenu.cs" />
     <Compile Include="Assets\Scripts\Adventure\InTavern\TalkToTavernOwner.cs" />

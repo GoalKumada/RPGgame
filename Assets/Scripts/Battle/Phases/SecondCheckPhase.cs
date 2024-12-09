@@ -12,7 +12,7 @@ public class SecondCheckPhase : BattlePhaseBase
         BattleManager bm = obj.GetComponent<BattleManager>();
 
         GameObject gobj = GameObject.Find("SystemManager");
-        SystemManager sm = gobj.GetComponent<SystemManager>();
+        BattleSystemManager sm = gobj.GetComponent<BattleSystemManager>();
 
         int count = 0;
         for (int i = sm.numOfAllies - 1; i >= 0; i--)

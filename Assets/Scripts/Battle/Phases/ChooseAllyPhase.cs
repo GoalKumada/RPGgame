@@ -22,7 +22,7 @@ public class ChooseAllyPhase : BattlePhaseBase
         battleContext.chooseAllyWindowMenu.DeleteSelectableTexts();
 
         GameObject gobj = GameObject.Find("SystemManager");
-        SystemManager sm = gobj.GetComponent<SystemManager>();
+        BattleSystemManager sm = gobj.GetComponent<BattleSystemManager>();
 
         if (Input.GetKeyDown(KeyCode.Space))
         {

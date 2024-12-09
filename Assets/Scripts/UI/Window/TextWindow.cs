@@ -9,14 +9,14 @@ public class TextWindow : MonoBehaviour
 
     [SerializeField] DialogueText dialogueText;
     [SerializeField] DialogueText dialogueTextPrefab;
-    SystemManager sm;
+    BattleSystemManager sm;
     WindowMenu menu;
     public bool isChooseComandPhase = false;
 
     private void Start()
     {
         GameObject gobj = GameObject.Find("SystemManager");
-        sm = gobj.GetComponent<SystemManager>();
+        sm = gobj.GetComponent<BattleSystemManager>();
 
         GameObject obj = GameObject.Find("WindowsPanel");
         Transform target = obj.transform.Find("ChooseCommandWindow");

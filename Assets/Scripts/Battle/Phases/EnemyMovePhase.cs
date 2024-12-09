@@ -17,7 +17,7 @@ public class EnemyMovePhase : BattlePhaseBase
         yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
 
         GameObject gobj = GameObject.Find("SystemManager");
-        SystemManager sm = gobj.GetComponent<SystemManager>();
+        BattleSystemManager sm = gobj.GetComponent<BattleSystemManager>();
 
         // 敵の行動を決めてListに格納
         // （動く敵を選ぶ→技を選ぶ→攻撃する味方を選ぶ）×（敵の数）

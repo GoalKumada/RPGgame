@@ -13,7 +13,7 @@ public class AllyMovePhase : BattlePhaseBase
         battleContext.textWindow.CreateDialogueText(dialogue);
 
         GameObject gobj = GameObject.Find("SystemManager");
-        SystemManager sm = gobj.GetComponent<SystemManager>();
+        BattleSystemManager sm = gobj.GetComponent<BattleSystemManager>();
 
         GameObject allyStatusPanel = GameObject.Find("AllyStatusPanel");
         CharacterStatusPanel aspCSP = allyStatusPanel.GetComponent<CharacterStatusPanel>();

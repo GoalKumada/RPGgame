@@ -14,7 +14,7 @@ public class FirstCheckPhase : BattlePhaseBase
         BattleManager bm = obj.GetComponent<BattleManager>();
         
         GameObject gobj = GameObject.Find("SystemManager");
-        SystemManager sm = gobj.GetComponent<SystemManager>();
+        BattleSystemManager sm = gobj.GetComponent<BattleSystemManager>();
 
         int count = 0;
         for (int i = sm.numOfEnemies-1; i >= 0; i--)
