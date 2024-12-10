@@ -6,6 +6,7 @@ public class SystemManager : MonoBehaviour
 {
     [SerializeField] public static int money = 500;
 
+    public static List<Ally> allies;
 
     void Start()
     {

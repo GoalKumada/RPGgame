@@ -9,7 +9,10 @@ public class Character : MonoBehaviour
     [SerializeField] public float maxHP;
     [SerializeField] public int currentTP;
     [SerializeField] public int maxTP;
-    [SerializeField] private float DEF;
+    [SerializeField] public float ATK;
+    [SerializeField] public float currentATK;
+    [SerializeField] public float DEF;
+    [SerializeField] public float currentDEF;
     [SerializeField] public Skill[] skills;
 
     private void Awake()

@@ -147,13 +147,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 566881279}
+  - {fileID: 683579182}
   - {fileID: 1480665310}
   m_Father: {fileID: 1092057761}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 380, y: 247}
+  m_AnchoredPosition: {x: 380, y: 245}
   m_SizeDelta: {x: 110, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &19537882
@@ -1687,28 +1687,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuPanel: {fileID: 1495232657}
-  jobPanel: {fileID: 159777850}
-  allyRecruitPanelObject: {fileID: 1938188792}
-  allyTextPanel: {fileID: 972386765}
-  statusPanelObject: {fileID: 1369240948}
-  skillPanelObject: {fileID: 1247806262}
-  recruiteCheckPanelObject: {fileID: 1043285791}
-  recruitOptionsPanel: {fileID: 2019852517}
-  confirmTextPanelObject: {fileID: 1921176707}
-  currentAllyNamePanel: {fileID: 19537887}
-  currnetAllyImagePanelObject: {fileID: 962248430}
-  currnetAllyStatusPanelObject: {fileID: 336879106}
-  currentAllySkillPanelObject: {fileID: 23808873}
-  currnetAllyEquiomentPanelObject: {fileID: 1780222901}
-  entrustCheckPanelObject: {fileID: 1548037728}
-  entrustCheckPanel: {fileID: 27513692}
-  reserveAllyNamePanel: {fileID: 216945809}
-  reserveAllyImagePanelObject: {fileID: 1393996978}
-  reserveAllyStatusPanelObject: {fileID: 634613655}
-  reserveAllySkillPanelObject: {fileID: 1104430545}
-  reserveAllyEquiomentPanelObject: {fileID: 934196620}
-  bringOutCheckPanelObject: {fileID: 1567247560}
-  bringOutCheckPanel: {fileID: 1986133289}
+  dataForRecruiting:
+    jobPanel: {fileID: 159777850}
+    allyRecruitPanelObject: {fileID: 1938188792}
+    allyTextPanel: {fileID: 972386765}
+    statusPanelObject: {fileID: 1369240948}
+    skillPanelObject: {fileID: 1247806262}
+    recruiteCheckPanelObject: {fileID: 1043285791}
+    recruitOptionsPanel: {fileID: 2019852517}
+    confirmTextPanelObject: {fileID: 1921176707}
+  dataForEntrusting:
+    currentAllyNamePanel: {fileID: 19537887}
+    currnetAllyImagePanelObject: {fileID: 962248430}
+    currnetAllyStatusPanelObject: {fileID: 336879106}
+    currentAllySkillPanelObject: {fileID: 23808873}
+    currnetAllyEquiomentPanelObject: {fileID: 1780222901}
+    entrustCheckPanelObject: {fileID: 1548037728}
+    entrustCheckPanel: {fileID: 27513692}
+  dataForBringingOut:
+    reserveAllyNamePanel: {fileID: 216945809}
+    reserveAllyImagePanelObject: {fileID: 1393996978}
+    reserveAllyStatusPanelObject: {fileID: 634613655}
+    reserveAllySkillPanelObject: {fileID: 1104430545}
+    reserveAllyEquiomentPanelObject: {fileID: 934196620}
+    bringOutCheckPanelObject: {fileID: 1567247560}
+    bringOutCheckPanel: {fileID: 1986133289}
   isMenuSelectingPhase: 0
   isJobSelectingPhase: 0
   isRecruitingPhase: 0
@@ -1718,6 +1721,26 @@ MonoBehaviour:
   isEntrustCheckPhase: 0
   isReserveAllySelectingPhase: 0
   isBringOutCheckPhase: 0
+  swordsmans:
+  - {fileID: 1237356188}
+  - {fileID: 286143805}
+  - {fileID: 1290656593}
+  knights:
+  - {fileID: 296004692}
+  - {fileID: 770756716}
+  - {fileID: 2086616883}
+  archers:
+  - {fileID: 1469604604}
+  - {fileID: 1979076362}
+  - {fileID: 455496200}
+  wizards:
+  - {fileID: 1850739016}
+  - {fileID: 1423847028}
+  - {fileID: 603216199}
+  priests:
+  - {fileID: 1752067117}
+  - {fileID: 1945713064}
+  - {fileID: 594188009}
 --- !u!4 &193935509
 Transform:
   m_ObjectHideFlags: 0
@@ -2162,6 +2185,118 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 276620826}
   m_CullTransparentMesh: 1
+--- !u!1 &286143803
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 286143804}
+  - component: {fileID: 286143805}
+  m_Layer: 0
+  m_Name: SwordsmanVeteran
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &286143804
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286143803}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1725406762}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &286143805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286143803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cff7372b54b524aacb163003b4c132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: "\u30EA\u30F3\u30C0"
+  currentHP: 0
+  maxHP: 0
+  currentTP: 0
+  maxTP: 0
+  ATK: 0
+  currentATK: 0
+  DEF: 0
+  currentDEF: 0
+  skills: []
+  SPEED: 0
+  currentSPEED: 0
+--- !u!1 &296004690
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 296004691}
+  - component: {fileID: 296004692}
+  m_Layer: 0
+  m_Name: KnighRookie
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &296004691
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296004690}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1725406762}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &296004692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296004690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cff7372b54b524aacb163003b4c132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: "\u30C0\u30F3"
+  currentHP: 0
+  maxHP: 0
+  currentTP: 0
+  maxTP: 0
+  ATK: 0
+  currentATK: 0
+  DEF: 0
+  currentDEF: 0
+  skills: []
+  SPEED: 0
+  currentSPEED: 0
 --- !u!1 &330354709
 GameObject:
   m_ObjectHideFlags: 0
@@ -2340,7 +2475,7 @@ GameObject:
   - component: {fileID: 337438748}
   - component: {fileID: 337438747}
   m_Layer: 5
-  m_Name: AllyText
+  m_Name: AllyNameText (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3229,6 +3364,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 427235047}
   m_CullTransparentMesh: 1
+--- !u!1 &455496198
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 455496199}
+  - component: {fileID: 455496200}
+  m_Layer: 0
+  m_Name: ArcherLegendary
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &455496199
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455496198}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1725406762}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &455496200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455496198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cff7372b54b524aacb163003b4c132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: "\u30EB\u30A4\u30FC\u30C0"
+  currentHP: 0
+  maxHP: 0
+  currentTP: 0
+  maxTP: 0
+  ATK: 0
+  currentATK: 0
+  DEF: 0
+  currentDEF: 0
+  skills: []
+  SPEED: 0
+  currentSPEED: 0
 --- !u!1 &457107026
 GameObject:
   m_ObjectHideFlags: 0
@@ -3995,85 +4186,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 559843556}
   m_CullTransparentMesh: 1
---- !u!1 &566881278
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 566881279}
-  - component: {fileID: 566881281}
-  - component: {fileID: 566881280}
-  m_Layer: 5
-  m_Name: Money
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &566881279
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 566881278}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7262254}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 15, y: 0}
-  m_SizeDelta: {x: 80, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &566881280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 566881278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: c7576fd91501d9f47a70eca60dc07401, type: 3}
-    m_FontSize: 20
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 40
-    m_Alignment: 5
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 1000
---- !u!222 &566881281
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 566881278}
-  m_CullTransparentMesh: 1
 --- !u!1 &581971616
 GameObject:
   m_ObjectHideFlags: 0
@@ -4378,6 +4490,118 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 587737688}
   m_CullTransparentMesh: 1
+--- !u!1 &594188007
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 594188008}
+  - component: {fileID: 594188009}
+  m_Layer: 0
+  m_Name: 'PriestLegendary '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &594188008
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 594188007}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1725406762}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &594188009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 594188007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cff7372b54b524aacb163003b4c132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: "\u30AA\u30EB\u30AC"
+  currentHP: 0
+  maxHP: 0
+  currentTP: 0
+  maxTP: 0
+  ATK: 0
+  currentATK: 0
+  DEF: 0
+  currentDEF: 0
+  skills: []
+  SPEED: 0
+  currentSPEED: 0
+--- !u!1 &603216197
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 603216198}
+  - component: {fileID: 603216199}
+  m_Layer: 0
+  m_Name: WizardLegendary
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &603216198
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603216197}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1725406762}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &603216199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603216197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cff7372b54b524aacb163003b4c132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: "\u30A2\u30DE\u30F3\u30C0"
+  currentHP: 0
+  maxHP: 0
+  currentTP: 0
+  maxTP: 0
+  ATK: 0
+  currentATK: 0
+  DEF: 0
+  currentDEF: 0
+  skills: []
+  SPEED: 0
+  currentSPEED: 0
 --- !u!1 &626215673
 GameObject:
   m_ObjectHideFlags: 0
@@ -4890,6 +5114,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 665601658}
   m_CullTransparentMesh: 1
+--- !u!1 &683579181
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 683579182}
+  - component: {fileID: 683579184}
+  - component: {fileID: 683579183}
+  m_Layer: 5
+  m_Name: Money
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &683579182
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683579181}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7262254}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 15, y: 0}
+  m_SizeDelta: {x: 80, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &683579183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683579181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: c7576fd91501d9f47a70eca60dc07401, type: 3}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 5
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: money
+--- !u!222 &683579184
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683579181}
+  m_CullTransparentMesh: 1
 --- !u!1 &707877891
 GameObject:
   m_ObjectHideFlags: 0
@@ -5352,6 +5655,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 765617159}
   m_CullTransparentMesh: 1
+--- !u!1 &770756714
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 770756715}
+  - component: {fileID: 770756716}
+  m_Layer: 0
+  m_Name: KnighVeteran
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &770756715
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770756714}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1725406762}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &770756716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770756714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cff7372b54b524aacb163003b4c132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: "\u30B4\u30FC\u30C9\u30F3"
+  currentHP: 0
+  maxHP: 0
+  currentTP: 0
+  maxTP: 0
+  ATK: 0
+  currentATK: 0
+  DEF: 0
+  currentDEF: 0
+  skills: []
+  SPEED: 0
+  currentSPEED: 0
 --- !u!1 &801340285
 GameObject:
   m_ObjectHideFlags: 0
@@ -5366,7 +5725,7 @@ GameObject:
   - component: {fileID: 801340288}
   - component: {fileID: 801340287}
   m_Layer: 5
-  m_Name: AllyText (1)
+  m_Name: AllyNameText (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6441,7 +6800,7 @@ GameObject:
   - component: {fileID: 972386763}
   - component: {fileID: 972386762}
   m_Layer: 5
-  m_Name: AllyTextPanel
+  m_Name: AllyNameTexts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7835,6 +8194,62 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1237356186
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1237356187}
+  - component: {fileID: 1237356188}
+  m_Layer: 0
+  m_Name: SwordsmanRookie
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1237356187
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237356186}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1725406762}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1237356188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237356186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cff7372b54b524aacb163003b4c132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: "\u30B5\u30E9"
+  currentHP: 0
+  maxHP: 0
+  currentTP: 0
+  maxTP: 0
+  ATK: 0
+  currentATK: 0
+  DEF: 0
+  currentDEF: 0
+  skills: []
+  SPEED: 0
+  currentSPEED: 0
 --- !u!1 &1241163980
 GameObject:
   m_ObjectHideFlags: 0
@@ -8151,6 +8566,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1278571111}
   m_CullTransparentMesh: 1
+--- !u!1 &1290656591
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1290656592}
+  - component: {fileID: 1290656593}
+  m_Layer: 0
+  m_Name: SwordsmanLegendary
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1290656592
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290656591}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1725406762}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1290656593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290656591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cff7372b54b524aacb163003b4c132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: "\u30A8\u30E9\u30A4\u30B6"
+  currentHP: 0
+  maxHP: 0
+  currentTP: 0
+  maxTP: 0
+  ATK: 0
+  currentATK: 0
+  DEF: 0
+  currentDEF: 0
+  skills: []
+  SPEED: 0
+  currentSPEED: 0
 --- !u!1 &1300305892
 GameObject:
   m_ObjectHideFlags: 0
@@ -9850,6 +10321,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1395219805}
   m_CullTransparentMesh: 1
+--- !u!1 &1423847026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1423847027}
+  - component: {fileID: 1423847028}
+  m_Layer: 0
+  m_Name: WizardVeteran
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1423847027
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423847026}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1725406762}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1423847028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423847026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cff7372b54b524aacb163003b4c132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: "\u30EA\u30CA"
+  currentHP: 0
+  maxHP: 0
+  currentTP: 0
+  maxTP: 0
+  ATK: 0
+  currentATK: 0
+  DEF: 0
+  currentDEF: 0
+  skills: []
+  SPEED: 0
+  currentSPEED: 0
 --- !u!1 &1428616530
 GameObject:
   m_ObjectHideFlags: 0
@@ -10253,6 +10780,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1448405766}
   m_CullTransparentMesh: 1
+--- !u!1 &1469604602
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1469604603}
+  - component: {fileID: 1469604604}
+  m_Layer: 0
+  m_Name: ArcherRookie
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1469604603
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469604602}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1725406762}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1469604604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469604602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cff7372b54b524aacb163003b4c132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: "\u30B1\u30A4\u30C8"
+  currentHP: 0
+  maxHP: 0
+  currentTP: 0
+  maxTP: 0
+  ATK: 0
+  currentATK: 0
+  DEF: 0
+  currentDEF: 0
+  skills: []
+  SPEED: 0
+  currentSPEED: 0
 --- !u!1 &1480665309
 GameObject:
   m_ObjectHideFlags: 0
@@ -10270,7 +10853,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1480665310
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11470,6 +12053,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1703898346}
   m_CullTransparentMesh: 1
+--- !u!1 &1725406761
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1725406762}
+  m_Layer: 0
+  m_Name: Ally
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1725406762
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725406761}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1237356187}
+  - {fileID: 286143804}
+  - {fileID: 1290656592}
+  - {fileID: 296004691}
+  - {fileID: 770756715}
+  - {fileID: 2086616882}
+  - {fileID: 1469604603}
+  - {fileID: 1979076361}
+  - {fileID: 455496199}
+  - {fileID: 1850739015}
+  - {fileID: 1423847027}
+  - {fileID: 603216198}
+  - {fileID: 1752067116}
+  - {fileID: 1945713063}
+  - {fileID: 594188008}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1744786836
 GameObject:
   m_ObjectHideFlags: 0
@@ -11549,6 +12178,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1744786836}
   m_CullTransparentMesh: 1
+--- !u!1 &1752067115
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1752067116}
+  - component: {fileID: 1752067117}
+  m_Layer: 0
+  m_Name: PriestRookie
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1752067116
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752067115}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1725406762}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1752067117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752067115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cff7372b54b524aacb163003b4c132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: "\u30AB\u30F3\u30CD"
+  currentHP: 0
+  maxHP: 0
+  currentTP: 0
+  maxTP: 0
+  ATK: 0
+  currentATK: 0
+  DEF: 0
+  currentDEF: 0
+  skills: []
+  SPEED: 0
+  currentSPEED: 0
 --- !u!1001 &1760873958
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12278,6 +12963,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1842920905}
   m_CullTransparentMesh: 1
+--- !u!1 &1850739014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1850739015}
+  - component: {fileID: 1850739016}
+  m_Layer: 0
+  m_Name: WizardRookie
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1850739015
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850739014}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1725406762}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1850739016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850739014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cff7372b54b524aacb163003b4c132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: "\u30E1\u30B0"
+  currentHP: 0
+  maxHP: 0
+  currentTP: 0
+  maxTP: 0
+  ATK: 0
+  currentATK: 0
+  DEF: 0
+  currentDEF: 0
+  skills: []
+  SPEED: 0
+  currentSPEED: 0
 --- !u!1 &1863365990
 GameObject:
   m_ObjectHideFlags: 0
@@ -12371,7 +13112,7 @@ GameObject:
   - component: {fileID: 1893331364}
   - component: {fileID: 1893331363}
   m_Layer: 5
-  m_Name: AllyText (2)
+  m_Name: AllyNameText (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12963,6 +13704,118 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1945563034}
   m_CullTransparentMesh: 1
+--- !u!1 &1945713062
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1945713063}
+  - component: {fileID: 1945713064}
+  m_Layer: 0
+  m_Name: PriestVeteran
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1945713063
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945713062}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1725406762}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1945713064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945713062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cff7372b54b524aacb163003b4c132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: "\u30A4\u30A7\u30F3"
+  currentHP: 0
+  maxHP: 0
+  currentTP: 0
+  maxTP: 0
+  ATK: 0
+  currentATK: 0
+  DEF: 0
+  currentDEF: 0
+  skills: []
+  SPEED: 0
+  currentSPEED: 0
+--- !u!1 &1979076360
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1979076361}
+  - component: {fileID: 1979076362}
+  m_Layer: 0
+  m_Name: ArcherVeteran
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1979076361
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979076360}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1725406762}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1979076362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979076360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cff7372b54b524aacb163003b4c132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: "\u30DF\u30E9"
+  currentHP: 0
+  maxHP: 0
+  currentTP: 0
+  maxTP: 0
+  ATK: 0
+  currentATK: 0
+  DEF: 0
+  currentDEF: 0
+  skills: []
+  SPEED: 0
+  currentSPEED: 0
 --- !u!1 &1985395377
 GameObject:
   m_ObjectHideFlags: 0
@@ -13664,6 +14517,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2085852614}
   m_CullTransparentMesh: 1
+--- !u!1 &2086616881
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2086616882}
+  - component: {fileID: 2086616883}
+  m_Layer: 0
+  m_Name: KnighLegendary
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2086616882
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086616881}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1725406762}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2086616883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086616881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cff7372b54b524aacb163003b4c132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: "\u30AA\u30EA\u30D0\u30FC"
+  currentHP: 0
+  maxHP: 0
+  currentTP: 0
+  maxTP: 0
+  ATK: 0
+  currentATK: 0
+  DEF: 0
+  currentDEF: 0
+  skills: []
+  SPEED: 0
+  currentSPEED: 0
 --- !u!1 &2132255232
 GameObject:
   m_ObjectHideFlags: 0
@@ -13963,4 +14872,5 @@ SceneRoots:
   m_Roots:
   - {fileID: 655988714}
   - {fileID: 193935509}
+  - {fileID: 1725406762}
   - {fileID: 193052592}

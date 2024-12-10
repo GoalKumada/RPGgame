@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TavernSystemController : MonoBehaviour
+[System.Serializable]
+public class DateForRecruiting
 {
-    [SerializeField] public WindowMenu menuPanel;
-
     [SerializeField] public WindowMenu jobPanel;
     [SerializeField] public GameObject allyRecruitPanelObject;
     [SerializeField] public WindowMenu allyTextPanel;
@@ -15,7 +15,11 @@ public class TavernSystemController : MonoBehaviour
     [SerializeField] public GameObject recruiteCheckPanelObject;
     [SerializeField] public WindowMenu recruitOptionsPanel;
     [SerializeField] public GameObject confirmTextPanelObject;
+}
 
+[System.Serializable]
+public class DateForEntrusting
+{
     [SerializeField] public WindowMenu currentAllyNamePanel;
     [SerializeField] public GameObject currnetAllyImagePanelObject;
     [SerializeField] public GameObject currnetAllyStatusPanelObject;
@@ -23,7 +27,11 @@ public class TavernSystemController : MonoBehaviour
     [SerializeField] public GameObject currnetAllyEquiomentPanelObject;
     [SerializeField] public GameObject entrustCheckPanelObject;
     [SerializeField] public WindowMenu entrustCheckPanel;
+}
 
+[System.Serializable]
+public class DateForBringingOut
+{
     [SerializeField] public WindowMenu reserveAllyNamePanel;
     [SerializeField] public GameObject reserveAllyImagePanelObject;
     [SerializeField] public GameObject reserveAllyStatusPanelObject;
@@ -31,6 +39,14 @@ public class TavernSystemController : MonoBehaviour
     [SerializeField] public GameObject reserveAllyEquiomentPanelObject;
     [SerializeField] public GameObject bringOutCheckPanelObject;
     [SerializeField] public WindowMenu bringOutCheckPanel;
+}
+
+public class TavernSystemController : MonoBehaviour
+{
+    [SerializeField] public WindowMenu menuPanel;
+    [SerializeField] private DateForRecruiting dataForRecruiting;
+    [SerializeField] private DateForEntrusting dataForEntrusting;
+    [SerializeField] private DateForBringingOut dataForBringingOut;
 
     public bool isMenuSelectingPhase;
     public bool isJobSelectingPhase;
@@ -42,11 +58,18 @@ public class TavernSystemController : MonoBehaviour
     public bool isReserveAllySelectingPhase;
     public bool isBringOutCheckPhase;
 
+    Ally[] nameForDisplay;
+    [SerializeField] private Ally[] swordsmans;
+    [SerializeField] private Ally[] knights;
+    [SerializeField] private Ally[] archers;
+    [SerializeField] private Ally[] wizards;
+    [SerializeField] private Ally[] priests;
+
     void Start()
     {
-        
-    }
 
+    }
+    
     void Update()
     {
         if (isMenuSelectingPhase)
@@ -90,6 +113,7 @@ public class TavernSystemController : MonoBehaviour
         }
     }
 
+    
     public void OnMenuSelectPhase()
     {
         if (Input.GetKeyDown(KeyCode.Space))
@@ -98,19 +122,19 @@ public class TavernSystemController : MonoBehaviour
 
             if (index == 0)
             {
-                jobPanel.Open();
+                dataForRecruiting.jobPanel.Open();
                 isJobSelectingPhase = true;
                 isMenuSelectingPhase = false;
             }
             else if (index == 1)
             {
-                currentAllyNamePanel.Open();
+                dataForEntrusting.currentAllyNamePanel.Open();
                 isCurrentAllySelectingPhase = true;
                 isMenuSelectingPhase = false;
             }
             else if (index == 2)
             {
-                reserveAllyNamePanel.Open();
+                dataForBringingOut.reserveAllyNamePanel.Open();
                 isReserveAllySelectingPhase = true;
                 isMenuSelectingPhase = false;
             }
@@ -137,24 +161,22 @@ public class TavernSystemController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            int index = GetCurrentID(jobPanel);
+            int index = GetCurrentID(dataForRecruiting.jobPanel);
 
-            allyRecruitPanelObject.SetActive(true);
-            statusPanelObject.SetActive(true);
-            skillPanelObject.SetActive(true);
-            allyTextPanel.Open();
+            dataForRecruiting.allyRecruitPanelObject.SetActive(true);
+            dataForRecruiting.statusPanelObject.SetActive(true);
+            dataForRecruiting.skillPanelObject.SetActive(true);
+            dataForRecruiting.allyTextPanel.Open();
 
             isRecruitingPhase = true;
             isJobSelectingPhase = false;
 
             SetImageOfAllies(index);
-
-            //
-
+            SetNameOfAllies(index);
         }
         else if (Input.GetKeyDown(KeyCode.Escape))
         {
-            jobPanel.Close();
+            dataForRecruiting.jobPanel.Close();
             menuPanel.SetSelected();
             isJobSelectingPhase = false;
             isMenuSelectingPhase = true;
@@ -165,10 +187,10 @@ public class TavernSystemController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            int index = GetCurrentID(allyTextPanel);
+            int index = GetCurrentID(dataForRecruiting.allyTextPanel);
 
-            recruiteCheckPanelObject.SetActive(true);
-            recruitOptionsPanel.Open();
+            dataForRecruiting.recruiteCheckPanelObject.SetActive(true);
+            dataForRecruiting.recruitOptionsPanel.Open();
             isRecruitCheckPhase = true;
             isRecruitingPhase = false;
 
@@ -189,11 +211,11 @@ public class TavernSystemController : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Escape))
         {
-            allyRecruitPanelObject.SetActive(false);
-            statusPanelObject.SetActive(false);
-            skillPanelObject.SetActive(false);
-            allyTextPanel.Close();
-            jobPanel.SetSelected();
+            dataForRecruiting.allyRecruitPanelObject.SetActive(false);
+            dataForRecruiting.statusPanelObject.SetActive(false);
+            dataForRecruiting.skillPanelObject.SetActive(false);
+            dataForRecruiting.allyTextPanel.Close();
+            dataForRecruiting.jobPanel.SetSelected();
             isRecruitingPhase = false;
             isJobSelectingPhase = true;
         }
@@ -203,32 +225,32 @@ public class TavernSystemController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            int index = GetCurrentID(recruitOptionsPanel);
+            int index = GetCurrentID(dataForRecruiting.recruitOptionsPanel);
 
             if (index == 0)
             {
                 //
 
-                recruitOptionsPanel.SetDeselected();
-                recruiteCheckPanelObject.SetActive(false);
-                confirmTextPanelObject.SetActive(true);
+                dataForRecruiting.recruitOptionsPanel.SetDeselected();
+                dataForRecruiting.recruiteCheckPanelObject.SetActive(false);
+                dataForRecruiting.confirmTextPanelObject.SetActive(true);
                 isRecruitCheckPhase = false;
                 isConfirmingPhase = true;
             }
             else if (index == 1)
             {
-                recruiteCheckPanelObject.SetActive(false);
-                recruitOptionsPanel.Close();
-                allyTextPanel.SetSelected();
+                dataForRecruiting.recruiteCheckPanelObject.SetActive(false);
+                dataForRecruiting.recruitOptionsPanel.Close();
+                dataForRecruiting.allyTextPanel.SetSelected();
                 isRecruitCheckPhase = false;
                 isRecruitingPhase = true;
             }
         }
         else if (Input.GetKeyDown(KeyCode.Escape))
         {
-            recruiteCheckPanelObject.SetActive(false);
-            recruitOptionsPanel.Close();
-            allyTextPanel.SetSelected();
+            dataForRecruiting.recruiteCheckPanelObject.SetActive(false);
+            dataForRecruiting.recruitOptionsPanel.Close();
+            dataForRecruiting.allyTextPanel.SetSelected();
             isRecruitCheckPhase = false;
             isRecruitingPhase = true;
         }
@@ -238,8 +260,8 @@ public class TavernSystemController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Escape))
         {
-            confirmTextPanelObject.SetActive(false);
-            allyTextPanel.SetSelected();
+            dataForRecruiting.confirmTextPanelObject.SetActive(false);
+            dataForRecruiting.allyTextPanel.SetSelected();
             isConfirmingPhase = false;
             isRecruitingPhase = true;
         }
@@ -249,14 +271,14 @@ public class TavernSystemController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            int index = GetCurrentID(currentAllyNamePanel);
+            int index = GetCurrentID(dataForEntrusting.currentAllyNamePanel);
 
-            currnetAllyImagePanelObject.SetActive(true);
-            currnetAllyStatusPanelObject.SetActive(true);
-            currnetAllyEquiomentPanelObject.SetActive(true);
-            currentAllySkillPanelObject.SetActive(true);
-            entrustCheckPanelObject.SetActive(true);
-            entrustCheckPanel.Open();
+            dataForEntrusting.currnetAllyImagePanelObject.SetActive(true);
+            dataForEntrusting.currnetAllyStatusPanelObject.SetActive(true);
+            dataForEntrusting.currnetAllyEquiomentPanelObject.SetActive(true);
+            dataForEntrusting.currentAllySkillPanelObject.SetActive(true);
+            dataForEntrusting.entrustCheckPanelObject.SetActive(true);
+            dataForEntrusting.entrustCheckPanel.Open();
             isEntrustCheckPhase = true;
             isCurrentAllySelectingPhase = false;
 
@@ -277,7 +299,7 @@ public class TavernSystemController : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Escape))
         {
-            currentAllyNamePanel.Close();
+            dataForEntrusting.currentAllyNamePanel.Close();
             menuPanel.SetSelected();
             isCurrentAllySelectingPhase = false;
             isMenuSelectingPhase = true;
@@ -288,15 +310,15 @@ public class TavernSystemController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Escape))
         {
-            int index = GetCurrentID(entrustCheckPanel);
+            int index = GetCurrentID(dataForEntrusting.entrustCheckPanel);
 
-            currnetAllyImagePanelObject.SetActive(false);
-            currnetAllyStatusPanelObject.SetActive(false);
-            currnetAllyEquiomentPanelObject.SetActive(false);
-            currentAllySkillPanelObject.SetActive(false);
-            entrustCheckPanelObject.SetActive(false);
-            entrustCheckPanel.Close();
-            currentAllyNamePanel.SetSelected();
+            dataForEntrusting.currnetAllyImagePanelObject.SetActive(false);
+            dataForEntrusting.currnetAllyStatusPanelObject.SetActive(false);
+            dataForEntrusting.currnetAllyEquiomentPanelObject.SetActive(false);
+            dataForEntrusting.currentAllySkillPanelObject.SetActive(false);
+            dataForEntrusting.entrustCheckPanelObject.SetActive(false);
+            dataForEntrusting.entrustCheckPanel.Close();
+            dataForEntrusting.currentAllyNamePanel.SetSelected();
             isEntrustCheckPhase = false;
             isCurrentAllySelectingPhase = true;
 
@@ -311,14 +333,14 @@ public class TavernSystemController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            int index = GetCurrentID(reserveAllyNamePanel);
+            int index = GetCurrentID(dataForBringingOut.reserveAllyNamePanel);
 
-            reserveAllyImagePanelObject.SetActive(true);
-            reserveAllyStatusPanelObject.SetActive(true);
-            reserveAllyEquiomentPanelObject.SetActive(true);
-            reserveAllySkillPanelObject.SetActive(true);
-            bringOutCheckPanelObject.SetActive(true);
-            bringOutCheckPanel.Open();
+            dataForBringingOut.reserveAllyImagePanelObject.SetActive(true);
+            dataForBringingOut.reserveAllyStatusPanelObject.SetActive(true);
+            dataForBringingOut.reserveAllyEquiomentPanelObject.SetActive(true);
+            dataForBringingOut.reserveAllySkillPanelObject.SetActive(true);
+            dataForBringingOut.bringOutCheckPanelObject.SetActive(true);
+            dataForBringingOut.bringOutCheckPanel.Open();
             isBringOutCheckPhase = true;
             isReserveAllySelectingPhase = false;
 
@@ -339,7 +361,7 @@ public class TavernSystemController : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Escape))
         {
-            reserveAllyNamePanel.Close();
+            dataForBringingOut.reserveAllyNamePanel.Close();
             menuPanel.SetSelected();
             isReserveAllySelectingPhase = false;
             isMenuSelectingPhase = true;
@@ -350,15 +372,15 @@ public class TavernSystemController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Escape))
         {
-            int index = GetCurrentID(bringOutCheckPanel);
+            int index = GetCurrentID(dataForBringingOut.bringOutCheckPanel);
 
-            reserveAllyImagePanelObject.SetActive(false);
-            reserveAllyStatusPanelObject.SetActive(false);
-            reserveAllyEquiomentPanelObject.SetActive(false);
-            reserveAllySkillPanelObject.SetActive(false);
-            bringOutCheckPanelObject.SetActive(false);
-            bringOutCheckPanel.Close();
-            reserveAllyNamePanel.SetSelected();
+            dataForBringingOut.reserveAllyImagePanelObject.SetActive(false);
+            dataForBringingOut.reserveAllyStatusPanelObject.SetActive(false);
+            dataForBringingOut.reserveAllyEquiomentPanelObject.SetActive(false);
+            dataForBringingOut.reserveAllySkillPanelObject.SetActive(false);
+            dataForBringingOut.bringOutCheckPanelObject.SetActive(false);
+            dataForBringingOut.bringOutCheckPanel.Close();
+            dataForBringingOut.reserveAllyNamePanel.SetSelected();
             isBringOutCheckPhase = false;
             isReserveAllySelectingPhase = true;
 
@@ -369,20 +391,25 @@ public class TavernSystemController : MonoBehaviour
         }
     }
 
+
     public void SetCurrentAmountOfMoney()
     {
-        GameObject moneyTextGameObject = GameObject.Find("UI/TavernSystemCanvas/MoneyText");
-        moneyTextGameObject.SetActive(true);
         GameObject moneyGameObject = GameObject.Find("UI/TavernSystemCanvas/MoneyText/Money");
+        GameObject dollarTextGameObject = GameObject.Find("UI/TavernSystemCanvas/MoneyText/$Text");
+        moneyGameObject.SetActive(true);
+        dollarTextGameObject.SetActive(true);
         Text currentMoney = moneyGameObject.GetComponent<Text>();
         currentMoney.text = SystemManager.money.ToString();
     }
 
     public void DeactivateMoneyText()
     {
-        GameObject moneyTextGameObject = GameObject.Find("UI/TavernSystemCanvas/MoneyText");
-        moneyTextGameObject.SetActive(false);
+        GameObject moneyGameObject = GameObject.Find("UI/TavernSystemCanvas/MoneyText/Money");
+        GameObject dollarTextGameObject = GameObject.Find("UI/TavernSystemCanvas/MoneyText/$Text");
+        moneyGameObject.SetActive(false);
+        dollarTextGameObject.SetActive(false);
     }
+
 
     public void SetImageOfAllies(int index)
     {
@@ -400,7 +427,7 @@ public class TavernSystemController : MonoBehaviour
                 break;
             case 2:
                 typeOfJob = "Archer";
-                sizeOfWidth = 100;
+                sizeOfWidth = 90;
                 break;
             case 3:
                 typeOfJob = "Wizard";
@@ -408,7 +435,7 @@ public class TavernSystemController : MonoBehaviour
                 break;
             case 4:
                 typeOfJob = "Priest";
-                sizeOfWidth = 70;
+                sizeOfWidth = 60;
                 break;
         }
 
@@ -418,7 +445,7 @@ public class TavernSystemController : MonoBehaviour
         {
             GameObject allyImage = GameObject.Find($"UI/TavernSystemCanvas/AllyRecruitPanel/Images/Image ({i})");
             RectTransform targetRectTransform = (RectTransform)allyImage.transform;
-            
+
             Image image = allyImage.GetComponent<Image>();
             image.sprite = sprite;
 
@@ -426,7 +453,36 @@ public class TavernSystemController : MonoBehaviour
             size.x = sizeOfWidth;
             targetRectTransform.sizeDelta = size;
         }
-         
+
+    }
+
+    public void SetNameOfAllies(int index)
+    {
+        switch (index)
+        {
+            case 0:
+                nameForDisplay = swordsmans;
+                break;
+            case 1:
+                nameForDisplay = knights;
+                break;
+            case 2:
+                nameForDisplay = archers;
+                break;
+            case 3:
+                nameForDisplay = wizards;
+                break;
+            case 4:
+                nameForDisplay = priests;
+                break;
+        }
+
+        for (int i = 0; i < 3; i++)
+        {
+            GameObject allyNameTextObject = GameObject.Find($"UI/TavernSystemCanvas/AllyRecruitPanel/AllyNameTexts/AllyNameText ({i})");
+            Text allyNameText = allyNameTextObject.GetComponent<Text>();           
+            allyNameText.text = nameForDisplay[i].characterName;
+        }
     }
 
     public int GetCurrentID(WindowMenu window)
