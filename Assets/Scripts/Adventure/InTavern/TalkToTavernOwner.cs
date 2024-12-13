@@ -32,7 +32,7 @@ public class TalkToTavernOwner : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("衝突判定されている");
+            //Debug.Log("衝突判定されている");
             ActivateTalkIconObject();
         }
     }

@@ -21,7 +21,7 @@ public class ChooseAllyPhase : BattlePhaseBase
         battleContext.chooseAllyWindowMenu.Close();
         battleContext.chooseAllyWindowMenu.DeleteSelectableTexts();
 
-        GameObject gobj = GameObject.Find("SystemManager");
+        GameObject gobj = GameObject.Find("BattleSystemManager");
         BattleSystemManager sm = gobj.GetComponent<BattleSystemManager>();
 
         if (Input.GetKeyDown(KeyCode.Space))

@@ -16,7 +16,7 @@ public class CharacterStatusPanel : MonoBehaviour
 
     private void Start()
     {
-        GameObject gobj = GameObject.Find("SystemManager");
+        GameObject gobj = GameObject.Find("BattleSystemManager");
         sm = gobj.GetComponent<BattleSystemManager>();
 
         if (gameObject.tag == "Ally") 

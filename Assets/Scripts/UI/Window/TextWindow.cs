@@ -15,7 +15,7 @@ public class TextWindow : MonoBehaviour
 
     private void Start()
     {
-        GameObject gobj = GameObject.Find("SystemManager");
+        GameObject gobj = GameObject.Find("BattleSystemManager");
         sm = gobj.GetComponent<BattleSystemManager>();
 
         GameObject obj = GameObject.Find("WindowsPanel");

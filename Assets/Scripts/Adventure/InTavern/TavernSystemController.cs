@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
@@ -47,6 +48,7 @@ public class TavernSystemController : MonoBehaviour
     [SerializeField] private DateForRecruiting dataForRecruiting;
     [SerializeField] private DateForEntrusting dataForEntrusting;
     [SerializeField] private DateForBringingOut dataForBringingOut;
+    [SerializeField] public GameObject moneyTextGameObject;
 
     public bool isMenuSelectingPhase;
     public bool isJobSelectingPhase;
@@ -58,12 +60,16 @@ public class TavernSystemController : MonoBehaviour
     public bool isReserveAllySelectingPhase;
     public bool isBringOutCheckPhase;
 
-    Ally[] nameForDisplay;
+    public string typeOfJob = "";
+    public Ally[] nameForDisplay;
     [SerializeField] private Ally[] swordsmans;
     [SerializeField] private Ally[] knights;
     [SerializeField] private Ally[] archers;
     [SerializeField] private Ally[] wizards;
     [SerializeField] private Ally[] priests;
+
+    [SerializeField] private Text[] statusTexts;
+    private int preIndex = 10;
 
     void Start()
     {
@@ -113,7 +119,7 @@ public class TavernSystemController : MonoBehaviour
         }
     }
 
-    
+    // 各フェーズの制御
     public void OnMenuSelectPhase()
     {
         if (Input.GetKeyDown(KeyCode.Space))
@@ -185,10 +191,16 @@ public class TavernSystemController : MonoBehaviour
 
     public void OnRecruitingPhase()
     {
+        int index = GetCurrentID(dataForRecruiting.allyTextPanel);
+        SetStatusOfAllies(index);
+        if (index != preIndex)
+        {
+            SetSkillsOfAlliesForRecruiting(index);
+        }
+        preIndex = index;
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            int index = GetCurrentID(dataForRecruiting.allyTextPanel);
-
             dataForRecruiting.recruiteCheckPanelObject.SetActive(true);
             dataForRecruiting.recruitOptionsPanel.Open();
             isRecruitCheckPhase = true;
@@ -391,29 +403,22 @@ public class TavernSystemController : MonoBehaviour
         }
     }
 
-
+    // お金の表示をオンオフ
     public void SetCurrentAmountOfMoney()
     {
-        GameObject moneyGameObject = GameObject.Find("UI/TavernSystemCanvas/MoneyText/Money");
-        GameObject dollarTextGameObject = GameObject.Find("UI/TavernSystemCanvas/MoneyText/$Text");
-        moneyGameObject.SetActive(true);
-        dollarTextGameObject.SetActive(true);
-        Text currentMoney = moneyGameObject.GetComponent<Text>();
+        moneyTextGameObject.SetActive(true);
+        Text currentMoney = moneyTextGameObject.GetComponentInChildren<Text>();
         currentMoney.text = SystemManager.money.ToString();
     }
 
     public void DeactivateMoneyText()
     {
-        GameObject moneyGameObject = GameObject.Find("UI/TavernSystemCanvas/MoneyText/Money");
-        GameObject dollarTextGameObject = GameObject.Find("UI/TavernSystemCanvas/MoneyText/$Text");
-        moneyGameObject.SetActive(false);
-        dollarTextGameObject.SetActive(false);
+        moneyTextGameObject.SetActive(false);
     }
 
-
+    // 雇いたい仲間の画像を設定
     public void SetImageOfAllies(int index)
     {
-        string typeOfJob = "";
         int sizeOfWidth = 0;
         switch (index)
         {
@@ -456,6 +461,7 @@ public class TavernSystemController : MonoBehaviour
 
     }
 
+    // 仲間の名前を設定
     public void SetNameOfAllies(int index)
     {
         switch (index)
@@ -482,6 +488,104 @@ public class TavernSystemController : MonoBehaviour
             GameObject allyNameTextObject = GameObject.Find($"UI/TavernSystemCanvas/AllyRecruitPanel/AllyNameTexts/AllyNameText ({i})");
             Text allyNameText = allyNameTextObject.GetComponent<Text>();           
             allyNameText.text = nameForDisplay[i].characterName;
+        }
+    }
+
+    // 仲間のステータスを取得して表示
+    public void SetStatusOfAllies(int index)
+    {
+        switch (typeOfJob)
+        {
+            case "Swordsman":
+                statusTexts[0].text = swordsmans[index].maxHP.ToString();
+                statusTexts[1].text = swordsmans[index].maxTP.ToString();
+                statusTexts[2].text = swordsmans[index].ATK.ToString();
+                statusTexts[3].text = swordsmans[index].DEF.ToString();
+                statusTexts[4].text = swordsmans[index].SPEED.ToString();
+                break;
+            case "Knight":
+                statusTexts[0].text = knights[index].maxHP.ToString();
+                statusTexts[1].text = knights[index].maxTP.ToString();
+                statusTexts[2].text = knights[index].ATK.ToString();
+                statusTexts[3].text = knights[index].DEF.ToString();
+                statusTexts[4].text = knights[index].SPEED.ToString();
+                break;
+            case "Archer":
+                statusTexts[0].text = archers[index].maxHP.ToString();
+                statusTexts[1].text = archers[index].maxTP.ToString();
+                statusTexts[2].text = archers[index].ATK.ToString();
+                statusTexts[3].text = archers[index].DEF.ToString();
+                statusTexts[4].text = archers[index].SPEED.ToString();
+                break;
+            case "Wizard":
+                statusTexts[0].text = wizards[index].maxHP.ToString();
+                statusTexts[1].text = wizards[index].maxTP.ToString();
+                statusTexts[2].text = wizards[index].ATK.ToString();
+                statusTexts[3].text = wizards[index].DEF.ToString();
+                statusTexts[4].text = wizards[index].SPEED.ToString();
+                break;
+            case "Priest":
+                statusTexts[0].text = priests[index].maxHP.ToString();
+                statusTexts[1].text = priests[index].maxTP.ToString();
+                statusTexts[2].text = priests[index].ATK.ToString();
+                statusTexts[3].text = priests[index].DEF.ToString();
+                statusTexts[4].text = priests[index].SPEED.ToString();
+                break;
+        }
+    }
+
+    // 仲間のスキルを取得して表示
+    public void SetSkillsOfAlliesForRecruiting(int index)
+    {
+        SkillPanel skillPanel = dataForRecruiting.skillPanelObject.GetComponent<SkillPanel>();
+
+        foreach (GameObject skillText in skillPanel.skillTexts)
+        {
+            Destroy(skillText);
+        }
+
+        switch (typeOfJob)
+        {
+            case "Swordsman":
+                for (int i = 0; i < swordsmans[index].skills.Length; i++)
+                {
+                    GameObject skillText = Instantiate(skillPanel.skillTextPrefab,dataForRecruiting.skillPanelObject.transform);
+                    skillText.GetComponent<Text>().text = swordsmans[index].skills[i].ToString();
+                    skillPanel.skillTexts.Add(skillText);
+                }
+                break;
+            case "Knight":
+                for (int i = 0; i < knights[index].skills.Length; i++)
+                {
+                    GameObject skillText = Instantiate(skillPanel.skillTextPrefab, dataForRecruiting.skillPanelObject.transform);
+                    skillText.GetComponent<Text>().text = knights[index].skills[i].ToString();
+                    skillPanel.skillTexts.Add(skillText);
+                }
+                break;
+            case "Archer":
+                for (int i = 0; i < archers[index].skills.Length; i++)
+                {
+                    GameObject skillText = Instantiate(skillPanel.skillTextPrefab, dataForRecruiting.skillPanelObject.transform);
+                    skillText.GetComponent<Text>().text = archers[index].skills[i].ToString();
+                    skillPanel.skillTexts.Add(skillText);
+                }
+                break;
+            case "Wizard":
+                for (int i = 0; i < wizards[index].skills.Length; i++)
+                {
+                    GameObject skillText = Instantiate(skillPanel.skillTextPrefab, dataForRecruiting.skillPanelObject.transform);
+                    skillText.GetComponent<Text>().text = wizards[index].skills[i].ToString();
+                    skillPanel.skillTexts.Add(skillText);
+                }
+                break;
+            case "Priest":
+                for (int i = 0; i < priests[index].skills.Length; i++)
+                {
+                    GameObject skillText = Instantiate(skillPanel.skillTextPrefab, dataForRecruiting.skillPanelObject.transform);
+                    skillText.GetComponent<Text>().text = priests[index].skills[i].ToString();
+                    skillPanel.skillTexts.Add(skillText);
+                }
+                break;
         }
     }
 

@@ -18,7 +18,7 @@ public class ChooseCommandPhase : BattlePhaseBase
         battleContext.chooseCommandWindowMenu.DeleteSelectableTexts();
         battleContext.textWindow.isChooseComandPhase = false;
 
-        GameObject gobj = GameObject.Find("SystemManager");
+        GameObject gobj = GameObject.Find("BattleSystemManager");
         BattleSystemManager sm = gobj.GetComponent<BattleSystemManager>();
 
         if (Input.GetKeyDown(KeyCode.Space))

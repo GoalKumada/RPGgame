@@ -113,6 +113,7 @@
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\DisableInPlayModeAttribute.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\DisableLucidEditorAttribute.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\PropertyGroupAttribute.cs" />
+    <Compile Include="Assets\Scripts\Adventure\InTavern\SkillPanel.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\ValidateInputAttribute.cs" />
     <Compile Include="Assets\Scripts\Skills\Skill.cs" />
     <Compile Include="Assets\Imports\Low Poly Trim Sheet Asset Collection\DemoSceneAssets\DemoSceneScripts\DemoCameraMovement.cs" />
