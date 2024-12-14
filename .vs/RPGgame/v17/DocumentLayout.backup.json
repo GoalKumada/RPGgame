@@ -3,8 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\goal2\\RPGgame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|c:\\users\\goal2\\rpggame\\assets\\scripts\\adventure\\intavern\\tavernsystemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|c:\\users\\goal2\\rpggame\\assets\\scripts\\skills\\wizardskills\\darkmagic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\skills\\wizardskills\\darkmagic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|C:\\Users\\goal2\\RPGgame\\assets\\scripts\\skills\\wizardskills\\icemagic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\skills\\wizardskills\\icemagic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|C:\\Users\\goal2\\RPGgame\\assets\\scripts\\skills\\wizardskills\\firemagic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\skills\\wizardskills\\firemagic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|C:\\Users\\goal2\\RPGgame\\assets\\scripts\\skills\\archerskills\\snipeshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\skills\\archerskills\\snipeshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|C:\\Users\\goal2\\RPGgame\\assets\\scripts\\adventure\\intavern\\tavernsystemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\adventure\\intavern\\tavernsystemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|C:\\Users\\goal2\\RPGgame\\assets\\scripts\\systemmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\systemmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|C:\\Users\\goal2\\RPGgame\\assets\\scripts\\adventure\\intavern\\skillpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\adventure\\intavern\\skillpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|C:\\Users\\goal2\\RPGgame\\assets\\scripts\\ui\\window\\windowmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,10 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|C:\\Users\\goal2\\RPGgame\\assets\\scripts\\character\\ally.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\character\\ally.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|C:\\Users\\goal2\\RPGgame\\assets\\scripts\\systemmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\systemmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C81248A9-9DF7-F925-C658-71B216640B53}|Assembly-CSharp.csproj|C:\\Users\\goal2\\RPGgame\\assets\\scripts\\adventure\\intavern\\talktotavernowner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -86,11 +106,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "ToDoList.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\ToDoList.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ToDoList.cs",
@@ -103,7 +123,68 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "DarkMagic.cs",
+              "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Skills\\WizardSkills\\DarkMagic.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Skills\\WizardSkills\\DarkMagic.cs",
+              "ToolTip": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Skills\\WizardSkills\\DarkMagic.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Skills\\WizardSkills\\DarkMagic.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwwAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T03:55:33.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IceMagic.cs",
+              "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Skills\\WizardSkills\\IceMagic.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Skills\\WizardSkills\\IceMagic.cs",
+              "ToolTip": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Skills\\WizardSkills\\IceMagic.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Skills\\WizardSkills\\IceMagic.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwwAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T03:53:55.519Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FireMagic.cs",
+              "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Skills\\WizardSkills\\FireMagic.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Skills\\WizardSkills\\FireMagic.cs",
+              "ToolTip": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Skills\\WizardSkills\\FireMagic.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Skills\\WizardSkills\\FireMagic.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwwAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T03:51:25.999Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SnipeShot.cs",
+              "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Skills\\ArcherSkills\\SnipeShot.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Skills\\ArcherSkills\\SnipeShot.cs",
+              "ToolTip": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Skills\\ArcherSkills\\SnipeShot.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Skills\\ArcherSkills\\SnipeShot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvw0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T03:42:09.194Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SkillPanel.cs",
+              "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Adventure\\InTavern\\SkillPanel.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Adventure\\InTavern\\SkillPanel.cs",
+              "ToolTip": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Adventure\\InTavern\\SkillPanel.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Adventure\\InTavern\\SkillPanel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwYAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T21:47:25.857Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "Ally.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Character\\Ally.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Character\\Ally.cs",
@@ -111,12 +192,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Character\\Ally.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T07:06:39.923Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T07:06:39.923Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "Character.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Character\\Character.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Character\\Character.cs",
@@ -124,8 +204,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Character\\Character.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAAwBQAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T07:06:20.839Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T07:06:20.839Z"
             },
             {
               "$type": "Document",
@@ -137,25 +216,23 @@
               "RelativeToolTip": "Assets\\Scripts\\SystemManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T13:25:59.155Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-09T13:25:59.155Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "TavernSystemController.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Adventure\\InTavern\\TavernSystemController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Adventure\\InTavern\\TavernSystemController.cs",
               "ToolTip": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Adventure\\InTavern\\TavernSystemController.cs",
               "RelativeToolTip": "Assets\\Scripts\\Adventure\\InTavern\\TavernSystemController.cs",
-              "ViewState": "AgIAAJ8BAAAAAAAAAAAywB0CAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAB8CAAAAAAAAAAAcwOYAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T18:01:15.116Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T18:01:15.116Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "TalkToTavernOwner.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Adventure\\InTavern\\TalkToTavernOwner.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Adventure\\InTavern\\TalkToTavernOwner.cs",
@@ -167,7 +244,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Adventure\\Common\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Adventure\\Common\\PlayerController.cs",
@@ -179,7 +256,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 22,
               "Title": "SceneController.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Adventure\\Common\\SceneController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Adventure\\Common\\SceneController.cs",
@@ -191,7 +268,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 23,
               "Title": "FadeManager.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\UI\\FadeManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\FadeManager.cs",
@@ -203,7 +280,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 21,
               "Title": "PlayerPositionManager.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Adventure\\Common\\PlayerPositionManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Adventure\\Common\\PlayerPositionManager.cs",
@@ -215,7 +292,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 19,
               "Title": "FromTownToTavern.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Adventure\\InTown\\SceneTransition\\FromTownToTavern.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Adventure\\InTown\\SceneTransition\\FromTownToTavern.cs",
@@ -227,7 +304,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "FromTownToDungeon.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Adventure\\InTown\\SceneTransition\\FromTownToDungeon.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Adventure\\InTown\\SceneTransition\\FromTownToDungeon.cs",
@@ -239,7 +316,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "FromDungeonToTown.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Adventure\\InDungeon\\SceneTransition\\FromDungeonToTown.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Adventure\\InDungeon\\SceneTransition\\FromDungeonToTown.cs",
@@ -251,7 +328,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 20,
               "Title": "ToBattle.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Adventure\\InDungeon\\SceneTransition\\ToBattle.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Adventure\\InDungeon\\SceneTransition\\ToBattle.cs",
@@ -263,7 +340,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "DungeonProgressManager.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Adventure\\InDungeon\\DungeonProgressManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Adventure\\InDungeon\\DungeonProgressManager.cs",
@@ -275,7 +352,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "BattleSystemManager.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Battle\\BattleSystemManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Battle\\BattleSystemManager.cs",
@@ -287,7 +364,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "BattleManager.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\Battle\\BattleManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Battle\\BattleManager.cs",
@@ -299,7 +376,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "WindowMenu.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\UI\\Window\\WindowMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Window\\WindowMenu.cs",
@@ -307,12 +384,11 @@
               "RelativeToolTip": "Assets\\Scripts\\UI\\Window\\WindowMenu.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEgAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T17:25:32.657Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T17:25:32.657Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "SelectableText.cs",
               "DocumentMoniker": "C:\\Users\\goal2\\RPGgame\\Assets\\Scripts\\UI\\Window\\SelectableText.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Window\\SelectableText.cs",
@@ -320,8 +396,7 @@
               "RelativeToolTip": "Assets\\Scripts\\UI\\Window\\SelectableText.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAswCAAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T22:17:34.058Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-22T22:17:34.058Z"
             }
           ]
         }

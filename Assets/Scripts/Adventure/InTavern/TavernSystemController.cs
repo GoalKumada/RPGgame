@@ -228,6 +228,7 @@ public class TavernSystemController : MonoBehaviour
             dataForRecruiting.skillPanelObject.SetActive(false);
             dataForRecruiting.allyTextPanel.Close();
             dataForRecruiting.jobPanel.SetSelected();
+            preIndex++; // 0以外の整数にするため
             isRecruitingPhase = false;
             isJobSelectingPhase = true;
         }
@@ -550,7 +551,7 @@ public class TavernSystemController : MonoBehaviour
                 for (int i = 0; i < swordsmans[index].skills.Length; i++)
                 {
                     GameObject skillText = Instantiate(skillPanel.skillTextPrefab,dataForRecruiting.skillPanelObject.transform);
-                    skillText.GetComponent<Text>().text = swordsmans[index].skills[i].ToString();
+                    skillText.GetComponent<Text>().text = swordsmans[index].skills[i].skillName.ToString();
                     skillPanel.skillTexts.Add(skillText);
                 }
                 break;
@@ -558,7 +559,7 @@ public class TavernSystemController : MonoBehaviour
                 for (int i = 0; i < knights[index].skills.Length; i++)
                 {
                     GameObject skillText = Instantiate(skillPanel.skillTextPrefab, dataForRecruiting.skillPanelObject.transform);
-                    skillText.GetComponent<Text>().text = knights[index].skills[i].ToString();
+                    skillText.GetComponent<Text>().text = knights[index].skills[i].skillName.ToString();
                     skillPanel.skillTexts.Add(skillText);
                 }
                 break;
@@ -566,7 +567,7 @@ public class TavernSystemController : MonoBehaviour
                 for (int i = 0; i < archers[index].skills.Length; i++)
                 {
                     GameObject skillText = Instantiate(skillPanel.skillTextPrefab, dataForRecruiting.skillPanelObject.transform);
-                    skillText.GetComponent<Text>().text = archers[index].skills[i].ToString();
+                    skillText.GetComponent<Text>().text = archers[index].skills[i].skillName.ToString();
                     skillPanel.skillTexts.Add(skillText);
                 }
                 break;
@@ -574,7 +575,7 @@ public class TavernSystemController : MonoBehaviour
                 for (int i = 0; i < wizards[index].skills.Length; i++)
                 {
                     GameObject skillText = Instantiate(skillPanel.skillTextPrefab, dataForRecruiting.skillPanelObject.transform);
-                    skillText.GetComponent<Text>().text = wizards[index].skills[i].ToString();
+                    skillText.GetComponent<Text>().text = wizards[index].skills[i].skillName.ToString();
                     skillPanel.skillTexts.Add(skillText);
                 }
                 break;
@@ -582,7 +583,7 @@ public class TavernSystemController : MonoBehaviour
                 for (int i = 0; i < priests[index].skills.Length; i++)
                 {
                     GameObject skillText = Instantiate(skillPanel.skillTextPrefab, dataForRecruiting.skillPanelObject.transform);
-                    skillText.GetComponent<Text>().text = priests[index].skills[i].ToString();
+                    skillText.GetComponent<Text>().text = priests[index].skills[i].skillName.ToString();
                     skillPanel.skillTexts.Add(skillText);
                 }
                 break;

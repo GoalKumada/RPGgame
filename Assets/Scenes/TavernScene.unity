@@ -2296,8 +2296,9 @@ GameObject:
   m_Component:
   - component: {fileID: 296004691}
   - component: {fileID: 296004692}
+  - component: {fileID: 296004693}
   m_Layer: 0
-  m_Name: KnighRookie
+  m_Name: KnightRookie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2339,9 +2340,26 @@ MonoBehaviour:
   currentATK: 0
   DEF: 40
   currentDEF: 0
-  skills: []
+  skills:
+  - {fileID: 296004693}
   SPEED: 15
   currentSPEED: 0
+--- !u!114 &296004693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296004690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da7b1c0e32fa4d147a853767d57cf913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u524D\u7A81\u304D"
+  attackPower: 10
+  requiredTP: 0
+  skillExplain: "\u524D\u65B9\u306E\u6575\u3092\u7A81\u304D\u523A\u3059\r\n\u6D88\u8CBB\uFF34\uFF30\uFF10"
 --- !u!1 &336879106
 GameObject:
   m_ObjectHideFlags: 0
@@ -3340,6 +3358,9 @@ GameObject:
   m_Component:
   - component: {fileID: 455496199}
   - component: {fileID: 455496200}
+  - component: {fileID: 455496203}
+  - component: {fileID: 455496202}
+  - component: {fileID: 455496201}
   m_Layer: 0
   m_Name: ArcherLegendary
   m_TagString: Untagged
@@ -3383,9 +3404,60 @@ MonoBehaviour:
   currentATK: 0
   DEF: 120
   currentDEF: 0
-  skills: []
+  skills:
+  - {fileID: 455496203}
+  - {fileID: 455496202}
+  - {fileID: 455496201}
   SPEED: 45
   currentSPEED: 0
+--- !u!114 &455496201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455496198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63162c44ec8f52d49bfee15db2c35381, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u5FC5\u6BBA\u306E\u4E00\u77E2"
+  attackPower: 30
+  requiredTP: 5
+  skillExplain: "\u96C6\u4E2D\u529B\u3092\u9AD8\u3081\u3066\u6575\u306B\u5FC5\u6BBA\u306E\u4E00\u6483\u3092\u653E\u3064\u5927\u6280\r\n\uFF34\uFF30\u6D88\u8CBB\uFF15"
+--- !u!114 &455496202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455496198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71287d24494507044acbe770f86502d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u9023\u7D9A\u77E2"
+  attackPower: 20
+  requiredTP: 3
+  skillExplain: "\u7D9A\u3051\u3056\u307E\u306B\u5F13\u3092\u653E\u3061\u76F8\u624B\u3092\u653B\u6483\u3059\u308B\r\n\uFF34\uFF30\u6D88\u8CBB\uFF13"
+--- !u!114 &455496203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455496198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e183a35916a33314f8a7058fe4d55365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u72D9\u3044\u6483\u3061"
+  attackPower: 10
+  requiredTP: 0
+  skillExplain: "\u6575\u4E00\u4F53\u3092\u5F13\u77E2\u3067\u72D9\u3044\u6483\u3064\r\n\uFF34\uFF30\u6D88\u8CBB\uFF10"
 --- !u!1 &457107026
 GameObject:
   m_ObjectHideFlags: 0
@@ -4522,6 +4594,9 @@ GameObject:
   m_Component:
   - component: {fileID: 603216198}
   - component: {fileID: 603216199}
+  - component: {fileID: 603216202}
+  - component: {fileID: 603216201}
+  - component: {fileID: 603216200}
   m_Layer: 0
   m_Name: WizardLegendary
   m_TagString: Untagged
@@ -4565,9 +4640,60 @@ MonoBehaviour:
   currentATK: 0
   DEF: 120
   currentDEF: 0
-  skills: []
+  skills:
+  - {fileID: 603216202}
+  - {fileID: 603216201}
+  - {fileID: 603216200}
   SPEED: 40
   currentSPEED: 0
+--- !u!114 &603216200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603216197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7991b9f43489d144d8aab6f3b266c429, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u95C7\u306E\u9B54\u6CD5"
+  attackPower: 30
+  requiredTP: 5
+  skillExplain: "\u7981\u65AD\u306E\u95C7\u306E\u9B54\u6CD5\u3067\u6575\u3092\u653B\u6483\u3059\u308B\r\n\uFF34\uFF30\u6D88\u8CBB\uFF15"
+--- !u!114 &603216201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603216197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01bb7e71c52c4654a9369a5b53fdbb9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u6C37\u306E\u9B54\u6CD5"
+  attackPower: 20
+  requiredTP: 3
+  skillExplain: "\u6C37\u306E\u3064\u3076\u3066\u3092\u653E\u3061\u6575\u3092\u51CD\u3048\u3055\u305B\u308B\r\n\uFF34\uFF30\u6D88\u8CBB\uFF13"
+--- !u!114 &603216202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603216197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2988757b8448ad4f9d7ba08e7ac5159, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u708E\u306E\u9B54\u6CD5"
+  attackPower: 20
+  requiredTP: 3
+  skillExplain: "\u706B\u306E\u7389\u3092\u653E\u3061\u6575\u3092\u71C3\u3084\u3059\r\n\uFF34\uFF30\u6D88\u8CBB\uFF13"
 --- !u!1 &626215673
 GameObject:
   m_ObjectHideFlags: 0
@@ -5631,8 +5757,10 @@ GameObject:
   m_Component:
   - component: {fileID: 770756715}
   - component: {fileID: 770756716}
+  - component: {fileID: 770756718}
+  - component: {fileID: 770756717}
   m_Layer: 0
-  m_Name: KnighVeteran
+  m_Name: KnightVeteran
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5674,9 +5802,43 @@ MonoBehaviour:
   currentATK: 0
   DEF: 120
   currentDEF: 0
-  skills: []
+  skills:
+  - {fileID: 770756718}
+  - {fileID: 770756717}
   SPEED: 20
   currentSPEED: 0
+--- !u!114 &770756717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770756714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd2ff34511ddb9243b5f44c8c3751184, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u8599\u304E\u6255\u3044"
+  attackPower: 20
+  requiredTP: 2
+  skillExplain: "\u69CD\u3067\u524D\u65B9\u3092\u5927\u304D\u304F\u632F\u308A\u6255\u3046\r\n\u6D88\u8CBB\uFF34\uFF30\uFF12"
+--- !u!114 &770756718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770756714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da7b1c0e32fa4d147a853767d57cf913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u524D\u7A81\u304D"
+  attackPower: 10
+  requiredTP: 0
+  skillExplain: "\u524D\u65B9\u306E\u6575\u3092\u7A81\u304D\u523A\u3059\r\n\u6D88\u8CBB\uFF34\uFF30\uFF10"
 --- !u!1 &801340285
 GameObject:
   m_ObjectHideFlags: 0
@@ -10327,6 +10489,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1423847027}
   - component: {fileID: 1423847028}
+  - component: {fileID: 1423847030}
+  - component: {fileID: 1423847029}
   m_Layer: 0
   m_Name: WizardVeteran
   m_TagString: Untagged
@@ -10370,9 +10534,43 @@ MonoBehaviour:
   currentATK: 0
   DEF: 60
   currentDEF: 0
-  skills: []
+  skills:
+  - {fileID: 1423847030}
+  - {fileID: 1423847029}
   SPEED: 35
   currentSPEED: 0
+--- !u!114 &1423847029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423847026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01bb7e71c52c4654a9369a5b53fdbb9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u6C37\u306E\u9B54\u6CD5"
+  attackPower: 20
+  requiredTP: 3
+  skillExplain: "\u6C37\u306E\u3064\u3076\u3066\u3092\u653E\u3061\u6575\u3092\u51CD\u3048\u3055\u305B\u308B\r\n\uFF34\uFF30\u6D88\u8CBB\uFF13"
+--- !u!114 &1423847030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423847026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2988757b8448ad4f9d7ba08e7ac5159, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u708E\u306E\u9B54\u6CD5"
+  attackPower: 20
+  requiredTP: 3
+  skillExplain: "\u706B\u306E\u7389\u3092\u653E\u3061\u6575\u3092\u71C3\u3084\u3059\r\n\uFF34\uFF30\u6D88\u8CBB\uFF13"
 --- !u!1 &1428616530
 GameObject:
   m_ObjectHideFlags: 0
@@ -10786,6 +10984,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1469604603}
   - component: {fileID: 1469604604}
+  - component: {fileID: 1469604605}
   m_Layer: 0
   m_Name: ArcherRookie
   m_TagString: Untagged
@@ -10829,9 +11028,26 @@ MonoBehaviour:
   currentATK: 0
   DEF: 20
   currentDEF: 0
-  skills: []
+  skills:
+  - {fileID: 1469604605}
   SPEED: 35
   currentSPEED: 0
+--- !u!114 &1469604605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469604602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e183a35916a33314f8a7058fe4d55365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u72D9\u3044\u6483\u3061"
+  attackPower: 10
+  requiredTP: 0
+  skillExplain: "\u6575\u4E00\u4F53\u3092\u5F13\u77E2\u3067\u72D9\u3044\u6483\u3064\r\n\uFF34\uFF30\u6D88\u8CBB\uFF10"
 --- !u!1 &1480665309
 GameObject:
   m_ObjectHideFlags: 0
@@ -12890,6 +13106,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1850739015}
   - component: {fileID: 1850739016}
+  - component: {fileID: 1850739017}
   m_Layer: 0
   m_Name: WizardRookie
   m_TagString: Untagged
@@ -12933,9 +13150,26 @@ MonoBehaviour:
   currentATK: 0
   DEF: 20
   currentDEF: 0
-  skills: []
+  skills:
+  - {fileID: 1850739017}
   SPEED: 30
   currentSPEED: 0
+--- !u!114 &1850739017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850739014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2988757b8448ad4f9d7ba08e7ac5159, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u708E\u306E\u9B54\u6CD5"
+  attackPower: 20
+  requiredTP: 3
+  skillExplain: "\u706B\u306E\u7389\u3092\u653E\u3061\u6575\u3092\u71C3\u3084\u3059\r\n\uFF34\uFF30\u6D88\u8CBB\uFF13"
 --- !u!1 &1863365990
 GameObject:
   m_ObjectHideFlags: 0
@@ -13687,6 +13921,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1979076361}
   - component: {fileID: 1979076362}
+  - component: {fileID: 1979076364}
+  - component: {fileID: 1979076363}
   m_Layer: 0
   m_Name: ArcherVeteran
   m_TagString: Untagged
@@ -13730,9 +13966,43 @@ MonoBehaviour:
   currentATK: 0
   DEF: 60
   currentDEF: 0
-  skills: []
+  skills:
+  - {fileID: 1979076364}
+  - {fileID: 1979076363}
   SPEED: 40
   currentSPEED: 0
+--- !u!114 &1979076363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979076360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71287d24494507044acbe770f86502d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u9023\u7D9A\u77E2"
+  attackPower: 20
+  requiredTP: 3
+  skillExplain: "\u7D9A\u3051\u3056\u307E\u306B\u5F13\u3092\u653E\u3061\u76F8\u624B\u3092\u653B\u6483\u3059\u308B\r\n\uFF34\uFF30\u6D88\u8CBB\uFF13"
+--- !u!114 &1979076364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979076360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e183a35916a33314f8a7058fe4d55365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u72D9\u3044\u6483\u3061"
+  attackPower: 10
+  requiredTP: 0
+  skillExplain: "\u6575\u4E00\u4F53\u3092\u5F13\u77E2\u3067\u72D9\u3044\u6483\u3064\r\n\uFF34\uFF30\u6D88\u8CBB\uFF10"
 --- !u!1 &1985395377
 GameObject:
   m_ObjectHideFlags: 0
@@ -14444,8 +14714,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2086616882}
   - component: {fileID: 2086616883}
+  - component: {fileID: 2086616886}
+  - component: {fileID: 2086616885}
+  - component: {fileID: 2086616887}
   m_Layer: 0
-  m_Name: KnighLegendary
+  m_Name: KnightLegendary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14487,9 +14760,60 @@ MonoBehaviour:
   currentATK: 0
   DEF: 240
   currentDEF: 0
-  skills: []
+  skills:
+  - {fileID: 2086616886}
+  - {fileID: 2086616885}
+  - {fileID: 2086616887}
   SPEED: 25
   currentSPEED: 0
+--- !u!114 &2086616885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086616881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd2ff34511ddb9243b5f44c8c3751184, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u8599\u304E\u6255\u3044"
+  attackPower: 20
+  requiredTP: 2
+  skillExplain: "\u69CD\u3067\u524D\u65B9\u3092\u5927\u304D\u304F\u632F\u308A\u6255\u3046\r\n\u6D88\u8CBB\uFF34\uFF30\uFF12"
+--- !u!114 &2086616886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086616881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da7b1c0e32fa4d147a853767d57cf913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u524D\u7A81\u304D"
+  attackPower: 10
+  requiredTP: 0
+  skillExplain: "\u524D\u65B9\u306E\u6575\u3092\u7A81\u304D\u523A\u3059\r\n\u6D88\u8CBB\uFF34\uFF30\uFF10"
+--- !u!114 &2086616887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086616881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbfa43fc3b572f844ae8a70d6c528638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u30B7\u30FC\u30EB\u30C9\u30A2\u30BF\u30C3\u30AF"
+  attackPower: 30
+  requiredTP: 5
+  skillExplain: "\u76FE\u3067\u6575\u3092\u5730\u9762\u306B\u305F\u305F\u304D\u3064\u3051\u308B\u5927\u6280\r\n\uFF34\uFF30\u6D88\u8CBB\uFF15"
 --- !u!1 &2132255232
 GameObject:
   m_ObjectHideFlags: 0

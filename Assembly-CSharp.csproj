@@ -61,12 +61,14 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2023.2.18f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Skills\KnightSkills\ForwardStab.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HideMonoScript.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\BlockquoteAttribute.cs" />
+    <Compile Include="Assets\Scripts\Skills\WizardSkills\FireMagic.cs" />
     <Compile Include="Assets\Scripts\Battle\Phases\AllyMovePhase.cs" />
     <Compile Include="Assets\Scripts\UI\Window\DialogueText.cs" />
+    <Compile Include="Assets\Scripts\Skills\ArcherSkills\DeadlyArrow.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\IndentAttribute.cs" />
-    <Compile Include="Assets\Scripts\Skills\WarriorSkills\DoubleAttack.cs" />
     <Compile Include="Assets\Scripts\Battle\StatusUI\GaugeUI.cs" />
     <Compile Include="Assets\Scripts\Character\Enemy.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\BoxGroupAttribute.cs" />
@@ -76,6 +78,7 @@
     <Compile Include="Assets\Imports\Cainos\Pixel Art Platformer - Village Props\Script\Elevator.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\SectionHeaderAttribute.cs" />
     <Compile Include="Assets\Scripts\Battle\Phases\RunCheckPhase.cs" />
+    <Compile Include="Assets\Scripts\Skills\ArcherSkills\SnipeShot.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\ReadOnlyAttribute.cs" />
     <Compile Include="Assets\Scripts\Adventure\InDungeon\DungeonProgressManager.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\GroupAttribute.cs" />
@@ -94,6 +97,7 @@
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\FoldoutGroupAttribute.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\DisableIfAttribute.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HelpBoxIfAttribute.cs" />
+    <Compile Include="Assets\Scripts\Skills\PriestSkills\LightMagic.cs" />
     <Compile Include="Assets\Scripts\SystemManager.cs" />
     <Compile Include="Assets\Scripts\Battle\Phases\StartPhase.cs" />
     <Compile Include="Assets\Scripts\Battle\Phases\BattlePhaseBase.cs" />
@@ -105,13 +109,17 @@
     <Compile Include="Assets\Scripts\Adventure\Common\PlayerPositionManager.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HideIfAttribute.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\ShowIfAttribute.cs" />
+    <Compile Include="Assets\Scripts\Skills\KnightSkills\Sweep.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HideLabelAttribute.cs" />
     <Compile Include="Assets\Scripts\OnClick.cs" />
     <Compile Include="Assets\Imports\Cainos\Pixel Art Platformer - Village Props\Script\BoundingPlatform.cs" />
+    <Compile Include="Assets\Scripts\Skills\SwordsmanSkills\Slash.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HorizontalLineAttribute.cs" />
     <Compile Include="Assets\Scripts\Battle\Phases\FirstCheckPhase.cs" />
+    <Compile Include="Assets\Scripts\Skills\KnightSkills\ShieldAttack.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\DisableInPlayModeAttribute.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\DisableLucidEditorAttribute.cs" />
+    <Compile Include="Assets\Scripts\Skills\PriestSkills\HealMagic.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\PropertyGroupAttribute.cs" />
     <Compile Include="Assets\Scripts\Adventure\InTavern\SkillPanel.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\ValidateInputAttribute.cs" />
@@ -119,18 +127,21 @@
     <Compile Include="Assets\Imports\Low Poly Trim Sheet Asset Collection\DemoSceneAssets\DemoSceneScripts\DemoCameraMovement.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\AssetsOnlyAttribute.cs" />
     <Compile Include="Assets\Scripts\Character\Character.cs" />
+    <Compile Include="Assets\Scripts\Skills\WizardSkills\DarkMagic.cs" />
     <Compile Include="Assets\Scripts\Adventure\InTown\SceneTransition\FromTownToTavern.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HelpBoxAttribute.cs" />
     <Compile Include="Assets\Scripts\UI\Window\WindowMenu.cs" />
     <Compile Include="Assets\Scripts\Adventure\InTavern\TalkToTavernOwner.cs" />
     <Compile Include="Assets\RunemarkStudio\DarkFantasyKit [Free]\Readme\Parts\Readme.cs" />
-    <Compile Include="Assets\Scripts\Skills\WarriorSkills\SpinAttack.cs" />
+    <Compile Include="Assets\Scripts\Skills\PriestSkills\SlamAttack.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\DisableInEditModeAttribute.cs" />
     <Compile Include="Assets\Imports\Cainos\Pixel Art Platformer - Village Props\Script\MovingPlatform.cs" />
     <Compile Include="Assets\Scripts\Battle\StatusUI\LifeGaugeContainer.cs" />
     <Compile Include="Assets\Scripts\Battle\Move.cs" />
     <Compile Include="Assets\Scripts\Item\Item.cs" />
+    <Compile Include="Assets\Scripts\Skills\SwordsmanSkills\SpinAttack.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\LabelWidthAttribute.cs" />
+    <Compile Include="Assets\Scripts\Skills\WizardSkills\IceMagic.cs" />
     <Compile Include="Assets\Scripts\UI\Window\SelectableText.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\GUIColorAttribute.cs" />
     <Compile Include="Assets\Scripts\Battle\Phases\ChooseAllyPhase.cs" />
@@ -142,6 +153,8 @@
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HorizontalGroupAttribute.cs" />
     <Compile Include="Assets\Scripts\Adventure\InTown\SceneTransition\FromTownToDungeon.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\LabelTextAttribute.cs" />
+    <Compile Include="Assets\Scripts\Skills\ArcherSkills\DoubleShot.cs" />
+    <Compile Include="Assets\Scripts\Skills\SwordsmanSkills\DoubleAttack.cs" />
     <Compile Include="Assets\Scripts\Battle\Phases\ChooseCommandPhase.cs" />
     <Compile Include="Assets\Scripts\Adventure\InTown\SceneTransition\FromTavernToTown.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\OnValueChangedAttribute.cs" />
@@ -151,7 +164,6 @@
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\TitleHeaderAttribute.cs" />
     <Compile Include="Assets\Scripts\UI\Window\TextWindow.cs" />
     <Compile Include="Assets\Scripts\Adventure\InDungeon\SceneTransition\FromDungeonToTown.cs" />
-    <Compile Include="Assets\Scripts\Skills\WarriorSkills\Slash.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Imports\Cainos\Third Party\Lucid Editor\License.txt" />
