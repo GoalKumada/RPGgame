@@ -1,7 +1,6 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,6 +12,7 @@ public class DateForRecruiting
     [SerializeField] public WindowMenu allyTextPanel;
     [SerializeField] public GameObject statusPanelObject;
     [SerializeField] public GameObject skillPanelObject;
+    [SerializeField] public GameObject notificationPanelObject;
     [SerializeField] public GameObject recruiteCheckPanelObject;
     [SerializeField] public WindowMenu recruitOptionsPanel;
     [SerializeField] public GameObject confirmTextPanelObject;
@@ -51,30 +51,32 @@ public class TavernSystemController : MonoBehaviour
     [SerializeField] public GameObject moneyTextGameObject;
 
     public bool isMenuSelectingPhase;
-    public bool isJobSelectingPhase;
-    public bool isRecruitingPhase;
-    public bool isRecruitCheckPhase;
-    public bool isConfirmingPhase;
-    public bool isCurrentAllySelectingPhase;
-    public bool isEntrustCheckPhase;
-    public bool isReserveAllySelectingPhase;
-    public bool isBringOutCheckPhase;
+    private bool isJobSelectingPhase;
+    private bool isRecruitingPhase;
+    private bool isNotificationPhase;
+    private bool isRecruitCheckPhase;
+    private bool isConfirmingPhase;
+    private bool isCurrentAllySelectingPhase;
+    private bool isEntrustCheckPhase;
+    private bool isReserveAllySelectingPhase;
+    private bool isBringOutCheckPhase;
 
-    public string typeOfJob = "";
-    public Ally[] nameForDisplay;
+    private string typeOfJob = "";
+    private Ally[] nameForDisplay;
     [SerializeField] private Ally[] swordsmans;
     [SerializeField] private Ally[] knights;
     [SerializeField] private Ally[] archers;
     [SerializeField] private Ally[] wizards;
     [SerializeField] private Ally[] priests;
-
     [SerializeField] private Text[] statusTexts;
+
     private int preIndex = 10;
+    private GameObject allyCandidate;
+    private int limitOfAllyBringingAlong = 3;
+    private bool isAlreadyEmployed = false;
+    private bool isNotHaveEnoughMoney = false;
+    private bool isLimitOver = false;
 
-    void Start()
-    {
-
-    }
     
     void Update()
     {
@@ -90,6 +92,10 @@ public class TavernSystemController : MonoBehaviour
         else if (isRecruitingPhase)
         {
             OnRecruitingPhase();
+        }
+        else if (isNotificationPhase)
+        {
+            OnNotificationPhase();
         }
         else if (isRecruitCheckPhase)
         {
@@ -192,33 +198,49 @@ public class TavernSystemController : MonoBehaviour
     public void OnRecruitingPhase()
     {
         int index = GetCurrentID(dataForRecruiting.allyTextPanel);
-        SetStatusOfAllies(index);
+
         if (index != preIndex)
         {
+            SetStatusOfAllies(index);
             SetSkillsOfAlliesForRecruiting(index);
         }
         preIndex = index;
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            dataForRecruiting.recruiteCheckPanelObject.SetActive(true);
-            dataForRecruiting.recruitOptionsPanel.Open();
-            isRecruitCheckPhase = true;
-            isRecruitingPhase = false;
-
-            if (index == 0)
+            dataForRecruiting.allyTextPanel.SetDeselected();
+            GetAllyCandidate(index);
+            
+            if (allyCandidate.GetComponent<Ally>().isEmployed) //既に雇われていたら
             {
-                //
+                dataForRecruiting.notificationPanelObject.SetActive(true);
+                isAlreadyEmployed = true;
+                SetNotificationText();
+                isNotificationPhase = true;
+                isRecruitingPhase = false;
             }
-            else if (index == 1)
+            else if (allyCandidate.GetComponent<Ally>().moneyNeeded > SystemManager.money) //必要資金が足りなかったら
             {
-                //
-
+                dataForRecruiting.notificationPanelObject.SetActive(true);
+                isNotHaveEnoughMoney = true;
+                SetNotificationText();
+                isNotificationPhase = true;
+                isRecruitingPhase = false;
             }
-            else if (index == 2)
+            else if (SystemManager.currentPartyMember.Count >= limitOfAllyBringingAlong) //なかまにできる人数の上限に達していたら
             {
-                //
-
+                dataForRecruiting.notificationPanelObject.SetActive(true);
+                isLimitOver = true;
+                SetNotificationText();
+                isNotificationPhase = true;
+                isRecruitingPhase = false;
+            }
+            else
+            {
+                dataForRecruiting.recruiteCheckPanelObject.SetActive(true);
+                dataForRecruiting.recruitOptionsPanel.Open();
+                isRecruitCheckPhase = true;
+                isRecruitingPhase = false;
             }
         }
         else if (Input.GetKeyDown(KeyCode.Escape))
@@ -228,9 +250,22 @@ public class TavernSystemController : MonoBehaviour
             dataForRecruiting.skillPanelObject.SetActive(false);
             dataForRecruiting.allyTextPanel.Close();
             dataForRecruiting.jobPanel.SetSelected();
+
             preIndex++; // 0以外の整数にするため
+
             isRecruitingPhase = false;
             isJobSelectingPhase = true;
+        }
+    }
+
+    public void OnNotificationPhase()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Escape))
+        {
+            dataForRecruiting.notificationPanelObject.SetActive(false);
+            dataForRecruiting.allyTextPanel.SetSelected();
+            isRecruitingPhase = true;
+            isNotificationPhase = false;
         }
     }
 
@@ -242,11 +277,21 @@ public class TavernSystemController : MonoBehaviour
 
             if (index == 0)
             {
-                //
+                AddAllyToParty();
+                allyCandidate.GetComponent<Ally>().isEmployed = true;
+                
+                // 
+                foreach (GameObject a in SystemManager.currentPartyMember)
+                {
+                    Debug.Log(a.GetComponent<Ally>().characterName);
+                }
 
                 dataForRecruiting.recruitOptionsPanel.SetDeselected();
                 dataForRecruiting.recruiteCheckPanelObject.SetActive(false);
                 dataForRecruiting.confirmTextPanelObject.SetActive(true);
+
+                SetConfirmTextInfo();
+
                 isRecruitCheckPhase = false;
                 isConfirmingPhase = true;
             }
@@ -404,18 +449,6 @@ public class TavernSystemController : MonoBehaviour
         }
     }
 
-    // お金の表示をオンオフ
-    public void SetCurrentAmountOfMoney()
-    {
-        moneyTextGameObject.SetActive(true);
-        Text currentMoney = moneyTextGameObject.GetComponentInChildren<Text>();
-        currentMoney.text = SystemManager.money.ToString();
-    }
-
-    public void DeactivateMoneyText()
-    {
-        moneyTextGameObject.SetActive(false);
-    }
 
     // 雇いたい仲間の画像を設定
     public void SetImageOfAllies(int index)
@@ -590,6 +623,86 @@ public class TavernSystemController : MonoBehaviour
         }
     }
 
+    // 仲間候補のオブジェクトを取得
+    public void GetAllyCandidate(int index)
+    {
+        if (index == 0)
+        {
+            allyCandidate = GameObject.Find($"Ally/{typeOfJob}Rookie");
+        }
+        else if (index == 1)
+        {
+            allyCandidate = GameObject.Find($"Ally/{typeOfJob}Veteran");
+        }
+        else if (index == 2)
+        {
+            allyCandidate = GameObject.Find($"Ally/{typeOfJob}Legendary");
+        }
+    }
+
+    // 確認画面の情報を取得して設定
+    public void SetConfirmTextInfo()
+    {
+        GameObject allyImageObject = GameObject.Find("UI/TavernSystemCanvas/ConfirmTextPanel/AllyImage");
+        Image allyImage = allyImageObject.GetComponent<Image>();
+        allyImage.sprite = allyCandidate.GetComponent<SpriteRenderer>().sprite;
+        allyImage.color = allyCandidate.GetComponent<SpriteRenderer>().color;
+
+        GameObject nameTextObject = GameObject.Find("UI/TavernSystemCanvas/ConfirmTextPanel/NameText");
+        Text text = nameTextObject.GetComponent<Text>();
+        text.text = allyCandidate.GetComponent<Ally>().characterName;
+
+    }
+
+    // 警告表示の内容を設定
+    public void SetNotificationText()
+    {
+        GameObject notificotionTextObject = GameObject.Find("UI/TavernSystemCanvas/NotificationTextPanel/Text");
+        Text text = notificotionTextObject.GetComponent<Text>();
+
+        if (isAlreadyEmployed)
+        {
+            text.text = "この人はすでに\nなかまになっています";
+        }
+
+        if (isNotHaveEnoughMoney)
+        {
+            text.text = "この人を雇うのに\n十分なお金がありません";
+        }
+
+        if (isLimitOver)
+        {
+            text.text = "一度に雇うことができるのは\n３人までです";
+        }
+
+        isAlreadyEmployed = false;
+        isNotHaveEnoughMoney = false;
+        isLimitOver = false;
+    }
+
+    // なかまをパーティーに加える
+    public void AddAllyToParty()
+    {
+        SystemManager.currentPartyMember.Add(allyCandidate);
+        SystemManager.money -= allyCandidate.GetComponent<Ally>().moneyNeeded;
+        SetCurrentAmountOfMoney();
+        Debug.Log(SystemManager.money);
+    }
+
+    // お金の表示をオンオフ
+    public void SetCurrentAmountOfMoney()
+    {
+        moneyTextGameObject.SetActive(true);
+        Text currentMoney = moneyTextGameObject.GetComponentInChildren<Text>();
+        currentMoney.text = SystemManager.money.ToString();
+    }
+
+    public void DeactivateMoneyText()
+    {
+        moneyTextGameObject.SetActive(false);
+    }
+
+    // 現在選択中のテキストが何番目の子要素かを取得
     public int GetCurrentID(WindowMenu window)
     {
         int id = window.currentID;

@@ -6,10 +6,10 @@ public class HealMagic : Skill
 {
     public HealMagic()
     {
-        skillName = "狙い撃ち";
+        skillName = "回復魔法";
         attackPower = 10;
-        type = Type.attack;
-        requiredTP = 0;
-        skillExplain = "敵一体を弓矢で狙い撃つ\r\nＴＰ消費０";
+        type = Type.heal;
+        requiredTP = 3;
+        skillExplain = "味方ひとりのＨＰを回復する魔法\r\nＴＰ消費３";
     }
 }

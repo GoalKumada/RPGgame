@@ -6,10 +6,10 @@ public class SlamAttack : Skill
 {
     public SlamAttack()
     {
-        skillName = "狙い撃ち";
+        skillName = "叩きつけ";
         attackPower = 10;
         type = Type.attack;
         requiredTP = 0;
-        skillExplain = "敵一体を弓矢で狙い撃つ\r\nＴＰ消費０";
+        skillExplain = "手持ちの杖で敵をたたきつける\r\nＴＰ消費０";
     }
 }

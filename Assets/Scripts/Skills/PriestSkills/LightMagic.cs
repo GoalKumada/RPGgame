@@ -6,10 +6,10 @@ public class LightMagic : Skill
 {
     public LightMagic()
     {
-        skillName = "狙い撃ち";
-        attackPower = 10;
+        skillName = "光の魔法";
+        attackPower = 30;
         type = Type.attack;
-        requiredTP = 0;
-        skillExplain = "敵一体を弓矢で狙い撃つ\r\nＴＰ消費０";
+        requiredTP = 5;
+        skillExplain = "聖なる光の魔法で敵を攻撃する\r\nＴＰ消費５";
     }
 }
