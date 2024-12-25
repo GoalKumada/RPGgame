@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class SystemManager : MonoBehaviour
 {
-    [SerializeField] public static int money = 1000;
+    [SerializeField] public static int money = 1500;
 
     public static List<GameObject> currentPartyMember = new List<GameObject>();
 
-    private void Start()
-    {
-        foreach (GameObject go in currentPartyMember)
-        {
-            Debug.Log(go.GetComponent<Ally>().characterName);
-        }
-    }
+    public static int number = 1;
 }

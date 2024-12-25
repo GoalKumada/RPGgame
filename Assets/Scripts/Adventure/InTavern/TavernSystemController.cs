@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -692,9 +693,23 @@ public class TavernSystemController : MonoBehaviour
     // お金の表示をオンオフ
     public void SetCurrentAmountOfMoney()
     {
+        /*
+        GameObject UIObject = GameObject.Find("UI");
+        Transform moneyUITransform = UIObject.transform.Find("ccc");
+        GameObject moneyUIObject = moneyUITransform.gameObject;
+        moneyUIObject.SetActive(true);
+        Text text = moneyUIObject.GetComponentInChildren<Text>();
+        text.text = SystemManager.money.ToString();
+        */
+        /*
+        moneyTextGameObject.SetActive(true);
+        TextMeshProUGUI currentMoney = moneyTextGameObject.GetComponentInChildren<TextMeshProUGUI>();
+        currentMoney.text = SystemManager.money.ToString();
+        */
         moneyTextGameObject.SetActive(true);
         Text currentMoney = moneyTextGameObject.GetComponentInChildren<Text>();
         currentMoney.text = SystemManager.money.ToString();
+        
     }
 
     public void DeactivateMoneyText()
