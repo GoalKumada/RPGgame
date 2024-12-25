@@ -492,6 +492,7 @@
 "Assets/Scripts/Skills/WizardSkills/FireMagic.cs"
 "Assets/Scripts/Skills/WizardSkills/IceMagic.cs"
 "Assets/Scripts/SystemManager.cs"
+"Assets/Scripts/ToDebug.cs"
 "Assets/Scripts/ToDoList.cs"
 "Assets/Scripts/UI/FadeManager.cs"
 "Assets/Scripts/UI/Window/DialogueText.cs"

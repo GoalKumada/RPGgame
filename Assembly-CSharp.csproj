@@ -130,6 +130,7 @@
     <Compile Include="Assets\Scripts\Skills\WizardSkills\DarkMagic.cs" />
     <Compile Include="Assets\Scripts\Adventure\InTown\SceneTransition\FromTownToTavern.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HelpBoxAttribute.cs" />
+    <Compile Include="Assets\Scripts\ToDebug.cs" />
     <Compile Include="Assets\Scripts\UI\Window\WindowMenu.cs" />
     <Compile Include="Assets\Scripts\Adventure\InTavern\TalkToTavernOwner.cs" />
     <Compile Include="Assets\RunemarkStudio\DarkFantasyKit [Free]\Readme\Parts\Readme.cs" />

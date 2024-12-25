@@ -16,15 +16,6 @@ public class PlayerController : MonoBehaviour
     {
         rigidBody = gameObject.GetComponent<Rigidbody>();
         animator = GetComponentInChildren<Animator>();
-
-        // 後で消す
-        /*foreach (GameObject go in SystemManager.currentPartyMember)
-        {
-            Debug.Log(go.GetComponent<Ally>().characterName);
-        }*/
-
-        Debug.Log(SystemManager.number);
-
     }
 
     void Update()

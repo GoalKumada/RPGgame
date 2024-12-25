@@ -9,6 +9,8 @@ public class BattleManager : MonoBehaviour
     [SerializeField] public List<Move> moveOfEnemy;
     public BattlePhaseBase phaseState;
 
+    // moveOfAllyにパーティーのMoveを入れる
+
     private void Start()
     {
         phaseState = new StartPhase();

@@ -12,6 +12,8 @@ public class TalkToTavernOwner : MonoBehaviour
     private GameObject tavernSystemControllerObject;
     private TavernSystemController tavernSystemController;
 
+    private bool isTalkIconActivating = false;
+
     private float cooldownTime = 0.2f;
     private float lastInteractionTime = 0f;
 
@@ -22,9 +24,12 @@ public class TalkToTavernOwner : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Space) && Time.time - lastInteractionTime >= cooldownTime)
+        if (isTalkIconActivating)
         {
-            StartTavernSystem();
+            if (Input.GetKeyUp(KeyCode.Space) && Time.time - lastInteractionTime >= cooldownTime)
+            {
+                StartTavernSystem();
+            }
         }
     }
 
@@ -32,16 +37,18 @@ public class TalkToTavernOwner : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            //Debug.Log("衝突判定されている");
             ActivateTalkIconObject();
+            isTalkIconActivating = true;
         }
     }
 
     private void OnCollisionExit(Collision collision)
     {
         talkIcon.SetActive(false);
+        isTalkIconActivating = false;
     }
 
+    // 「話す」アイコンを表示する
     public void ActivateTalkIconObject()
     {
         canvas = GameObject.Find("UI");
@@ -50,12 +57,14 @@ public class TalkToTavernOwner : MonoBehaviour
         talkIcon.SetActive(true);
     }
 
+    // SystemManagerを取得
     public void GetSystemManager()
     {
         tavernSystemControllerObject = GameObject.Find("TavernSystenController");
         tavernSystemController = tavernSystemControllerObject.GetComponent<TavernSystemController>();
     }
 
+    // 酒場の雇用システムを開始する
     public void StartTavernSystem()
     {
         lastInteractionTime = Time.time;

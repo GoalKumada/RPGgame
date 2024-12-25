@@ -5,7 +5,6 @@ using static UnityEngine.GraphicsBuffer;
 
 public class BattleSystemManager : MonoBehaviour
 {
-    // ToDo:戦闘開始時alliesとenemiesにパーティーのListを反映させるコードを追加したい
     [SerializeField] public List<Ally> allies;
     [SerializeField] public List<Enemy> enemies;
 
@@ -17,6 +16,8 @@ public class BattleSystemManager : MonoBehaviour
     public int numOfAllies;
     public int numOfEnemies;
     public int currentLoops = 0;
+
+    // ToDo:戦闘開始時alliesとenemiesにパーティーのListを反映させるコードを追加したい
 
     private void Awake()
     {

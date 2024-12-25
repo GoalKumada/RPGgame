@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -228,7 +227,7 @@ public class TavernSystemController : MonoBehaviour
                 isNotificationPhase = true;
                 isRecruitingPhase = false;
             }
-            else if (SystemManager.currentPartyMember.Count >= limitOfAllyBringingAlong) //なかまにできる人数の上限に達していたら
+            else if (SystemManager.allyComponentsOfCurrentPartyMember.Count >= limitOfAllyBringingAlong) //なかまにできる人数の上限に達していたら
             {
                 dataForRecruiting.notificationPanelObject.SetActive(true);
                 isLimitOver = true;
@@ -279,13 +278,9 @@ public class TavernSystemController : MonoBehaviour
             if (index == 0)
             {
                 AddAllyToParty();
+
+                // 要検討
                 allyCandidate.GetComponent<Ally>().isEmployed = true;
-                
-                // 
-                foreach (GameObject a in SystemManager.currentPartyMember)
-                {
-                    Debug.Log(a.GetComponent<Ally>().characterName);
-                }
 
                 dataForRecruiting.recruitOptionsPanel.SetDeselected();
                 dataForRecruiting.recruiteCheckPanelObject.SetActive(false);
@@ -681,13 +676,16 @@ public class TavernSystemController : MonoBehaviour
         isLimitOver = false;
     }
 
-    // なかまをパーティーに加える
+    // 雇用したなかまの情報をSystemManagerに渡す
     public void AddAllyToParty()
     {
-        SystemManager.currentPartyMember.Add(allyCandidate);
+        SystemManager.allyComponentsOfCurrentPartyMember.Add(allyCandidate.GetComponent<Ally>());
+        SystemManager.spritesOfCurrentPartyMember.Add(allyCandidate.GetComponent<SpriteRenderer>().sprite);
+        SystemManager.controllersOfCurrentPartyMember.Add(allyCandidate.GetComponent<Animator>().runtimeAnimatorController);
+        SystemManager.skillsOfCurrentPartyMember.Add(allyCandidate.GetComponent<Ally>().skills);
+
         SystemManager.money -= allyCandidate.GetComponent<Ally>().moneyNeeded;
         SetCurrentAmountOfMoney();
-        Debug.Log(SystemManager.money);
     }
 
     // お金の表示をオンオフ
