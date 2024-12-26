@@ -16,7 +16,7 @@ public class EnemyMovePhase : BattlePhaseBase
 
         yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
 
-        GameObject gobj = GameObject.Find("SystemManager");
+        GameObject gobj = GameObject.Find("BattleSystemManager");
         BattleSystemManager sm = gobj.GetComponent<BattleSystemManager>();
 
         // 敵の行動を決めてListに格納
@@ -74,11 +74,11 @@ public class EnemyMovePhase : BattlePhaseBase
             moveOfAlly[sm.nakama[i]].HurtAnimationStart();
 
             // ステイタス表示系のUIを更新する
-            espCSP.refreshedChracter = sm.teki[i];
-            espCSP.refreshEnemyTP = true;
+            espCSP.refreshedCharacter = sm.teki[i];
+            espCSP.isEnemyTpRefleshed = true;
 
-            aspCSP.refreshedChracter = sm.nakama[i];
-            aspCSP.refreshAllyHP = true;
+            aspCSP.refreshedCharacter = sm.nakama[i];
+            aspCSP.isAllyHPRefleshed = true;
 
             yield return new WaitUntil(() => moveOfAlly[sm.nakama[i]].hurtEnd == true);
             moveOfEnemy[sm.teki[i]].executeAfterAttackMove = true;

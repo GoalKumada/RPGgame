@@ -1,8 +1,9 @@
 //ToDo
 
-//Staticを使わずに、シーンを移動しても変数を保持しておきたい
-
+// spriteとAnimatorControllerを設定する反映させる
 
 //Animatorのコントローラーを設定する
-//confirmTextに表示されるImageのサイズを自動で調整する 
+//最初にTP切れを起こすとIndexOutOfException
 //マウスでの操作をできなくする Cursor.visible = false; // マウスカーソルを非表示 Cursor.lockState = CursorLockMode.Locked;
+
+//confirmTextに表示されるImageのサイズを自動で調整する 

@@ -12,7 +12,7 @@ public class AllyMovePhase : BattlePhaseBase
         Debug.Log("ExecutePhase");
         battleContext.textWindow.CreateDialogueText(dialogue);
 
-        GameObject gobj = GameObject.Find("SystemManager");
+        GameObject gobj = GameObject.Find("BattleSystemManager");
         BattleSystemManager sm = gobj.GetComponent<BattleSystemManager>();
 
         GameObject allyStatusPanel = GameObject.Find("AllyStatusPanel");
@@ -46,11 +46,11 @@ public class AllyMovePhase : BattlePhaseBase
             moveOfEnemy[sm.teki[i]].HurtAnimationStart();
 
             // ステイタス表示系のUIを更新する
-            aspCSP.refreshedChracter = sm.nakama[i];
-            aspCSP.refreshAllyTP = true;
+            aspCSP.refreshedCharacter = sm.nakama[i];
+            aspCSP.isAllyTpRefleshed = true;
 
-            espCSP.refreshedChracter = sm.teki[i];
-            espCSP.refreshEnemyHP = true;
+            espCSP.refreshedCharacter = sm.teki[i];
+            espCSP.isEnemyHpRefleshed = true;
 
             yield return new WaitUntil(() => moveOfEnemy[sm.teki[i]].hurtEnd == true);
             moveOfAlly[sm.nakama[i]].executeAfterAttackMove = true;

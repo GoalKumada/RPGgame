@@ -1817,7 +1817,7 @@ MonoBehaviour:
   moneyTextGameObject: {fileID: 1074170560}
   isMenuSelectingPhase: 0
   swordsmans:
-  - {fileID: 1237356188}
+  - {fileID: 1237356193}
   - {fileID: 286143805}
   - {fileID: 1290656593}
   knights:
@@ -2336,19 +2336,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: "\u30EA\u30F3\u30C0"
-  currentHP: 0
+  currentHP: 150
   maxHP: 150
-  currentTP: 0
+  currentTP: 45
   maxTP: 45
   ATK: 120
-  currentATK: 0
+  currentATK: 120
   DEF: 60
-  currentDEF: 0
+  currentDEF: 60
   skills:
   - {fileID: 286143807}
   - {fileID: 286143806}
   SPEED: 30
-  currentSPEED: 0
+  currentSPEED: 30
   moneyNeeded: 1000
   isEmployed: 0
   isEntrusted: 0
@@ -2533,18 +2533,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: "\u30C0\u30F3"
-  currentHP: 0
+  currentHP: 60
   maxHP: 60
-  currentTP: 0
+  currentTP: 15
   maxTP: 15
   ATK: 20
-  currentATK: 0
+  currentATK: 20
   DEF: 40
-  currentDEF: 0
+  currentDEF: 40
   skills:
   - {fileID: 296004693}
   SPEED: 15
-  currentSPEED: 0
+  currentSPEED: 15
   moneyNeeded: 300
   isEmployed: 0
   isEntrusted: 0
@@ -3703,20 +3703,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: "\u30EB\u30A4\u30FC\u30C0"
-  currentHP: 0
+  currentHP: 270
   maxHP: 270
-  currentTP: 0
+  currentTP: 150
   maxTP: 150
   ATK: 150
-  currentATK: 0
+  currentATK: 150
   DEF: 120
-  currentDEF: 0
+  currentDEF: 120
   skills:
   - {fileID: 455496203}
   - {fileID: 455496202}
   - {fileID: 455496201}
   SPEED: 45
-  currentSPEED: 0
+  currentSPEED: 45
   moneyNeeded: 2000
   isEmployed: 0
   isEntrusted: 0
@@ -5205,20 +5205,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: "\u30A2\u30DE\u30F3\u30C0"
-  currentHP: 0
+  currentHP: 240
   maxHP: 240
-  currentTP: 0
+  currentTP: 180
   maxTP: 180
   ATK: 180
-  currentATK: 0
+  currentATK: 180
   DEF: 120
-  currentDEF: 0
+  currentDEF: 120
   skills:
   - {fileID: 603216202}
   - {fileID: 603216201}
   - {fileID: 603216200}
   SPEED: 40
-  currentSPEED: 0
+  currentSPEED: 40
   moneyNeeded: 2000
   isEmployed: 0
   isEntrusted: 0
@@ -6350,19 +6350,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: "\u30B4\u30FC\u30C9\u30F3"
-  currentHP: 0
+  currentHP: 180
   maxHP: 180
-  currentTP: 0
+  currentTP: 45
   maxTP: 45
   ATK: 60
-  currentATK: 0
+  currentATK: 60
   DEF: 120
-  currentDEF: 0
+  currentDEF: 120
   skills:
   - {fileID: 770756718}
   - {fileID: 770756717}
   SPEED: 20
-  currentSPEED: 0
+  currentSPEED: 20
   moneyNeeded: 1000
   isEmployed: 0
   isEntrusted: 0
@@ -9140,7 +9140,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1237356187}
-  - component: {fileID: 1237356188}
+  - component: {fileID: 1237356193}
   - component: {fileID: 1237356189}
   - component: {fileID: 1237356190}
   - component: {fileID: 1237356192}
@@ -9167,34 +9167,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1725406762}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1237356188
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1237356186}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1cff7372b54b524aacb163003b4c132, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterName: "\u30B5\u30E9"
-  currentHP: 0
-  maxHP: 50
-  currentTP: 0
-  maxTP: 15
-  ATK: 40
-  currentATK: 0
-  DEF: 20
-  currentDEF: 0
-  skills:
-  - {fileID: 1237356189}
-  SPEED: 25
-  currentSPEED: 0
-  moneyNeeded: 300
-  isEmployed: 0
-  isEntrusted: 0
 --- !u!114 &1237356189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9311,6 +9283,34 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1237356193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237356186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cff7372b54b524aacb163003b4c132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: "\u30B5\u30E9"
+  currentHP: 50
+  maxHP: 50
+  currentTP: 15
+  maxTP: 15
+  ATK: 40
+  currentATK: 40
+  DEF: 20
+  currentDEF: 20
+  skills:
+  - {fileID: 1237356189}
+  SPEED: 25
+  currentSPEED: 25
+  moneyNeeded: 300
+  isEmployed: 0
+  isEntrusted: 0
 --- !u!1 &1241163980
 GameObject:
   m_ObjectHideFlags: 0
@@ -9715,20 +9715,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: "\u30A8\u30E9\u30A4\u30B6"
-  currentHP: 0
+  currentHP: 300
   maxHP: 300
-  currentTP: 0
+  currentTP: 90
   maxTP: 90
   ATK: 240
-  currentATK: 0
+  currentATK: 240
   DEF: 60
-  currentDEF: 0
+  currentDEF: 60
   skills:
   - {fileID: 1290656596}
   - {fileID: 1290656595}
   - {fileID: 1290656594}
   SPEED: 35
-  currentSPEED: 0
+  currentSPEED: 35
   moneyNeeded: 2000
   isEmployed: 0
   isEntrusted: 0
@@ -11708,19 +11708,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: "\u30EA\u30CA"
-  currentHP: 0
+  currentHP: 120
   maxHP: 120
-  currentTP: 0
+  currentTP: 90
   maxTP: 90
   ATK: 90
-  currentATK: 0
+  currentATK: 90
   DEF: 60
-  currentDEF: 0
+  currentDEF: 60
   skills:
   - {fileID: 1423847030}
   - {fileID: 1423847029}
   SPEED: 35
-  currentSPEED: 0
+  currentSPEED: 35
   moneyNeeded: 1000
   isEmployed: 0
   isEntrusted: 0
@@ -12285,18 +12285,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: "\u30B1\u30A4\u30C8"
-  currentHP: 0
+  currentHP: 45
   maxHP: 45
-  currentTP: 0
+  currentTP: 25
   maxTP: 25
   ATK: 25
-  currentATK: 0
+  currentATK: 25
   DEF: 20
-  currentDEF: 0
+  currentDEF: 20
   skills:
   - {fileID: 1469604605}
   SPEED: 35
-  currentSPEED: 0
+  currentSPEED: 35
   moneyNeeded: 300
   isEmployed: 0
   isEntrusted: 0
@@ -13725,18 +13725,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: "\u30AB\u30F3\u30CD"
-  currentHP: 0
+  currentHP: 35
   maxHP: 35
-  currentTP: 0
+  currentTP: 35
   maxTP: 35
   ATK: 25
-  currentATK: 0
+  currentATK: 25
   DEF: 25
-  currentDEF: 0
+  currentDEF: 25
   skills:
   - {fileID: 1752067118}
   SPEED: 30
-  currentSPEED: 0
+  currentSPEED: 30
   moneyNeeded: 300
   isEmployed: 0
   isEntrusted: 0
@@ -14634,18 +14634,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: "\u30E1\u30B0"
-  currentHP: 0
+  currentHP: 40
   maxHP: 40
-  currentTP: 0
+  currentTP: 30
   maxTP: 30
   ATK: 30
-  currentATK: 0
+  currentATK: 30
   DEF: 20
-  currentDEF: 0
+  currentDEF: 20
   skills:
   - {fileID: 1850739017}
   SPEED: 30
-  currentSPEED: 0
+  currentSPEED: 30
   moneyNeeded: 300
   isEmployed: 0
   isEntrusted: 0
@@ -15500,19 +15500,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: "\u30A4\u30A7\u30F3"
-  currentHP: 0
+  currentHP: 115
   maxHP: 115
-  currentTP: 0
+  currentTP: 115
   maxTP: 115
   ATK: 75
-  currentATK: 0
+  currentATK: 75
   DEF: 75
-  currentDEF: 0
+  currentDEF: 75
   skills:
   - {fileID: 1945713066}
   - {fileID: 1945713065}
   SPEED: 35
-  currentSPEED: 0
+  currentSPEED: 35
   moneyNeeded: 1000
   isEmployed: 0
   isEntrusted: 0
@@ -15698,19 +15698,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: "\u30DF\u30E9"
-  currentHP: 0
+  currentHP: 135
   maxHP: 135
-  currentTP: 0
+  currentTP: 75
   maxTP: 75
   ATK: 75
-  currentATK: 0
+  currentATK: 75
   DEF: 60
-  currentDEF: 0
+  currentDEF: 60
   skills:
   - {fileID: 1979076364}
   - {fileID: 1979076363}
   SPEED: 40
-  currentSPEED: 0
+  currentSPEED: 40
   moneyNeeded: 1000
   isEmployed: 0
   isEntrusted: 0
@@ -16598,20 +16598,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: "\u30AA\u30EA\u30D0\u30FC"
-  currentHP: 0
+  currentHP: 360
   maxHP: 360
-  currentTP: 0
+  currentTP: 90
   maxTP: 90
   ATK: 120
-  currentATK: 0
+  currentATK: 120
   DEF: 240
-  currentDEF: 0
+  currentDEF: 240
   skills:
   - {fileID: 2086616886}
   - {fileID: 2086616885}
   - {fileID: 2086616887}
   SPEED: 25
-  currentSPEED: 0
+  currentSPEED: 25
   moneyNeeded: 2000
   isEmployed: 0
   isEntrusted: 0

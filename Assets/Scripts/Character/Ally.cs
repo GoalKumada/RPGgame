@@ -12,6 +12,7 @@ public class Ally : Character
     public bool isEmployed = false;
     public bool isEntrusted = false;
 
+
     public enum Job {Swordsman,  Knight, Archer, Wizard, Priest};
 
     //private List<Skill> skillsOfAlly;

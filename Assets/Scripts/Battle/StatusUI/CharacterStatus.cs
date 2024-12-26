@@ -6,16 +6,6 @@ using UnityEngine.UI;
 
 public class CharacterStatus : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
     public void SetName(string name)
     {
         GameObject nameText = transform.Find("NameText").gameObject;

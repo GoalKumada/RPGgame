@@ -21,8 +21,7 @@ public class Character : MonoBehaviour
 
     private void Awake()
     {
-        currentHP = maxHP;
-        currentTP = maxTP;
+        
     }
 
     public string[] GetStringsOfSkills()

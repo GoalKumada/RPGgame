@@ -24,9 +24,6 @@ public class ChooseCommandPhase : BattlePhaseBase
         if (Input.GetKeyDown(KeyCode.Space))
         {
             // 現在のTPが必要TPより少なかったら選択できない
-
-            // ToDo:最初にTP切れを起こすとIndexOutOfException
-
             if (sm.allies[sm.nakama.Count - 1].currentTP < sm.allies[sm.nakama.Count - 1].skills[index].requiredTP)
             {
                 yield return null;
@@ -40,12 +37,10 @@ public class ChooseCommandPhase : BattlePhaseBase
                 battleContext.chooseCommandWindowMenu.Open();
                 battleContext.textWindow.isChooseComandPhase = true;
 
-
                 goto start;
             }
             else
             {
-                Debug.Log("こっち入ってるよね");
                 sm.skillNumber.Add(index);
                 nextPhase = new ChooseEnemyPhase();
                 battleContext.chooseEnemyWindowMenu.CreateSelectableTexts(sm.GetStringsOfEnemies());

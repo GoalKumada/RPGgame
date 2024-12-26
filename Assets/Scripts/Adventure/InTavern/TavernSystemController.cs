@@ -77,8 +77,12 @@ public class TavernSystemController : MonoBehaviour
     private bool isNotHaveEnoughMoney = false;
     private bool isLimitOver = false;
 
-    
-    void Update()
+    private void Start()
+    {
+        SetFlagOfEmploymentTrue();
+    }
+
+    private void Update()
     {
         if (isMenuSelectingPhase)
         {
@@ -279,7 +283,6 @@ public class TavernSystemController : MonoBehaviour
             {
                 AddAllyToParty();
 
-                // 要検討
                 allyCandidate.GetComponent<Ally>().isEmployed = true;
 
                 dataForRecruiting.recruitOptionsPanel.SetDeselected();
@@ -679,6 +682,7 @@ public class TavernSystemController : MonoBehaviour
     // 雇用したなかまの情報をSystemManagerに渡す
     public void AddAllyToParty()
     {
+        SystemManager.namesOfAllyAlreadyEmployed.Add(allyCandidate.name);
         SystemManager.allyComponentsOfCurrentPartyMember.Add(allyCandidate.GetComponent<Ally>());
         SystemManager.spritesOfCurrentPartyMember.Add(allyCandidate.GetComponent<SpriteRenderer>().sprite);
         SystemManager.controllersOfCurrentPartyMember.Add(allyCandidate.GetComponent<Animator>().runtimeAnimatorController);
@@ -686,6 +690,17 @@ public class TavernSystemController : MonoBehaviour
 
         SystemManager.money -= allyCandidate.GetComponent<Ally>().moneyNeeded;
         SetCurrentAmountOfMoney();
+    }
+
+    // 既に雇用済みのなかまのフラグを立てる
+    public void SetFlagOfEmploymentTrue()
+    {
+        foreach (string str in SystemManager.namesOfAllyAlreadyEmployed)
+        {
+            GameObject gameObject = GameObject.Find($"Ally/{str}");
+            Ally ally = gameObject.GetComponent<Ally>();
+            ally.isEmployed = true;
+        }
     }
 
     // お金の表示をオンオフ

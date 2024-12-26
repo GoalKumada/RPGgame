@@ -11,7 +11,7 @@ public class SecondCheckPhase : BattlePhaseBase
         GameObject obj = GameObject.Find("BattleManager");
         BattleManager bm = obj.GetComponent<BattleManager>();
 
-        GameObject gobj = GameObject.Find("SystemManager");
+        GameObject gobj = GameObject.Find("BattleSystemManager");
         BattleSystemManager sm = gobj.GetComponent<BattleSystemManager>();
 
         int count = 0;

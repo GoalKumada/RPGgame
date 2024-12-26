@@ -6,6 +6,8 @@ public class SystemManager
 {
     public static int money = 1500;
 
+    public static List<string> namesOfAllyAlreadyEmployed = new List<string>();
+
     //public static List<GameObject> currentPartyMember = new List<GameObject>();
     public static List<Ally> allyComponentsOfCurrentPartyMember = new List<Ally>();
     public static List<Sprite> spritesOfCurrentPartyMember = new List<Sprite>();

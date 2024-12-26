@@ -7,11 +7,11 @@ public class CharacterStatusPanel : MonoBehaviour
 {
     [SerializeField] List<CharacterStatus> characterStatuses = new List<CharacterStatus>();
     [SerializeField] CharacterStatus characterStatusPrefab = default;
-    public bool refreshAllyHP = false; 
-    public bool refreshAllyTP = false;
-    public bool refreshEnemyHP = false; 
-    public bool refreshEnemyTP = false; 
-    public int refreshedChracter;
+    public bool isAllyHPRefleshed = false; 
+    public bool isAllyTpRefleshed = false;
+    public bool isEnemyHpRefleshed = false; 
+    public bool isEnemyTpRefleshed = false; 
+    public int refreshedCharacter;
     BattleSystemManager sm;
 
     private void Start()
@@ -46,32 +46,32 @@ public class CharacterStatusPanel : MonoBehaviour
 
     private void Update()
     {
-        if (refreshAllyHP)
+        if (isAllyHPRefleshed)
         {
-            characterStatuses[refreshedChracter].SetValueOfHP(sm.allies[refreshedChracter]);
-            characterStatuses[refreshedChracter].RefreshGaugeOfHP(sm.allies[refreshedChracter]);
-            refreshAllyHP = false;
+            characterStatuses[refreshedCharacter].SetValueOfHP(sm.allies[refreshedCharacter]);
+            characterStatuses[refreshedCharacter].RefreshGaugeOfHP(sm.allies[refreshedCharacter]);
+            isAllyHPRefleshed = false;
         }
 
-        if (refreshAllyTP)
+        if (isAllyTpRefleshed)
         {
-            characterStatuses[refreshedChracter].SetValueOfTP(sm.allies[refreshedChracter]);
-            characterStatuses[refreshedChracter].RefreshGaugeOfTP(sm.allies[refreshedChracter]);
-            refreshAllyTP = false;
+            characterStatuses[refreshedCharacter].SetValueOfTP(sm.allies[refreshedCharacter]);
+            characterStatuses[refreshedCharacter].RefreshGaugeOfTP(sm.allies[refreshedCharacter]);
+            isAllyTpRefleshed = false;
         }
 
-        if (refreshEnemyHP)
+        if (isEnemyHpRefleshed)
         {
-            characterStatuses[refreshedChracter].SetValueOfHP(sm.enemies[refreshedChracter]);
-            characterStatuses[refreshedChracter].RefreshGaugeOfHP(sm.enemies[refreshedChracter]);
-            refreshEnemyHP = false;
+            characterStatuses[refreshedCharacter].SetValueOfHP(sm.enemies[refreshedCharacter]);
+            characterStatuses[refreshedCharacter].RefreshGaugeOfHP(sm.enemies[refreshedCharacter]);
+            isEnemyHpRefleshed = false;
         }
 
-        if (refreshEnemyTP)
+        if (isEnemyTpRefleshed)
         {
-            characterStatuses[refreshedChracter].SetValueOfTP(sm.enemies[refreshedChracter]);
-            characterStatuses[refreshedChracter].RefreshGaugeOfTP(sm.enemies[refreshedChracter]);
-            refreshEnemyTP = false;
+            characterStatuses[refreshedCharacter].SetValueOfTP(sm.enemies[refreshedCharacter]);
+            characterStatuses[refreshedCharacter].RefreshGaugeOfTP(sm.enemies[refreshedCharacter]);
+            isEnemyTpRefleshed = false;
         }
     }
 }
