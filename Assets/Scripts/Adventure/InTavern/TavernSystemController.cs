@@ -685,6 +685,7 @@ public class TavernSystemController : MonoBehaviour
         SystemManager.namesOfAllyAlreadyEmployed.Add(allyCandidate.name);
         SystemManager.allyComponentsOfCurrentPartyMember.Add(allyCandidate.GetComponent<Ally>());
         SystemManager.spritesOfCurrentPartyMember.Add(allyCandidate.GetComponent<SpriteRenderer>().sprite);
+        SystemManager.colorOfCurrentPartyMember.Add(allyCandidate.GetComponent<SpriteRenderer>().color);
         SystemManager.controllersOfCurrentPartyMember.Add(allyCandidate.GetComponent<Animator>().runtimeAnimatorController);
         SystemManager.skillsOfCurrentPartyMember.Add(allyCandidate.GetComponent<Ally>().skills);
 

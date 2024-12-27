@@ -6,7 +6,7 @@ public class ToDebug : MonoBehaviour
 {
     void Start()
     {
-        
+        /*
         foreach (Ally ally in SystemManager.allyComponentsOfCurrentPartyMember)
         {
             Debug.Log(ally.characterName);
@@ -26,7 +26,7 @@ public class ToDebug : MonoBehaviour
                 Debug.Log(s.skillName);
             }
         }
-        
+        */
     }
 
     void Update()
