@@ -8,7 +8,6 @@ public class FirstCheckPhase : BattlePhaseBase
     public override IEnumerator Execute(BattleContext battleContext, List<Move> moveOfAlly, List<Move> moveOfEnemy)
     {
         yield return null;
-        Debug.Log("FirstCheckPhase");
 
         GameObject obj = GameObject.Find("BattleManager");
         BattleManager bm = obj.GetComponent<BattleManager>();
@@ -37,11 +36,11 @@ public class FirstCheckPhase : BattlePhaseBase
             nextPhase = new EnemyMovePhase();
             
             // 味方の行動に関する情報をクリア
-            sm.nakama.Clear();
-            sm.nakamaObject.Clear();
-            sm.skillNumber.Clear();
-            sm.teki.Clear();
-            sm.tekiObject.Clear();
+            sm.numbersOfAllyInAction.Clear();
+            sm.allyObjectsInAction.Clear();
+            sm.skillNumbers.Clear();
+            sm.numbersOfEnemyInAction.Clear();
+            sm.enemyObjectsInAction.Clear();
             sm.currentLoops = 0;
         }
         else

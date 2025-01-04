@@ -11,7 +11,6 @@ public class ChooseAllyPhase : BattlePhaseBase
     public override IEnumerator Execute(BattleContext battleContext, List<Move> moveOfAlly, List<Move> moveOfEnemy)
     {
         yield return null;
-        Debug.Log("ChooseAllyPhase");
 
         battleContext.textWindow.CreateDialogueText(dialogue);
 
@@ -26,9 +25,8 @@ public class ChooseAllyPhase : BattlePhaseBase
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            sm.nakama.Add(index);
-            string itsName = sm.allies[index].name;
-            sm.nakamaObject.Add(GameObject.Find(itsName));
+            sm.numbersOfAllyInAction.Add(index);
+            sm.allyObjectsInAction.Add(sm.allyObjects[index]);
 
             nextPhase = new ChooseCommandPhase();
             battleContext.textWindow.isChooseComandPhase = true;
@@ -45,8 +43,8 @@ public class ChooseAllyPhase : BattlePhaseBase
             else
             {
                 sm.currentLoops--;
-                sm.teki.RemoveAt(sm.currentLoops);
-                sm.tekiObject.RemoveAt(sm.currentLoops);
+                sm.numbersOfEnemyInAction.RemoveAt(sm.currentLoops);
+                sm.enemyObjectsInAction.RemoveAt(sm.currentLoops);
                 nextPhase = new ChooseEnemyPhase();
                 battleContext.chooseEnemyWindowMenu.CreateSelectableTexts(sm.GetStringsOfEnemies());
                 battleContext.chooseEnemyWindowMenu.Open();

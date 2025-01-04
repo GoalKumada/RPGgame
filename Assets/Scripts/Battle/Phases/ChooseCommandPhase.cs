@@ -9,7 +9,7 @@ public class ChooseCommandPhase : BattlePhaseBase
     public override IEnumerator Execute(BattleContext battleContext, List<Move> moveOfAlly, List<Move> moveOfEnemy)
     {
         yield return null;
-        Debug.Log("ChooseCommandPhase");
+
         start:
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Escape));
 
@@ -24,7 +24,7 @@ public class ChooseCommandPhase : BattlePhaseBase
         if (Input.GetKeyDown(KeyCode.Space))
         {
             // 現在のTPが必要TPより少なかったら選択できない
-            if (sm.allies[sm.nakama.Count - 1].currentTP < sm.allies[sm.nakama.Count - 1].skills[index].requiredTP)
+            if (sm.allies[sm.numbersOfAllyInAction.Count - 1].currentTP < sm.allies[sm.numbersOfAllyInAction.Count - 1].skills[index].requiredTP)
             {
                 yield return null;
                 Debug.Log("aaa");
@@ -33,7 +33,7 @@ public class ChooseCommandPhase : BattlePhaseBase
                 
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
 
-                battleContext.chooseCommandWindowMenu.CreateSelectableTexts(sm.allies[sm.nakama.Count-1].GetStringsOfSkills());
+                battleContext.chooseCommandWindowMenu.CreateSelectableTexts(sm.allies[sm.numbersOfAllyInAction.Count-1].GetStringsOfSkills());
                 battleContext.chooseCommandWindowMenu.Open();
                 battleContext.textWindow.isChooseComandPhase = true;
 
@@ -41,7 +41,7 @@ public class ChooseCommandPhase : BattlePhaseBase
             }
             else
             {
-                sm.skillNumber.Add(index);
+                sm.skillNumbers.Add(index);
                 nextPhase = new ChooseEnemyPhase();
                 battleContext.chooseEnemyWindowMenu.CreateSelectableTexts(sm.GetStringsOfEnemies());
                 battleContext.chooseEnemyWindowMenu.Open();
@@ -49,19 +49,19 @@ public class ChooseCommandPhase : BattlePhaseBase
         }
         else
         {
-            sm.nakama.RemoveAt(sm.currentLoops);
-            sm.nakamaObject.RemoveAt(sm.currentLoops);
+            sm.numbersOfAllyInAction.RemoveAt(sm.currentLoops);
+            sm.allyObjectsInAction.RemoveAt(sm.currentLoops);
             nextPhase = new ChooseAllyPhase();
             battleContext.chooseAllyWindowMenu.CreateSelectableTexts(sm.GetStringsOfAllies());
             battleContext.chooseAllyWindowMenu.Open();
             if (sm.currentLoops == 1)
             {
-                battleContext.chooseAllyWindowMenu.DeactivateTextByIndex(sm.nakama[0]);
+                battleContext.chooseAllyWindowMenu.DeactivateTextByIndex(sm.numbersOfAllyInAction[0]);
             }
             if (sm.currentLoops == 2)
             {
-                battleContext.chooseAllyWindowMenu.DeactivateTextByIndex(sm.nakama[0]);
-                battleContext.chooseAllyWindowMenu.DeactivateTextByIndex(sm.nakama[1]);
+                battleContext.chooseAllyWindowMenu.DeactivateTextByIndex(sm.numbersOfAllyInAction[0]);
+                battleContext.chooseAllyWindowMenu.DeactivateTextByIndex(sm.numbersOfAllyInAction[1]);
             }
         }
     }

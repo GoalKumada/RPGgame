@@ -9,7 +9,6 @@ public class ChooseEnemyPhase : BattlePhaseBase
     public override IEnumerator Execute(BattleContext battleContext, List<Move> moveOfAlly, List<Move> moveOfEnemy)
     {
         yield return null;
-        Debug.Log("ChooseEnemyPhase");
         battleContext.textWindow.CreateDialogueText(dialogue);
 
         yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Escape));
@@ -23,9 +22,8 @@ public class ChooseEnemyPhase : BattlePhaseBase
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            sm.teki.Add(index);
-            string itsname = sm.enemies[index].name;
-            sm.tekiObject.Add(GameObject.Find(itsname));
+            sm.numbersOfEnemyInAction.Add(index);
+            sm.enemyObjectsInAction.Add(sm.enemyObjects[index]);
 
             if (sm.currentLoops != sm.numOfAllies - 1)
             {
@@ -35,12 +33,12 @@ public class ChooseEnemyPhase : BattlePhaseBase
                 battleContext.chooseAllyWindowMenu.Open();
                 if (sm.currentLoops == 1)
                 {
-                    battleContext.chooseAllyWindowMenu.DeactivateTextByIndex(sm.nakama[0]);
+                    battleContext.chooseAllyWindowMenu.DeactivateTextByIndex(sm.numbersOfAllyInAction[0]);
                 }
                 if (sm.currentLoops == 2)
                 {
-                    battleContext.chooseAllyWindowMenu.DeactivateTextByIndex(sm.nakama[0]);
-                    battleContext.chooseAllyWindowMenu.DeactivateTextByIndex(sm.nakama[1]);
+                    battleContext.chooseAllyWindowMenu.DeactivateTextByIndex(sm.numbersOfAllyInAction[0]);
+                    battleContext.chooseAllyWindowMenu.DeactivateTextByIndex(sm.numbersOfAllyInAction[1]);
                 }
             }
             else
@@ -50,9 +48,9 @@ public class ChooseEnemyPhase : BattlePhaseBase
         }
         else
         {
-            sm.skillNumber.RemoveAt(sm.currentLoops);
+            sm.skillNumbers.RemoveAt(sm.currentLoops);
             nextPhase = new ChooseCommandPhase();
-            battleContext.chooseCommandWindowMenu.CreateSelectableTexts(sm.allies[sm.nakama[sm.currentLoops]].GetStringsOfSkills());
+            battleContext.chooseCommandWindowMenu.CreateSelectableTexts(sm.allies[sm.numbersOfAllyInAction[sm.currentLoops]].GetStringsOfSkills());
             battleContext.chooseCommandWindowMenu.Open();
         }
     }

@@ -55,8 +55,6 @@ public class FromTownToDungeon : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("衝突判定されている");
-
             toDungeonPanel.SetActive(true);
 
             windowMenu.SetMoveArrowFunction();

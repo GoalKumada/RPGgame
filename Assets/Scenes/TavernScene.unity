@@ -2367,6 +2367,7 @@ MonoBehaviour:
   skillName: "\u30C0\u30D6\u30EB\u30A2\u30BF\u30C3\u30AF"
   attackPower: 20
   requiredTP: 2
+  type: 0
   skillExplain: "\u6575\u3092\u7D20\u65E9\u304F\uFF12\u56DE\u5207\u308B\u3064\u3051\u308B\r\n\u6D88\u8CBB\uFF2D\uFF30\uFF12"
 --- !u!114 &286143807
 MonoBehaviour:
@@ -2383,6 +2384,7 @@ MonoBehaviour:
   skillName: "\u30B9\u30E9\u30C3\u30B7\u30E5"
   attackPower: 10
   requiredTP: 0
+  type: 0
   skillExplain: "\u6575\u3092\u5207\u308A\u3064\u3051\u308B\u6280\r\nTP\u6D88\u8CBB\uFF10"
 --- !u!212 &286143808
 SpriteRenderer:
@@ -2472,7 +2474,7 @@ Animator:
   m_GameObject: {fileID: 286143803}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bbb23e8a6dfbcdb478fe6c36374ec76e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2563,6 +2565,7 @@ MonoBehaviour:
   skillName: "\u524D\u7A81\u304D"
   attackPower: 10
   requiredTP: 0
+  type: 0
   skillExplain: "\u524D\u65B9\u306E\u6575\u3092\u7A81\u304D\u523A\u3059\r\n\u6D88\u8CBB\uFF34\uFF30\uFF10"
 --- !u!212 &296004694
 SpriteRenderer:
@@ -3735,6 +3738,7 @@ MonoBehaviour:
   skillName: "\u5FC5\u6BBA\u306E\u4E00\u77E2"
   attackPower: 30
   requiredTP: 5
+  type: 0
   skillExplain: "\u96C6\u4E2D\u529B\u3092\u9AD8\u3081\u3066\u6575\u306B\u5FC5\u6BBA\u306E\u4E00\u6483\u3092\u653E\u3064\u5927\u6280\r\n\uFF34\uFF30\u6D88\u8CBB\uFF15"
 --- !u!114 &455496202
 MonoBehaviour:
@@ -3751,6 +3755,7 @@ MonoBehaviour:
   skillName: "\u9023\u7D9A\u77E2"
   attackPower: 20
   requiredTP: 3
+  type: 0
   skillExplain: "\u7D9A\u3051\u3056\u307E\u306B\u5F13\u3092\u653E\u3061\u76F8\u624B\u3092\u653B\u6483\u3059\u308B\r\n\uFF34\uFF30\u6D88\u8CBB\uFF13"
 --- !u!114 &455496203
 MonoBehaviour:
@@ -3767,6 +3772,7 @@ MonoBehaviour:
   skillName: "\u72D9\u3044\u6483\u3061"
   attackPower: 10
   requiredTP: 0
+  type: 0
   skillExplain: "\u6575\u4E00\u4F53\u3092\u5F13\u77E2\u3067\u72D9\u3044\u6483\u3064\r\n\uFF34\uFF30\u6D88\u8CBB\uFF10"
 --- !u!212 &455496204
 SpriteRenderer:
@@ -5021,6 +5027,7 @@ MonoBehaviour:
   skillName: "\u5149\u306E\u9B54\u6CD5"
   attackPower: 30
   requiredTP: 5
+  type: 0
   skillExplain: "\u8056\u306A\u308B\u5149\u306E\u9B54\u6CD5\u3067\u6575\u3092\u653B\u6483\u3059\u308B\r\n\uFF34\uFF30\u6D88\u8CBB\uFF15"
 --- !u!114 &594188011
 MonoBehaviour:
@@ -5037,6 +5044,7 @@ MonoBehaviour:
   skillName: "\u53E9\u304D\u3064\u3051"
   attackPower: 10
   requiredTP: 0
+  type: 0
   skillExplain: "\u624B\u6301\u3061\u306E\u6756\u3067\u6575\u3092\u305F\u305F\u304D\u3064\u3051\u308B\r\n\uFF34\uFF30\u6D88\u8CBB\uFF10"
 --- !u!114 &594188012
 MonoBehaviour:
@@ -5053,6 +5061,7 @@ MonoBehaviour:
   skillName: "\u56DE\u5FA9\u9B54\u6CD5"
   attackPower: 10
   requiredTP: 0
+  type: 1
   skillExplain: "\u5473\u65B9\u3072\u3068\u308A\u306E\uFF28\uFF30\u3092\u56DE\u5FA9\u3059\u308B\u9B54\u6CD5\r\n\uFF34\uFF30\u6D88\u8CBB\uFF10"
 --- !u!212 &594188013
 SpriteRenderer:
@@ -5237,6 +5246,7 @@ MonoBehaviour:
   skillName: "\u95C7\u306E\u9B54\u6CD5"
   attackPower: 30
   requiredTP: 5
+  type: 0
   skillExplain: "\u7981\u65AD\u306E\u95C7\u306E\u9B54\u6CD5\u3067\u6575\u3092\u653B\u6483\u3059\u308B\r\n\uFF34\uFF30\u6D88\u8CBB\uFF15"
 --- !u!114 &603216201
 MonoBehaviour:
@@ -5253,6 +5263,7 @@ MonoBehaviour:
   skillName: "\u6C37\u306E\u9B54\u6CD5"
   attackPower: 20
   requiredTP: 3
+  type: 0
   skillExplain: "\u6C37\u306E\u3064\u3076\u3066\u3092\u653E\u3061\u6575\u3092\u51CD\u3048\u3055\u305B\u308B\r\n\uFF34\uFF30\u6D88\u8CBB\uFF13"
 --- !u!114 &603216202
 MonoBehaviour:
@@ -5269,6 +5280,7 @@ MonoBehaviour:
   skillName: "\u708E\u306E\u9B54\u6CD5"
   attackPower: 20
   requiredTP: 3
+  type: 0
   skillExplain: "\u706B\u306E\u7389\u3092\u653E\u3061\u6575\u3092\u71C3\u3084\u3059\r\n\uFF34\uFF30\u6D88\u8CBB\uFF13"
 --- !u!212 &603216203
 SpriteRenderer:
@@ -6381,6 +6393,7 @@ MonoBehaviour:
   skillName: "\u8599\u304E\u6255\u3044"
   attackPower: 20
   requiredTP: 2
+  type: 0
   skillExplain: "\u69CD\u3067\u524D\u65B9\u3092\u5927\u304D\u304F\u632F\u308A\u6255\u3046\r\n\u6D88\u8CBB\uFF34\uFF30\uFF12"
 --- !u!114 &770756718
 MonoBehaviour:
@@ -6397,6 +6410,7 @@ MonoBehaviour:
   skillName: "\u524D\u7A81\u304D"
   attackPower: 10
   requiredTP: 0
+  type: 0
   skillExplain: "\u524D\u65B9\u306E\u6575\u3092\u7A81\u304D\u523A\u3059\r\n\u6D88\u8CBB\uFF34\uFF30\uFF10"
 --- !u!212 &770756719
 SpriteRenderer:
@@ -9182,6 +9196,7 @@ MonoBehaviour:
   skillName: "\u30B9\u30E9\u30C3\u30B7\u30E5"
   attackPower: 10
   requiredTP: 0
+  type: 0
   skillExplain: "\u6575\u3092\u5207\u308A\u3064\u3051\u308B\u6280\r\nTP\u6D88\u8CBB\uFF10"
 --- !u!212 &1237356190
 SpriteRenderer:
@@ -9271,7 +9286,7 @@ Animator:
   m_GameObject: {fileID: 1237356186}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bbb23e8a6dfbcdb478fe6c36374ec76e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -9747,6 +9762,7 @@ MonoBehaviour:
   skillName: "\u56DE\u8EE2\u5207\u308A"
   attackPower: 30
   requiredTP: 5
+  type: 0
   skillExplain: "\u56DE\u8EE2\u3057\u306A\u304C\u3089\u5F37\u304F\u6575\u3092\u5207\u308A\u4F0F\u305B\u308B\u5FC5\u6BBA\u6280\r\n\u6D88\u8CBBTP\uFF15"
 --- !u!114 &1290656595
 MonoBehaviour:
@@ -9763,6 +9779,7 @@ MonoBehaviour:
   skillName: "\u30C0\u30D6\u30EB\u30A2\u30BF\u30C3\u30AF"
   attackPower: 20
   requiredTP: 2
+  type: 0
   skillExplain: "\u6575\u3092\u7D20\u65E9\u304F\uFF12\u56DE\u5207\u308B\u3064\u3051\u308B\r\n\u6D88\u8CBB\uFF2D\uFF30\uFF12"
 --- !u!114 &1290656596
 MonoBehaviour:
@@ -9779,6 +9796,7 @@ MonoBehaviour:
   skillName: "\u30B9\u30E9\u30C3\u30B7\u30E5"
   attackPower: 10
   requiredTP: 0
+  type: 0
   skillExplain: "\u6575\u3092\u5207\u308A\u3064\u3051\u308B\u6280\r\nTP\u6D88\u8CBB\uFF10"
 --- !u!212 &1290656597
 SpriteRenderer:
@@ -9868,7 +9886,7 @@ Animator:
   m_GameObject: {fileID: 1290656591}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bbb23e8a6dfbcdb478fe6c36374ec76e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -11739,6 +11757,7 @@ MonoBehaviour:
   skillName: "\u6C37\u306E\u9B54\u6CD5"
   attackPower: 20
   requiredTP: 3
+  type: 0
   skillExplain: "\u6C37\u306E\u3064\u3076\u3066\u3092\u653E\u3061\u6575\u3092\u51CD\u3048\u3055\u305B\u308B\r\n\uFF34\uFF30\u6D88\u8CBB\uFF13"
 --- !u!114 &1423847030
 MonoBehaviour:
@@ -11755,6 +11774,7 @@ MonoBehaviour:
   skillName: "\u708E\u306E\u9B54\u6CD5"
   attackPower: 20
   requiredTP: 3
+  type: 0
   skillExplain: "\u706B\u306E\u7389\u3092\u653E\u3061\u6575\u3092\u71C3\u3084\u3059\r\n\uFF34\uFF30\u6D88\u8CBB\uFF13"
 --- !u!212 &1423847031
 SpriteRenderer:
@@ -12315,6 +12335,7 @@ MonoBehaviour:
   skillName: "\u72D9\u3044\u6483\u3061"
   attackPower: 10
   requiredTP: 0
+  type: 0
   skillExplain: "\u6575\u4E00\u4F53\u3092\u5F13\u77E2\u3067\u72D9\u3044\u6483\u3064\r\n\uFF34\uFF30\u6D88\u8CBB\uFF10"
 --- !u!212 &1469604606
 SpriteRenderer:
@@ -13755,6 +13776,7 @@ MonoBehaviour:
   skillName: "\u56DE\u5FA9\u9B54\u6CD5"
   attackPower: 10
   requiredTP: 0
+  type: 1
   skillExplain: "\u5473\u65B9\u3072\u3068\u308A\u306E\uFF28\uFF30\u3092\u56DE\u5FA9\u3059\u308B\u9B54\u6CD5\r\n\uFF34\uFF30\u6D88\u8CBB\uFF10"
 --- !u!212 &1752067119
 SpriteRenderer:
@@ -14664,6 +14686,7 @@ MonoBehaviour:
   skillName: "\u708E\u306E\u9B54\u6CD5"
   attackPower: 20
   requiredTP: 3
+  type: 0
   skillExplain: "\u706B\u306E\u7389\u3092\u653E\u3061\u6575\u3092\u71C3\u3084\u3059\r\n\uFF34\uFF30\u6D88\u8CBB\uFF13"
 --- !u!212 &1850739018
 SpriteRenderer:
@@ -15531,6 +15554,7 @@ MonoBehaviour:
   skillName: "\u53E9\u304D\u3064\u3051"
   attackPower: 10
   requiredTP: 0
+  type: 0
   skillExplain: "\u624B\u6301\u3061\u306E\u6756\u3067\u6575\u3092\u305F\u305F\u304D\u3064\u3051\u308B\r\n\uFF34\uFF30\u6D88\u8CBB\uFF10"
 --- !u!114 &1945713066
 MonoBehaviour:
@@ -15547,6 +15571,7 @@ MonoBehaviour:
   skillName: "\u56DE\u5FA9\u9B54\u6CD5"
   attackPower: 10
   requiredTP: 0
+  type: 1
   skillExplain: "\u5473\u65B9\u3072\u3068\u308A\u306E\uFF28\uFF30\u3092\u56DE\u5FA9\u3059\u308B\u9B54\u6CD5\r\n\uFF34\uFF30\u6D88\u8CBB\uFF10"
 --- !u!212 &1945713067
 SpriteRenderer:
@@ -15729,6 +15754,7 @@ MonoBehaviour:
   skillName: "\u9023\u7D9A\u77E2"
   attackPower: 20
   requiredTP: 3
+  type: 0
   skillExplain: "\u7D9A\u3051\u3056\u307E\u306B\u5F13\u3092\u653E\u3061\u76F8\u624B\u3092\u653B\u6483\u3059\u308B\r\n\uFF34\uFF30\u6D88\u8CBB\uFF13"
 --- !u!114 &1979076364
 MonoBehaviour:
@@ -15745,6 +15771,7 @@ MonoBehaviour:
   skillName: "\u72D9\u3044\u6483\u3061"
   attackPower: 10
   requiredTP: 0
+  type: 0
   skillExplain: "\u6575\u4E00\u4F53\u3092\u5F13\u77E2\u3067\u72D9\u3044\u6483\u3064\r\n\uFF34\uFF30\u6D88\u8CBB\uFF10"
 --- !u!212 &1979076365
 SpriteRenderer:
@@ -16630,6 +16657,7 @@ MonoBehaviour:
   skillName: "\u8599\u304E\u6255\u3044"
   attackPower: 20
   requiredTP: 2
+  type: 0
   skillExplain: "\u69CD\u3067\u524D\u65B9\u3092\u5927\u304D\u304F\u632F\u308A\u6255\u3046\r\n\u6D88\u8CBB\uFF34\uFF30\uFF12"
 --- !u!114 &2086616886
 MonoBehaviour:
@@ -16646,6 +16674,7 @@ MonoBehaviour:
   skillName: "\u524D\u7A81\u304D"
   attackPower: 10
   requiredTP: 0
+  type: 0
   skillExplain: "\u524D\u65B9\u306E\u6575\u3092\u7A81\u304D\u523A\u3059\r\n\u6D88\u8CBB\uFF34\uFF30\uFF10"
 --- !u!114 &2086616887
 MonoBehaviour:
@@ -16662,6 +16691,7 @@ MonoBehaviour:
   skillName: "\u30B7\u30FC\u30EB\u30C9\u30A2\u30BF\u30C3\u30AF"
   attackPower: 30
   requiredTP: 5
+  type: 0
   skillExplain: "\u76FE\u3067\u6575\u3092\u5730\u9762\u306B\u305F\u305F\u304D\u3064\u3051\u308B\u5927\u6280\r\n\uFF34\uFF30\u6D88\u8CBB\uFF15"
 --- !u!212 &2086616888
 SpriteRenderer:

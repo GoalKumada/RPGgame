@@ -8,7 +8,6 @@ public class ChooseRunOrBattlePhase : BattlePhaseBase
     public override IEnumerator Execute(BattleContext battleContext, List<Move> moveOfAlly, List<Move> moveOfEnemy)
     {
         yield return null;
-        Debug.Log("ChooseRunOrBattlePhase");
         battleContext.textWindow.CreateDialogueText(dialogue);
 
         yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));

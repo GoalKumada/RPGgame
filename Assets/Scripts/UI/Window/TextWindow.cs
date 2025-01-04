@@ -10,7 +10,7 @@ public class TextWindow : MonoBehaviour
     [SerializeField] DialogueText dialogueText;
     [SerializeField] DialogueText dialogueTextPrefab;
     BattleSystemManager sm;
-    WindowMenu menu;
+    WindowMenu chooseCommandMenu;
     public bool isChooseComandPhase = false;
 
     private void Start()
@@ -20,14 +20,14 @@ public class TextWindow : MonoBehaviour
 
         GameObject obj = GameObject.Find("WindowsPanel");
         Transform target = obj.transform.Find("ChooseCommandWindow");
-        menu = target.GetComponent<WindowMenu>();
+        chooseCommandMenu = target.GetComponent<WindowMenu>();
     }
 
     private void Update()
     {
         if (isChooseComandPhase)
         {
-            CreateDialogueText(sm.allies[sm.allies.Count - 1].skills[menu.currentID].skillExplain);
+            CreateDialogueText(sm.allies[sm.numbersOfAllyInAction[sm.numbersOfAllyInAction.Count-1]].skills[chooseCommandMenu.currentID].skillExplain);
         }
     }
 

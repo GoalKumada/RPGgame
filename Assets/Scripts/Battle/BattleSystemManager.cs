@@ -5,17 +5,18 @@ using UnityEngine;
 
 public class BattleSystemManager : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> allyObjects = new List<GameObject>();
+    [SerializeField] public List<GameObject> allyObjects = new List<GameObject>();
+    [SerializeField] public List<GameObject> enemyObjects = new List<GameObject>();
     [SerializeField] private GameObject allyObjectPrefab = default;
 
     [SerializeField] public List<Ally> allies;
     [SerializeField] public List<Enemy> enemies;
 
-    public List<int> nakama = new List<int>();
-    public List<int> teki = new List<int>();
-    public List<int> skillNumber = new List<int>();
-    public List<GameObject> nakamaObject = new List<GameObject>();
-    public List<GameObject> tekiObject = new List<GameObject>();
+    public List<int> numbersOfAllyInAction = new List<int>();
+    public List<int> numbersOfEnemyInAction = new List<int>();
+    public List<int> skillNumbers = new List<int>();
+    public List<GameObject> allyObjectsInAction = new List<GameObject>();
+    public List<GameObject> enemyObjectsInAction = new List<GameObject>();
     public int numOfAllies;
     public int numOfEnemies;
     public int currentLoops = 0;
@@ -89,6 +90,8 @@ public class BattleSystemManager : MonoBehaviour
             SetAllyContext(spriteRenderer,animator,i);
 
             SetAllySkill(allyObject, i);
+
+            allyObjects.Add(allyObject);
         }
     }
 

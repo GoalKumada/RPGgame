@@ -36,11 +36,11 @@ public class SecondCheckPhase : BattlePhaseBase
             battleContext.chooseRunOrBattleWindowMenu.Open();
             
             // 敵の行動に関する情報をクリア
-            sm.nakama.Clear();
-            sm.nakamaObject.Clear();
-            sm.skillNumber.Clear();
-            sm.teki.Clear();
-            sm.tekiObject.Clear();
+            sm.numbersOfAllyInAction.Clear();
+            sm.allyObjectsInAction.Clear();
+            sm.skillNumbers.Clear();
+            sm.numbersOfEnemyInAction.Clear();
+            sm.enemyObjectsInAction.Clear();
         }
         else
         {

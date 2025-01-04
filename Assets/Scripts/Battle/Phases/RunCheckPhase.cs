@@ -9,7 +9,6 @@ public class RunCheckPhase : BattlePhaseBase
     public override IEnumerator Execute(BattleContext battleContext, List<Move> moveOfAlly, List<Move> moveOfEnemy)
     {
         yield return null;
-        Debug.Log("RunCheckPhase");
         battleContext.textWindow.CreateDialogueText(dialogue);
 
 

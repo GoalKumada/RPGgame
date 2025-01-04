@@ -24,25 +24,25 @@ public class EnemyMovePhase : BattlePhaseBase
         //   opponent[i]→skillnumber[i]→self[i]
 
         System.Random random = new System.Random();
+
         for (int i = 0; i < sm.numOfEnemies; i++)
         {
             // 敵の行動順はListの０→１→２で
-            sm.teki.Add(i);
-            string enemyName = sm.enemies[i].name;
-            sm.tekiObject.Add(GameObject.Find(enemyName));
+            sm.numbersOfEnemyInAction.Add(i);
+            sm.enemyObjectsInAction.Add(sm.enemyObjects[i]);
 
             //Debug.Log($"{i+1}番目に行動する敵：{i}");
 
             // 技選択は乱数を用いてランダムに
             int maxNumOfSkill = sm.enemies[i].skills.Count();
-            sm.skillNumber.Add(random.Next(0, maxNumOfSkill));
+            sm.skillNumbers.Add(random.Next(0, maxNumOfSkill));
 
             //Debug.Log($"{i+1}番目に行動する敵の技：{sm.skillNumber[i]}");
 
             // 攻撃する味方の選択もランダムに
-            sm.nakama.Add(random.Next(0,sm.numOfAllies));
-            string allyname = sm.allies[sm.nakama[i]].name;
-            sm.nakamaObject.Add(GameObject.Find(allyname));
+            int numOfRandomAlly = random.Next(0, sm.numOfAllies);
+            sm.numbersOfAllyInAction.Add(numOfRandomAlly);
+            sm.allyObjectsInAction.Add(sm.allyObjects[numOfRandomAlly]);
 
             //Debug.Log($"攻撃する味方：{sm.nakama[i]}");
         } 
@@ -58,39 +58,39 @@ public class EnemyMovePhase : BattlePhaseBase
         for (int i = 0; i < sm.numOfEnemies; i++)
         {
             // 敵の攻撃によるダメージの計算をする
-            sm.enemies[sm.teki[i]].UseSkill(sm.allies[sm.nakama[i]], sm.skillNumber[i]);
+            sm.enemies[sm.numbersOfEnemyInAction[i]].UseSkill(sm.allies[sm.numbersOfAllyInAction[i]], sm.skillNumbers[i]);
 
 
-            moveOfEnemy[sm.teki[i]].SetSelfInfo(sm.tekiObject[i]);
-            moveOfAlly [sm.nakama[i]].SetTargetInfo(sm.nakamaObject[i]);
+            moveOfEnemy[sm.numbersOfEnemyInAction[i]].SetSelfInfo(sm.enemyObjectsInAction[i]);
+            moveOfAlly [sm.numbersOfAllyInAction[i]].SetTargetInfo(sm.allyObjectsInAction[i]);
 
-            moveOfEnemy[sm.teki[i]].executeAttackMove = true;
-            moveOfAlly[sm.nakama[i]].executeHurtMove = true;
+            moveOfEnemy[sm.numbersOfEnemyInAction[i]].executeAttackMove = true;
+            moveOfAlly[sm.numbersOfAllyInAction[i]].executeHurtMove = true;
 
-            yield return new WaitUntil(() => moveOfEnemy[sm.teki[i]].attackStart == true);
-            moveOfEnemy[sm.teki[i]].AttackAnimationStart();
+            yield return new WaitUntil(() => moveOfEnemy[sm.numbersOfEnemyInAction[i]].attackStart == true);
+            moveOfEnemy[sm.numbersOfEnemyInAction[i]].AttackAnimationStart(sm.skillNumbers[i]);
 
-            yield return new WaitUntil(() => moveOfEnemy[sm.teki[i]].attackEnd == true);
-            moveOfAlly[sm.nakama[i]].HurtAnimationStart();
+            yield return new WaitUntil(() => moveOfEnemy[sm.numbersOfEnemyInAction[i]].attackEnd == true);
+            moveOfAlly[sm.numbersOfAllyInAction[i]].HurtAnimationStart();
 
             // ステイタス表示系のUIを更新する
-            espCSP.refreshedCharacter = sm.teki[i];
+            espCSP.refreshedCharacter = sm.numbersOfEnemyInAction[i];
             espCSP.isEnemyTpRefleshed = true;
 
-            aspCSP.refreshedCharacter = sm.nakama[i];
+            aspCSP.refreshedCharacter = sm.numbersOfAllyInAction[i];
             aspCSP.isAllyHPRefleshed = true;
 
-            yield return new WaitUntil(() => moveOfAlly[sm.nakama[i]].hurtEnd == true);
-            moveOfEnemy[sm.teki[i]].executeAfterAttackMove = true;
-            moveOfAlly[sm.nakama[i]].executeAfterHurtMove = true;
+            yield return new WaitUntil(() => moveOfAlly[sm.numbersOfAllyInAction[i]].hurtEnd == true);
+            moveOfEnemy[sm.numbersOfEnemyInAction[i]].executeAfterAttackMove = true;
+            moveOfAlly[sm.numbersOfAllyInAction[i]].executeAfterHurtMove = true;
 
-            yield return new WaitUntil(() => moveOfAlly[sm.nakama[i]].end == true);
+            yield return new WaitUntil(() => moveOfAlly[sm.numbersOfAllyInAction[i]].end == true);
 
             yield return null;
-            moveOfEnemy[sm.teki[i]].end = false;
-            moveOfAlly[sm.nakama[i]].end = false;
-            moveOfEnemy[sm.teki[i]].self = null;
-            moveOfAlly[sm.nakama[i]].target = null;
+            moveOfEnemy[sm.numbersOfEnemyInAction[i]].end = false;
+            moveOfAlly[sm.numbersOfAllyInAction[i]].end = false;
+            moveOfEnemy[sm.numbersOfEnemyInAction[i]].self = null;
+            moveOfAlly[sm.numbersOfAllyInAction[i]].target = null;
         }
 
         nextPhase = new SecondCheckPhase();
