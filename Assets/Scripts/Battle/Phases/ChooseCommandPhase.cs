@@ -24,7 +24,7 @@ public class ChooseCommandPhase : BattlePhaseBase
         if (Input.GetKeyDown(KeyCode.Space))
         {
             // 現在のTPが必要TPより少なかったら選択できない
-            if (sm.allies[sm.numbersOfAllyInAction.Count - 1].currentTP < sm.allies[sm.numbersOfAllyInAction.Count - 1].skills[index].requiredTP)
+            if (sm.allies[sm.numbersOfAllyInAction[sm.numbersOfAllyInAction.Count-1]].currentTP < sm.allies[sm.numbersOfAllyInAction[sm.numbersOfAllyInAction.Count - 1]].skills[index].requiredTP)
             {
                 yield return null;
                 Debug.Log("aaa");

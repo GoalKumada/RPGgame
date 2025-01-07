@@ -97,6 +97,7 @@
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\FoldoutGroupAttribute.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\DisableIfAttribute.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HelpBoxIfAttribute.cs" />
+    <Compile Include="Assets\Scripts\Skills\SwordsmanSkills\HyperSlash.cs" />
     <Compile Include="Assets\Scripts\Skills\PriestSkills\LightMagic.cs" />
     <Compile Include="Assets\Scripts\SystemManager.cs" />
     <Compile Include="Assets\Scripts\Battle\Phases\StartPhase.cs" />
@@ -124,6 +125,7 @@
     <Compile Include="Assets\Scripts\Adventure\InTavern\SkillPanel.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\ValidateInputAttribute.cs" />
     <Compile Include="Assets\Scripts\Skills\Skill.cs" />
+    <Compile Include="Assets\Scripts\Skills\SwordsmanSkills\ContinuousThrust.cs" />
     <Compile Include="Assets\Imports\Low Poly Trim Sheet Asset Collection\DemoSceneAssets\DemoSceneScripts\DemoCameraMovement.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\AssetsOnlyAttribute.cs" />
     <Compile Include="Assets\Scripts\Character\Character.cs" />
@@ -140,7 +142,6 @@
     <Compile Include="Assets\Scripts\Battle\StatusUI\LifeGaugeContainer.cs" />
     <Compile Include="Assets\Scripts\Battle\Move.cs" />
     <Compile Include="Assets\Scripts\Item\Item.cs" />
-    <Compile Include="Assets\Scripts\Skills\SwordsmanSkills\SpinAttack.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\LabelWidthAttribute.cs" />
     <Compile Include="Assets\Scripts\Skills\WizardSkills\IceMagic.cs" />
     <Compile Include="Assets\Scripts\UI\Window\SelectableText.cs" />
@@ -155,7 +156,6 @@
     <Compile Include="Assets\Scripts\Adventure\InTown\SceneTransition\FromTownToDungeon.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\LabelTextAttribute.cs" />
     <Compile Include="Assets\Scripts\Skills\ArcherSkills\DoubleShot.cs" />
-    <Compile Include="Assets\Scripts\Skills\SwordsmanSkills\DoubleAttack.cs" />
     <Compile Include="Assets\Scripts\Battle\Phases\ChooseCommandPhase.cs" />
     <Compile Include="Assets\Scripts\Adventure\InTown\SceneTransition\FromTavernToTown.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\OnValueChangedAttribute.cs" />

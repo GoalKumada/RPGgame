@@ -7,10 +7,10 @@ public class Slash : Skill
 {
     public Slash()
     {
-        skillName = "スラッシュ";
+        skillName = "切り上げ";
         attackPower = 10;
         type = Type.attack;
         requiredTP = 0;
-        skillExplain = "敵を切りつける技\r\nＴＰ消費０";
+        skillExplain = "剣を振り上げ敵を切りつける技\r\nＴＰ消費０";
     }
 }

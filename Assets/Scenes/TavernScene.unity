@@ -2296,11 +2296,11 @@ GameObject:
   m_Component:
   - component: {fileID: 286143804}
   - component: {fileID: 286143805}
-  - component: {fileID: 286143807}
-  - component: {fileID: 286143806}
   - component: {fileID: 286143808}
   - component: {fileID: 286143810}
   - component: {fileID: 286143809}
+  - component: {fileID: 286143812}
+  - component: {fileID: 286143811}
   m_Layer: 0
   m_Name: SwordsmanVeteran
   m_TagString: Untagged
@@ -2345,47 +2345,13 @@ MonoBehaviour:
   DEF: 60
   currentDEF: 60
   skills:
-  - {fileID: 286143807}
-  - {fileID: 286143806}
+  - {fileID: 286143812}
+  - {fileID: 286143811}
   SPEED: 30
   currentSPEED: 30
   moneyNeeded: 1000
   isEmployed: 0
   isEntrusted: 0
---- !u!114 &286143806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 286143803}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26608363abf0f8b4fae82c80eded1bed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillName: "\u30C0\u30D6\u30EB\u30A2\u30BF\u30C3\u30AF"
-  attackPower: 20
-  requiredTP: 2
-  type: 0
-  skillExplain: "\u6575\u3092\u7D20\u65E9\u304F\uFF12\u56DE\u5207\u308B\u3064\u3051\u308B\r\n\u6D88\u8CBB\uFF2D\uFF30\uFF12"
---- !u!114 &286143807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 286143803}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d06298980d87094baf3dc3dfbbbae70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillName: "\u30B9\u30E9\u30C3\u30B7\u30E5"
-  attackPower: 10
-  requiredTP: 0
-  type: 0
-  skillExplain: "\u6575\u3092\u5207\u308A\u3064\u3051\u308B\u6280\r\nTP\u6D88\u8CBB\uFF10"
 --- !u!212 &286143808
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2486,6 +2452,40 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &286143811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286143803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26608363abf0f8b4fae82c80eded1bed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u9023\u7D9A\u7A81\u304D"
+  attackPower: 20
+  requiredTP: 2
+  type: 0
+  skillExplain: "\u6575\u3092\u7D20\u65E9\u304F\u9023\u7D9A\u3067\u5207\u308B\u3064\u3051\u308B\r\n\u6D88\u8CBB\uFF34\uFF30\uFF12"
+--- !u!114 &286143812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286143803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d06298980d87094baf3dc3dfbbbae70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u5207\u308A\u4E0A\u3052"
+  attackPower: 10
+  requiredTP: 0
+  type: 0
+  skillExplain: "\u5263\u3092\u632F\u308A\u4E0A\u3052\u6575\u3092\u5207\u308A\u3064\u3051\u308B\u6280\r\n\uFF34\uFF30\u6D88\u8CBB\uFF10"
 --- !u!1 &296004690
 GameObject:
   m_ObjectHideFlags: 0
@@ -9155,10 +9155,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1237356187}
   - component: {fileID: 1237356193}
-  - component: {fileID: 1237356189}
   - component: {fileID: 1237356190}
   - component: {fileID: 1237356192}
   - component: {fileID: 1237356191}
+  - component: {fileID: 1237356194}
   m_Layer: 0
   m_Name: SwordsmanRookie
   m_TagString: Untagged
@@ -9181,23 +9181,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1725406762}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1237356189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1237356186}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d06298980d87094baf3dc3dfbbbae70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillName: "\u30B9\u30E9\u30C3\u30B7\u30E5"
-  attackPower: 10
-  requiredTP: 0
-  type: 0
-  skillExplain: "\u6575\u3092\u5207\u308A\u3064\u3051\u308B\u6280\r\nTP\u6D88\u8CBB\uFF10"
 --- !u!212 &1237356190
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9320,12 +9303,29 @@ MonoBehaviour:
   DEF: 20
   currentDEF: 20
   skills:
-  - {fileID: 1237356189}
+  - {fileID: 1237356194}
   SPEED: 25
   currentSPEED: 25
   moneyNeeded: 300
   isEmployed: 0
   isEntrusted: 0
+--- !u!114 &1237356194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237356186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d06298980d87094baf3dc3dfbbbae70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u5207\u308A\u4E0A\u3052"
+  attackPower: 10
+  requiredTP: 0
+  type: 0
+  skillExplain: "\u5263\u3092\u632F\u308A\u4E0A\u3052\u6575\u3092\u5207\u308A\u3064\u3051\u308B\u6280\r\n\uFF34\uFF30\u6D88\u8CBB\uFF10"
 --- !u!1 &1241163980
 GameObject:
   m_ObjectHideFlags: 0
@@ -9689,12 +9689,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1290656592}
   - component: {fileID: 1290656593}
-  - component: {fileID: 1290656596}
-  - component: {fileID: 1290656595}
   - component: {fileID: 1290656594}
   - component: {fileID: 1290656597}
   - component: {fileID: 1290656599}
   - component: {fileID: 1290656598}
+  - component: {fileID: 1290656602}
+  - component: {fileID: 1290656601}
+  - component: {fileID: 1290656600}
   m_Layer: 0
   m_Name: SwordsmanLegendary
   m_TagString: Untagged
@@ -9739,9 +9740,9 @@ MonoBehaviour:
   DEF: 60
   currentDEF: 60
   skills:
-  - {fileID: 1290656596}
-  - {fileID: 1290656595}
-  - {fileID: 1290656594}
+  - {fileID: 1290656602}
+  - {fileID: 1290656601}
+  - {fileID: 1290656600}
   SPEED: 35
   currentSPEED: 35
   moneyNeeded: 2000
@@ -9764,40 +9765,6 @@ MonoBehaviour:
   requiredTP: 5
   type: 0
   skillExplain: "\u56DE\u8EE2\u3057\u306A\u304C\u3089\u5F37\u304F\u6575\u3092\u5207\u308A\u4F0F\u305B\u308B\u5FC5\u6BBA\u6280\r\n\u6D88\u8CBBTP\uFF15"
---- !u!114 &1290656595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1290656591}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26608363abf0f8b4fae82c80eded1bed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillName: "\u30C0\u30D6\u30EB\u30A2\u30BF\u30C3\u30AF"
-  attackPower: 20
-  requiredTP: 2
-  type: 0
-  skillExplain: "\u6575\u3092\u7D20\u65E9\u304F\uFF12\u56DE\u5207\u308B\u3064\u3051\u308B\r\n\u6D88\u8CBB\uFF2D\uFF30\uFF12"
---- !u!114 &1290656596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1290656591}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d06298980d87094baf3dc3dfbbbae70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillName: "\u30B9\u30E9\u30C3\u30B7\u30E5"
-  attackPower: 10
-  requiredTP: 0
-  type: 0
-  skillExplain: "\u6575\u3092\u5207\u308A\u3064\u3051\u308B\u6280\r\nTP\u6D88\u8CBB\uFF10"
 --- !u!212 &1290656597
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9898,6 +9865,57 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1290656600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290656591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f39220b4c488c946bdcdb30cf958855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u7F85\u5239\u65AC"
+  attackPower: 30
+  requiredTP: 5
+  type: 0
+  skillExplain: "\u4E00\u77AC\u306E\u3046\u3061\u306B\u6575\u3092\u5207\u308A\u4F0F\u305B\u308B\u7A76\u6975\u306E\u6280\r\n\u6D88\u8CBB\uFF34\uFF30\uFF15"
+--- !u!114 &1290656601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290656591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26608363abf0f8b4fae82c80eded1bed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u9023\u7D9A\u7A81\u304D"
+  attackPower: 20
+  requiredTP: 2
+  type: 0
+  skillExplain: "\u6575\u3092\u7D20\u65E9\u304F\u9023\u7D9A\u3067\u5207\u308B\u3064\u3051\u308B\r\n\u6D88\u8CBB\uFF34\uFF30\uFF12"
+--- !u!114 &1290656602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290656591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d06298980d87094baf3dc3dfbbbae70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u5207\u308A\u4E0A\u3052"
+  attackPower: 10
+  requiredTP: 0
+  type: 0
+  skillExplain: "\u5263\u3092\u632F\u308A\u4E0A\u3052\u6575\u3092\u5207\u308A\u3064\u3051\u308B\u6280\r\n\uFF34\uFF30\u6D88\u8CBB\uFF10"
 --- !u!1 &1300305892
 GameObject:
   m_ObjectHideFlags: 0

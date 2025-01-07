@@ -79,7 +79,7 @@ public class Move : MonoBehaviour
 
     public void OnAttackEnd()
     {
-        Debug.Log(gameObject.GetComponent<Character>().characterName);
+        //Debug.Log(gameObject.GetComponent<Character>().characterName);
         attackEnd = true;
         attackStart = false;
     }
@@ -211,6 +211,7 @@ public class Move : MonoBehaviour
 
     public void AttackAnimationStart(int skillnumber)
     {
+        //Debug.Log("AttackAnimationStart");
         animator.SetTrigger($"Attack{skillnumber}");
     }
 
