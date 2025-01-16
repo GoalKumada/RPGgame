@@ -2655,7 +2655,7 @@ Animator:
   m_GameObject: {fileID: 296004690}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e69f914e914227d448dab8aa6e977576, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3862,7 +3862,7 @@ Animator:
   m_GameObject: {fileID: 455496198}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e69b6c5534cb1714986216f134e696a7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -4995,20 +4995,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: "\u30AA\u30EB\u30AC"
-  currentHP: 0
+  currentHP: 210
   maxHP: 210
-  currentTP: 0
+  currentTP: 210
   maxTP: 210
   ATK: 150
-  currentATK: 0
+  currentATK: 150
   DEF: 150
-  currentDEF: 0
+  currentDEF: 150
   skills:
   - {fileID: 594188012}
   - {fileID: 594188011}
   - {fileID: 594188010}
   SPEED: 40
-  currentSPEED: 0
+  currentSPEED: 40
   moneyNeeded: 2000
   isEmployed: 0
   isEntrusted: 0
@@ -5151,7 +5151,7 @@ Animator:
   m_GameObject: {fileID: 594188007}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 10f5933c37aa414459ca80c64772ef64, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -5370,7 +5370,7 @@ Animator:
   m_GameObject: {fileID: 603216197}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 26e560323a555d2458321de5a78370d4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -6500,7 +6500,7 @@ Animator:
   m_GameObject: {fileID: 770756714}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e69f914e914227d448dab8aa6e977576, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -11882,7 +11882,7 @@ Animator:
   m_GameObject: {fileID: 1423847026}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 26e560323a555d2458321de5a78370d4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -12443,7 +12443,7 @@ Animator:
   m_GameObject: {fileID: 1469604602}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e69b6c5534cb1714986216f134e696a7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -13884,7 +13884,7 @@ Animator:
   m_GameObject: {fileID: 1752067115}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 10f5933c37aa414459ca80c64772ef64, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -14794,7 +14794,7 @@ Animator:
   m_GameObject: {fileID: 1850739014}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 26e560323a555d2458321de5a78370d4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -15679,7 +15679,7 @@ Animator:
   m_GameObject: {fileID: 1945713062}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 10f5933c37aa414459ca80c64772ef64, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -15879,7 +15879,7 @@ Animator:
   m_GameObject: {fileID: 1979076360}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e69b6c5534cb1714986216f134e696a7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -16604,7 +16604,7 @@ GameObject:
   - component: {fileID: 2086616883}
   - component: {fileID: 2086616886}
   - component: {fileID: 2086616885}
-  - component: {fileID: 2086616887}
+  - component: {fileID: 2086616891}
   - component: {fileID: 2086616888}
   - component: {fileID: 2086616890}
   - component: {fileID: 2086616889}
@@ -16654,7 +16654,7 @@ MonoBehaviour:
   skills:
   - {fileID: 2086616886}
   - {fileID: 2086616885}
-  - {fileID: 2086616887}
+  - {fileID: 2086616891}
   SPEED: 25
   currentSPEED: 25
   moneyNeeded: 2000
@@ -16694,23 +16694,6 @@ MonoBehaviour:
   requiredTP: 0
   type: 0
   skillExplain: "\u524D\u65B9\u306E\u6575\u3092\u7A81\u304D\u523A\u3059\r\n\u6D88\u8CBB\uFF34\uFF30\uFF10"
---- !u!114 &2086616887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2086616881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbfa43fc3b572f844ae8a70d6c528638, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillName: "\u30B7\u30FC\u30EB\u30C9\u30A2\u30BF\u30C3\u30AF"
-  attackPower: 30
-  requiredTP: 5
-  type: 0
-  skillExplain: "\u76FE\u3067\u6575\u3092\u5730\u9762\u306B\u305F\u305F\u304D\u3064\u3051\u308B\u5927\u6280\r\n\uFF34\uFF30\u6D88\u8CBB\uFF15"
 --- !u!212 &2086616888
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16799,7 +16782,7 @@ Animator:
   m_GameObject: {fileID: 2086616881}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e69f914e914227d448dab8aa6e977576, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -16811,6 +16794,23 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2086616891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086616881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbfa43fc3b572f844ae8a70d6c528638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u8599\u304E\u53E9\u304D"
+  attackPower: 30
+  requiredTP: 5
+  type: 0
+  skillExplain: "\u69CD\u3067\u6575\u3092\u5730\u9762\u306B\u305F\u305F\u304D\u3064\u3051\u308B\u5927\u6280\r\n\uFF34\uFF30\u6D88\u8CBB\uFF15"
 --- !u!1 &2132255232
 GameObject:
   m_ObjectHideFlags: 0
