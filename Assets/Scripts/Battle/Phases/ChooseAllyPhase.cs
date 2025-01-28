@@ -20,8 +20,7 @@ public class ChooseAllyPhase : BattlePhaseBase
         battleContext.chooseAllyWindowMenu.Close();
         battleContext.chooseAllyWindowMenu.DeleteSelectableTexts();
 
-        GameObject gobj = GameObject.Find("BattleSystemManager");
-        BattleSystemManager sm = gobj.GetComponent<BattleSystemManager>();
+        BattleSystemManager sm = GetBattleSystemManager();
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -30,7 +29,7 @@ public class ChooseAllyPhase : BattlePhaseBase
 
             nextPhase = new ChooseCommandPhase();
             battleContext.textWindow.isChooseComandPhase = true;
-            battleContext.chooseCommandWindowMenu.CreateSelectableTexts(sm.allies[index].GetStringsOfSkills());
+            battleContext.chooseCommandWindowMenu.CreateSelectableTexts(sm.allies[index].GetSkillStrings());
             battleContext.chooseCommandWindowMenu.Open();
         }
         else

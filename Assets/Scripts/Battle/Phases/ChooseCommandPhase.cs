@@ -18,8 +18,7 @@ public class ChooseCommandPhase : BattlePhaseBase
         battleContext.chooseCommandWindowMenu.DeleteSelectableTexts();
         battleContext.textWindow.isChooseComandPhase = false;
 
-        GameObject gobj = GameObject.Find("BattleSystemManager");
-        BattleSystemManager sm = gobj.GetComponent<BattleSystemManager>();
+        BattleSystemManager sm = GetBattleSystemManager();
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -27,13 +26,12 @@ public class ChooseCommandPhase : BattlePhaseBase
             if (sm.allies[sm.numbersOfAllyInAction[sm.numbersOfAllyInAction.Count-1]].currentTP < sm.allies[sm.numbersOfAllyInAction[sm.numbersOfAllyInAction.Count - 1]].skills[index].requiredTP)
             {
                 yield return null;
-                Debug.Log("aaa");
                 battleContext.textWindow.isChooseComandPhase = false;
                 battleContext.textWindow.CreateDialogueText(dialogue);
                 
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
 
-                battleContext.chooseCommandWindowMenu.CreateSelectableTexts(sm.allies[sm.numbersOfAllyInAction.Count-1].GetStringsOfSkills());
+                battleContext.chooseCommandWindowMenu.CreateSelectableTexts(sm.allies[sm.numbersOfAllyInAction.Count-1].GetSkillStrings());
                 battleContext.chooseCommandWindowMenu.Open();
                 battleContext.textWindow.isChooseComandPhase = true;
 

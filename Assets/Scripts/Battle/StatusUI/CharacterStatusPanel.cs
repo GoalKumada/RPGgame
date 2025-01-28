@@ -10,8 +10,9 @@ public class CharacterStatusPanel : MonoBehaviour
     public bool isAllyHPRefleshed = false; 
     public bool isAllyTpRefleshed = false;
     public bool isEnemyHpRefleshed = false; 
-    public bool isEnemyTpRefleshed = false; 
-    public int refreshedCharacter;
+    public bool isEnemyTpRefleshed = false;
+    public int refreshedStatusPanelNum;
+    public int refreshedCharacterNum;
     BattleSystemManager sm;
 
     private void Start()
@@ -48,29 +49,29 @@ public class CharacterStatusPanel : MonoBehaviour
     {
         if (isAllyHPRefleshed)
         {
-            characterStatuses[refreshedCharacter].SetValueOfHP(sm.allies[refreshedCharacter]);
-            characterStatuses[refreshedCharacter].RefreshGaugeOfHP(sm.allies[refreshedCharacter]);
+            characterStatuses[refreshedStatusPanelNum].SetValueOfHP(sm.allies[refreshedCharacterNum]);
+            characterStatuses[refreshedStatusPanelNum].RefreshGaugeOfHP(sm.allies[refreshedCharacterNum]);
             isAllyHPRefleshed = false;
         }
 
         if (isAllyTpRefleshed)
         {
-            characterStatuses[refreshedCharacter].SetValueOfTP(sm.allies[refreshedCharacter]);
-            characterStatuses[refreshedCharacter].RefreshGaugeOfTP(sm.allies[refreshedCharacter]);
+            characterStatuses[refreshedStatusPanelNum].SetValueOfTP(sm.allies[refreshedCharacterNum]);
+            characterStatuses[refreshedStatusPanelNum].RefreshGaugeOfTP(sm.allies[refreshedCharacterNum]);
             isAllyTpRefleshed = false;
         }
 
         if (isEnemyHpRefleshed)
         {
-            characterStatuses[refreshedCharacter].SetValueOfHP(sm.enemies[refreshedCharacter]);
-            characterStatuses[refreshedCharacter].RefreshGaugeOfHP(sm.enemies[refreshedCharacter]);
+            characterStatuses[refreshedStatusPanelNum].SetValueOfHP(sm.enemies[refreshedCharacterNum]);
+            characterStatuses[refreshedStatusPanelNum].RefreshGaugeOfHP(sm.enemies[refreshedCharacterNum]);
             isEnemyHpRefleshed = false;
         }
 
         if (isEnemyTpRefleshed)
         {
-            characterStatuses[refreshedCharacter].SetValueOfTP(sm.enemies[refreshedCharacter]);
-            characterStatuses[refreshedCharacter].RefreshGaugeOfTP(sm.enemies[refreshedCharacter]);
+            characterStatuses[refreshedStatusPanelNum].SetValueOfTP(sm.enemies[refreshedCharacterNum]);
+            characterStatuses[refreshedStatusPanelNum].RefreshGaugeOfTP(sm.enemies[refreshedCharacterNum]);
             isEnemyTpRefleshed = false;
         }
     }

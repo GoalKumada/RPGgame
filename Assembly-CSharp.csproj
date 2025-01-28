@@ -84,6 +84,7 @@
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\GroupAttribute.cs" />
     <Compile Include="Assets\Scripts\Item\Weapon.cs" />
     <Compile Include="Assets\Scripts\Battle\Phases\ChooseEnemyPhase.cs" />
+    <Compile Include="Assets\Scripts\Skills\SlimeSkills\SlashAttack.cs" />
     <Compile Include="Assets\Scripts\Battle\Phases\ChooseRunOrBattlePhase.cs" />
     <Compile Include="Assets\Scripts\Battle\BattleManager.cs" />
     <Compile Include="Assets\Scripts\ToDoList.cs" />
@@ -150,6 +151,7 @@
     <Compile Include="Assets\Scripts\Adventure\InDungeon\SceneTransition\ToBattle.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Enum.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\PropertyOrderAttribute.cs" />
+    <Compile Include="Assets\Scripts\Skills\SlimeSkills\StabAttack.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\RequiredAttribute.cs" />
     <Compile Include="Assets\Imports\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HorizontalGroupAttribute.cs" />
     <Compile Include="Assets\Scripts\Skills\KnightSkills\SweepSlam.cs" />

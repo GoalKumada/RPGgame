@@ -12,53 +12,55 @@ public class AllyMovePhase : BattlePhaseBase
         Debug.Log("AllyMovePhase");
         battleContext.textWindow.CreateDialogueText(dialogue);
 
-        GameObject gobj = GameObject.Find("BattleSystemManager");
-        BattleSystemManager sm = gobj.GetComponent<BattleSystemManager>();
+        BattleSystemManager sm = GetBattleSystemManager();
+        CharacterStatusPanel allysCharacterStatusPanel = GetCharacterStatusPanel("AllyStatusPanel");
+        CharacterStatusPanel enemysCharacterStatusPanel = GetCharacterStatusPanel("EnemyStatusPanel");
 
-        GameObject allyStatusPanel = GameObject.Find("AllyStatusPanel");
-        CharacterStatusPanel aspCSP = allyStatusPanel.GetComponent<CharacterStatusPanel>();
-
-        GameObject enemyStatusPanel = GameObject.Find("EnemyStatusPanel");
-        CharacterStatusPanel espCSP = enemyStatusPanel.GetComponent<CharacterStatusPanel>();
 
         // 味方の動きのアニメーションを制御するコード
         for (int i = 0; i < sm.numOfAllies; i++)
         {
-            // 味方の攻撃によるダメージの計算をする
-            sm.allies[sm.numbersOfAllyInAction[i]].UseSkill(sm.enemies[sm.numbersOfEnemyInAction[i]], sm.skillNumbers[i]);
+            //冗長になるため短い名前の変数に収納
+            int allyNumber = sm.numbersOfAllyInAction[i];
+            int enemyNumber = sm.numbersOfEnemyInAction[i];
 
-            moveOfAlly[sm.numbersOfAllyInAction[i]].SetSelfInfo(sm.allyObjectsInAction[i]);
-            moveOfEnemy[sm.numbersOfEnemyInAction[i]].SetTargetInfo(sm.enemyObjectsInAction[i]);
+            //内部的な計算はここで行う
+            string damageDialogue = sm.allies[allyNumber].UseSkill(sm.enemies[enemyNumber], sm.skillNumbers[i]);
 
-            moveOfAlly[sm.numbersOfAllyInAction[i]].executeAttackMove = true;
-            moveOfEnemy[sm.numbersOfEnemyInAction[i]].executeHurtMove = true;
+            moveOfAlly[allyNumber].SetSelfInfo(sm.allyObjectsInAction[i]);
+            moveOfEnemy[enemyNumber].SetTargetInfo(sm.enemyObjectsInAction[i]);
 
-            yield return new WaitUntil(() => moveOfAlly[sm.numbersOfAllyInAction[i]].attackStart == true);
-            moveOfAlly[sm.numbersOfAllyInAction[i]].AttackAnimationStart(sm.skillNumbers[i]);
+            moveOfAlly[allyNumber].executeAttackMove = true;
+            moveOfEnemy[enemyNumber].executeHurtMove = true;
 
-            Debug.Log("aaa");
+            battleContext.textWindow.CreateDialogueText(damageDialogue);
 
-            yield return new WaitUntil(() => moveOfAlly[sm.numbersOfAllyInAction[i]].attackEnd == true);
-            moveOfEnemy[sm.numbersOfEnemyInAction[i]].HurtAnimationStart();
+            yield return new WaitUntil(() => moveOfAlly[allyNumber].attackStart == true);
+            moveOfAlly[allyNumber].AttackAnimationStart(sm.skillNumbers[i]);
+
+            yield return new WaitUntil(() => moveOfAlly[allyNumber].attackEnd == true);
+            moveOfEnemy[enemyNumber].HurtAnimationStart();
 
             // ステイタス表示系のUIを更新する
-            aspCSP.refreshedCharacter = sm.numbersOfAllyInAction[i];
-            aspCSP.isAllyTpRefleshed = true;
+            allysCharacterStatusPanel.refreshedStatusPanelNum = ;
+            allysCharacterStatusPanel.refreshedCharacterNum = allyNumber;
+            allysCharacterStatusPanel.isAllyTpRefleshed = true;
 
-            espCSP.refreshedCharacter = sm.numbersOfEnemyInAction[i];
-            espCSP.isEnemyHpRefleshed = true;
+            enemysCharacterStatusPanel.refreshedStatusPanelNum = ;
+            enemysCharacterStatusPanel.refreshedCharacterNum = enemyNumber;
+            enemysCharacterStatusPanel.isEnemyHpRefleshed = true;
 
-            yield return new WaitUntil(() => moveOfEnemy[sm.numbersOfEnemyInAction[i]].hurtEnd == true);
+            yield return new WaitUntil(() => moveOfEnemy[enemyNumber].hurtEnd == true);
             moveOfAlly[sm.numbersOfAllyInAction[i]].executeAfterAttackMove = true;
-            moveOfEnemy[sm.numbersOfEnemyInAction[i]].executeAfterHurtMove = true;
+            moveOfEnemy[enemyNumber].executeAfterHurtMove = true;
 
-            yield return new WaitUntil(() => moveOfEnemy[sm.numbersOfEnemyInAction[i]].end == true);
+            yield return new WaitUntil(() => moveOfEnemy[enemyNumber].end == true);
 
             yield return null;
-            moveOfAlly[sm.numbersOfAllyInAction[i]].end = false;
-            moveOfEnemy[sm.numbersOfEnemyInAction[i]].end = false;
-            moveOfAlly[sm.numbersOfAllyInAction[i]].self = null;
-            moveOfEnemy[sm.numbersOfEnemyInAction[i]].target = null;
+            moveOfAlly[allyNumber].end = false;
+            moveOfEnemy[enemyNumber].end = false;
+            moveOfAlly[allyNumber].self = null;
+            moveOfEnemy[enemyNumber].target = null;
         }
 
         nextPhase = new FirstCheckPhase();

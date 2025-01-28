@@ -9,12 +9,10 @@ public class FirstCheckPhase : BattlePhaseBase
     {
         yield return null;
 
-        GameObject obj = GameObject.Find("BattleManager");
-        BattleManager bm = obj.GetComponent<BattleManager>();
-        
-        GameObject gobj = GameObject.Find("BattleSystemManager");
-        BattleSystemManager sm = gobj.GetComponent<BattleSystemManager>();
+        BattleManager bm = GetBattleManager();
+        BattleSystemManager sm = GetBattleSystemManager();
 
+        //敵のListの後ろから順に死んでいるかどうかチェック
         int count = 0;
         for (int i = sm.numOfEnemies-1; i >= 0; i--)
         {
@@ -24,17 +22,14 @@ public class FirstCheckPhase : BattlePhaseBase
                 animator.SetBool("Death_Idle", true);
                 bm.moveOfEnemy.RemoveAt(i);
                 sm.enemies.RemoveAt(i);
+                sm.enemyObjects.RemoveAt(i);
                 count++;
             }
         }
         sm.numOfEnemies -= count;
 
-        //Debug.Log(sm.numOfEnemies);
-
         if (sm.numOfEnemies > 0)
         {
-            nextPhase = new EnemyMovePhase();
-            
             // 味方の行動に関する情報をクリア
             sm.numbersOfAllyInAction.Clear();
             sm.allyObjectsInAction.Clear();
@@ -42,6 +37,8 @@ public class FirstCheckPhase : BattlePhaseBase
             sm.numbersOfEnemyInAction.Clear();
             sm.enemyObjectsInAction.Clear();
             sm.currentLoops = 0;
+            
+            nextPhase = new EnemyMovePhase();
         }
         else
         {

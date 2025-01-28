@@ -8,12 +8,10 @@ public class SecondCheckPhase : BattlePhaseBase
     {
         yield return null;
 
-        GameObject obj = GameObject.Find("BattleManager");
-        BattleManager bm = obj.GetComponent<BattleManager>();
+        BattleManager bm = GetBattleManager();
+        BattleSystemManager sm = GetBattleSystemManager();
 
-        GameObject gobj = GameObject.Find("BattleSystemManager");
-        BattleSystemManager sm = gobj.GetComponent<BattleSystemManager>();
-
+        //味方のListの後ろから順に死んでいるかどうかチェック
         int count = 0;
         for (int i = sm.numOfAllies - 1; i >= 0; i--)
         {
@@ -23,12 +21,11 @@ public class SecondCheckPhase : BattlePhaseBase
                 animator.SetBool("Death_Idle", true);
                 bm.moveOfAlly.RemoveAt(i);
                 sm.allies.RemoveAt(i);
+                sm.allyObjects.RemoveAt(i);
                 count++;
             }
         }
         sm.numOfAllies -= count;
-
-        //Debug.Log(sm.numOfAllies);
 
         if (sm.numOfAllies > 0)
         {

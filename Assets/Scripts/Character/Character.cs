@@ -19,12 +19,8 @@ public class Character : MonoBehaviour
     [SerializeField] public float currentDEF;
     [SerializeField] public Skill[] skills;
 
-    private void Awake()
-    {
-        
-    }
-
-    public string[] GetStringsOfSkills()
+    
+    public string[] GetSkillStrings()
     {
         List<string> list = new List<string>();
         foreach (Skill skill in skills)
@@ -35,36 +31,19 @@ public class Character : MonoBehaviour
         return list.ToArray();
     }
 
-    /*
-    public void Attack(Character target, int skillNumber)
-    {
-        int damage = 5;
-        target.currentHP -= damage;
-        Debug.Log($"{characterName}の攻撃！ {target.characterName}に{damage}のダメージ");
-        if (target.currentHP > 0)
-        {
-            Debug.Log($"{target.characterName}の残りHPは{target.currentHP}。");
-        }
-        else
-        {
-            Debug.Log($"{target.characterName}を倒した！");
-        }
-    }
-    */
 
-    public void UseSkill(Character target, int skillNumber)
+    public string UseSkill(Character target, int skillNumber)
     {
         target.currentHP -= skills[skillNumber].attackPower;
         currentTP -= skills[skillNumber].requiredTP;
+
+        string dialog = $"{characterName}の{skills[skillNumber].skillName}! {target.characterName}に{skills[skillNumber].attackPower}のダメージ";
         
-        Debug.Log($"{characterName}の{skills[skillNumber].skillName}! {target.characterName}に{skills[skillNumber].attackPower}のダメージ");
-        if (target.currentHP > 0)
+        if (target.currentHP < 0)
         {
-            Debug.Log($"{target.characterName}の残りHPは{target.currentHP}。");
+            target.currentHP = 0;
         }
-        else
-        {
-            Debug.Log($"{target.characterName}を倒した！");
-        }
+
+        return dialog;
     }
 }

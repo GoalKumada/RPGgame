@@ -485,6 +485,8 @@
 "Assets/Scripts/Skills/PriestSkills/LightMagic.cs"
 "Assets/Scripts/Skills/PriestSkills/SlamAttack.cs"
 "Assets/Scripts/Skills/Skill.cs"
+"Assets/Scripts/Skills/SlimeSkills/SlashAttack.cs"
+"Assets/Scripts/Skills/SlimeSkills/StabAttack.cs"
 "Assets/Scripts/Skills/SwordsmanSkills/ContinuousThrust.cs"
 "Assets/Scripts/Skills/SwordsmanSkills/HyperSlash.cs"
 "Assets/Scripts/Skills/SwordsmanSkills/Slash.cs"

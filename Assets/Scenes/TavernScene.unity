@@ -2336,8 +2336,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: "\u30EA\u30F3\u30C0"
-  currentHP: 150
-  maxHP: 150
+  currentHP: 10
+  maxHP: 10
   currentTP: 45
   maxTP: 45
   ATK: 120
@@ -9294,8 +9294,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: "\u30B5\u30E9"
-  currentHP: 50
-  maxHP: 50
+  currentHP: 10
+  maxHP: 10
   currentTP: 15
   maxTP: 15
   ATK: 40
@@ -9731,8 +9731,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: "\u30A8\u30E9\u30A4\u30B6"
-  currentHP: 300
-  maxHP: 300
+  currentHP: 10
+  maxHP: 10
   currentTP: 90
   maxTP: 90
   ATK: 240
