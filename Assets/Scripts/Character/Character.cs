@@ -17,6 +17,9 @@ public class Character : MonoBehaviour
     [SerializeField] public float currentATK;
     [SerializeField] public float DEF;
     [SerializeField] public float currentDEF;
+
+    [SerializeField] public bool isDead;
+
     [SerializeField] public Skill[] skills;
 
     

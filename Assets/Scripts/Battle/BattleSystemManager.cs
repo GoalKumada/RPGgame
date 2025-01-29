@@ -17,23 +17,26 @@ public class BattleSystemManager : MonoBehaviour
     public List<int> skillNumbers = new List<int>();
     public List<GameObject> allyObjectsInAction = new List<GameObject>();
     public List<GameObject> enemyObjectsInAction = new List<GameObject>();
-    public int numOfAllies;
-    public int numOfEnemies;
+
+    public int numOfDeadAllies;
+    public int numOfDeadEnemies;
     public int currentLoops = 0;
+
+    public bool isCleared;
+    public bool isEscaped;
+    public bool isDefeated;
 
     private float distance = 0.5f; // 立ち位置調整用
 
 
     private void Awake()
     {
-        InstantiateAllyObject();
-        numOfAllies = allies.Count;
-        numOfEnemies = enemies.Count;
+        InstantiateAllyObjects();
     }
 
     private void Start()
     {
-
+        CheckAllyIsDead();
     }
 
     private void Update()
@@ -64,13 +67,12 @@ public class BattleSystemManager : MonoBehaviour
     }
 
     
-    // なかまの数だけオブジェクトをインスタンス化
-    public void InstantiateAllyObject()
+    public void InstantiateAllyObjects()
     {
         GameObject gameObject = GameObject.Find("BattleManager");
         BattleManager battleManager = gameObject.GetComponent<BattleManager>();
 
-        for (int i = 0; i < SystemManager.allyComponentsOfCurrentPartyMember.Count; i++)
+        for (int i = 0; i < SystemManager.allyComponents.Count; i++)
         {
             GameObject allyObject = Instantiate(allyObjectPrefab);
             
@@ -89,45 +91,44 @@ public class BattleSystemManager : MonoBehaviour
             Animator animator = allyObject.GetComponent<Animator>();
             SetAllyContext(spriteRenderer,animator,i);
 
-            SetAllySkill(allyObject, i);
+            SetAllySkills(allyObject, i);
 
             allyObjects.Add(allyObject);
         }
     }
 
     // なかまのステイタスなどの情報をオブジェクトに渡して、
-    // battlesystemmanagerのリストに追加
+    // BattleSystemManagerのリストに追加
     public void SetAllyStatus(Ally ally, int i)
     {
-        ally.characterName = SystemManager.allyComponentsOfCurrentPartyMember[i].characterName;
-        ally.maxHP = SystemManager.allyComponentsOfCurrentPartyMember[i].maxHP;
-        ally.currentHP = SystemManager.allyComponentsOfCurrentPartyMember[i].currentHP;
-        ally.maxTP = SystemManager.allyComponentsOfCurrentPartyMember[i].maxTP;
-        ally.currentTP = SystemManager.allyComponentsOfCurrentPartyMember[i].currentTP;
-        ally.ATK = SystemManager.allyComponentsOfCurrentPartyMember[i].ATK;
-        ally.currentATK = SystemManager.allyComponentsOfCurrentPartyMember[i].currentATK;
-        ally.DEF = SystemManager.allyComponentsOfCurrentPartyMember[i].DEF;
-        ally.currentDEF = SystemManager.allyComponentsOfCurrentPartyMember[i].currentDEF;
-        ally.SPEED = SystemManager.allyComponentsOfCurrentPartyMember[i].SPEED;
-        ally.currentSPEED = SystemManager.allyComponentsOfCurrentPartyMember[i].currentSPEED;
-        ally.skills = new Skill[SystemManager.allyComponentsOfCurrentPartyMember[i].skills.Length];
-
+        ally.characterName =    SystemManager.allyComponents[i].characterName;
+        ally.maxHP =            SystemManager.allyComponents[i].maxHP;
+        ally.currentHP =        SystemManager.allyComponents[i].currentHP;
+        ally.maxTP =            SystemManager.allyComponents[i].maxTP;
+        ally.currentTP =        SystemManager.allyComponents[i].currentTP;
+        ally.ATK =              SystemManager.allyComponents[i].ATK;
+        ally.currentATK =       SystemManager.allyComponents[i].currentATK;
+        ally.DEF =              SystemManager.allyComponents[i].DEF;
+        ally.currentDEF =       SystemManager.allyComponents[i].currentDEF;
+        ally.SPEED =            SystemManager.allyComponents[i].SPEED;
+        ally.currentSPEED =     SystemManager.allyComponents[i].currentSPEED;
+        ally.skills = new Skill[SystemManager.allyComponents[i].skills.Length];
+        ally.isDead =           SystemManager.allyComponents[i].isDead;
         allies.Add(ally);
     }
 
     // なかまのスプライト、色、AnimatorControllerを設定する
     public void SetAllyContext(SpriteRenderer spriteRenderer,Animator animator, int i)
     {
-        spriteRenderer.sprite = SystemManager.spritesOfCurrentPartyMember[i];
-        spriteRenderer.color = SystemManager.colorOfCurrentPartyMember[i];
-        animator.runtimeAnimatorController = SystemManager.controllersOfCurrentPartyMember[i];
+        spriteRenderer.sprite = SystemManager.sprites[i];
+        spriteRenderer.color = SystemManager.colorsOfSpriteProperty[i];
+        animator.runtimeAnimatorController = SystemManager.runtimeAnimatorControllers[i];
     }
 
-    // なかまのスキルを設定する
-    public void SetAllySkill(GameObject allyObject, int i)
+    public void SetAllySkills(GameObject allyObject, int i)
     {
         int countSkillnumber = 0;
-        foreach (Skill skill in SystemManager.skillsOfCurrentPartyMember[i])
+        foreach (Skill skill in SystemManager.skills[i])
         {
             Skill addedSkill = allyObject.AddComponent<Skill>();
 
@@ -139,6 +140,20 @@ public class BattleSystemManager : MonoBehaviour
 
             allyObject.GetComponent<Ally>().skills[countSkillnumber] = addedSkill;
             countSkillnumber++;
+        }
+    }
+
+    public void CheckAllyIsDead()
+    {
+        for (int i = 0; i < allies.Count; i++)
+        {
+            if (allies[i].isDead)
+            {
+                Animator animator = allies[i].GetComponent<Animator>();
+                animator.SetBool("Death_Idle", true);
+
+                numOfDeadAllies++;
+            }
         }
     }
 }

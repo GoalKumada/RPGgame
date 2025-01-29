@@ -6,7 +6,7 @@ public class DungeonProgressManager : MonoBehaviour
 {
     public static bool[] isBattleCompleted = new bool[9];
 
-    public static int numOfBattlesAttempting = 0;
+    public static int attemptingBattleNum = 0;
 
     void Start()
     {

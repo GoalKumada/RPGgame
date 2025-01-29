@@ -12,23 +12,20 @@ public class FirstCheckPhase : BattlePhaseBase
         BattleManager bm = GetBattleManager();
         BattleSystemManager sm = GetBattleSystemManager();
 
-        //敵のListの後ろから順に死んでいるかどうかチェック
-        int count = 0;
-        for (int i = sm.numOfEnemies-1; i >= 0; i--)
+        //敵が死んでいるかListを順にどうかチェック
+        sm.numOfDeadEnemies = 0;
+        for (int i = 0; i <sm.enemies.Count; i++)
         {
             if (sm.enemies[i].currentHP <= 0)
             {
                 Animator animator = sm.enemies[i].GetComponent<Animator>();
                 animator.SetBool("Death_Idle", true);
-                bm.moveOfEnemy.RemoveAt(i);
-                sm.enemies.RemoveAt(i);
-                sm.enemyObjects.RemoveAt(i);
-                count++;
+                sm.enemies[i].isDead = true;
+                sm.numOfDeadEnemies++;
             }
         }
-        sm.numOfEnemies -= count;
 
-        if (sm.numOfEnemies > 0)
+        if (sm.numOfDeadEnemies < sm.enemies.Count)
         {
             // 味方の行動に関する情報をクリア
             sm.numbersOfAllyInAction.Clear();
@@ -42,7 +39,9 @@ public class FirstCheckPhase : BattlePhaseBase
         }
         else
         {
-            Debug.Log("敵を全員倒した");
+            string dialogue = "敵を全員倒し、戦いに勝利した！";
+            battleContext.textWindow.CreateDialogueText(dialogue);
+            sm.isCleared = true;
             nextPhase = new EndPhase();
         }
     }

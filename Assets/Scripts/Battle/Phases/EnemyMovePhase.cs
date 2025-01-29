@@ -11,7 +11,6 @@ public class EnemyMovePhase : BattlePhaseBase
     public override IEnumerator Execute(BattleContext battleContext, List<Move> moveOfAlly, List<Move> moveOfEnemy)
     {
         yield return null;
-        Debug.Log("EnemyMovePhase");
         battleContext.textWindow.CreateDialogueText(dialogue);
 
         yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
@@ -24,34 +23,40 @@ public class EnemyMovePhase : BattlePhaseBase
 
         System.Random random = new System.Random();
 
-        for (int i = 0; i < sm.numOfEnemies; i++)
+        for (int i = 0; i < sm.enemies.Count; i++)
         {
             // 敵の行動順はListの０→１→２で
             sm.numbersOfEnemyInAction.Add(i);
             sm.enemyObjectsInAction.Add(sm.enemyObjects[i]);
 
-            //Debug.Log($"{i+1}番目に行動する敵：{i}");
-
             // 技選択は乱数を用いてランダムに
             int maxNumOfSkill = sm.enemies[i].skills.Count();
             sm.skillNumbers.Add(random.Next(0, maxNumOfSkill));
 
-            //Debug.Log($"{i+1}番目に行動する敵の技：{sm.skillNumber[i]}");
+            // 攻撃する味方の選択もランダムに、死んでる味方を選んだらやり直し
+            start:
+                int numOfRandomAlly = random.Next(0, sm.allies.Count);
 
-            // 攻撃する味方の選択もランダムに
-            int numOfRandomAlly = random.Next(0, sm.numOfAllies);
+            if (sm.allies[numOfRandomAlly].isDead)
+            {
+                goto start;
+            }
+
             sm.numbersOfAllyInAction.Add(numOfRandomAlly);
             sm.allyObjectsInAction.Add(sm.allyObjects[numOfRandomAlly]);
-
-            //Debug.Log($"攻撃する味方：{sm.nakama[i]}");
         }
 
         CharacterStatusPanel allysCharacterStatusPanel = GetCharacterStatusPanel("AllyStatusPanel");
         CharacterStatusPanel enemysCharacterStatusPanel = GetCharacterStatusPanel("EnemyStatusPanel");
 
         // 敵の動きのアニメーションを制御するコード
-        for (int i = 0; i < sm.numOfEnemies; i++)
+        for (int i = 0; i < sm.enemies.Count; i++)
         {
+            if (sm.enemies[i].isDead)
+            {
+                continue;
+            }
+
             //冗長になるため短い名前の変数に収納
             int allyNumber = sm.numbersOfAllyInAction[i];
             int enemyNumber = sm.numbersOfEnemyInAction[i];

@@ -45,7 +45,7 @@ public class WindowMenu : MonoBehaviour
     public void DeactivateTextByIndex(int index)
     {
         // インデックスが範囲内か確認
-        if (index >= 0 && index < selectableTexts.Count)
+        if (0 <= index && index < selectableTexts.Count)
         {
             selectableTexts[index].gameObject.SetActive(false);
         }
@@ -54,14 +54,17 @@ public class WindowMenu : MonoBehaviour
             Debug.LogError("インデックスが範囲外です");
         }
 
-        if (!selectableTexts[0].gameObject.activeInHierarchy)
+        
+        for (int i = 0; i < selectableTexts.Count-1; i++)
         {
-            EventSystem.current.SetSelectedGameObject(selectableTexts[1].gameObject);
-
-        }
-        if (!selectableTexts[1].gameObject.activeInHierarchy)
-        {
-            EventSystem.current.SetSelectedGameObject(selectableTexts[2].gameObject);
+            if (!selectableTexts[i].gameObject.activeInHierarchy)
+            {
+                EventSystem.current.SetSelectedGameObject(selectableTexts[i+1].gameObject);
+            }
+            else
+            {
+                break;
+            }
         }
     }
 

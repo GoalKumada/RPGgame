@@ -25,17 +25,29 @@ public class ChooseEnemyPhase : BattlePhaseBase
             sm.numbersOfEnemyInAction.Add(index);
             sm.enemyObjectsInAction.Add(sm.enemyObjects[index]);
 
-            if (sm.currentLoops != sm.numOfAllies - 1)
+            if (sm.currentLoops != sm.allies.Count - sm.numOfDeadAllies -1)
             {
                 sm.currentLoops++;
                 nextPhase = new ChooseAllyPhase();
+
                 battleContext.chooseAllyWindowMenu.CreateSelectableTexts(sm.GetStringsOfAllies());
                 battleContext.chooseAllyWindowMenu.Open();
+
+                //死んでるなかまのSelectableTextsを非アクティブに
+                for (int i = 0; i < sm.allies.Count; i++)
+                {
+                    if (sm.allies[i].isDead)
+                    {
+                        battleContext.chooseAllyWindowMenu.DeactivateTextByIndex(i);
+                    }
+                }
+
+                //ループの回数に応じて既に選んだなかまのSelectableTextsを非表示に
                 if (sm.currentLoops == 1)
                 {
                     battleContext.chooseAllyWindowMenu.DeactivateTextByIndex(sm.numbersOfAllyInAction[0]);
                 }
-                if (sm.currentLoops == 2)
+                else if (sm.currentLoops == 2)
                 {
                     battleContext.chooseAllyWindowMenu.DeactivateTextByIndex(sm.numbersOfAllyInAction[0]);
                     battleContext.chooseAllyWindowMenu.DeactivateTextByIndex(sm.numbersOfAllyInAction[1]);
@@ -49,7 +61,9 @@ public class ChooseEnemyPhase : BattlePhaseBase
         else
         {
             sm.skillNumbers.RemoveAt(sm.currentLoops);
+
             nextPhase = new ChooseCommandPhase();
+
             battleContext.chooseCommandWindowMenu.CreateSelectableTexts(sm.allies[sm.numbersOfAllyInAction[sm.currentLoops]].GetSkillStrings());
             battleContext.chooseCommandWindowMenu.Open();
         }

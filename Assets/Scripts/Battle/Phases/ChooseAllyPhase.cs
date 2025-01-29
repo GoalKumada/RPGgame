@@ -47,6 +47,15 @@ public class ChooseAllyPhase : BattlePhaseBase
                 nextPhase = new ChooseEnemyPhase();
                 battleContext.chooseEnemyWindowMenu.CreateSelectableTexts(sm.GetStringsOfEnemies());
                 battleContext.chooseEnemyWindowMenu.Open();
+
+                //死んでる敵のSelectableTextsを非アクティブに
+                for (int i = 0; i < sm.enemies.Count; i++)
+                {
+                    if (sm.enemies[i].isDead)
+                    {
+                        battleContext.chooseEnemyWindowMenu.DeactivateTextByIndex(i);
+                    }
+                }
             }
         }
     }

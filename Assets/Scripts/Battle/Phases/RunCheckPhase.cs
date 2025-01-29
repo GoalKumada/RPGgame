@@ -10,6 +10,7 @@ public class RunCheckPhase : BattlePhaseBase
     {
         yield return null;
         battleContext.textWindow.CreateDialogueText(dialogue);
+        BattleSystemManager sm = GetBattleSystemManager();
 
 
         yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Escape));
@@ -26,6 +27,9 @@ public class RunCheckPhase : BattlePhaseBase
             }
             else if (index == 1)
             {
+                sm.isEscaped = true;
+                string dialogue = "バトルから逃走した";
+                battleContext.textWindow.CreateDialogueText(dialogue);
                 nextPhase = new EndPhase();
             }
         }

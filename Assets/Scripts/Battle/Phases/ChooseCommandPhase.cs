@@ -43,15 +43,36 @@ public class ChooseCommandPhase : BattlePhaseBase
                 nextPhase = new ChooseEnemyPhase();
                 battleContext.chooseEnemyWindowMenu.CreateSelectableTexts(sm.GetStringsOfEnemies());
                 battleContext.chooseEnemyWindowMenu.Open();
+
+                //死んでる敵のSelectableTextsを非アクティブに
+                for (int i = 0; i < sm.enemies.Count; i++)
+                {
+                    if (sm.enemies[i].isDead)
+                    {
+                        battleContext.chooseEnemyWindowMenu.DeactivateTextByIndex(i);
+                    }
+                }
             }
         }
         else
         {
             sm.numbersOfAllyInAction.RemoveAt(sm.currentLoops);
             sm.allyObjectsInAction.RemoveAt(sm.currentLoops);
+
             nextPhase = new ChooseAllyPhase();
+
             battleContext.chooseAllyWindowMenu.CreateSelectableTexts(sm.GetStringsOfAllies());
             battleContext.chooseAllyWindowMenu.Open();
+
+            //死んでるなかまのSelectableTextsを非アクティブに
+            for (int i = 0; i < sm.allies.Count; i++)
+            {
+                if (sm.allies[i].isDead)
+                {
+                    battleContext.chooseAllyWindowMenu.DeactivateTextByIndex(i);
+                }
+            }
+
             if (sm.currentLoops == 1)
             {
                 battleContext.chooseAllyWindowMenu.DeactivateTextByIndex(sm.numbersOfAllyInAction[0]);

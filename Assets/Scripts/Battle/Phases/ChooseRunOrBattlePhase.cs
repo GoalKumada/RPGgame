@@ -22,6 +22,15 @@ public class ChooseRunOrBattlePhase : BattlePhaseBase
             nextPhase = new ChooseAllyPhase();
             battleContext.chooseAllyWindowMenu.CreateSelectableTexts(sm.GetStringsOfAllies());
             battleContext.chooseAllyWindowMenu.Open();
+
+            //死んでるなかまのSelectableTextsを非アクティブに
+            for (int i = 0; i < sm.allies.Count; i++)
+            {
+                if (sm.allies[i].isDead)
+                {
+                    battleContext.chooseAllyWindowMenu.DeactivateTextByIndex(i);
+                }
+            }
         }
         else if (index == 1) // 1（にげる）ならRunCheckへ
         {

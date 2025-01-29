@@ -2344,6 +2344,7 @@ MonoBehaviour:
   currentATK: 120
   DEF: 60
   currentDEF: 60
+  isDead: 0
   skills:
   - {fileID: 286143812}
   - {fileID: 286143811}
@@ -2543,6 +2544,7 @@ MonoBehaviour:
   currentATK: 20
   DEF: 40
   currentDEF: 40
+  isDead: 0
   skills:
   - {fileID: 296004693}
   SPEED: 15
@@ -3714,6 +3716,7 @@ MonoBehaviour:
   currentATK: 150
   DEF: 120
   currentDEF: 120
+  isDead: 0
   skills:
   - {fileID: 455496203}
   - {fileID: 455496202}
@@ -5003,6 +5006,7 @@ MonoBehaviour:
   currentATK: 150
   DEF: 150
   currentDEF: 150
+  isDead: 0
   skills:
   - {fileID: 594188012}
   - {fileID: 594188011}
@@ -5222,6 +5226,7 @@ MonoBehaviour:
   currentATK: 180
   DEF: 120
   currentDEF: 120
+  isDead: 0
   skills:
   - {fileID: 603216202}
   - {fileID: 603216201}
@@ -6370,6 +6375,7 @@ MonoBehaviour:
   currentATK: 60
   DEF: 120
   currentDEF: 120
+  isDead: 0
   skills:
   - {fileID: 770756718}
   - {fileID: 770756717}
@@ -9302,6 +9308,7 @@ MonoBehaviour:
   currentATK: 40
   DEF: 20
   currentDEF: 20
+  isDead: 0
   skills:
   - {fileID: 1237356194}
   SPEED: 25
@@ -9739,6 +9746,7 @@ MonoBehaviour:
   currentATK: 240
   DEF: 60
   currentDEF: 60
+  isDead: 0
   skills:
   - {fileID: 1290656602}
   - {fileID: 1290656601}
@@ -11752,6 +11760,7 @@ MonoBehaviour:
   currentATK: 90
   DEF: 60
   currentDEF: 60
+  isDead: 0
   skills:
   - {fileID: 1423847030}
   - {fileID: 1423847029}
@@ -12331,6 +12340,7 @@ MonoBehaviour:
   currentATK: 25
   DEF: 20
   currentDEF: 20
+  isDead: 0
   skills:
   - {fileID: 1469604605}
   SPEED: 35
@@ -13772,6 +13782,7 @@ MonoBehaviour:
   currentATK: 25
   DEF: 25
   currentDEF: 25
+  isDead: 0
   skills:
   - {fileID: 1752067118}
   SPEED: 30
@@ -14682,6 +14693,7 @@ MonoBehaviour:
   currentATK: 30
   DEF: 20
   currentDEF: 20
+  isDead: 0
   skills:
   - {fileID: 1850739017}
   SPEED: 30
@@ -15549,6 +15561,7 @@ MonoBehaviour:
   currentATK: 75
   DEF: 75
   currentDEF: 75
+  isDead: 0
   skills:
   - {fileID: 1945713066}
   - {fileID: 1945713065}
@@ -15749,6 +15762,7 @@ MonoBehaviour:
   currentATK: 75
   DEF: 60
   currentDEF: 60
+  isDead: 0
   skills:
   - {fileID: 1979076364}
   - {fileID: 1979076363}
@@ -16651,6 +16665,7 @@ MonoBehaviour:
   currentATK: 120
   DEF: 240
   currentDEF: 240
+  isDead: 0
   skills:
   - {fileID: 2086616886}
   - {fileID: 2086616885}

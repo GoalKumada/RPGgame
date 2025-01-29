@@ -11,23 +11,20 @@ public class SecondCheckPhase : BattlePhaseBase
         BattleManager bm = GetBattleManager();
         BattleSystemManager sm = GetBattleSystemManager();
 
-        //味方のListの後ろから順に死んでいるかどうかチェック
-        int count = 0;
-        for (int i = sm.numOfAllies - 1; i >= 0; i--)
+        //味方が死んでいるかどうか順にチェック
+        sm.numOfDeadAllies = 0;
+        for (int i = 0; i < sm.allies.Count; i++)
         {
             if (sm.allies[i].currentHP <= 0)
             {
                 Animator animator = sm.allies[i].GetComponent<Animator>();
                 animator.SetBool("Death_Idle", true);
-                bm.moveOfAlly.RemoveAt(i);
-                sm.allies.RemoveAt(i);
-                sm.allyObjects.RemoveAt(i);
-                count++;
+                sm.allies[i].isDead = true;
+                sm.numOfDeadAllies++;
             }
         }
-        sm.numOfAllies -= count;
 
-        if (sm.numOfAllies > 0)
+        if (sm.numOfDeadAllies < sm.allies.Count)
         {
             nextPhase = new ChooseRunOrBattlePhase();
             battleContext.chooseRunOrBattleWindowMenu.Open();
@@ -41,7 +38,9 @@ public class SecondCheckPhase : BattlePhaseBase
         }
         else
         {
-            Debug.Log("味方が全滅した");
+            string dialogue = "味方が全滅し、戦いに敗れた";
+            battleContext.textWindow.CreateDialogueText(dialogue);
+            sm.isDefeated = true;
             nextPhase = new EndPhase();
         }
     }

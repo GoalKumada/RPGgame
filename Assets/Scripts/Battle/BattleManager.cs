@@ -21,7 +21,7 @@ public class BattleManager : MonoBehaviour
         while (!(phaseState is EndPhase)) //EndPhaseになるまで繰り返し
         {
              yield return phaseState.Execute(battleContext,moveOfAlly,moveOfEnemy); //フェーズの実行
-            phaseState = phaseState.nextPhase; //次のフェーズに移行
+             phaseState = phaseState.nextPhase; //次のフェーズに移行
         }
 
         yield return phaseState.Execute(battleContext,moveOfAlly,moveOfEnemy); //EndPhaseの実行

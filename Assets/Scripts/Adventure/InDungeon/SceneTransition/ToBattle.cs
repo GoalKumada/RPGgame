@@ -10,6 +10,7 @@ public class ToBattle : MonoBehaviour
     private WindowMenu windowMenu;
     private GameObject toBattlePanel;
     private Vector3 currentPos = new Vector3(0 ,0, 0);
+    private float distance = 0.5f; //位置調整用
 
     private void Start()
     {
@@ -30,12 +31,7 @@ public class ToBattle : MonoBehaviour
                     PlayerPositionManager.posOfPlayerInDungeon = currentPos;
 
                     GameObject sceneController = GameObject.Find("SceneController");
-                    sceneController.GetComponent<SceneController>().sceneChange($"BattleScene_{DungeonProgressManager.numOfBattlesAttempting}");
-
-                    //後で消す
-                    DungeonProgressManager.isBattleCompleted[DungeonProgressManager.numOfBattlesAttempting] = true;
-                    DungeonProgressManager.numOfBattlesAttempting++;
-
+                    sceneController.GetComponent<SceneController>().sceneChange($"BattleScene_{DungeonProgressManager.attemptingBattleNum}");
 
                     toBattlePanel.SetActive(false);
                     isCollided = false;
@@ -62,10 +58,12 @@ public class ToBattle : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             currentPos = collision.gameObject.transform.position;
-            currentPos.x += 0.5f;
-            isCollided = true;
+            currentPos.x -= distance;
+            
             toBattlePanel.SetActive(true);
             windowMenu.SetMoveArrowFunction();
+            
+            isCollided = true;
             isSelecting = true;
         }
     }

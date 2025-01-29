@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// SystemContorollerに折りたたみできるデータを渡すためのクラス
 [System.Serializable]
 public class DateForRecruiting
 {
@@ -42,6 +43,7 @@ public class DateForBringingOut
     [SerializeField] public WindowMenu bringOutCheckPanel;
 }
 
+
 public class TavernSystemController : MonoBehaviour
 {
     [SerializeField] public WindowMenu menuPanel;
@@ -76,6 +78,7 @@ public class TavernSystemController : MonoBehaviour
     private bool isAlreadyEmployed = false;
     private bool isNotHaveEnoughMoney = false;
     private bool isLimitOver = false;
+
 
     private void Start()
     {
@@ -130,6 +133,7 @@ public class TavernSystemController : MonoBehaviour
     }
 
     // 各フェーズの制御
+    //メニュー選択フェーズ
     public void OnMenuSelectPhase()
     {
         if (Input.GetKeyDown(KeyCode.Space))
@@ -173,6 +177,7 @@ public class TavernSystemController : MonoBehaviour
         }
     }
 
+    //雇用フェーズ
     public void OnJobSelectPhase()
     {
         if (Input.GetKeyDown(KeyCode.Space))
@@ -213,7 +218,7 @@ public class TavernSystemController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             dataForRecruiting.allyTextPanel.SetDeselected();
-            GetAllyCandidate(index);
+            GetAllyCandidateObject(index);
             
             if (allyCandidate.GetComponent<Ally>().isEmployed) //既に雇われていたら
             {
@@ -231,7 +236,7 @@ public class TavernSystemController : MonoBehaviour
                 isNotificationPhase = true;
                 isRecruitingPhase = false;
             }
-            else if (SystemManager.allyComponentsOfCurrentPartyMember.Count >= limitOfAllyBringingAlong) //なかまにできる人数の上限に達していたら
+            else if (SystemManager.allyComponents.Count >= limitOfAllyBringingAlong) //なかまにできる人数の上限に達していたら
             {
                 dataForRecruiting.notificationPanelObject.SetActive(true);
                 isLimitOver = true;
@@ -324,6 +329,8 @@ public class TavernSystemController : MonoBehaviour
         }
     }
 
+
+    //預けるフェーズ
     public void OnCurrentAllySelectingPhase()
     {
         if (Input.GetKeyDown(KeyCode.Space))
@@ -425,6 +432,7 @@ public class TavernSystemController : MonoBehaviour
         }
     }
 
+    //連れ出すフェーズ
     public void OnBringOutCheckPhase()
     {
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Escape))
@@ -449,7 +457,7 @@ public class TavernSystemController : MonoBehaviour
     }
 
 
-    // 雇いたい仲間の画像を設定
+    //雇用フェーズで使うメソッドたち
     public void SetImageOfAllies(int index)
     {
         int sizeOfWidth = 0;
@@ -494,7 +502,6 @@ public class TavernSystemController : MonoBehaviour
 
     }
 
-    // 仲間の名前を設定
     public void SetNameOfAllies(int index)
     {
         switch (index)
@@ -524,7 +531,6 @@ public class TavernSystemController : MonoBehaviour
         }
     }
 
-    // 仲間のステータスを取得して表示
     public void SetStatusOfAllies(int index)
     {
         switch (typeOfJob)
@@ -567,7 +573,6 @@ public class TavernSystemController : MonoBehaviour
         }
     }
 
-    // 仲間のスキルを取得して表示
     public void SetSkillsOfAlliesForRecruiting(int index)
     {
         SkillPanel skillPanel = dataForRecruiting.skillPanelObject.GetComponent<SkillPanel>();
@@ -622,8 +627,7 @@ public class TavernSystemController : MonoBehaviour
         }
     }
 
-    // 仲間候補のオブジェクトを取得
-    public void GetAllyCandidate(int index)
+    public void GetAllyCandidateObject(int index)
     {
         if (index == 0)
         {
@@ -639,7 +643,6 @@ public class TavernSystemController : MonoBehaviour
         }
     }
 
-    // 確認画面の情報を取得して設定
     public void SetConfirmTextInfo()
     {
         GameObject allyImageObject = GameObject.Find("UI/TavernSystemCanvas/ConfirmTextPanel/AllyImage");
@@ -653,7 +656,6 @@ public class TavernSystemController : MonoBehaviour
 
     }
 
-    // 警告表示の内容を設定
     public void SetNotificationText()
     {
         GameObject notificotionTextObject = GameObject.Find("UI/TavernSystemCanvas/NotificationTextPanel/Text");
@@ -679,15 +681,16 @@ public class TavernSystemController : MonoBehaviour
         isLimitOver = false;
     }
 
-    // 雇用したなかまの情報をSystemManagerに渡す
+
+
     public void AddAllyToParty()
     {
-        SystemManager.namesOfAllyAlreadyEmployed.Add(allyCandidate.name);
-        SystemManager.allyComponentsOfCurrentPartyMember.Add(allyCandidate.GetComponent<Ally>());
-        SystemManager.spritesOfCurrentPartyMember.Add(allyCandidate.GetComponent<SpriteRenderer>().sprite);
-        SystemManager.colorOfCurrentPartyMember.Add(allyCandidate.GetComponent<SpriteRenderer>().color);
-        SystemManager.controllersOfCurrentPartyMember.Add(allyCandidate.GetComponent<Animator>().runtimeAnimatorController);
-        SystemManager.skillsOfCurrentPartyMember.Add(allyCandidate.GetComponent<Ally>().skills);
+        SystemManager.employedAllyNames.            Add(allyCandidate.name);
+        SystemManager.allyComponents.               Add(allyCandidate.GetComponent<Ally>());
+        SystemManager.sprites.                      Add(allyCandidate.GetComponent<SpriteRenderer>().sprite);
+        SystemManager.colorsOfSpriteProperty.       Add(allyCandidate.GetComponent<SpriteRenderer>().color);
+        SystemManager.runtimeAnimatorControllers.   Add(allyCandidate.GetComponent<Animator>().runtimeAnimatorController);
+        SystemManager.skills.                       Add(allyCandidate.GetComponent<Ally>().skills);
 
         SystemManager.money -= allyCandidate.GetComponent<Ally>().moneyNeeded;
         SetCurrentAmountOfMoney();
@@ -696,7 +699,7 @@ public class TavernSystemController : MonoBehaviour
     // 既に雇用済みのなかまのフラグを立てる
     public void SetFlagOfEmploymentTrue()
     {
-        foreach (string str in SystemManager.namesOfAllyAlreadyEmployed)
+        foreach (string str in SystemManager.employedAllyNames)
         {
             GameObject gameObject = GameObject.Find($"Ally/{str}");
             Ally ally = gameObject.GetComponent<Ally>();
@@ -704,22 +707,9 @@ public class TavernSystemController : MonoBehaviour
         }
     }
 
-    // お金の表示をオンオフ
+    // お金を更新して表示をオンオフ
     public void SetCurrentAmountOfMoney()
     {
-        /*
-        GameObject UIObject = GameObject.Find("UI");
-        Transform moneyUITransform = UIObject.transform.Find("ccc");
-        GameObject moneyUIObject = moneyUITransform.gameObject;
-        moneyUIObject.SetActive(true);
-        Text text = moneyUIObject.GetComponentInChildren<Text>();
-        text.text = SystemManager.money.ToString();
-        */
-        /*
-        moneyTextGameObject.SetActive(true);
-        TextMeshProUGUI currentMoney = moneyTextGameObject.GetComponentInChildren<TextMeshProUGUI>();
-        currentMoney.text = SystemManager.money.ToString();
-        */
         moneyTextGameObject.SetActive(true);
         Text currentMoney = moneyTextGameObject.GetComponentInChildren<Text>();
         currentMoney.text = SystemManager.money.ToString();
