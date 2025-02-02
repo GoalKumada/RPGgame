@@ -11,7 +11,7 @@ public class ChooseEnemyPhase : BattlePhaseBase
         yield return null;
         battleContext.textWindow.CreateDialogueText(dialogue);
 
-        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Escape));
+        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftShift));
 
         int index = battleContext.chooseEnemyWindowMenu.currentID;
         battleContext.chooseEnemyWindowMenu.Close();

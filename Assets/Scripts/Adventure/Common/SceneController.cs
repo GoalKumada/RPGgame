@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
-    public GameObject fadeCanvas;//インスペクタからPrefab化したCanvasを入れる
+    public GameObject fadeCanvas;
 
     void Start()
     {

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SystemManager
 {
-    public static int money = 6000;
+    public static int money = 3500;
 
     public static List<string> employedAllyNames = new List<string>();
 

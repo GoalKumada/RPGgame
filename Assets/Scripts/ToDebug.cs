@@ -6,11 +6,11 @@ public class ToDebug : MonoBehaviour
 {
     void Start()
     {
-
+        
     }
 
     void Update()
     {
-        
+
     }
 }

@@ -14,7 +14,7 @@ public class ChooseAllyPhase : BattlePhaseBase
 
         battleContext.textWindow.CreateDialogueText(dialogue);
 
-        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Escape));
+        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftShift));
 
         int index = battleContext.chooseAllyWindowMenu.currentID;
         battleContext.chooseAllyWindowMenu.Close();

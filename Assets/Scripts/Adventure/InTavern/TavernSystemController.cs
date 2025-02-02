@@ -79,6 +79,8 @@ public class TavernSystemController : MonoBehaviour
     private bool isNotHaveEnoughMoney = false;
     private bool isLimitOver = false;
 
+    [SerializeField] private PauseController PauseController;
+
 
     private void Start()
     {
@@ -136,6 +138,8 @@ public class TavernSystemController : MonoBehaviour
     //メニュー選択フェーズ
     public void OnMenuSelectPhase()
     {
+        PauseController.isPausable = false;
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             int index = GetCurrentID(menuPanel);
@@ -165,15 +169,14 @@ public class TavernSystemController : MonoBehaviour
                 Resume();
                 isMenuSelectingPhase = false;
             }
-
-
         }
-        else if (Input.GetKeyDown(KeyCode.Escape))
+        else if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             menuPanel.Close();
             DeactivateMoneyText();
             Resume();
             isMenuSelectingPhase = false;
+            PauseController.isPausable = true;
         }
     }
 
@@ -195,7 +198,7 @@ public class TavernSystemController : MonoBehaviour
             SetImageOfAllies(index);
             SetNameOfAllies(index);
         }
-        else if (Input.GetKeyDown(KeyCode.Escape))
+        else if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             dataForRecruiting.jobPanel.Close();
             menuPanel.SetSelected();
@@ -252,7 +255,7 @@ public class TavernSystemController : MonoBehaviour
                 isRecruitingPhase = false;
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Escape))
+        else if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             dataForRecruiting.allyRecruitPanelObject.SetActive(false);
             dataForRecruiting.statusPanelObject.SetActive(false);
@@ -269,7 +272,7 @@ public class TavernSystemController : MonoBehaviour
 
     public void OnNotificationPhase()
     {
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftShift))
         {
             dataForRecruiting.notificationPanelObject.SetActive(false);
             dataForRecruiting.allyTextPanel.SetSelected();
@@ -308,7 +311,7 @@ public class TavernSystemController : MonoBehaviour
                 isRecruitingPhase = true;
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Escape))
+        else if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             dataForRecruiting.recruiteCheckPanelObject.SetActive(false);
             dataForRecruiting.recruitOptionsPanel.Close();
@@ -320,7 +323,7 @@ public class TavernSystemController : MonoBehaviour
 
     public void OnConfirmingPhase()
     {
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftShift))
         {
             dataForRecruiting.confirmTextPanelObject.SetActive(false);
             dataForRecruiting.allyTextPanel.SetSelected();
@@ -361,7 +364,7 @@ public class TavernSystemController : MonoBehaviour
 
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Escape))
+        else if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             dataForEntrusting.currentAllyNamePanel.Close();
             menuPanel.SetSelected();
@@ -372,7 +375,7 @@ public class TavernSystemController : MonoBehaviour
 
     public void OnEnrtustCheckPhase()
     {
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftShift))
         {
             int index = GetCurrentID(dataForEntrusting.entrustCheckPanel);
 
@@ -423,7 +426,7 @@ public class TavernSystemController : MonoBehaviour
 
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Escape))
+        else if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             dataForBringingOut.reserveAllyNamePanel.Close();
             menuPanel.SetSelected();
@@ -435,7 +438,7 @@ public class TavernSystemController : MonoBehaviour
     //連れ出すフェーズ
     public void OnBringOutCheckPhase()
     {
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftShift))
         {
             int index = GetCurrentID(dataForBringingOut.bringOutCheckPanel);
 

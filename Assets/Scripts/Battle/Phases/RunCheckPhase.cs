@@ -13,7 +13,7 @@ public class RunCheckPhase : BattlePhaseBase
         BattleSystemManager sm = GetBattleSystemManager();
 
 
-        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Escape));
+        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftShift));
 
         int index = battleContext.runCheckWindowMenu.currentID;
         battleContext.runCheckWindowMenu.Close();

@@ -8,8 +8,6 @@ public class EndPhase : BattlePhaseBase
     {
         yield return null;
 
-        Debug.Log("EndPhase");
-
         BattleSystemManager sm = GetBattleSystemManager();
 
         yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
@@ -31,9 +29,9 @@ public class EndPhase : BattlePhaseBase
         {
             ActivateGameOverPanel();
 
-            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Escape));
 
-
+            TransitToTitleScene();
         }
     }
 
@@ -60,12 +58,10 @@ public class EndPhase : BattlePhaseBase
         GameObject uiCanvasPanelObject = GameObject.Find("UICanvas");
         if ( uiCanvasPanelObject != null)
         {
-            // 子オブジェクトを取得
             Transform gameOverPanelTransform = uiCanvasPanelObject.transform.Find("GameOverPanel");
 
             if (gameOverPanelTransform != null)
             {
-                // 子オブジェクトをアクティブにする
                 gameOverPanelTransform.gameObject.SetActive(true);
             }
             else
@@ -77,5 +73,11 @@ public class EndPhase : BattlePhaseBase
         {
             Debug.LogWarning("親オブジェクトが見つかりませんでした。");
         }
+    }
+
+    public void TransitToTitleScene()
+    {
+        GameObject sceneController = GameObject.Find("SceneController");
+        sceneController.GetComponent<SceneController>().sceneChange("TitleScene");
     }
 }

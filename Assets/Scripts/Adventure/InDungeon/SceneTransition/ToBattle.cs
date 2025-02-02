@@ -44,7 +44,7 @@ public class ToBattle : MonoBehaviour
                     isSelecting = false;
                 }
             }
-            else if (Input.GetKeyDown(KeyCode.Escape))
+            else if (Input.GetKeyDown(KeyCode.LeftShift))
             {
                 toBattlePanel.SetActive(false);
                 isCollided = false;

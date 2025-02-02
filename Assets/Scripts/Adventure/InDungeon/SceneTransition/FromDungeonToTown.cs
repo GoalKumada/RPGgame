@@ -36,7 +36,7 @@ public class FromDungeonToTown : MonoBehaviour
                     toTownPanel.SetActive(false);
                 }
             }
-            else if (Input.GetKeyDown(KeyCode.Escape))
+            else if (Input.GetKeyDown(KeyCode.LeftShift))
             {
                 Time.timeScale = 1.0f;
                 isPaused = false;

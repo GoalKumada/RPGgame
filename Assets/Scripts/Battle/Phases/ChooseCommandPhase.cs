@@ -11,7 +11,7 @@ public class ChooseCommandPhase : BattlePhaseBase
         yield return null;
 
         start:
-            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Escape));
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftShift));
 
         int index = battleContext.chooseCommandWindowMenu.currentID;
         battleContext.chooseCommandWindowMenu.Close();

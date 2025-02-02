@@ -6,17 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class FromTownToDungeon : MonoBehaviour
 {
-    private bool isPaused = false;
-    private WindowMenu windowMenu;
-    private GameObject toDungeonPanel;
+    private bool isPaused;
+    private bool isCautioned;
+    [SerializeField] public GameObject toDungeonPanel;
+    [SerializeField] public GameObject cautionPanel;
+    [SerializeField] public WindowMenu windowMenu;
     private Vector3 EntranceToTheCity = new Vector3(0, 0.2f, -6.0f);
 
     private void Start()
     {
-        toDungeonPanel = GameObject.Find("UI/TextCanvas/ToDungeonPanel");
 
-        GameObject optionPanel = GameObject.Find("UI/TextCanvas/ToDungeonPanel/OptionsPanel");
-        windowMenu = optionPanel.GetComponent<WindowMenu>();
     }
 
     private void Update()
@@ -41,11 +40,20 @@ public class FromTownToDungeon : MonoBehaviour
                     toDungeonPanel.SetActive(false);
                 }
             }
-            else if (Input.GetKeyDown(KeyCode.Escape))
+            else if (Input.GetKeyDown(KeyCode.LeftShift))
             {
                 Resume();
                 isPaused = false;
                 toDungeonPanel.SetActive(false);
+            }
+        }
+
+        if (isCautioned)
+        {
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                cautionPanel.SetActive(false);
+                Resume();
             }
         }
     }
@@ -55,14 +63,24 @@ public class FromTownToDungeon : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            toDungeonPanel.SetActive(true);
+            if (SystemManager.allyComponents.Count != 0)
+            {
+                toDungeonPanel.SetActive(true);
 
-            windowMenu.SetMoveArrowFunction();
+                windowMenu.SetMoveArrowFunction();
 
-            Pause();
+                Pause();
 
-            isPaused = true;
+                isPaused = true;
+            }
+            else
+            {
+                cautionPanel.SetActive(true);
 
+                Pause();
+
+                isCautioned = true;
+            }
         }
     }
 
